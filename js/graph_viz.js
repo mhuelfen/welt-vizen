@@ -32,9 +32,9 @@ var link = svg.selectAll(".link")
     .data(force.links())
     .enter().append("line")
     .attr("class", "link")
-    .style("stroke-width", function(d) { if (d.type == "IN_STATE") {return 1;} else{return 4;} })
-    .on("mouseover", link_mouseover)
-    .on("mouseout", link_mouseout);
+    .style("stroke-width", function(d) { if (d.type == "IN_STATE") {return 1;} else{return 4;} });
+    // .on("mouseover", link_mouseover)
+    // .on("mouseout", link_mouseout);
 
 link.append("text")
     .attr("x", 12)
@@ -126,17 +126,17 @@ function node_mouseout() {
        .attr("dy", ".35em")
        .style("font-size","10px");
 		// d3.select(this).moveToBack();
-	console.log(d3.select(this));
+	// console.log(d3.select(this));
 
 }
 
-function link_mouseover() {
-	console.log("over link")
-    d3.select(this).select("line").transition()
-        .style("stroke-width", 8);
-}
-
-function link_mouseout() {
-    d3.select(this).select("line")//.transition()
-        .style("stroke-width", 2);
-}
+// function link_mouseover() {
+// 	console.log("over link")
+//     d3.select(this).select("line").transition()
+//         .style("stroke-width", 8);
+// }
+// 
+// function link_mouseout() {
+//     d3.select(this).select("line")//.transition()
+//         .style("stroke-width", 2);
+// }
