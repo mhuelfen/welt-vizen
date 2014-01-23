@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <style>
+
+    .link {
+      fill: none;
+      stroke: #a8a8a8;
+      stroke-width: 4px;
+      color: black;
+    }
+
+    .node circle {
+	  stroke: #fff;
+	  stroke-width: 1.5px;
+    }
+
+    text {
+      font: 10px sans-serif;
+      pointer-events: none;
+    }
+
+    </style>
+
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+	<script  src="js/graph_viz.js"></script>
+	<script  src="js/query_neo4j.js"></script>
+	<script  src="js/fisheye.js"></script>
+
+
+	<script>
+
+	// var query = [
+	//     // 'START m=node:nouns(word="cattle"),n=node:nouns(word="mouse") Match p=AllShortestPaths((n)-[*..4]-(m)) ',
+	//     'START m=node:nouns(word="dark"),n=node:nouns(word="moon") Match p=allShortestPaths((n)-[*..4]-(m)) ',
+	//     // 'START n=node(*),m=node:nouns(word="water") MATCH p=shortestPath((n)-[*..4]-(m)) WHERE HAS(n.term) AND n.term =~ ".* awake.*"',
+	//     'RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,',
+	//     'EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,',
+	//     'EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels;'
+	// ].join('\n');
+
+	var url = 'http://localhost:7474/db/data/cypher';
+
+	// query_db(url,query);
+	</script>
+
+</head>
+<body>
+<h1>Viz Test</h1>
+<form action="textarea.htm">
+  <p>Enter Neo4j query<br>
+    <textarea id="query_input" name="query_input" cols="80" rows="6">
+START m=node:nouns(word="dark"),n=node:nouns(word="moon") Match p=allShortestPaths((n)-[*..4]-(m))
+RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,
+EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,
+EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels;
+</textarea>
+<input type="button" name="send_query" value="query"
+  onclick="query_db(url,$('#query_input').val());">
+  </p>
+
+</form>
+
+</body>
