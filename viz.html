@@ -56,7 +56,8 @@
 START m=node:nouns(word="dark"),n=node:nouns(word="moon") Match p=allShortestPaths((n)-[*..4]-(m))
 RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,
 EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,
-EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels;
+EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels,p LIMIT 5;
+
 </textarea>
 <input type="button" name="send_query" value="query"
   onclick="query_db(url,$('#query_input').val());">

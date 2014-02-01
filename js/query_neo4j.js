@@ -1,3 +1,4 @@
+
 function query_db(url, query) {
     var data = {
         "query": query,
@@ -26,6 +27,7 @@ function parse_results(data) {
 
     var nodes_from_query = [];
     var relations_for_viz = [];
+    var paths_for_viz = [];
     var results = data.data;
     // console.log(data);
     // console.log(results);
@@ -65,7 +67,42 @@ function parse_results(data) {
             }
             relations_for_viz.push(relation);
         }
+
+
     }
+//     var paths = []
+//     // add path data	
+//     var path_nodes_urls;
+//     for (var i = 0; i < results.length; i++) {
+// //        console.log("PATH", results[i][3].nodes);
+//         path_nodes = results[i][3].nodes;
+//         path_node_ids = []
+//         // nodes are str        
+//         for (var n = 0; n < path_nodes.length; n++) {
+//             path_node_ids.push(id_from_url(path_nodes[n]));
+//         }
+//         console.log(path_node_ids);
+//         paths.push(path_node_ids);
+//     }
+//     console.log(paths);
+// 
+
+	    var paths = []
+	    // add path data	
+	    var path_nodes_urls;
+	    for (var i = 0; i < results.length; i++) {
+	//        console.log("PATH", results[i][3].nodes);
+	        path_nodes = results[i][3].nodes;
+	        path_node_ids = []
+	        // nodes are str        
+	        for (var n = 0; n < path_nodes.length; n++) {
+	            path_nodes[n] = parseInt(id_from_url(path_nodes[n]));
+	        }
+	        // console.log(path_nodes);
+	        paths.push(path_nodes);
+	    }
+	    // console.log(paths);
+
 
     // console.log('nodes:', nodes_from_query);
     // console.log('rels', relations_for_viz);
@@ -100,6 +137,20 @@ function parse_results(data) {
         relations_for_viz[rel].target = node_ids[relations_for_viz[rel].target]
 
     }
-
-    draw_graph(nodes_for_viz, relations_for_viz);
+	// change ids in path from graph ids to new ones
+	$.each(paths, function (p_index, path) {
+	    $.each(path, function (n_index, node) {
+	        paths[p_index][n_index] = node_ids[node];
+	    });
+	});
+	
+    draw_graph(nodes_for_viz, relations_for_viz,paths);
 }
+
+// function unique(elems) {
+//     var unique = [];
+//     $.each(elems, function (i, el) {
+//         if ($.inArray(el, unique) === -1) unique.push(el);
+//     });
+//     return unique;
+// }
