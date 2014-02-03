@@ -4,6 +4,8 @@ var rels;
 var linkedByIndex = {};
 var paths;
 
+var mouseDown = 0;
+
 function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
     nodes = nodes_for_viz;
     rels = relations_for_viz;
@@ -12,7 +14,6 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
 
     var width = 960,
         height = 700;
-
 
     var force = d3.layout.force()
         .nodes(nodes_for_viz)
@@ -35,8 +36,6 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
         .attr("width", width)
         .attr("height", height)
         .attr("id", 'graph_svg');
-
-
 
     var link = svg.selectAll(".link")
         .data(force.links())
@@ -74,13 +73,10 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
         .on("mouseover", node_mouseover)
         .on("mouseout", node_mouseout)
         .call(force.drag);
-
-
-
-    // 
+    // draw node 
     node.append("circle")
         .attr("r", 8);
-    // 
+    // add text
     node.append("text")
         .attr("x", 12)
         .attr("dy", ".35em")
@@ -109,15 +105,11 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
                 return "translate(" + d.x + "," + d.y + ")";
             });
     }
-
-
-    rels.forEach(function (d) {
-        linkedByIndex[d.source.index + "," + d.target.index] = 1;
-    });
+    // rels.forEach(function (d) {
+    //     linkedByIndex[d.source.index + "," + d.target.index] = 1;
+    // });
 
 }
-
-
 
 d3.selection.prototype.moveToFront = function () {
     return this.each(function () {
@@ -136,6 +128,8 @@ d3.selection.prototype.moveToBack = function () {
 
 
 function node_mouseover() {
+    if (!mouseDown){
+	console.log("mouse",mouseDown);
     d3.select(this).select("circle").transition()
         .duration(750)
         .attr("r", 16);
@@ -167,12 +161,13 @@ function node_mouseover() {
           return isInPaths(l.source.index, paths_with_node) && isInPaths(l.target.index, paths_with_node) ? 1 : 0.1;
       });
 
-
     //    //	highlight_node_links(d3.select(this),2);
-
+}
 }
 
 function node_mouseout() {
+	if (!mouseDown){
+    
     d3.select(this).select("circle").transition()
         .duration(750)
         .attr("r", 8);
@@ -196,8 +191,8 @@ function node_mouseout() {
 	      d3.selectAll(".link").style("stroke-opacity", 1 );
 	
     // d3.select(this).moveToBack();
-    // console.log(d3.select(this));
 
+}
 }
 
 // get all paths with this node
@@ -215,13 +210,24 @@ function paths_for_node(node_id, paths) {
 function isInPaths(node_id, path_ids) {
 	var inP = false
     $.each(path_ids, function (i, p_id) {
-//console.log(node_id,"in",p_id,":",paths[p_id],"->",$.inArray(node_id, paths[p_id]) != -1);
         if ($.inArray(node_id, paths[p_id]) != -1) {
             inP = true;
         }
     });
     return inP;
 }
+
+
+$(document).mousedown( function() { 
+
+  ++mouseDown;
+		console.log("mouse D",mouseDown);
+});
+
+$(document).mouseup( function() {
+  --mouseDown;
+		console.log("mouse U",mouseDown);
+});
     // function link_mouseover() {
     // 	console.log("over link")
     //     d3.select(this).select("line").transition()
