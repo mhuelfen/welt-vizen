@@ -1,240 +1,8 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <head>
-    <style>
-
-    .link {
-      fill: none;
-      stroke: #a8a8a8;
-      stroke-width: 4px;
-      color: black;
-    }
-
-    .node circle {
-    stroke: #fff;
-    stroke-width: 1.5px;
-    }
-
-    text {
-      font: 10px sans-serif;
-      pointer-events: none;
-    }
-
-	orm li div
-	{
-		color:#444;
-		margin:0 4px 0 0;
-		padding:0 0 8px;
-	}
-
-	form li span
-	{
-		color:#444;
-		float:left;
-		margin:0 4px 0 0;
-		padding:0 0 8px;
-	}
-
-	form li div.left
-	{
-		display:inline;
-		float:left;
-		width:48%;
-	}
-
-	form li div.right
-	{
-		display:inline;
-		float:right;
-		width:48%;
-	}
-
-	form li div.left .medium
-	{
-		width:100%;
-	}
-
-	form li div.right .medium
-	{
-		width:100%;
-	}
-
-	form ul
-	{
-		font-size:100%;
-		list-style-type:none;
-		margin:0;
-		padding:0;
-		width:100%;
-	}
-
-	form li div label
-	{
-		clear:both;
-		color:#444;
-		display:block;
-		font-size:9px;
-		line-height:9px;
-		margin:0;
-		padding-top:3px;
-	}
-
-	form li span label
-	{
-		clear:both;
-		color:#444;
-		display:block;
-		font-size:9px;
-		line-height:9px;
-		margin:0;
-		padding-top:3px;
-	}
-
-	form li
-	{
-		display:block;
-		margin:0;
-		padding:4px 5px 2px 9px;
-		position:relative;
-	}
-
-	form li:after
-	{
-		clear:both;
-		content:".";
-		display:block;
-		height:0;
-		visibility:hidden;
-	}
-	
-	* html form li
-	{
-		height:1%;
-	}
-	form ul li.first
-	{
-		border-top:none !important;
-		margin-top:0 !important;
-		padding-top:0 !important;
-	}
-	**** Inputs and Labels ****/
-	label.description
-	{
-		border:none;
-		color:#222;
-		display:block;
-		font-size:95%;
-		font-weight:700;
-		line-height:150%;
-		padding:0 0 1px;
-	}
-
-	span.symbol
-	{
-		font-size:115%;
-		line-height:130%;
-	}
-
-	input.text
-	{
-		background:#fff;
-		border-bottom:1px solid #ddd;
-		border-left:1px solid #c3c3c3;
-		border-right:1px solid #c3c3c3;
-		border-top:1px solid #7c7c7c;
-		color:#333;
-		font-size:100%;
-		margin:0;
-		padding:2px 0;
-	}
-	extarea.textarea
-	{
-		background:#fff url(../../../images/shadow.gif) repeat-x top;
-		border-bottom:1px solid #ddd;
-		border-left:1px solid #c3c3c3;
-		border-right:1px solid #c3c3c3;
-		border-top:1px solid #7c7c7c;
-		color:#333;
-		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-		font-size:100%;
-		margin:0;
-		width:99%;
-	}
-
-	select.select
-	{
-		color:#333;
-		font-size:100%;
-		margin:1px 0;
-		padding:1px 0 0;
-		background:#fff url(../../../images/shadow.gif) repeat-x top;
-		border-bottom:1px solid #ddd;
-		border-left:1px solid #c3c3c3;
-		border-right:1px solid #c3c3c3;
-		border-top:1px solid #7c7c7c;
-	}
-
-	input.small
-	{
-		width:25%;
-	}
-
-	select.small
-	{
-		width:25%;
-	}
-
-	input.medium
-	{
-		width:50%;
-	}
-
-	select.medium
-	{
-		width:50%;
-	}
-
-	input.large
-	{
-		width:99%;
-	}
-
-
-	textarea.medium
-	{
-		height:10em;
-		width:90%;
-	}
-
-	label.choice
-	{
-		color:#444;
-		display:block;
-		font-size:100%;
-		line-height:1.4em;
-		margin:-1.55em 0 0 25px;
-		padding:4px 0 5px;
-		width:90%;
-	}
-	
-	.sub_label{
-		font-size:100%;		
-	}
-
-	#control {
-
-		width: 50%;
-		float:left;
-	}
-	
-	#draw_area {
-		background-color: #E8E8EE;
-		width: 50%;
-		float:right;
-
-
-	}
-    </style>
+    
+    <link rel="stylesheet" type="text/css" href="vizen.css" />
 
     <script src="http://d3js.org/d3.v3.min.js"></script>
 
@@ -245,7 +13,42 @@
 
     <script>
     var url = 'http://localhost:7474/db/data/cypher';
+    
+    function build_query(mode) {
+        var query = 'START ';
+
+        // define starting nodes
+        if (mode == 'noun_state'){
+            query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:stats(term="' + $('#statement1').val()  +'")\n';
+        } else if (mode == 'noun_noun'){
+            query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:nouns(word="' + $('#noun2').val() +'")\n';
+        } else if (mode == 'state_state'){
+            query += 'n=node:stats(term="'+ $('#statement1').val()  +'"),m=node:stats(term="'+ $('#statement2').val()  +'")\n';
+        }
+        // set algorithm and path length
+        if ($('#allshorttest').is(':checked')){
+            query += 'MATCH p=allShortestPaths((n)-[*..' + $('#max_length').val() +']->(m))\n';
+        } else {
+            query += 'MATCH p=shortestPath((n)-[*..' + $('#max_length').val() +']->(m))\n';
+        }
+
+        query += 'RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,\n';
+        query += 'EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,\n';
+        query += 'EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels, ';
+        query += 'p LIMIT ' + $('#max_path').val() + ';'
+
+        $('#query_input').val(query);
+        return query;
+        console.log(query); 
+    } 
     </script>
+
+START n=node:nouns(word="freedom"),m=node:stats(term="{ball} may hit {___}")
+Match p=allShortestPaths((n)-[*..4]->(m))
+RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,
+EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,
+EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels,p LIMIT 10;</textarea> 
+
 
 </head>
 <body>
@@ -263,51 +66,47 @@
                 <li id="li_1" >
     <label class="description" for="element_1">Nouns </label>
     <span>
-        <input id="noun1" name= "noun1" class="element text" maxlength="255" size="8" value=""/>
+        <input id="noun1" name= "noun1" class="element text" maxlength="255" size="20" value="house"/>
         <label class="sub_label">Noun1</label>
     </span>
     <span>
-        <input id="noun2" name= "noun2" class="element text" maxlength="255" size="14" value=""/>
+        <input id="noun2" name= "noun2" class="element text" maxlength="255" size="20" value="ball"/>
         <label class="sub_label">Noun2</label>
     </span>
     </li>       <li id="li_2" >
     <label class="description" for="element_2">Statements
 </label>
     <span>
-        <input id="statement1" name= "statement1" class="element text" maxlength="255" size="8" value=""/>
+        <input id="statement1" name= "statement1" class="element text" maxlength="255" size="20" value="{dog} may bite {___}"/>
         <label class="sub_label">Statement1</label>
     </span>
     <span>
-        <input id="statement2" name= "statement2" class="element text" maxlength="255" size="14" value=""/>
+        <input id="statement2" name= "statement2" class="element text" maxlength="255" size="20" value="{ball} may hit {___}"/>
         <label class="sub_label">Statement2</label>
     </span> 
     </li>       <li id="li_7" >
     <label class="description" for="element_7">Algorithm</label>
     <span>
-        <input id="element_7_1" name="element_7" class="element radio" type="radio" value="1" />
-<label class="choice" for="element_7_1">shortestPath</label>
-<input id="element_7_2" name="element_7" class="element radio" type="radio" value="2" checked="checked"/>
-<label class="choice" for="element_7_2">allShortestPath</label>
+    <input id="shortest" name="element_7" class="element radio" type="radio" value="1" />
+    <label class="choice" for="element_7_1">shortestPath</label>
+    <input id="allshorttest" name="element_7" class="element radio" type="radio" value="2" checked="checked"/>
+    <label class="choice" for="element_7_2">allShortestPath</label>
 
     </span> 
     </li>       <li id="li_5" >
     <label class="description" for="element_5">max path lenght </label>
     <div>
-        <input id="element_5" name="element_5" class="element text small" type="text" maxlength="255" value=""/> 
+        <input id="max_length" name="element_5" class="element text small" type="text" maxlength="255" value="5"/> 
     </div> 
     </li>       <li id="li_6" >
     <label class="description" for="element_6">max path number returned </label>
     <div>
-        <input id="element_6" name="element_6" class="element text small" type="text" maxlength="255" value=""/> 
+        <input id="max_path" name="element_6" class="element text small" type="text" maxlength="255" value="100"/> 
     </div> 
     </li>       <li id="li_3" >
     <label class="description" for="element_3">Neo4j Query </label>
     <div>
-        <textarea id="query_input" name="query_input" class="element textarea medium">
-START n=node:nouns(word="freedom"),m=node:stats(term="{ball} may hit {___}") Match p=allShortestPaths((n)-[*..4]->(m))
-RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,
-EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,
-EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels,p LIMIT 10;</textarea> 
+        <textarea id="query_input" name="query_input" class="element textarea medium">query</textarea> 
     </div> 
     </li>       <li id="li_4" >
     <label class="description" for="element_4">Results </label>
@@ -327,8 +126,14 @@ RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] )
 EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,
 EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels,p LIMIT 10;
 </textarea>-->
-<input type="button" name="send_query" value="query"
-  onclick="query_db(url,$('#query_input').val());">
+<input type="button" name="send_query" value="query noun1 state1"
+  onclick="query_db(url,build_query('noun_state'));" />
+
+<input type="button" name="send_noun" value="query noun1 noun2"
+  onclick="query_db(url,build_query('noun_noun'));" />
+
+<input type="button" name="send_stat" value="query state1 state2"
+  onclick="query_db(url,build_query('state_state'));" />
 </p>
 </form>
 
