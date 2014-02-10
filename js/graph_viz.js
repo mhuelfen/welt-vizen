@@ -9,11 +9,12 @@ var mouseDown = 0;
 var max_stroke_width = 5;
 var min_stroke_width = 2;
 var stroke_range = max_stroke_width - min_stroke_width;
-var max_cos_dist = 0.88;
-var min_cos_dist = 0.65;
+var max_cos_dist = 0.65;
+var min_cos_dist = 0.88;
 
-var max_pmi = 0;
-var min_pmi = 1;
+var max_pmi = 0.7;
+var min_pmi = 0.1;
+
 
 
 function draw_legend(svg, legend_content, rel_types) {
@@ -42,7 +43,7 @@ function draw_legend(svg, legend_content, rel_types) {
         .style("stroke", function (d) {
             //          var color = color_hash[dataset.indexOf(d)][1];
             var color = legend_content[d].color;
-            console.log(d);
+            // console.log(d);
             return color;
         });
 
@@ -80,7 +81,7 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
         .links(relations_for_viz)
         .size([width, height])
         .linkDistance(140)
-        .charge(-1000)
+        .charge(-400)
         .on("tick", tick)
         .start();
 
@@ -136,7 +137,7 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
         .enter().append("line")
         .attr("class", "link")
         .style("stroke", function (d) {
-            console.log("line", d.type)
+            // console.log("line", d.type)
             return rel_colors[d.type].color;
 
         })
@@ -144,15 +145,16 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
             if (d.type == "SIM_NOUN" || d.type == "SIM_STAT") {
                 // calc how much of stroke width range is used
                 var percent = (d.cos_dist - min_cos_dist) / (max_cos_dist - min_cos_dist);
-                console.log(d, d.cos_dist);
-                console.log("p", percent, "calc", d.cos_dist, min_cos_dist, "/", max_cos_dist, min_cos_dist);
-                console.log("w", min_stroke_width + stroke_range * percent);
+//                console.log(d,"cos_stroke", min_stroke_width + stroke_range * percent, "p",percent, "cos_dist", d.cos_dist)
                 return min_stroke_width + stroke_range * percent;
             } else if (d.type == "IN_STATE") {
                 var percent = (d.pmi - min_pmi) / (max_pmi - min_pmi);
-                console.log(d,"pmi_stroke",min_stroke_width + stroke_range * percent, "p",percent)
+//                console.log(d,"pmi_stroke",min_stroke_width + stroke_range * percent, "p",percent, "pmi", d.pmi)
                 return min_stroke_width + stroke_range * percent;
 
+            } else {
+                // default stroke for rels without connection strength in mid of the stroke range
+                return stroke_range / 2 + min_stroke_width;
             }
         })
         .attr("marker-end", function (d) {
@@ -233,7 +235,6 @@ d3.selection.prototype.moveToBack = function () {
 
 function node_mouseover() {
     if (!mouseDown) {
-        console.log("mouse", mouseDown);
         d3.select(this).select("circle").transition()
             .duration(750)
             .attr("r", 16);
