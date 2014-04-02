@@ -2,6 +2,8 @@
 <meta charset="utf-8">
 <head>
     
+	<title>Weltvissualisation</title>
+	
     <link rel="stylesheet" type="text/css" href="vizen.css" />
 
     <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -14,6 +16,48 @@
     <script>
     var url = 'http://localhost:7474/db/data/cypher';
     
+	var json;
+	var copa_question;
+	function load_json_to_ui(path){
+        json = $.getJSON(path);
+		
+		// combobox for question numbers
+		var cb_quest = document.getElementById('cb_questions');
+		
+		// read questions
+	    $.getJSON(path,function(result){
+          console.log(result); 
+	      $.each(result.questions, function(num, field){
+            console.log("q",num,field); 
+
+
+		    var el = document.createElement("option");
+		    el.textContent = num + ": " + field.premise_text;
+		    el.value = num;
+			
+		    cb_quest.appendChild(el);
+
+	      });
+	    });
+		  
+		  
+		// console.log("JSON",json); 
+	// 
+	// 	console.log(json.responseJSON.questions);
+	// 	copa_questions = json.responseJSON.questions;
+	// 	console.log("Quests",copa_question); 
+	// 	var cb_quest = document.getElementById('cb_questions');
+	// 
+	// 	for(var i = 0; i < copa_question.length; i++) {
+	// 	    var profile = copa_questions[i],
+	// 	        opt = document.createElement("option");
+	// 
+	// 	    opt.id = profile.id;
+	// 	    opt.value = profile.name;
+	// 	    cb_quest.appendChild(opt);
+	// 	}
+	}
+	
     function build_query(mode) {
         var query = 'START ';
 
@@ -40,7 +84,13 @@
         $('#query_input').val(query);
         return query;
         console.log(query); 
-    } 
+    }
+	
+	$( document ).ready(function() {
+      load_json_to_ui("data/test_quest.json");
+	});
+
+
     </script>
 
 
@@ -49,17 +99,70 @@
 
 
 <div id="control">
-<h1>Weltvissualisation Demo</h1>
+<!-- <h1>Weltvissualisation Demo</h1> -->
 <div id="form_container">
 
     <form id="form_787881" class="appnitro"  method="post" action="">
                 <div class="form_description">
     </div>                      
-        <ul >
-        
+        <ul >        
                 <li id="li_1" >
-    <label class="description" for="element_1">Nouns </label>
-    <span>
+
+    <label >COPA Question</label>
+	
+    <select id ="cb_questions">
+    </select>
+    <hr>
+    <label class="description">Premise:</label>
+    <label >I poured water on my sleeping friend.</label>
+	
+    <select id ="premise_nouns">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+    <select id ="premise_stats">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+    <hr>
+    <label class="description">Alternative1:</label>
+    <label >I poured water on my sleeping friend.</label>
+	
+    <select id ="alternative1_nouns">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+    <select id ="alternative1_stats">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+    <hr>
+    <label class="description">Alternative2:</label>
+	    <label >I poured water on my sleeping friend.</label>
+	
+    <select id ="alternative2_nouns">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+    <select id ="alternative2_stats">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+
+    <hr>
+    <!-- <span>
         <input id="noun1" name= "noun1" class="element text" maxlength="255" size="20" value="house"/>
         <label class="sub_label">Noun1</label>
     </span>
@@ -77,7 +180,30 @@
     <span>
         <input id="statement2" name= "statement2" class="element text" maxlength="255" size="20" value="{ball} may hit {___}"/>
         <label class="sub_label">Statement2</label>
-    </span> 
+    </span>  -->
+		
+<!-- controls -->
+    <label class="description">Premise - Alternative1:</label>
+		<input type="button" name="send_query" value="query noun1 state1"
+		onclick="query_db(url,build_query('noun_state'));" />
+
+		<input type="button" name="send_noun" value="query noun1 noun2"
+		onclick="query_db(url,build_query('noun_noun'));" />
+
+		<input type="button" name="send_stat" value="query state1 state2"
+		onclick="query_db(url,build_query('state_state'));" />
+    <hr>		
+	 <label class="description">Premise - Alternative2:</label>
+		<input type="button" name="send_query" value="query noun1 state1"
+		onclick="query_db(url,build_query('noun_state'));" />
+
+		<input type="button" name="send_noun" value="query noun1 noun2"
+		onclick="query_db(url,build_query('noun_noun'));" />
+
+		<input type="button" name="send_stat" value="query state1 state2"
+		onclick="query_db(url,build_query('state_state'));" />		
+		
+		
     </li>       <li id="li_7" >
     <label class="description" for="element_7">Algorithm</label>
     <span>
@@ -120,14 +246,7 @@ RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] )
 EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,
 EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels,p LIMIT 10;
 </textarea>-->
-<input type="button" name="send_query" value="query noun1 state1"
-  onclick="query_db(url,build_query('noun_state'));" />
 
-<input type="button" name="send_noun" value="query noun1 noun2"
-  onclick="query_db(url,build_query('noun_noun'));" />
-
-<input type="button" name="send_stat" value="query state1 state2"
-  onclick="query_db(url,build_query('state_state'));" />
 </p>
 </form>
 
