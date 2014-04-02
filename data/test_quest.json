@@ -1,0 +1,65 @@
+{
+    "questions": {
+        "6": {
+            "type": "cause",
+            "premise_text": "The politician lost the election.",
+            "premise_nouns": [
+                "politician",
+                "election"
+            ],
+            "premise_stats": [
+                "{someone} may lose {___}",
+                "{person} may lose {___}",
+                "{people} may lose {___}"
+            ],
+            "alt1_text": " He ran negative campaign ads.",
+            "alt1_nouns": [
+                "campaign",
+                "ad"
+            ],
+            "alt1_stats": [
+                "{{someone} may run {___}",
+                "{person} may run {___}",
+                "{people} may run {___}"
+            ],
+            "alt2_text": "No one voted for him.",
+            "alt2_nouns": [
+                "election"
+            ],
+            "alt2_stats": [
+                "{___} may vote for {someone}",
+                "{someone} may vote for {___}"
+            ]
+        },
+        "15": {
+            "type": "result",
+            "premise_text": "I poured water on my sleeping friend.",
+            "premise_nouns": [
+                "friend",
+                "water"
+            ],
+            "premise_stats": [
+                "{___} may sleep",
+                "{someone} may sleep {___}",
+                "{something} may pour on {___}",
+                "{___} may pour {something}",
+                "{someone} may pour {___}"
+            ],
+            "alt1_text": "My friend awoke.",
+            "alt1_nouns": [
+                "friend"
+            ],
+            "alt1_stats": [
+                "{___} may awake",
+                "{someone} may awake {___}"
+            ],
+            "alt2_text": "My friend snored.",
+            "alt2_nouns": [
+                "friend"
+            ],
+            "alt2_stats": [
+                "{___} may snore"
+            ]
+        }
+    }
+}
