@@ -10,81 +10,13 @@
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
+    <script  src="js/interface.js"></script>
     <script  src="js/graph_viz.js"></script>
     <script  src="js/query_neo4j.js"></script>
 
+   
     <script>
-    var url = 'http://localhost:7474/db/data/cypher';
-    
-	var json;
-	var copa_question;
-	function load_json_to_ui(path){
-        json = $.getJSON(path);
-		
-		// combobox for question numbers
-		var cb_quest = document.getElementById('cb_questions');
-		
-		// read questions
-	    $.getJSON(path,function(result){
-          console.log(result); 
-	      $.each(result.questions, function(num, field){
-            console.log("q",num,field); 
-
-
-		    var el = document.createElement("option");
-		    el.textContent = num + ": " + field.premise_text;
-		    el.value = num;
-			
-		    cb_quest.appendChild(el);
-
-	      });
-	    });
-		  
-		  
-		// console.log("JSON",json); 
-	// 
-	// 	console.log(json.responseJSON.questions);
-	// 	copa_questions = json.responseJSON.questions;
-	// 	console.log("Quests",copa_question); 
-	// 	var cb_quest = document.getElementById('cb_questions');
-	// 
-	// 	for(var i = 0; i < copa_question.length; i++) {
-	// 	    var profile = copa_questions[i],
-	// 	        opt = document.createElement("option");
-	// 
-	// 	    opt.id = profile.id;
-	// 	    opt.value = profile.name;
-	// 	    cb_quest.appendChild(opt);
-	// 	}
-	}
-	
-    function build_query(mode) {
-        var query = 'START ';
-
-        // define starting nodes
-        if (mode == 'noun_state'){
-            query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:stats(term="' + $('#statement1').val()  +'")\n';
-        } else if (mode == 'noun_noun'){
-            query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:nouns(word="' + $('#noun2').val() +'")\n';
-        } else if (mode == 'state_state'){
-            query += 'n=node:stats(term="'+ $('#statement1').val()  +'"),m=node:stats(term="'+ $('#statement2').val()  +'")\n';
-        }
-        // set algorithm and path length
-        if ($('#allshorttest').is(':checked')){
-            query += 'MATCH p=allShortestPaths((n)-[*..' + $('#max_length').val() +']->(m))\n';
-        } else {
-            query += 'MATCH p=shortestPath((n)-[*..' + $('#max_length').val() +']->(m))\n';
-        }
-
-        query += 'RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,\n';
-        query += 'EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,\n';
-        query += 'EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels, ';
-        query += 'p LIMIT ' + $('#max_path').val() + ';'
-
-        $('#query_input').val(query);
-        return query;
-        console.log(query); 
-    }
+	var url = 'http://localhost:7474/db/data/cypher';
 	
 	$( document ).ready(function() {
       load_json_to_ui("data/test_quest.json");
@@ -110,56 +42,25 @@
 
     <label >COPA Question</label>
 	
-    <select id ="cb_questions">
-    </select>
+    <select id ="cb_questions" onchange="update_cbs()" ></select>
     <hr>
     <label class="description">Premise:</label>
     <label >I poured water on my sleeping friend.</label>
 	
-    <select id ="premise_nouns">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
-    </select>
-    <select id ="premise_stats">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
-    </select>
+    <select id ="premise_nouns"></select>
+    <select id ="premise_stats"></select>
     <hr>
     <label class="description">Alternative1:</label>
     <label >I poured water on my sleeping friend.</label>
 	
-    <select id ="alternative1_nouns">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
-    </select>
-    <select id ="alternative1_stats">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
-    </select>
+    <select id ="alternative1_nouns"></select>
+    <select id ="alternative1_stats"></select>
     <hr>
     <label class="description">Alternative2:</label>
 	    <label >I poured water on my sleeping friend.</label>
 	
-    <select id ="alternative2_nouns">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
-    </select>
-    <select id ="alternative2_stats">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
-    </select>
+    <select id ="alternative2_nouns"></select>
+    <select id ="alternative2_stats"></select>
 
     <hr>
     <!-- <span>
