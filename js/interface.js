@@ -74,18 +74,28 @@ function load_quest_entities(quest_num){
 }
 
 
-function build_copa_query(mode) {
+function build_copa_query(cb_start,cb_end) {
+	// cb_start combobox with start entity
+	// cb_end combobox with end entity
     var query = 'START ';
 
-    // define starting nodes
-    if (mode == 'noun_state'){
-        query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:stats(term="' + $('#statement1').val()  +'")\n';
-    } else if (mode == 'noun_noun'){
-        query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:nouns(word="' + $('#noun2').val() +'")\n';
-    } else if (mode == 'state_state'){
-        query += 'n=node:stats(term="'+ $('#statement1').val()  +'"),m=node:stats(term="'+ $('#statement2').val()  +'")\n';
-    }
-	
+
+	console.log($('#'+ cb_start).text());
+	// if (cb_start.split('_')[1] == nouns){
+	// 	
+	// }
+	 query += 'n=node:' + cb_start.split("_")[1] + '(' + (cb_start.split("_")[1] == 'nouns' ? 'word' : 'term') + '="' + $('#'+ cb_start + ' option:selected').text() +  '" ),'
+	 query += 'm=node:' + cb_end.split("_")[1] + '(' + (cb_end.split("_")[1] == 'nouns' ? 'word' : 'term') + '="' + $('#'+ cb_end + ' option:selected').text() + '")\n'
+	 
+    // // define starting nodes
+    // if (mode == 'noun_state'){
+    //     query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:stats(term="' + $('#statement1').val()  +'")\n';
+    // } else if (mode == 'noun_noun'){
+    //     query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:nouns(word="' + $('#noun2').val() +'")\n';
+    // } else if (mode == 'state_state'){
+    //     query += 'n=node:stats(term="'+ $('#statement1').val()  +'"),m=node:stats(term="'+ $('#statement2').val()  +'")\n';
+    // }
+    // 	
 	
     // set algorithm and path length
     if ($('#allshorttest').is(':checked')){

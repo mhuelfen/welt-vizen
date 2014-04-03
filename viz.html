@@ -85,24 +85,24 @@
 		
 <!-- controls -->
     <label class="description">Premise - Alternative1:</label>
-		<input type="button" name="send_query" value="query noun1 state1"
-		onclick="query_db(url,build_copa_query('noun_state'));" />
+		<input type="button" name="send_query" value="P noun -> A1 state"
+		onclick="query_db(url,build_copa_query('premise_nouns','alternative1_stats'));" />
 
-		<input type="button" name="send_noun" value="query noun1 noun2"
-		onclick="query_db(url,build_copa_query('noun_noun'));" />
+		<input type="button" name="send_noun" value="P noun -> A1 noun"
+		onclick="query_db(url,build_copa_query('premise_nouns','alternative1_nouns'));" />
 
-		<input type="button" name="send_stat" value="query state1 state2"
-		onclick="query_db(url,build_copa_query('state_state'));" />
+		<input type="button" name="send_stat" value="P state -> A1 state"
+		onclick="query_db(url,build_copa_query('premise_stats','alternative1_stats'));" />
     <hr>		
 	 <label class="description">Premise - Alternative2:</label>
-		<input type="button" name="send_query" value="query noun1 state1"
-		onclick="query_db(url,build_copa_query('noun_state'));" />
+		<input type="button" name="send_query" value="P noun -> A2 state"
+		onclick="query_db(url,build_copa_query('premise_nouns','alternative2_stats'));" />
 
-		<input type="button" name="send_noun" value="query noun1 noun2"
-		onclick="query_db(url,build_copa_query('noun_noun'));" />
+		<input type="button" name="send_noun" value="P noun -> A2 noun"
+		onclick="query_db(url,build_copa_query('premise_nouns','alternative2_nouns'));" />
 
-		<input type="button" name="send_stat" value="query state1 state2"
-		onclick="query_db(url,build_copa_query('state_state'));" />		
+		<input type="button" name="send_stat" value="P state -> A2 state"
+		onclick="query_db(url,build_copa_query('premise_stats','alternative2_stats'));" />		
 		
 		
     </li>       <li id="li_7" >
