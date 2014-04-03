@@ -12,10 +12,8 @@ function load_json_to_ui(path){
 	
 	// read questions
     $.getJSON(path,function(result){
-      console.log(result);
 	  copa_question = result.questions;
       $.each(copa_question, function(num, field){
-        console.log("q",num,field); 
 	    var el = document.createElement("option");
 	    el.textContent = num + ": " + field.premise_text;
 	    el.value = num;	
@@ -44,6 +42,14 @@ function add_option(cb,num, field){
 }
  
 function load_quest_entities(quest_num){
+
+	// questions texts
+    $("#l_premise").text(copa_question[quest_num].premise_text);
+    $("#l_alternative1").text(copa_question[quest_num].alt1_text);
+    $("#l_alternative2").text(copa_question[quest_num].alt2_text);
+
+	// comboboxes
+
 	//premise nouns
     $("#premise_nouns").empty();
    	$.each(copa_question[quest_num].premise_nouns, function(num, field){
@@ -79,24 +85,11 @@ function build_copa_query(cb_start,cb_end) {
 	// cb_end combobox with end entity
     var query = 'START ';
 
-
-	console.log($('#'+ cb_start).text());
-	// if (cb_start.split('_')[1] == nouns){
-	// 	
-	// }
+	// start node
 	 query += 'n=node:' + cb_start.split("_")[1] + '(' + (cb_start.split("_")[1] == 'nouns' ? 'word' : 'term') + '="' + $('#'+ cb_start + ' option:selected').text() +  '" ),'
+	// end node
 	 query += 'm=node:' + cb_end.split("_")[1] + '(' + (cb_end.split("_")[1] == 'nouns' ? 'word' : 'term') + '="' + $('#'+ cb_end + ' option:selected').text() + '")\n'
-	 
-    // // define starting nodes
-    // if (mode == 'noun_state'){
-    //     query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:stats(term="' + $('#statement1').val()  +'")\n';
-    // } else if (mode == 'noun_noun'){
-    //     query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:nouns(word="' + $('#noun2').val() +'")\n';
-    // } else if (mode == 'state_state'){
-    //     query += 'n=node:stats(term="'+ $('#statement1').val()  +'"),m=node:stats(term="'+ $('#statement2').val()  +'")\n';
-    // }
-    // 	
-	
+	 	
     // set algorithm and path length
     if ($('#allshorttest').is(':checked')){
         query += 'MATCH p=allShortestPaths((n)-[*..' + $('#max_length').val() +']->(m))\n';
@@ -111,7 +104,14 @@ function build_copa_query(cb_start,cb_end) {
 
     $('#query_input').val(query);
     return query;
-    console.log(query); 
+}
+
+function highlight_query_interface(cb_start,cb_end){
+	// reset all comboboxes and buttons
+	// $('.query_cb', '.query_control').
+	
+
+
 }
 
 function build_custom_query(mode) {
@@ -141,7 +141,6 @@ function build_custom_query(mode) {
 
     $('#query_input').val(query);
     return query;
-    console.log(query); 
 }
 
 // $("#cb_questions").change(function () {
