@@ -81,6 +81,9 @@ function load_quest_entities(quest_num){
 
 
 function build_copa_query(cb_start,cb_end) {
+	// highlight interface elements connected to query
+    highlight_query_interface(cb_start,cb_end)
+
 	// cb_start combobox with start entity
 	// cb_end combobox with end entity
     var query = 'START ';
@@ -108,10 +111,14 @@ function build_copa_query(cb_start,cb_end) {
 
 function highlight_query_interface(cb_start,cb_end){
 	// reset all comboboxes and buttons
-	// $('.query_cb', '.query_control').
-	
+	$('.query_cb, .query_control').css("background-color", "white");
 
+    // cbs
+	$('#' + cb_start).css("background-color", "#ff756b");
+	$('#' + cb_end).css("background-color", "#ff756b");
 
+	// pressed button
+	$('#b_' + cb_start + '__' + cb_end).css("background-color", "#ff756b");
 }
 
 function build_custom_query(mode) {
@@ -125,7 +132,6 @@ function build_custom_query(mode) {
     } else if (mode == 'state_state'){
         query += 'n=node:stats(term="'+ $('#statement1').val()  +'"),m=node:stats(term="'+ $('#statement2').val()  +'")\n';
     }
-	
 	
     // set algorithm and path length
     if ($('#allshorttest').is(':checked')){
@@ -142,8 +148,6 @@ function build_custom_query(mode) {
     $('#query_input').val(query);
     return query;
 }
-
-// $("#cb_questions").change(function () {
 
 function update_cbs(){
     $( "#cb_questions option:selected" ).each(function() {

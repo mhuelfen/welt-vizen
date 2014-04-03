@@ -45,22 +45,22 @@
     <select id ="cb_questions" onchange="update_cbs()" ></select>
     <hr>
     <label class="description">Premise:</label>
-    <label >I poured water on my sleeping friend.</label>
+    <label id='l_premise'>Premise text</label>
 	
-    <select id ="premise_nouns"></select>
-    <select id ="premise_stats"></select>
+    <select id ="premise_nouns" class='query_cb' ></select>
+    <select id ="premise_stats" class='query_cb' ></select>
     <hr>
     <label class="description">Alternative1:</label>
-    <label >I poured water on my sleeping friend.</label>
+    <label id='l_alternative1'>Alternative1 text</label>
 	
-    <select id ="alternative1_nouns"></select>
-    <select id ="alternative1_stats"></select>
+    <select id ="alternative1_nouns" class='query_cb' ></select>
+    <select id ="alternative1_stats" class='query_cb' ></select>
     <hr>
     <label class="description">Alternative2:</label>
-	    <label >I poured water on my sleeping friend.</label>
+    <label id='l_alternative2'>Alternative2 text</label>
 	
-    <select id ="alternative2_nouns"></select>
-    <select id ="alternative2_stats"></select>
+    <select id ="alternative2_nouns" class='query_cb' ></select>
+    <select id ="alternative2_stats" class='query_cb' ></select>
 
     <hr>
     <!-- <span>
@@ -85,23 +85,23 @@
 		
 <!-- controls -->
     <label class="description">Premise - Alternative1:</label>
-		<input type="button" name="send_query" value="P noun -> A1 state"
+		<input type="button" id='b_premise_nouns__alternative1_stats' class='query_control' value="P noun -> A1 state"
 		onclick="query_db(url,build_copa_query('premise_nouns','alternative1_stats'));" />
 
-		<input type="button" name="send_noun" value="P noun -> A1 noun"
+		<input type="button" id='b_premise_nouns__alternative1_nouns' class='query_control' value="P noun -> A1 noun"
 		onclick="query_db(url,build_copa_query('premise_nouns','alternative1_nouns'));" />
 
-		<input type="button" name="send_stat" value="P state -> A1 state"
+		<input type="button" id='b_premise_stats__alternative1_stats' class='query_control' value="P state -> A1 state"
 		onclick="query_db(url,build_copa_query('premise_stats','alternative1_stats'));" />
     <hr>		
 	 <label class="description">Premise - Alternative2:</label>
-		<input type="button" name="send_query" value="P noun -> A2 state"
+		<input type="button" id='b_premise_nouns__alternative2_stats' class='query_control' value="P noun -> A2 state"
 		onclick="query_db(url,build_copa_query('premise_nouns','alternative2_stats'));" />
 
-		<input type="button" name="send_noun" value="P noun -> A2 noun"
+		<input type="button" id='b_premise_nouns__alternative2_nouns' class='query_control' value="P noun -> A2 noun"
 		onclick="query_db(url,build_copa_query('premise_nouns','alternative2_nouns'));" />
 
-		<input type="button" name="send_stat" value="P state -> A2 state"
+		<input type="button" id='b_premise_stats__alternative2_stats' class='query_control' value="P state -> A2 state"
 		onclick="query_db(url,build_copa_query('premise_stats','alternative2_stats'));" />		
 		
 		
@@ -130,7 +130,7 @@
         <textarea id="query_input" name="query_input" class="element textarea medium">Type Cypher Query</textarea> 
     </div>
 	
-	<input type="button" name="send_stat" value="Send custom query"
+	<input type="button" class='query_control' name="send_stat" value="Send custom query"
 		onclick='query_db(url,$("#query_input").val());' /> 
     </li>       <li id="li_4" >
     <label class="description" for="element_4">Results </label>
