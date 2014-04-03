@@ -30,7 +30,7 @@ function parse_results(data) {
     var paths_for_viz = [];
     var results = data.data;
     // console.log(data);
-    // console.log(results);
+    console.log(results);
 
     for (var i = 0; i < results.length; i++) {
 
