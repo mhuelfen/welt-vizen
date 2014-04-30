@@ -4,7 +4,7 @@ welt-vizen
 Visualisation the Reasongraph, a common sense reasoning network.
 
 ## Installation
-+ to setup Neo4j database and load with content follow the instructions of the weltmodell batch importer <https://github.com/mhuelfen/batch-import-weltmodell/blob/20/readme.md>
++ to setup Neo4j database and load content follow the instructions of the weltmodell batch importer <https://github.com/mhuelfen/batch-import-weltmodell/blob/20/readme.md>
 
 
 ## Running the visualisation
