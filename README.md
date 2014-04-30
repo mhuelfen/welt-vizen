@@ -1,6 +1,17 @@
 welt-vizen
 ==========
 
-Visualisation for querying the Weltwissen graph in a neo4j db
+Visualisation the Reasongraph, a common sense reasoning network.
 
-when neo4J server is running open viz.html
+## Installation
++ to setup Neo4j database and load with content follow the instructions of the weltmodell batch importer <https://github.com/mhuelfen/batch-import-weltmodell/blob/20/readme.md>
+
+
+## Running the visualisation
+1. go to neo4j folder
+2. start neo4j server  
+````bin/neo4j start````
+3. open welt-vizen/viz.html
+
+to shutdown neo4J Server use
+````bin/neo4j stop````
