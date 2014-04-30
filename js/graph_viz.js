@@ -18,55 +18,7 @@ var min_pmi = 0.1;
 
 
 function draw_legend(svg, legend_content, rel_types) {
-
-    var legend = svg
-    // var legend = svg.append("g")
-        // .attr("class", "legend")
-        // .attr("x", w - 65)
-        // .attr("y", 50)
-        // .attr("x", 100)
-        // .attr("y", 100)
-        // .attr("height", 10)
-        // .attr("width", 10)
-        // .attr('transform', 'translate(-20,50)')
-
-    var w = svg[0][0].clientWidth;
-
-	//     legend.selectAll('rect')
-	//         .data(rel_types)
-	//         .enter()
-	//         .append("rect")
-	//         .attr("x", w - 165)
-	//         .attr("y", function (d, i) {
-	//             return i * 20 + 5;
-	//         })
-	//         .attr("width", 20)
-	//         .attr("height", 1)
-	//         .style("stroke-width", 2)
-	//         .style("stroke", function (d) {
-	//             //          var color = color_hash[dataset.indexOf(d)][1];
-	//             var color = legend_content[d].color;
-	//             // console.log(d);
-	//             return color;
-	//         });
-	// 
-	// // legend texts
-	//     legend.selectAll('text')
-	//         .data(rel_types)
-	//         .enter()
-	//         .append("text")
-	//         .attr("x", w - 142)
-	//         .attr("y", function (d, i) {
-	//             return i * 20 + 9;
-	//         })
-	//         .text(function (d) {
-	//             var text = legend_content[d].text;
-	// 
-	//             //    var text = color_hash[dataset.indexOf(d)][0];
-	//             return text;
-	// 
-	//         });
-		
+			
 	var legendData = [
 	  { "cx": 10, "cy": 10, "radius": 0.1, "color" : "black","text" : "Edge Types (Relations)" },
 	  { "cx": 10, "cy": 20, "radius": 5, "color" : "green","text" : "<noun> in <statement>" },
@@ -178,6 +130,14 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
     // graph legend
     draw_legend(svg, rel_colors, rel_types);
 
+	// // curvy linksadd the links and the arrows
+	// var path = svg.append("svg:g").selectAll("path")
+	//     .data(force.links())
+	//   .enter().append("svg:path")
+	//     .attr("class", "link")
+	//     // .attr("marker-end", "url(#end)");
+    
+    
     var link = svg.selectAll(".link")
         .data(force.links())
         .enter().append("line")
@@ -208,6 +168,8 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
                 return "url(#arrowhead)";
         })
         .style("stroke-opacity", 0.5);
+
+
 
 
     var node = svg.selectAll(".node")
@@ -250,12 +212,38 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
             .attr("y2", function (d) {
                 return d.target.y;
             });
-
+    
         node
             .attr("transform", function (d) {
                 return "translate(" + d.x + "," + d.y + ")";
             });
     }
+	
+	// // curvy links
+//     function tick() {
+// 	    path.attr("d", function(d) {
+// 	        var dx = d.target.x - d.source.x,
+// 	            dy = d.target.y - d.source.y,
+// 	            dr = Math.sqrt(dx * dx + dy * dy);
+// 	        return "M" + 
+// 	            d.source.x + "," + 
+// 	            d.source.y + "A" + 
+// 	            dr + "," + dr + " 0 0,1 " + 
+// 	            d.target.x + "," + 
+// 	            d.target.y;
+// 	    });
+// 
+// 	    node
+// 	        .attr("transform", function(d) { 
+// 	            return "translate(" + d.x + "," + d.y + ")"; });
+//     }
+	
+	
+	
+	
+	
+	
+	
     // rels.forEach(function (d) {
     //     linkedByIndex[d.source.index + "," + d.target.index] = 1;
     // });
@@ -370,7 +358,6 @@ function isInPaths(node_id, path_ids) {
     });
     return inP;
 }
-
 
 $(document).mousedown(function () {
     ++mouseDown;
