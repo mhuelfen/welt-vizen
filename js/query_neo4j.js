@@ -29,8 +29,14 @@ function parse_results(data) {
     var relations_for_viz = [];
     var paths_for_viz = [];
     var results = data.data;
-    // console.log(data);
-    console.log(results);
+
+	// display found results info
+	update_results('Results found: '+results.length);
+
+
+
+    console.log("Data", data);
+    console.log("Results",results.length,results,results.length);
 
     for (var i = 0; i < results.length; i++) {
 
@@ -100,8 +106,9 @@ function parse_results(data) {
 	        }
 	        // console.log(path_nodes);
 	        paths.push(path_nodes);
+
 	    }
-	    // console.log(paths);
+	    console.log("paths",paths);
 
 
     // console.log('nodes:', nodes_from_query);

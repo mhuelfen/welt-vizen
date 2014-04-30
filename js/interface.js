@@ -154,3 +154,7 @@ function update_cbs(){
       load_quest_entities($( this ).val());
     });
 }
+
+function update_results(text){
+	    $("#text_results").val(text);
+}
