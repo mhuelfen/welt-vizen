@@ -38,6 +38,7 @@ function parse_results(data) {
     console.log("Data", data);
     console.log("Results",results.length,results,results.length);
 
+	$('#results').val(results.length + " paths found");
     for (var i = 0; i < results.length; i++) {
 
         // add noun nodes 
