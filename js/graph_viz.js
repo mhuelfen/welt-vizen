@@ -19,50 +19,96 @@ var min_pmi = 0.1;
 
 function draw_legend(svg, legend_content, rel_types) {
 
-    var legend = svg.append("g")
-        .attr("class", "legend")
-    //.attr("x", w - 65)
-    //.attr("y", 50)
-    .attr("height", 100)
-        .attr("width", 100)
-        .attr('transform', 'translate(-20,50)')
+    var legend = svg
+    // var legend = svg.append("g")
+        // .attr("class", "legend")
+        // .attr("x", w - 65)
+        // .attr("y", 50)
+        // .attr("x", 100)
+        // .attr("y", 100)
+        // .attr("height", 10)
+        // .attr("width", 10)
+        // .attr('transform', 'translate(-20,50)')
 
     var w = svg[0][0].clientWidth;
 
-    legend.selectAll('rect')
-        .data(rel_types)
-        .enter()
-        .append("rect")
-        .attr("x", w - 165)
-        .attr("y", function (d, i) {
-            return i * 20 + 5;
-        })
-        .attr("width", 20)
-        .attr("height", 1)
-        .style("stroke-width", 2)
-        .style("stroke", function (d) {
-            //          var color = color_hash[dataset.indexOf(d)][1];
-            var color = legend_content[d].color;
-            // console.log(d);
-            return color;
-        });
+	//     legend.selectAll('rect')
+	//         .data(rel_types)
+	//         .enter()
+	//         .append("rect")
+	//         .attr("x", w - 165)
+	//         .attr("y", function (d, i) {
+	//             return i * 20 + 5;
+	//         })
+	//         .attr("width", 20)
+	//         .attr("height", 1)
+	//         .style("stroke-width", 2)
+	//         .style("stroke", function (d) {
+	//             //          var color = color_hash[dataset.indexOf(d)][1];
+	//             var color = legend_content[d].color;
+	//             // console.log(d);
+	//             return color;
+	//         });
+	// 
+	// // legend texts
+	//     legend.selectAll('text')
+	//         .data(rel_types)
+	//         .enter()
+	//         .append("text")
+	//         .attr("x", w - 142)
+	//         .attr("y", function (d, i) {
+	//             return i * 20 + 9;
+	//         })
+	//         .text(function (d) {
+	//             var text = legend_content[d].text;
+	// 
+	//             //    var text = color_hash[dataset.indexOf(d)][0];
+	//             return text;
+	// 
+	//         });
+		
+	var legendData = [
+	  { "cx": 10, "cy": 10, "radius": 0.1, "color" : "black","text" : "Edge Types (Relations)" },
+	  { "cx": 10, "cy": 20, "radius": 5, "color" : "green","text" : "<noun> in <statement>" },
+	  { "cx": 10, "cy": 32, "radius": 5, "color" : "violet","text" : "<noun> may be <noun>" },
+	  { "cx": 10, "cy": 44, "radius": 5, "color" : "red","text" : "<noun> similar to <noun>" },
+	  { "cx": 10, "cy": 56, "radius": 5, "color" : "blue" ,"text" : "<statement> similar to <statement>" },
+	  { "cx": 10, "cy": 80, "radius": 0.1, "color" : "black","text" : "Node Types" },
+	  { "cx": 10, "cy": 92, "radius": 5, "color" : "red" ,"text" : "nouns" },
+  	  { "cx": 10, "cy": 104, "radius": 5, "color" : "blue" ,"text" : "statements" }];
 
 
-    legend.selectAll('text')
-        .data(rel_types)
-        .enter()
-        .append("text")
-        .attr("x", w - 142)
-        .attr("y", function (d, i) {
-            return i * 20 + 9;
-        })
-        .text(function (d) {
-            var text = legend_content[d].text;
+		//Create the SVG Viewport
+		var svgContainer = svg.append("svg");
 
-            //    var text = color_hash[dataset.indexOf(d)][0];
-            return text;
-        });
+		//Add circles to the svgContainer
+		var circles = svgContainer.selectAll("circle")
+		                           .data(legendData)
+		                           .enter()
+		                           .append("circle");
 
+		//Add the circle attributes
+		var circleAttributes = circles
+		                       .attr("cx", function (d) { return d.cx; })
+		                       .attr("cy", function (d) { return d.cy; })
+		                       .attr("r", function (d) { return d.radius; })
+		                       .style("fill", function (d) { return d.color; });
+
+		//Add the SVG Text Element to the svgContainer
+		var text = svgContainer.selectAll("text")
+		                        .data(legendData)
+		                        .enter()
+		                        .append("text");
+
+		//Add SVG Text Element Attributes
+		var textLabels = text
+		                 .attr("x", function(d) { return d.cx + 10; })
+		                 .attr("y", function(d) { return d.cy + 2.5; })
+		                 .text( function (d) { return d.text; })
+		                 .attr("font-family", "sans-serif")
+		                 .attr("font-size", "20px")
+		                 .attr("fill", "black");
+						 
 }
 
 function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
@@ -89,7 +135,7 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
     $('#graph_svg').remove();
 
     // make new graphic
-//    var svg = d3.select("body").append("svg")
+    //    var svg = d3.select("body").append("svg")
     var svg = d3.select("#draw_area").append("svg")
         .attr("width", width)
         .attr("height", height)
@@ -105,7 +151,7 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
             text: "noun may be"
         },
         "SIM_NOUN": {
-            color: "brown",
+            color: "red",
             text: "similar nouns"
         },
         "SIM_STAT": {
@@ -126,8 +172,8 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
         .attr("markerHeight", 3)
         .attr("orient", "auto")
         .append("path")
-//        .style("stroke-opacity", 0.5)
-        .attr("d", "M 0 0 L 10 5 L 0 10 z");
+    //        .style("stroke-opacity", 0.5)
+    .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
     // graph legend
     draw_legend(svg, rel_colors, rel_types);
@@ -145,11 +191,11 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
             if (d.type == "SIM_NOUN" || d.type == "SIM_STAT") {
                 // calc how much of stroke width range is used
                 var percent = (d.cos_dist - min_cos_dist) / (max_cos_dist - min_cos_dist);
-//                console.log(d,"cos_stroke", min_stroke_width + stroke_range * percent, "p",percent, "cos_dist", d.cos_dist)
+                //                console.log(d,"cos_stroke", min_stroke_width + stroke_range * percent, "p",percent, "cos_dist", d.cos_dist)
                 return min_stroke_width + stroke_range * percent;
             } else if (d.type == "IN_STATE") {
                 var percent = (d.pmi - min_pmi) / (max_pmi - min_pmi);
-//                console.log(d,"pmi_stroke",min_stroke_width + stroke_range * percent, "p",percent, "pmi", d.pmi)
+                //                console.log(d,"pmi_stroke",min_stroke_width + stroke_range * percent, "p",percent, "pmi", d.pmi)
                 return min_stroke_width + stroke_range * percent;
 
             } else {
@@ -161,7 +207,7 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
             if (!(d.type == "SIM_NOUN" || d.type == "SIM_STAT"))
                 return "url(#arrowhead)";
         })
-        .style("stroke-opacity",0.5);
+        .style("stroke-opacity", 0.5);
 
 
     var node = svg.selectAll(".node")
@@ -284,16 +330,19 @@ function node_mouseout() {
 
         // show all nodes
         d3.selectAll(".node")
+			.transition()
+			.duration(500)		
             .style("stroke-opacity", function (d) {
 
                 thisOpacity = 1;
-
                 this.setAttribute('fill-opacity', thisOpacity);
-
                 return thisOpacity;
             });
         //show all links
-        d3.selectAll(".link").style("stroke-opacity", 0.5);
+        d3.selectAll(".link")
+			.transition()
+			.duration(500)
+			.style("stroke-opacity", 0.5);
 
         // d3.select(this).moveToBack();
 

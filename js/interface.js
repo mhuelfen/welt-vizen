@@ -21,9 +21,7 @@ function load_json_to_ui(path){
 
       });
 	  
-	// TODO start with first
-	// load first question
-	load_quest_entities(6);
+	load_quest_entities(1);
     });
 
 }
