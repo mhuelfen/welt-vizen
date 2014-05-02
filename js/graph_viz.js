@@ -129,12 +129,11 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
 	// add links as lines and style depending on properties
     var link = svg.selectAll(".link")
         .data(force.links())
-        .enter().append("line")
+        .enter().append("path")
         .attr("class", "link")
         .style("stroke", function (d) {
             // console.log("line", d.type)
             return rel_colors[d.type].color;
-
         })
 		// thickness of line shows connection strength aka distributional semantics value
         .style("stroke-width", function (d) {
@@ -160,27 +159,49 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
         })
         .style("stroke-opacity", 0.5);
 
-	// place nodes and links on canvas
-    function tick() {
-        link
-            .attr("x1", function (d) {
-                return d.source.x;
-            })
-            .attr("y1", function (d) {
-                return d.source.y;
-            })
-            .attr("x2", function (d) {
-                return d.target.x;
-            })
-            .attr("y2", function (d) {
-                return d.target.y;
+        function tick() {
+            link.attr("d", function (d) {
+                var x1 = d.source.x,
+                    y1 = d.source.y,
+                    x2 = d.target.x,
+                    y2 = d.target.y,
+                    dx = x2 - x1,
+                    dy = y2 - y1,
+                    // Set dr to 0 for straight edges.
+                    // Set dr to Math.sqrt(dx * dx + dy * dy) for a simple curve.
+                    // Assuming a simple curve, decrease dr to space curves.
+                    // There's probably a better decay function that spaces things nice and evenly. 
+                    dr = Math.sqrt(dx * dx + dy * dy) - Math.sqrt(300 * (d.link_num * 3 - 1));
+
+                return "M" + x1 + "," + y1 + "A" + dr + "," + dr + " 0 0,1 " + x2 + "," + y2;
             });
-    
-        node
-            .attr("transform", function (d) {
+
+            node.attr("transform", function (d) {
                 return "translate(" + d.x + "," + d.y + ")";
             });
-    }	
+        }
+	
+	// // place nodes and links on canvas
+	//     function tick() {
+	//         link
+	//             .attr("x1", function (d) {
+	//                 return d.source.x;
+	//             })
+	//             .attr("y1", function (d) {
+	//                 return d.source.y;
+	//             })
+	//             .attr("x2", function (d) {
+	//                 return d.target.x;
+	//             })
+	//             .attr("y2", function (d) {
+	//                 return d.target.y;
+	//             });
+	//     
+	//         node
+	//             .attr("transform", function (d) {
+	//                 return "translate(" + d.x + "," + d.y + ")";
+	//             });
+	//     }	
 }
 
 /*
