@@ -1,0 +1,70 @@
+// evaluation code 
+
+// Copa Quesst structure
+// alt1_nouns: Array[2]
+// alt1_stats: Array[2]
+// alt1_text: "Many citizens relocated to the capitol."
+// alt2_nouns: Array[3]
+// alt2_stats: Array[3]
+// alt2_text: "Many citizens took refuge in other territories."
+// premise_nouns: Array[2]
+// premise_stats: Array[2]
+// premise_text: "Political violence broke out in the nation."
+
+/*
+* Get list of all possible query options.
+*/
+function get_all_query_options() {
+	// get two list for options: premise - alternative1, premise - alternative2
+	var query_options = {}
+    for (quest_num in copa_questions) {
+        if (copa_questions.hasOwnProperty(quest_num)) {
+			// all query options for this copa question
+			quest_options = {}
+			// for alternative 1
+			quest_options['alt1'] = all_premise_alt_options(copa_questions[quest_num],1);
+			// for alternative 2
+			quest_options['alt2'] = all_premise_alt_options(copa_questions[quest_num],2);
+			query_options[quest_num] = quest_options;
+        }
+    }
+	return query_options;	
+}
+
+/*
+* Gets all option for the combination of the premise and one alternative.
+*/
+function all_premise_alt_options(copa_quest,alt_num){
+	options = []
+	// get data for given alternative
+	alt_name = "alt" + alt_num;
+	alt_nouns = copa_quest[alt_name + "_nouns"]
+	alt_stats = copa_quest[alt_name + "_stats"]
+
+	prem_nouns = copa_quest['premise_nouns']
+	prem_stats = copa_quest['premise_stats']
+			
+	// make all p noun - a state
+	options = make_option_bundle(options,prem_nouns,alt_stats,'nouns','stats');
+	// make all a noun - p state
+	options = make_option_bundle(options,alt_nouns,prem_stats,'nouns','stats');
+	// make all p noun - a noun
+	options = make_option_bundle(options,prem_nouns,alt_nouns,'nouns','nouns');
+	// make all p state - a state
+	options = make_option_bundle(options,prem_stats,alt_stats,'stats','stats');
+	return options;
+}
+
+/*
+* Add all query options for one query mode e.g. noun noun.
+*/
+function make_option_bundle(options,contents1,contents2,type1,type2){
+	for(item1 in contents1){		
+		for(item2 in contents2){
+			options.push([contents1[item1],type1,contents2[item2],type2])
+			// console.log(options);
+		}
+	}    	
+	return options;
+}
+ 

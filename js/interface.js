@@ -151,34 +151,6 @@ function highlight_query_interface(cb_start,cb_end){
 	$('#b_' + cb_start + '__' + cb_end).css("background-color", "#ff756b");
 }
 
-function build_custom_query(mode) {
-    var query = 'START ';
-
-    // define starting nodes
-    if (mode == 'noun_state'){
-        query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:stats(term="' + $('#statement1').val()  +'")\n';
-    } else if (mode == 'noun_noun'){
-        query += 'n=node:nouns(word="' + $('#noun1').val() +  '" ),m=node:nouns(word="' + $('#noun2').val() +'")\n';
-    } else if (mode == 'state_state'){
-        query += 'n=node:stats(term="'+ $('#statement1').val()  +'"),m=node:stats(term="'+ $('#statement2').val()  +'")\n';
-    }
-	
-    // set algorithm and path length
-    if ($('#allshorttest').is(':checked')){
-        query += 'MATCH p=allShortestPaths((n)-[*..' + $('#max_length').val() +']->(m))\n';
-    } else {
-        query += 'MATCH p=shortestPath((n)-[*..' + $('#max_length').val() +']->(m))\n';
-    }
-
-    query += 'RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,\n';
-    query += 'EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,\n';
-    query += 'EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels, ';
-    query += 'p LIMIT ' + $('#max_path').val() + ';'
-
-    $('#query_input').val(query);
-    return query;
-}
-
 function update_cbs(){
     $( "#cb_questions option:selected" ).each(function() {
       load_quest_entities($( this ).val());
@@ -188,3 +160,5 @@ function update_cbs(){
 function update_results(text){
 	    $("#text_results").val(text);
 }
+
+

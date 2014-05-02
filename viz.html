@@ -13,7 +13,7 @@
     <script  src="js/interface.js"></script>
     <script  src="js/graph_viz.js"></script>
     <script  src="js/query_neo4j.js"></script>
-
+    <script  src="js/copa_eval.js"></script>
    
     <script>
 	var url = 'http://localhost:7474/db/data/cypher';
@@ -135,6 +135,11 @@
 	
 	<input type="button" class='query_control' name="send_stat" value="Send custom query"
 		onclick='query_db(url,$("#query_input").val());' /> 
+
+
+	<input type="button" class='query_control' name="send_stat" value="EVAL!"
+		onclick='get_all_query_options();' /> 
+		
     </li>       <li id="li_4" >
     <label class="description" for="element_4">Results </label>
     <div>
