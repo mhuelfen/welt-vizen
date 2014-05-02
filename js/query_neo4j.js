@@ -1,4 +1,3 @@
-
 function query_db(url, query) {
     var data = {
         "query": query,
@@ -24,23 +23,24 @@ function id_from_url(url) {
 }
 
 /*
-* Parse results from neo4J api for visualisation.
-*/
+ * Parse results from neo4J api for visualisation.
+ */
 function parse_results(data) {
 
     var nodes_from_query = [];
     var relations_for_viz = [];
     var paths_for_viz = [];
     var results = data.data;
-	var link_counts = {};
+    var link_counts = {};
+    var unique_links = {};
 
-	// display found results info
-	update_results('Results found: '+results.length);
+    // display found results info
+    update_results('Results found: ' + results.length);
 
-    console.log("Data", data);
-    console.log("Results",results.length,results,results.length);
+    // console.log("Data", data);
+    // console.log("Results", results.length, results, results.length);
 
-	$('#results').val(results.length + " paths found");
+    $('#results').val(results.length + " paths found");
     for (var i = 0; i < results.length; i++) {
 
         // add noun nodes 
@@ -65,68 +65,79 @@ function parse_results(data) {
         for (var rel = 0; rel < results[i][2].length; rel++) {
             var rel_data = results[i][2][rel];
 
-			var start_id = id_from_url(rel_data[2].start);
-			var end_id = id_from_url(rel_data[2].end);
+            var start_id = id_from_url(rel_data[2].start);
+            var end_id = id_from_url(rel_data[2].end);
+            var type = rel_data[1];
 
-			// count number of links
-			var rel_key = ""+ start_id +":"+ end_id;
-			console.log('s:',start_id, 'e:',end_id,'key:',rel_key, link_counts )
-			if(rel_key in link_counts){
-				link_counts[rel_key] = link_counts[rel_key] + 1
-			} else {
-				link_counts[rel_key] = 1				
-			}
-			
-            var relation = {
-                'source': start_id,
-                'target': end_id,
-                'type': rel_data[1],
-				'link_num' : link_counts[rel_key] 				
-            };			
-			
-            // get properties of relation
-            var rel_properties = results[i][2][rel][2].data;
-            for (attr in rel_properties) {
-                relation[attr] = rel_properties[attr];
+            // check if relation is already there to prevent double links in vizualisation
+            var rel_type_key = "" + start_id + ":" + type + ":" + end_id;
+			console.log('key',rel_type_key)
+			// only rels with different nodes or types
+			if (!unique_links.hasOwnProperty(rel_type_key)){
+                unique_links[rel_type_key] = true;
+				console.log('add',rel_type_key)
+                
+				// count number of links
+                var rel_key = "" + start_id + ":" + end_id;
+                console.log('s:', start_id, 'e:', end_id, 'key:', rel_key, link_counts)
+                if (link_counts.hasOwnProperty(rel_key)) {
+                    link_counts[rel_key] = link_counts[rel_key] + 1
+                } else {
+                    link_counts[rel_key] = 1
+                }
+
+                var relation = {
+                    'source': start_id,
+                    'target': end_id,
+                    'type': type,
+                    'link_num': link_counts[rel_key]
+                };
+
+                // get properties of relation
+                var rel_properties = results[i][2][rel][2].data;
+                for (attr in rel_properties) {
+                    relation[attr] = rel_properties[attr];
+                }
+				console.log("Rel",relation)
+                relations_for_viz.push(relation);
             }
-            relations_for_viz.push(relation);
         }
 
 
     }
-//     var paths = []
-//     // add path data	
-//     var path_nodes_urls;
-//     for (var i = 0; i < results.length; i++) {
-// //        console.log("PATH", results[i][3].nodes);
-//         path_nodes = results[i][3].nodes;
-//         path_node_ids = []
-//         // nodes are str        
-//         for (var n = 0; n < path_nodes.length; n++) {
-//             path_node_ids.push(id_from_url(path_nodes[n]));
-//         }
-//         console.log(path_node_ids);
-//         paths.push(path_node_ids);
-//     }
-//     console.log(paths);
-// 
+    //     var paths = []
+    //     // add path data	
+    //     var path_nodes_urls;
+    //     for (var i = 0; i < results.length; i++) {
+    // //        console.log("PATH", results[i][3].nodes);
+    //         path_nodes = results[i][3].nodes;
+    //         path_node_ids = []
+    //         // nodes are str        
+    //         for (var n = 0; n < path_nodes.length; n++) {
+    //             path_node_ids.push(id_from_url(path_nodes[n]));
+    //         }
+    //         console.log(path_node_ids);
+    //         paths.push(path_node_ids);
+    //     }
+    //     console.log(paths);
+    // 
 
-	    var paths = []
-	    // add path data	
-	    var path_nodes_urls;
-	    for (var i = 0; i < results.length; i++) {
-	//        console.log("PATH", results[i][3].nodes);
-	        path_nodes = results[i][3].nodes;
-	        path_node_ids = []
-	        // nodes are str        
-	        for (var n = 0; n < path_nodes.length; n++) {
-	            path_nodes[n] = parseInt(id_from_url(path_nodes[n]));
-	        }
-	        // console.log(path_nodes);
-	        paths.push(path_nodes);
+    var paths = []
+        // add path data	
+    var path_nodes_urls;
+    for (var i = 0; i < results.length; i++) {
+        //        console.log("PATH", results[i][3].nodes);
+        path_nodes = results[i][3].nodes;
+        path_node_ids = []
+        // nodes are str        
+        for (var n = 0; n < path_nodes.length; n++) {
+            path_nodes[n] = parseInt(id_from_url(path_nodes[n]));
+        }
+        // console.log(path_nodes);
+        paths.push(path_nodes);
 
-	    }
-	    console.log("paths",paths);
+    }
+    console.log("paths", paths);
 
 
     // console.log('nodes:', nodes_from_query);
@@ -162,14 +173,14 @@ function parse_results(data) {
         relations_for_viz[rel].target = node_ids[relations_for_viz[rel].target]
 
     }
-	// change ids in path from graph ids to new ones
-	$.each(paths, function (p_index, path) {
-	    $.each(path, function (n_index, node) {
-	        paths[p_index][n_index] = node_ids[node];
-	    });
-	});
-	console.log('LINKS ',relations_for_viz);
-    draw_graph(nodes_for_viz, relations_for_viz,paths);
+    // change ids in path from graph ids to new ones
+    $.each(paths, function (p_index, path) {
+        $.each(path, function (n_index, node) {
+            paths[p_index][n_index] = node_ids[node];
+        });
+    });
+    console.log('LINKS ', relations_for_viz);
+    draw_graph(nodes_for_viz, relations_for_viz, paths);
 }
 
 // function unique(elems) {
