@@ -183,14 +183,56 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
     }	
 }
 
-// functions to mode nodes to front
+/*
+* Draw the graph legend from static data.
+*/
+function draw_legend(svg) {
+			
+		//Create the SVG Viewport
+		var svgContainer = svg.append("svg");
+
+		//Add circles to the svgContainer
+		var circles = svgContainer.selectAll("circle")
+		                           .data(legendData)
+		                           .enter()
+		                           .append("circle");
+
+		//Add the circle attributes
+		var circleAttributes = circles
+		                       .attr("cx", function (d) { return d.cx; })
+		                       .attr("cy", function (d) { return d.cy; })
+		                       .attr("r", function (d) { return d.radius; })
+		                       .style("fill", function (d) { return d.color; });
+
+		//Add the SVG Text Element to the svgContainer
+		var text = svgContainer.selectAll("text")
+		                        .data(legendData)
+		                        .enter()
+		                        .append("text");
+
+		//Add SVG Text Element Attributes
+		var textLabels = text
+		                 .attr("x", function(d) { return d.cx + 10; })
+		                 .attr("y", function(d) { return d.cy + 2.5; })
+		                 .text( function (d) { return d.text; })
+		                 .attr("font-family", "sans-serif")
+		                 .attr("font-size", "20px")
+		                 .attr("fill", "black");
+						 
+}
+
+/*
+* function to move nodes to front
+*/
 d3.selection.prototype.moveToFront = function () {
     return this.each(function () {
         this.parentNode.appendChild(this);
     });
 };
 
-// functions to mode nodes to back
+/*
+* function to move nodes to back
+*/
 d3.selection.prototype.moveToBack = function () {
     return this.each(function () {
         var firstChild = this.parentNode.firstChild;
@@ -277,8 +319,6 @@ function node_mouseout() {
 			.duration(500)
 			.style("stroke-opacity", 0.5);
 
-        // d3.select(this).moveToBack();
-
     }
 }
 
@@ -294,6 +334,7 @@ function paths_for_node(node_id, paths) {
     return node_paths;
 }
 
+// check if node is paths
 function isInPaths(node_id, path_ids) {
     var inP = false
     $.each(path_ids, function (i, p_id) {
@@ -312,37 +353,3 @@ $(document).mouseup(function () {
     --mouseDown;
 });
 
-function draw_legend(svg) {
-			
-		//Create the SVG Viewport
-		var svgContainer = svg.append("svg");
-
-		//Add circles to the svgContainer
-		var circles = svgContainer.selectAll("circle")
-		                           .data(legendData)
-		                           .enter()
-		                           .append("circle");
-
-		//Add the circle attributes
-		var circleAttributes = circles
-		                       .attr("cx", function (d) { return d.cx; })
-		                       .attr("cy", function (d) { return d.cy; })
-		                       .attr("r", function (d) { return d.radius; })
-		                       .style("fill", function (d) { return d.color; });
-
-		//Add the SVG Text Element to the svgContainer
-		var text = svgContainer.selectAll("text")
-		                        .data(legendData)
-		                        .enter()
-		                        .append("text");
-
-		//Add SVG Text Element Attributes
-		var textLabels = text
-		                 .attr("x", function(d) { return d.cx + 10; })
-		                 .attr("y", function(d) { return d.cy + 2.5; })
-		                 .text( function (d) { return d.text; })
-		                 .attr("font-family", "sans-serif")
-		                 .attr("font-size", "20px")
-		                 .attr("fill", "black");
-						 
-}
