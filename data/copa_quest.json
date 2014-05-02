@@ -7,8 +7,8 @@
       "scientist"
     ],
     "alt2_stats": [
-      "{she} may fabricate {___}",
-      "{___} may fabricate {datum}"
+      "{___} may fabricate {datum}",
+      "{someone} may fabricate {___}"
     ],
     "alt2_text": "She fabricated her data.",
     "premise_stats": [
@@ -16,17 +16,17 @@
       "{scientist} may conduct {___}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "theory"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "datum"
     ],
     "alt1_text": "She validated her theory.",
     "type": "",
     "alt1_stats": [
-      "{she} may validate {___}",
+      "{someone} may validate {___}",
       "{___} may validate {theory}"
     ]
   },
@@ -34,17 +34,17 @@
     "premise_text": "The milk stayed cold.",
     "premise_nouns": ["milk"],
     "alt2_stats": [
-      "{I} may store {___} in {refrigerator}",
       "{___} may store {something} in {refrigerator}",
-      "{I} may store {something} in {___}"
+      "{someone} may store {___} in {refrigerator}",
+      "{someone} may store {something} in {___}"
     ],
     "alt2_text": "I stored it in the refrigerator.",
     "premise_stats": ["{___} may stay cold"],
-    "alt1_nouns": ["it"],
+    "alt1_nouns": ["something"],
     "alt2_nouns": [
+      "someone",
       "refrigerator",
-      "something",
-      "I"
+      "something"
     ],
     "alt1_text": "It was pasteurized.",
     "type": "",
@@ -57,7 +57,7 @@
       "man"
     ],
     "alt2_stats": [
-      "{he} may scratch {___}",
+      "{someone} may scratch {___}",
       "{___} may scratch {back}"
     ],
     "alt2_text": "He scratched his back.",
@@ -66,42 +66,42 @@
       "{___} may lift {box}"
     ],
     "alt1_nouns": [
-      "back",
-      "he"
+      "someone",
+      "back"
     ],
     "alt2_nouns": [
-      "back",
-      "he"
+      "someone",
+      "back"
     ],
     "alt1_text": "He put out his back.",
     "type": "",
     "alt1_stats": [
-      "{___} may put out {back}",
-      "{he} may put out {___}"
+      "{someone} may put out {___}",
+      "{___} may put out {back}"
     ]
   },
   "333": {
     "premise_text": "The woman's purse was missing.",
     "premise_nouns": ["something"],
     "alt2_stats": [
-      "{she} may leave {___}",
+      "{someone} may leave {___}",
       "{___} may leave {something}"
     ],
     "alt2_text": "She left it unsupervised.",
     "premise_stats": ["{___} may miss"],
     "alt1_nouns": [
-      "it",
-      "lot"
+      "lot",
+      "something"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "something"
     ],
     "alt1_text": "It contained a lot of junk.",
     "type": "",
     "alt1_stats": [
-      "{it} may contain {___}",
-      "{___} may contain {lot}"
+      "{___} may contain {lot}",
+      "{something} may contain {___}"
     ]
   },
   "159": {
@@ -111,7 +111,7 @@
       "archeologist"
     ],
     "alt2_stats": [
-      "{she} may read about {___}",
+      "{someone} may read about {___}",
       "{___} may read about {history}"
     ],
     "alt2_text": "She read about the site's history.",
@@ -121,17 +121,17 @@
     ],
     "alt1_nouns": [
       "artifact",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
       "history",
-      "she"
+      "someone"
     ],
     "alt1_text": "She excavated ancient artifacts.",
     "type": "",
     "alt1_stats": [
       "{___} may excavate {artifact}",
-      "{she} may excavate {___}"
+      "{someone} may excavate {___}"
     ]
   },
   "330": {
@@ -141,7 +141,7 @@
       "footage"
     ],
     "alt2_stats": [
-      "{he} may notice {___}",
+      "{someone} may notice {___}",
       "{___} may notice {activity}"
     ],
     "alt2_text": "He noticed some suspicious activity.",
@@ -151,7 +151,7 @@
     ],
     "alt1_nouns": [],
     "alt2_nouns": [
-      "he",
+      "someone",
       "activity"
     ],
     "alt1_text": "The surveillance camera was out of focus.",
@@ -187,7 +187,7 @@
     "premise_nouns": [
       "awakening",
       "bed",
-      "I"
+      "someone"
     ],
     "alt2_stats": [
       "{it} may be {___}",
@@ -195,11 +195,11 @@
     ],
     "alt2_text": "It was Saturday.",
     "premise_stats": [
-      "{I} may linger in {___} upon {awakening}",
-      "{I} may linger in {bed} upon {___}",
+      "{someone} may linger in {___} upon {awakening}",
+      "{someone} may linger in {bed} upon {___}",
       "{___} may linger in {bed} upon {awakening}"
     ],
-    "alt1_nouns": ["I"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "it",
       "something"
@@ -211,31 +211,31 @@
   "157": {
     "premise_text": "I came upon a puddle on the sidewalk.",
     "premise_nouns": [
-      "puddle",
-      "I"
+      "someone",
+      "puddle"
     ],
     "alt2_stats": [
-      "{I} may play in {___}",
+      "{someone} may play in {___}",
       "{___} may play in {puddle}"
     ],
     "alt2_text": "I played in the puddle.",
     "premise_stats": [
       "{___} may come upon {puddle}",
-      "{I} may come upon {___}"
+      "{someone} may come upon {___}"
     ],
     "alt1_nouns": [
-      "puddle",
-      "I"
+      "someone",
+      "puddle"
     ],
     "alt2_nouns": [
-      "puddle",
-      "I"
+      "someone",
+      "puddle"
     ],
     "alt1_text": "I leapt over the puddle.",
     "type": "",
     "alt1_stats": [
       "{___} may leap over {puddle}",
-      "{I} may leap over {___}"
+      "{someone} may leap over {___}"
     ]
   },
   "336": {
@@ -271,22 +271,22 @@
   "156": {
     "premise_text": "I chugged the pitcher of water.",
     "premise_nouns": [
-      "pitcher",
-      "I"
+      "someone",
+      "pitcher"
     ],
     "alt2_stats": [
-      "{___} may run {mile}",
-      "{I} may run {___}"
+      "{someone} may run {___}",
+      "{___} may run {mile}"
     ],
     "alt2_text": "I ran five miles.",
     "premise_stats": [
-      "{I} may chug {___}",
-      "{___} may chug {pitcher}"
+      "{___} may chug {pitcher}",
+      "{someone} may chug {___}"
     ],
-    "alt1_nouns": ["I"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
-      "mile",
-      "I"
+      "someone",
+      "mile"
     ],
     "alt1_text": "I walked upstairs.",
     "type": "",
@@ -297,22 +297,22 @@
     "premise_nouns": ["something"],
     "alt2_stats": [
       "{___} may play {game}",
-      "{he} may play {___}"
+      "{someone} may play {___}"
     ],
     "alt2_text": "He played computer games.",
     "premise_stats": ["{___} may be muscular"],
     "alt1_nouns": [
       "weight",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
-      "game",
-      "he"
+      "someone",
+      "game"
     ],
     "alt1_text": "He lifted weights.",
     "type": "",
     "alt1_stats": [
-      "{he} may lift {___}",
+      "{someone} may lift {___}",
       "{___} may lift {weight}"
     ]
   },
@@ -323,8 +323,8 @@
       "woman"
     ],
     "alt2_stats": [
-      "{she} may graduate from {___}",
-      "{___} may graduate from {college}"
+      "{___} may graduate from {college}",
+      "{someone} may graduate from {___}"
     ],
     "alt2_text": "She graduated from college.",
     "premise_stats": [
@@ -332,18 +332,18 @@
       "{___} may receive {diploma}"
     ],
     "alt1_nouns": [
-      "college",
-      "she"
+      "someone",
+      "college"
     ],
     "alt2_nouns": [
-      "college",
-      "she"
+      "someone",
+      "college"
     ],
     "alt1_text": "She enrolled in college.",
     "type": "",
     "alt1_stats": [
       "{___} may enrol in {college}",
-      "{she} may enrol in {___}"
+      "{someone} may enrol in {___}"
     ]
   },
   "334": {
@@ -353,7 +353,7 @@
       "woman"
     ],
     "alt2_stats": [
-      "{she} may get into {___}",
+      "{someone} may get into {___}",
       "{___} may get into {accident}"
     ],
     "alt2_text": "She got into a car accident.",
@@ -363,17 +363,17 @@
     ],
     "alt1_nouns": [
       "reaction",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
       "accident",
-      "she"
+      "someone"
     ],
     "alt1_text": "She had an allergic reaction.",
     "type": "",
     "alt1_stats": [
-      "{she} may have {___}",
-      "{___} may have {reaction}"
+      "{___} may have {reaction}",
+      "{someone} may have {___}"
     ]
   },
   "154": {
@@ -403,8 +403,8 @@
       "something"
     ],
     "alt2_stats": [
-      "{___} may buy {wallet}",
-      "{I} may buy {___}"
+      "{someone} may buy {___}",
+      "{___} may buy {wallet}"
     ],
     "alt2_text": "I bought a wallet.",
     "premise_stats": [
@@ -412,34 +412,34 @@
       "{___} may get {cash}"
     ],
     "alt1_nouns": [
-      "bank",
-      "I"
+      "someone",
+      "bank"
     ],
     "alt2_nouns": [
-      "I",
+      "someone",
       "wallet"
     ],
     "alt1_text": "I went to the bank.",
     "type": "",
     "alt1_stats": [
-      "{I} may go to {___}",
-      "{___} may go to {bank}"
+      "{___} may go to {bank}",
+      "{someone} may go to {___}"
     ]
   },
   "152": {
     "premise_text": "We found empty seats in the theatre.",
     "premise_nouns": [
       "seat",
-      "we"
+      "someone"
     ],
     "alt2_stats": ["{___} may sit down"],
     "alt2_text": "We sat down.",
     "premise_stats": [
       "{___} may find {seat}",
-      "{we} may find {___}"
+      "{someone} may find {___}"
     ],
     "alt1_nouns": ["film"],
-    "alt2_nouns": ["we"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "The film began.",
     "type": "",
     "alt1_stats": ["{___} may begin"]
@@ -505,7 +505,7 @@
     "alt2_text": "She was adopted.",
     "premise_stats": ["{___} may threaten"],
     "alt1_nouns": ["something"],
-    "alt2_nouns": ["she"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "She didn't get vaccinated.",
     "type": "",
     "alt1_stats": ["{___} may not vaccinate"]
@@ -513,7 +513,7 @@
   "202": {
     "premise_text": "I jumped instinctively in fright.",
     "premise_nouns": [
-      "I",
+      "someone",
       "fright"
     ],
     "alt2_stats": [
@@ -523,7 +523,7 @@
     "alt2_text": "I heard people chuckling in the adjacent room.",
     "premise_stats": [
       "{___} may jump in {fright}",
-      "{I} may jump in {___}"
+      "{someone} may jump in {___}"
     ],
     "alt1_nouns": [
       "someone",
@@ -547,8 +547,8 @@
       "ammunition"
     ],
     "alt2_stats": [
-      "{he} may aim at {___}",
-      "{___} may aim at {deer}"
+      "{___} may aim at {deer}",
+      "{someone} may aim at {___}"
     ],
     "alt2_text": "He aimed at the deer.",
     "premise_stats": [
@@ -556,17 +556,17 @@
       "{___} may run out of {ammunition}"
     ],
     "alt1_nouns": [
-      "he",
+      "someone",
       "gun"
     ],
     "alt2_nouns": [
-      "he",
+      "someone",
       "deer"
     ],
     "alt1_text": "He reloaded the gun.",
     "type": "",
     "alt1_stats": [
-      "{he} may reload {___}",
+      "{someone} may reload {___}",
       "{___} may reload {gun}"
     ]
   },
@@ -574,26 +574,26 @@
     "premise_text": "The gardener wanted his plants to flourish.",
     "premise_nouns": ["plant"],
     "alt2_stats": [
-      "{he} may put {fertilizer} in {___}",
       "{___} may put {fertilizer} in {soil}",
-      "{he} may put {___} in {soil}"
+      "{someone} may put {fertilizer} in {___}",
+      "{someone} may put {___} in {soil}"
     ],
     "alt2_text": "He put fertilizer in the soil.",
     "premise_stats": ["{___} may flourish"],
     "alt1_nouns": [
-      "he",
+      "someone",
       "variety"
     ],
     "alt2_nouns": [
+      "someone",
       "fertilizer",
-      "he",
       "soil"
     ],
     "alt1_text": "He planted a variety of seeds.",
     "type": "",
     "alt1_stats": [
       "{___} may plant {variety}",
-      "{he} may plant {___}"
+      "{someone} may plant {___}"
     ]
   },
   "204": {
@@ -612,23 +612,23 @@
     "premise_text": "The waistband on my pants was loose.",
     "premise_nouns": ["waistband"],
     "alt2_stats": [
-      "{I} may put on {___}",
-      "{___} may put on {hat}"
+      "{___} may put on {hat}",
+      "{someone} may put on {___}"
     ],
     "alt2_text": "I put on a hat.",
     "premise_stats": ["{___} may be loose"],
     "alt1_nouns": [
-      "belt",
-      "I"
+      "someone",
+      "belt"
     ],
     "alt2_nouns": [
-      "I",
+      "someone",
       "hat"
     ],
     "alt1_text": "I put on a belt.",
     "type": "",
     "alt1_stats": [
-      "{I} may put on {___}",
+      "{someone} may put on {___}",
       "{___} may put on {belt}"
     ]
   },
@@ -639,8 +639,8 @@
       "shock"
     ],
     "alt2_stats": [
-      "{___} may pound on {door}",
-      "{she} may pound on {___}"
+      "{someone} may pound on {___}",
+      "{___} may pound on {door}"
     ],
     "alt2_text": "She pounded on the door.",
     "premise_stats": [
@@ -649,17 +649,17 @@
     ],
     "alt1_nouns": [
       "doorknob",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "door"
     ],
     "alt1_text": "She grabbed the doorknob.",
     "type": "",
     "alt1_stats": [
-      "{she} may grab {___}",
-      "{___} may grab {doorknob}"
+      "{___} may grab {doorknob}",
+      "{someone} may grab {___}"
     ]
   },
   "201": {
@@ -689,15 +689,15 @@
   "341": {
     "premise_text": "I put ice cubes in the hot soup.",
     "premise_nouns": [
+      "someone",
       "cube",
-      "soup",
-      "I"
+      "soup"
     ],
     "alt2_stats": ["{___} may become thick"],
     "alt2_text": "The soup became thick.",
     "premise_stats": [
-      "{I} may put {___} in {soup}",
-      "{I} may put {cube} in {___}",
+      "{someone} may put {cube} in {___}",
+      "{someone} may put {___} in {soup}",
       "{___} may put {cube} in {soup}"
     ],
     "alt1_nouns": ["soup"],
@@ -713,7 +713,7 @@
       "woman"
     ],
     "alt2_stats": [
-      "{she} may destroy {___}",
+      "{someone} may destroy {___}",
       "{___} may destroy {evidence}"
     ],
     "alt2_text": "She destroyed the evidence.",
@@ -724,7 +724,7 @@
     "alt1_nouns": ["accomplice"],
     "alt2_nouns": [
       "evidence",
-      "she"
+      "someone"
     ],
     "alt1_text": "Her accomplice was apprehended.",
     "type": "",
@@ -775,14 +775,14 @@
       "{___} may close {investigation}"
     ],
     "alt1_nouns": [
-      "they",
+      "someone",
       "suspect"
     ],
     "alt2_nouns": ["victim"],
     "alt1_text": "They apprehended the suspect.",
     "type": "",
     "alt1_stats": [
-      "{they} may apprehend {___}",
+      "{someone} may apprehend {___}",
       "{___} may apprehend {suspect}"
     ]
   },
@@ -791,39 +791,39 @@
     "premise_nouns": ["rain"],
     "alt2_stats": [
       "{___} may browse {internet}",
-      "{I} may browse {___}"
+      "{someone} may browse {___}"
     ],
     "alt2_text": "I browsed the internet.",
     "premise_stats": ["{___} may subside"],
     "alt1_nouns": [
-      "walk",
-      "I"
+      "someone",
+      "walk"
     ],
     "alt2_nouns": [
-      "internet",
-      "I"
+      "someone",
+      "internet"
     ],
     "alt1_text": "I went for a walk.",
     "type": "",
     "alt1_stats": [
       "{___} may go for {walk}",
-      "{I} may go for {___}"
+      "{someone} may go for {___}"
     ]
   },
   "166": {
     "premise_text": "I stood on one foot.",
     "premise_nouns": [
       "foot",
-      "I"
+      "someone"
     ],
     "alt2_stats": ["{___} may kneel down"],
     "alt2_text": "I kneeled down.",
     "premise_stats": [
-      "{___} may stand on {foot}",
-      "{I} may stand on {___}"
+      "{someone} may stand on {___}",
+      "{___} may stand on {foot}"
     ],
     "alt1_nouns": ["balance"],
-    "alt2_nouns": ["I"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "My balance wavered.",
     "type": "",
     "alt1_stats": ["{___} may waver"]
@@ -834,7 +834,7 @@
       "company",
       "money"
     ],
-    "alt2_stats": [],
+    "alt2_stats": ["{___} may be manufactured"],
     "alt2_text": "Some of its products were manufactured defectively.",
     "premise_stats": [
       "{___} may lose {money}",
@@ -844,7 +844,7 @@
       "product",
       "review"
     ],
-    "alt2_nouns": [],
+    "alt2_nouns": ["something"],
     "alt1_text": "Its products received positive consumer reviews.",
     "type": "",
     "alt1_stats": [
@@ -856,23 +856,23 @@
     "premise_text": "The cup of tea was scalding hot.",
     "premise_nouns": ["cup"],
     "alt2_stats": [
-      "{I} may pour out {___}",
-      "{___} may pour out {something}"
+      "{___} may pour out {something}",
+      "{someone} may pour out {___}"
     ],
     "alt2_text": "I poured it out.",
     "premise_stats": ["{___} may scald hot"],
     "alt1_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt2_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt1_text": "I blew on it.",
     "type": "",
     "alt1_stats": [
-      "{I} may blow on {___}",
+      "{someone} may blow on {___}",
       "{___} may blow on {something}"
     ]
   },
@@ -901,8 +901,8 @@
       "apartment"
     ],
     "alt2_stats": [
-      "{they} may get along with {___}",
-      "{___} may get along with {landlord}"
+      "{___} may get along with {landlord}",
+      "{someone} may get along with {___}"
     ],
     "alt2_text": "They got along with their landlord.",
     "premise_stats": [
@@ -915,7 +915,7 @@
     ],
     "alt2_nouns": [
       "landlord",
-      "they"
+      "someone"
     ],
     "alt1_text": "They neglected to pay their rent.",
     "type": "",
@@ -940,15 +940,15 @@
     "premise_text": "My car was towed.",
     "premise_nouns": ["car"],
     "alt2_stats": [
-      "{I} may jump {___}",
+      "{someone} may jump {___}",
       "{___} may jump {battery}"
     ],
     "alt2_text": "I jumped the battery.",
     "premise_stats": ["{___} may be towed"],
-    "alt1_nouns": ["I"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "battery",
-      "I"
+      "someone"
     ],
     "alt1_text": "I parked illegally.",
     "type": "",
@@ -961,8 +961,8 @@
       "man"
     ],
     "alt2_stats": [
-      "{___} may make {appointment}",
-      "{he} may make {___}"
+      "{someone} may make {___}",
+      "{___} may make {appointment}"
     ],
     "alt2_text": "He made an appointment with the dentist.",
     "premise_stats": [
@@ -970,18 +970,18 @@
       "{man} may wake up with {___}"
     ],
     "alt1_nouns": [
-      "he",
+      "someone",
       "appointment"
     ],
     "alt2_nouns": [
-      "he",
+      "someone",
       "appointment"
     ],
     "alt1_text": "He missed an appointment with the dentist.",
     "type": "",
     "alt1_stats": [
-      "{he} may miss {___}",
-      "{___} may miss {appointment}"
+      "{___} may miss {appointment}",
+      "{someone} may miss {___}"
     ]
   },
   "347": {
@@ -1017,13 +1017,13 @@
   "167": {
     "premise_text": "I pushed the gas pedal.",
     "premise_nouns": [
-      "pedal",
-      "I"
+      "someone",
+      "pedal"
     ],
     "alt2_stats": ["{___} may open"],
     "alt2_text": "The car door opened.",
     "premise_stats": [
-      "{I} may push {___}",
+      "{someone} may push {___}",
       "{___} may push {pedal}"
     ],
     "alt1_nouns": ["car"],
@@ -1059,30 +1059,30 @@
   "348": {
     "premise_text": "I misplaced my wallet.",
     "premise_nouns": [
-      "I",
+      "someone",
       "wallet"
     ],
     "alt2_stats": [
       "{___} may retrace {step}",
-      "{I} may retrace {___}"
+      "{someone} may retrace {___}"
     ],
     "alt2_text": "I retraced my steps.",
     "premise_stats": [
       "{___} may misplace {wallet}",
-      "{I} may misplace {___}"
+      "{someone} may misplace {___}"
     ],
     "alt1_nouns": [
       "phone",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
-      "I",
+      "someone",
       "step"
     ],
     "alt1_text": "I retrieved my phone.",
     "type": "",
     "alt1_stats": [
-      "{I} may retrieve {___}",
+      "{someone} may retrieve {___}",
       "{___} may retrieve {phone}"
     ]
   },
@@ -1091,24 +1091,24 @@
     "premise_nouns": ["flame"],
     "alt2_stats": [
       "{___} may put {match} to {wick}",
-      "{I} may put {___} to {wick}",
-      "{I} may put {match} to {___}"
+      "{someone} may put {match} to {___}",
+      "{someone} may put {___} to {wick}"
     ],
     "alt2_text": "I put a match to the wick.",
     "premise_stats": ["{___} may go out"],
     "alt1_nouns": [
       "wick",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
       "wick",
-      "match",
-      "I"
+      "someone",
+      "match"
     ],
     "alt1_text": "I blew on the wick.",
     "type": "",
     "alt1_stats": [
-      "{I} may blow on {___}",
+      "{someone} may blow on {___}",
       "{___} may blow on {wick}"
     ]
   },
@@ -1175,8 +1175,8 @@
     "alt2_stats": ["{___} may laugh"],
     "alt2_text": "I was laughing.",
     "premise_stats": ["{___} may become red"],
-    "alt1_nouns": ["I"],
-    "alt2_nouns": ["I"],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "I was sobbing.",
     "type": "",
     "alt1_stats": ["{___} may sob"]
@@ -1185,7 +1185,7 @@
     "premise_text": "I tossed the ball upwards.",
     "premise_nouns": [
       "ball",
-      "I"
+      "someone"
     ],
     "alt2_stats": [
       "{ball} may hit {___}",
@@ -1193,7 +1193,7 @@
     ],
     "alt2_text": "The ball hit the ceiling.",
     "premise_stats": [
-      "{I} may toss {___}",
+      "{someone} may toss {___}",
       "{___} may toss {ball}"
     ],
     "alt1_nouns": [
@@ -1250,8 +1250,8 @@
       "breath"
     ],
     "alt2_stats": [
-      "{I} may brush {___}",
-      "{___} may brush {tooth}"
+      "{___} may brush {tooth}",
+      "{someone} may brush {___}"
     ],
     "alt2_text": "I brushed my teeth.",
     "premise_stats": [
@@ -1260,17 +1260,17 @@
     ],
     "alt1_nouns": [
       "mouth",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
       "tooth",
-      "I"
+      "someone"
     ],
     "alt1_text": "I wiped my mouth.",
     "type": "",
     "alt1_stats": [
       "{___} may wipe {mouth}",
-      "{I} may wipe {___}"
+      "{someone} may wipe {___}"
     ]
   },
   "1": {
@@ -1297,24 +1297,24 @@
     "premise_text": "The man was lost.",
     "premise_nouns": ["man"],
     "alt2_stats": [
-      "{he} may draw {___}",
+      "{someone} may draw {___}",
       "{___} may draw {map}"
     ],
     "alt2_text": "He drew a map.",
     "premise_stats": ["{___} may be lost"],
     "alt1_nouns": [
       "direction",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
-      "map",
-      "he"
+      "someone",
+      "map"
     ],
     "alt1_text": "He asked for directions.",
     "type": "",
     "alt1_stats": [
-      "{___} may ask for {direction}",
-      "{he} may ask for {___}"
+      "{someone} may ask for {___}",
+      "{___} may ask for {direction}"
     ]
   },
   "405": {
@@ -1345,23 +1345,23 @@
     "premise_text": "The stain came out of the shirt.",
     "premise_nouns": ["stain"],
     "alt2_stats": [
-      "{I} may bleach {___}",
+      "{someone} may bleach {___}",
       "{___} may bleach {shirt}"
     ],
     "alt2_text": "I bleached the shirt.",
     "premise_stats": ["{___} may come"],
     "alt1_nouns": [
-      "I",
+      "someone",
       "shirt"
     ],
     "alt2_nouns": [
-      "I",
+      "someone",
       "shirt"
     ],
     "alt1_text": "I patched the shirt.",
     "type": "",
     "alt1_stats": [
-      "{I} may patch {___}",
+      "{someone} may patch {___}",
       "{___} may patch {shirt}"
     ]
   },
@@ -1372,8 +1372,8 @@
       "energy"
     ],
     "alt2_stats": [
-      "{I} may shut off {___} in {room}",
-      "{I} may shut off {light} in {___}",
+      "{someone} may shut off {___} in {room}",
+      "{someone} may shut off {light} in {___}",
       "{___} may shut off {light} in {room}"
     ],
     "alt2_text": "I shut off the light in the unoccupied room.",
@@ -1383,20 +1383,20 @@
     ],
     "alt1_nouns": [
       "floor",
-      "I",
+      "someone",
       "room"
     ],
     "alt2_nouns": [
+      "someone",
       "light",
-      "I",
       "room"
     ],
     "alt1_text": "I swept the floor in the unoccupied room.",
     "type": "",
     "alt1_stats": [
-      "{I} may sweep {___} in {room}",
+      "{someone} may sweep {___} in {room}",
       "{___} may sweep {floor} in {room}",
-      "{I} may sweep {floor} in {___}"
+      "{someone} may sweep {floor} in {___}"
     ]
   },
   "6": {
@@ -1415,15 +1415,15 @@
       "{politician} may lose {___}"
     ],
     "alt1_nouns": [
-      "ad",
-      "he"
+      "someone",
+      "ad"
     ],
     "alt2_nouns": ["someone"],
     "alt1_text": "He ran negative campaign ads.",
     "type": "",
     "alt1_stats": [
-      "{___} may run {ad}",
-      "{he} may run {___}"
+      "{someone} may run {___}",
+      "{___} may run {ad}"
     ]
   },
   "407": {
@@ -1509,8 +1509,8 @@
   "406": {
     "premise_text": "I doubted the salesman's pitch.",
     "premise_nouns": [
-      "pitch",
-      "I"
+      "someone",
+      "pitch"
     ],
     "alt2_stats": [
       "{something} may buy {___}",
@@ -1518,12 +1518,12 @@
     ],
     "alt2_text": "He persuaded me to buy the product.",
     "premise_stats": [
-      "{I} may doubt {___}",
-      "{___} may doubt {pitch}"
+      "{___} may doubt {pitch}",
+      "{someone} may doubt {___}"
     ],
     "alt1_nouns": [
-      "offer",
-      "I"
+      "someone",
+      "offer"
     ],
     "alt2_nouns": [
       "product",
@@ -1533,7 +1533,7 @@
     "type": "",
     "alt1_stats": [
       "{___} may turn down {offer}",
-      "{I} may turn down {___}"
+      "{someone} may turn down {___}"
     ]
   },
   "160": {
@@ -1544,8 +1544,8 @@
       "stage"
     ],
     "alt2_stats": [
-      "{___} may entertain {audience}",
-      "{he} may entertain {___}"
+      "{someone} may entertain {___}",
+      "{___} may entertain {audience}"
     ],
     "alt2_text": "He entertained the audience.",
     "premise_stats": [
@@ -1554,17 +1554,17 @@
       "{___} may boo {comedian} off {stage}"
     ],
     "alt1_nouns": [
-      "joke",
-      "he"
+      "someone",
+      "joke"
     ],
     "alt2_nouns": [
       "audience",
-      "he"
+      "someone"
     ],
     "alt1_text": "He told a racist joke.",
     "type": "",
     "alt1_stats": [
-      "{he} may tell {___}",
+      "{someone} may tell {___}",
       "{___} may tell {joke}"
     ]
   },
@@ -1636,7 +1636,7 @@
     ],
     "alt2_stats": [
       "{___} may wear {uniform}",
-      "{they} may wear {___}"
+      "{someone} may wear {___}"
     ],
     "alt2_text": "They wore camouflage uniforms.",
     "premise_stats": [
@@ -1644,18 +1644,18 @@
       "{___} may be concealed in {brush}"
     ],
     "alt1_nouns": [
-      "they",
+      "someone",
       "rifle"
     ],
     "alt2_nouns": [
-      "they",
-      "uniform"
+      "uniform",
+      "someone"
     ],
     "alt1_text": "They were armed with rifles.",
     "type": "",
     "alt1_stats": [
-      "{they} may be armed with {___}",
-      "{___} may be armed with {rifle}"
+      "{___} may be armed with {rifle}",
+      "{someone} may be armed with {___}"
     ]
   },
   "403": {
@@ -1663,23 +1663,23 @@
     "premise_nouns": ["woman"],
     "alt2_stats": [
       "{___} may pay off {mortgage}",
-      "{she} may pay off {___}"
+      "{someone} may pay off {___}"
     ],
     "alt2_text": "She paid off her mortgage.",
     "premise_stats": ["{___} may retire"],
     "alt1_nouns": [
-      "she",
+      "someone",
       "pension"
     ],
     "alt2_nouns": [
-      "mortgage",
-      "she"
+      "someone",
+      "mortgage"
     ],
     "alt1_text": "She received her pension.",
     "type": "",
     "alt1_stats": [
       "{___} may receive {pension}",
-      "{she} may receive {___}"
+      "{someone} may receive {___}"
     ]
   },
   "9": {
@@ -1723,8 +1723,8 @@
       "bug"
     ],
     "alt2_stats": [
-      "{she} may lose {___}",
-      "{___} may lose {appetite}"
+      "{___} may lose {appetite}",
+      "{someone} may lose {___}"
     ],
     "alt2_text": "She lost her appetite.",
     "premise_stats": [
@@ -1734,18 +1734,18 @@
     "alt1_nouns": [
       "bowl",
       "milk",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "appetite"
     ],
     "alt1_text": "She poured milk in the bowl.",
     "type": "",
     "alt1_stats": [
-      "{she} may pour {___} in {bowl}",
-      "{___} may pour {milk} in {bowl}",
-      "{she} may pour {milk} in {___}"
+      "{someone} may pour {___} in {bowl}",
+      "{someone} may pour {milk} in {___}",
+      "{___} may pour {milk} in {bowl}"
     ]
   },
   "8": {
@@ -1756,7 +1756,7 @@
     ],
     "alt2_stats": [
       "{___} may use {coupon}",
-      "{he} may use {___}"
+      "{someone} may use {___}"
     ],
     "alt2_text": "He used a coupon.",
     "premise_stats": [
@@ -1764,17 +1764,17 @@
       "{___} may get {discount}"
     ],
     "alt1_nouns": [
-      "he",
+      "someone",
       "cashier"
     ],
     "alt2_nouns": [
-      "he",
+      "someone",
       "coupon"
     ],
     "alt1_text": "He greeted the cashier.",
     "type": "",
     "alt1_stats": [
-      "{he} may greet {___}",
+      "{someone} may greet {___}",
       "{___} may greet {cashier}"
     ]
   },
@@ -1908,24 +1908,24 @@
     "premise_text": "The woman's makeup smeared.",
     "premise_nouns": ["makeup"],
     "alt2_stats": [
-      "{___} may wipe {eye}",
-      "{she} may wipe {___}"
+      "{someone} may wipe {___}",
+      "{___} may wipe {eye}"
     ],
     "alt2_text": "She wiped her eyes.",
     "premise_stats": ["{___} may smear"],
     "alt1_nouns": [
-      "she",
+      "someone",
       "hair"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "eye"
     ],
     "alt1_text": "She brushed her hair.",
     "type": "",
     "alt1_stats": [
-      "{she} may brush {___}",
-      "{___} may brush {hair}"
+      "{___} may brush {hair}",
+      "{someone} may brush {___}"
     ]
   },
   "319": {
@@ -1953,8 +1953,8 @@
       "climber"
     ],
     "alt2_stats": [
-      "{they} may congratulate {___}",
-      "{___} may congratulate {something}"
+      "{___} may congratulate {something}",
+      "{someone} may congratulate {___}"
     ],
     "alt2_text": "They congratulated each other.",
     "premise_stats": [
@@ -1962,18 +1962,18 @@
       "{climber} may reach {___}"
     ],
     "alt1_nouns": [
-      "they",
+      "someone",
       "avalanche"
     ],
     "alt2_nouns": [
-      "they",
+      "someone",
       "something"
     ],
     "alt1_text": "They encountered an avalanche.",
     "type": "",
     "alt1_stats": [
-      "{they} may encounter {___}",
-      "{___} may encounter {avalanche}"
+      "{___} may encounter {avalanche}",
+      "{someone} may encounter {___}"
     ]
   },
   "316": {
@@ -1990,7 +1990,7 @@
       "{girl} may stare at {someone} in {___}",
       "{girl} may stare at {___} in {mirror}"
     ],
-    "alt1_nouns": ["she"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": ["mirror"],
     "alt1_text": "She felt self-conscious.",
     "type": "",
@@ -2020,7 +2020,7 @@
     "premise_text": "The man was bitten by mosquitoes.",
     "premise_nouns": ["man"],
     "alt2_stats": [
-      "{he} may fall on {___}",
+      "{someone} may fall on {___}",
       "{___} may fall on {couch}"
     ],
     "alt2_text": "He fell asleep on his couch.",
@@ -2028,25 +2028,25 @@
     "alt1_nouns": [
       "wood",
       "camping",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
       "couch",
-      "he"
+      "someone"
     ],
     "alt1_text": "He went camping in the woods.",
     "type": "",
     "alt1_stats": [
+      "{someone} may go {camping} in {___}",
       "{___} may go {camping} in {wood}",
-      "{he} may go {camping} in {___}",
-      "{he} may go {___} in {wood}"
+      "{someone} may go {___} in {wood}"
     ]
   },
   "179": {
     "premise_text": "The boat capsized.",
     "premise_nouns": ["boat"],
     "alt2_stats": [
-      "{it} may be caught in {___}",
+      "{something} may be caught in {___}",
       "{___} may be caught in {hurricane}"
     ],
     "alt2_text": "It was caught in a hurricane.",
@@ -2056,7 +2056,7 @@
       "captain"
     ],
     "alt2_nouns": [
-      "it",
+      "something",
       "hurricane"
     ],
     "alt1_text": "The captain raised the sail.",
@@ -2099,7 +2099,7 @@
       "{woman} may fan {someone} with {___}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "conditioner",
       "room"
     ],
@@ -2107,31 +2107,28 @@
     "alt1_text": "She installed the air conditioner in the room.",
     "type": "",
     "alt1_stats": [
-      "{she} may install {___} in {room}",
-      "{she} may install {conditioner} in {___}",
-      "{___} may install {conditioner} in {room}"
+      "{___} may install {conditioner} in {room}",
+      "{someone} may install {conditioner} in {___}",
+      "{someone} may install {___} in {room}"
     ]
   },
   "178": {
     "premise_text": "I clumsily bumped into the stranger.",
     "premise_nouns": [
-      "stranger",
-      "I"
+      "someone",
+      "stranger"
     ],
     "alt2_stats": [
       "{___} may apologize to {someone}",
-      "{I} may apologize to {___}"
+      "{someone} may apologize to {___}"
     ],
     "alt2_text": "I apologized to him.",
     "premise_stats": [
-      "{I} may bump into {___}",
+      "{someone} may bump into {___}",
       "{___} may bump into {stranger}"
     ],
-    "alt1_nouns": ["I"],
-    "alt2_nouns": [
-      "someone",
-      "I"
-    ],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "I ran away.",
     "type": "",
     "alt1_stats": ["{___} may run"]
@@ -2148,8 +2145,8 @@
       "{doctor} may amputate {___}",
       "{___} may amputate {leg}"
     ],
-    "alt1_nouns": ["it"],
-    "alt2_nouns": ["it"],
+    "alt1_nouns": ["something"],
+    "alt2_nouns": ["something"],
     "alt1_text": "It was badly bruised.",
     "type": "",
     "alt1_stats": ["{___} may be bruised"]
@@ -2162,17 +2159,17 @@
     ],
     "alt2_stats": [
       "{___} may tread {water}",
-      "{he} may tread {___}"
+      "{someone} may tread {___}"
     ],
     "alt2_text": "He treaded water.",
     "premise_stats": [
       "{man} may hold {___}",
       "{___} may hold {breath}"
     ],
-    "alt1_nouns": ["he"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "water",
-      "he"
+      "someone"
     ],
     "alt1_text": "He went underwater.",
     "type": "",
@@ -2182,25 +2179,25 @@
     "premise_text": "The company's profits started to level off.",
     "premise_nouns": ["something"],
     "alt2_stats": [
-      "{it} may move {headquarters} to {___}",
-      "{it} may move {___} to {location}",
+      "{something} may move {headquarters} to {___}",
+      "{something} may move {___} to {location}",
       "{___} may move {headquarters} to {location}"
     ],
     "alt2_text": "It moved its headquarters to a suburban location.",
     "premise_stats": ["{___} may level off"],
     "alt1_nouns": [
-      "it",
-      "effort"
+      "effort",
+      "something"
     ],
     "alt2_nouns": [
-      "it",
       "location",
+      "something",
       "headquarters"
     ],
     "alt1_text": "It increased its marketing efforts for new products.",
     "type": "",
     "alt1_stats": [
-      "{it} may increase {___}",
+      "{something} may increase {___}",
       "{___} may increase {effort}"
     ]
   },
@@ -2211,7 +2208,7 @@
       "infection"
     ],
     "alt2_stats": [
-      "{she} may wash {___}",
+      "{someone} may wash {___}",
       "{___} may wash {hand}"
     ],
     "alt2_text": "She washed her hands.",
@@ -2220,18 +2217,18 @@
       "{woman} may have {___}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "antibiotic"
     ],
     "alt2_nouns": [
       "hand",
-      "she"
+      "someone"
     ],
     "alt1_text": "She took antibiotics.",
     "type": "",
     "alt1_stats": [
       "{___} may take {antibiotic}",
-      "{she} may take {___}"
+      "{someone} may take {___}"
     ]
   },
   "176": {
@@ -2251,7 +2248,7 @@
     ],
     "alt1_nouns": [
       "child",
-      "it"
+      "something"
     ],
     "alt2_nouns": [
       "child",
@@ -2260,8 +2257,8 @@
     "alt1_text": "It was bedtime for the children.",
     "type": "",
     "alt1_stats": [
-      "{___} may be bedtime for {child}",
-      "{it} may be bedtime for {___}"
+      "{something} may be bedtime for {___}",
+      "{___} may be bedtime for {child}"
     ]
   },
   "218": {
@@ -2299,8 +2296,8 @@
       "woman"
     ],
     "alt2_stats": [
-      "{she} may cancel {___}",
-      "{___} may cancel {appointment}"
+      "{___} may cancel {appointment}",
+      "{someone} may cancel {___}"
     ],
     "alt2_text": "She cancelled her appointments.",
     "premise_stats": [
@@ -2308,17 +2305,17 @@
       "{woman} may be summoned for {___}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "lawyer"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "appointment"
     ],
     "alt1_text": "She contacted her lawyer.",
     "type": "",
     "alt1_stats": [
-      "{she} may contact {___}",
+      "{someone} may contact {___}",
       "{___} may contact {lawyer}"
     ]
   },
@@ -2334,8 +2331,8 @@
       "{woman} may compliment {___}",
       "{___} may compliment {man}"
     ],
-    "alt1_nouns": ["he"],
-    "alt2_nouns": ["he"],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "He sneezed.",
     "type": "",
     "alt1_stats": ["{___} may sneeze"]
@@ -2344,17 +2341,17 @@
     "premise_text": "I applied pressure to the cut on my arm.",
     "premise_nouns": [
       "pressure",
-      "cut",
-      "I"
+      "someone",
+      "cut"
     ],
     "alt2_stats": ["{___} may bleed"],
     "alt2_text": "It stopped bleeding.",
     "premise_stats": [
       "{___} may apply {pressure} to {cut}",
-      "{I} may apply {pressure} to {___}",
-      "{I} may apply {___} to {cut}"
+      "{someone} may apply {___} to {cut}",
+      "{someone} may apply {pressure} to {___}"
     ],
-    "alt1_nouns": ["it"],
+    "alt1_nouns": ["something"],
     "alt2_nouns": ["something"],
     "alt1_text": "It healed.",
     "type": "",
@@ -2367,7 +2364,7 @@
       "kidnapper"
     ],
     "alt2_stats": [
-      "{they} may escape from {___}",
+      "{someone} may escape from {___}",
       "{___} may escape from {jail}"
     ],
     "alt2_text": "They escaped from jail.",
@@ -2376,18 +2373,18 @@
       "{kidnapper} may release {___}"
     ],
     "alt1_nouns": [
-      "they",
+      "someone",
       "money"
     ],
     "alt2_nouns": [
-      "they",
+      "someone",
       "jail"
     ],
     "alt1_text": "They accepted ransom money.",
     "type": "",
     "alt1_stats": [
       "{___} may accept {money}",
-      "{they} may accept {___}"
+      "{someone} may accept {___}"
     ]
   },
   "170": {
@@ -2397,9 +2394,9 @@
       "desk"
     ],
     "alt2_stats": [
-      "{I} may remove {___} from {desk}",
-      "{___} may remove {book} from {desk}",
-      "{I} may remove {book} from {___}"
+      "{someone} may remove {book} from {___}",
+      "{someone} may remove {___} from {desk}",
+      "{___} may remove {book} from {desk}"
     ],
     "alt2_text": "I removed the books from the desk.",
     "premise_stats": [
@@ -2408,20 +2405,20 @@
     ],
     "alt1_nouns": [
       "cloth",
-      "desk",
-      "I"
+      "someone",
+      "desk"
     ],
     "alt2_nouns": [
+      "someone",
       "book",
-      "desk",
-      "I"
+      "desk"
     ],
     "alt1_text": "I wiped the desk with a cloth.",
     "type": "",
     "alt1_stats": [
-      "{I} may wipe {___} with {cloth}",
+      "{someone} may wipe {___} with {cloth}",
       "{___} may wipe {desk} with {cloth}",
-      "{I} may wipe {desk} with {___}"
+      "{someone} may wipe {desk} with {___}"
     ]
   },
   "417": {
@@ -2627,23 +2624,23 @@
     "premise_text": "The cook's eyes watered.",
     "premise_nouns": ["eye"],
     "alt2_stats": [
-      "{he} may cut {___}",
+      "{someone} may cut {___}",
       "{___} may cut {onion}"
     ],
     "alt2_text": "He cut an onion.",
     "premise_stats": ["{___} may be watered"],
     "alt1_nouns": [
-      "he",
+      "someone",
       "onion"
     ],
     "alt2_nouns": [
-      "he",
+      "someone",
       "onion"
     ],
     "alt1_text": "He ran out of onions.",
     "type": "",
     "alt1_stats": [
-      "{he} may run out of {___}",
+      "{someone} may run out of {___}",
       "{___} may run out of {onion}"
     ]
   },
@@ -2674,8 +2671,8 @@
       "man"
     ],
     "alt2_stats": [
-      "{he} may have {___}",
-      "{___} may have {nose}"
+      "{___} may have {nose}",
+      "{someone} may have {___}"
     ],
     "alt2_text": "He had a runny nose the next day.",
     "premise_stats": [
@@ -2684,17 +2681,17 @@
     ],
     "alt1_nouns": [
       "headache",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
-      "he",
+      "someone",
       "nose"
     ],
     "alt1_text": "He had a headache the next day.",
     "type": "",
     "alt1_stats": [
-      "{he} may have {___}",
-      "{___} may have {headache}"
+      "{___} may have {headache}",
+      "{someone} may have {___}"
     ]
   },
   "414": {
@@ -2728,23 +2725,23 @@
     "premise_nouns": ["computer"],
     "alt2_stats": [
       "{___} may lose {datum}",
-      "{I} may lose {___}"
+      "{someone} may lose {___}"
     ],
     "alt2_text": "I lost all my data.",
     "premise_stats": ["{___} may crash"],
     "alt1_nouns": [
       "speaker",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
-      "datum",
-      "I"
+      "someone",
+      "datum"
     ],
     "alt1_text": "I installed new speakers.",
     "type": "",
     "alt1_stats": [
       "{___} may install {speaker}",
-      "{I} may install {___}"
+      "{someone} may install {___}"
     ]
   },
   "412": {
@@ -2906,10 +2903,7 @@
       "{stranger} may cry out to {___} in {language}",
       "{stranger} may cry out to {someone} in {___}"
     ],
-    "alt1_nouns": [
-      "someone",
-      "I"
-    ],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "someone",
       "something"
@@ -2918,7 +2912,7 @@
     "type": "",
     "alt1_stats": [
       "{___} may stare at {someone}",
-      "{I} may stare at {___}"
+      "{someone} may stare at {___}"
     ]
   },
   "224": {
@@ -2957,13 +2951,13 @@
     "premise_text": "I went to bed.",
     "premise_nouns": [
       "bed",
-      "I"
+      "someone"
     ],
     "alt2_stats": ["{___} may be late"],
     "alt2_text": "It was late.",
     "premise_stats": [
-      "{I} may go to {___}",
-      "{___} may go to {bed}"
+      "{___} may go to {bed}",
+      "{someone} may go to {___}"
     ],
     "alt1_nouns": [
       "it",
@@ -2985,7 +2979,7 @@
       "top"
     ],
     "alt2_stats": [
-      "{she} may crawl up {___}",
+      "{someone} may crawl up {___}",
       "{___} may crawl up {slide}"
     ],
     "alt2_text": "She crawled up the slide.",
@@ -2995,18 +2989,18 @@
       "{girl} may push {___} off {top}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "slide"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "slide"
     ],
     "alt1_text": "She glided down the slide.",
     "type": "",
     "alt1_stats": [
-      "{___} may glide down {slide}",
-      "{she} may glide down {___}"
+      "{someone} may glide down {___}",
+      "{___} may glide down {slide}"
     ]
   },
   "328": {
@@ -3016,8 +3010,8 @@
       "friend"
     ],
     "alt2_stats": [
-      "{I} may bring {___}",
-      "{___} may bring {card}"
+      "{___} may bring {card}",
+      "{someone} may bring {___}"
     ],
     "alt2_text": "I brought her a card and flowers.",
     "premise_stats": [
@@ -3026,18 +3020,17 @@
     ],
     "alt1_nouns": [
       "someone",
-      "I",
       "hospital"
     ],
     "alt2_nouns": [
-      "card",
-      "I"
+      "someone",
+      "card"
     ],
     "alt1_text": "I dropped her off at the hospital.",
     "type": "",
     "alt1_stats": [
-      "{I} may drop off {someone} at {___}",
-      "{I} may drop off {___} at {hospital}",
+      "{someone} may drop off {___} at {hospital}",
+      "{someone} may drop off {someone} at {___}",
       "{___} may drop off {someone} at {hospital}"
     ]
   },
@@ -3047,7 +3040,7 @@
     "alt2_stats": ["{___} may be shocked"],
     "alt2_text": "I was shocked.",
     "premise_stats": ["{___} may drop open"],
-    "alt1_nouns": ["I"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": ["something"],
     "alt1_text": "I was unhappy.",
     "type": "",
@@ -3114,9 +3107,9 @@
       "woman"
     ],
     "alt2_stats": [
+      "{someone} may install {___} on {computer}",
       "{___} may install {software} on {computer}",
-      "{she} may install {software} on {___}",
-      "{she} may install {___} on {computer}"
+      "{someone} may install {software} on {___}"
     ],
     "alt2_text": "She installed new software on the computer.",
     "premise_stats": [
@@ -3126,18 +3119,18 @@
     "alt1_nouns": [
       "computer",
       "file",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
       "computer",
       "software",
-      "she"
+      "someone"
     ],
     "alt1_text": "She deleted old files on the computer.",
     "type": "",
     "alt1_stats": [
-      "{she} may delete {___} on {computer}",
-      "{she} may delete {file} on {___}",
+      "{someone} may delete {___} on {computer}",
+      "{someone} may delete {file} on {___}",
       "{___} may delete {file} on {computer}"
     ]
   },
@@ -3177,8 +3170,8 @@
     ],
     "alt2_stats": [
       "{___} may receive {tenure} at {university}",
-      "{she} may receive {tenure} at {___}",
-      "{she} may receive {___} at {university}"
+      "{someone} may receive {tenure} at {___}",
+      "{someone} may receive {___} at {university}"
     ],
     "alt2_text": "She received tenure at the university.",
     "premise_stats": [
@@ -3187,18 +3180,18 @@
     ],
     "alt1_nouns": [
       "species",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
       "university",
-      "tenure",
-      "she"
+      "someone",
+      "tenure"
     ],
     "alt1_text": "She discovered a new species.",
     "type": "",
     "alt1_stats": [
-      "{___} may discover {species}",
-      "{she} may discover {___}"
+      "{someone} may discover {___}",
+      "{___} may discover {species}"
     ]
   },
   "187": {
@@ -3210,7 +3203,7 @@
     ],
     "alt2_stats": [
       "{___} may build {castle}",
-      "{he} may build {___}"
+      "{someone} may build {___}"
     ],
     "alt2_text": "He was building a sand castle.",
     "premise_stats": [
@@ -3220,18 +3213,18 @@
     ],
     "alt1_nouns": [
       "sand",
-      "seashell",
-      "he"
+      "someone",
+      "seashell"
     ],
     "alt2_nouns": [
-      "castle",
-      "he"
+      "someone",
+      "castle"
     ],
     "alt1_text": "He was collecting seashells in the sand.",
     "type": "",
     "alt1_stats": [
-      "{he} may collect {___} in {sand}",
-      "{he} may collect {seashell} in {___}",
+      "{someone} may collect {seashell} in {___}",
+      "{someone} may collect {___} in {sand}",
       "{___} may collect {seashell} in {sand}"
     ]
   },
@@ -3243,7 +3236,7 @@
     ],
     "alt2_stats": [
       "{___} may pay {someone}",
-      "{I} may pay {___}"
+      "{someone} may pay {___}"
     ],
     "alt2_text": "I paid her back.",
     "premise_stats": [
@@ -3252,17 +3245,14 @@
     ],
     "alt1_nouns": [
       "refund",
-      "I"
+      "someone"
     ],
-    "alt2_nouns": [
-      "someone",
-      "I"
-    ],
+    "alt2_nouns": ["someone"],
     "alt1_text": "I sought a refund.",
     "type": "",
     "alt1_stats": [
-      "{I} may seek {___}",
-      "{___} may seek {refund}"
+      "{___} may seek {refund}",
+      "{someone} may seek {___}"
     ]
   },
   "324": {
@@ -3360,8 +3350,7 @@
     ],
     "alt1_nouns": [
       "railing",
-      "someone",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
       "railing",
@@ -3370,9 +3359,9 @@
     "alt1_text": "I caught myself on the railing.",
     "type": "",
     "alt1_stats": [
-      "{I} may catch {someone} on {___}",
+      "{someone} may catch {someone} on {___}",
       "{___} may catch {someone} on {railing}",
-      "{I} may catch {___} on {railing}"
+      "{someone} may catch {___} on {railing}"
     ]
   },
   "320": {
@@ -3389,13 +3378,13 @@
     ],
     "alt1_nouns": [
       "popsicle",
-      "they"
+      "someone"
     ],
-    "alt2_nouns": ["they"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "They ate popsicles.",
     "type": "",
     "alt1_stats": [
-      "{they} may eat {___}",
+      "{someone} may eat {___}",
       "{___} may eat {popsicle}"
     ]
   },
@@ -3406,10 +3395,10 @@
       "something"
     ],
     "alt2_stats": [
-      "{he} may beg {___} on {street} for {change}",
-      "{he} may beg {people} on {street} for {___}",
-      "{he} may beg {people} on {___} for {change}",
-      "{___} may beg {people} on {street} for {change}"
+      "{someone} may beg {___} on {street} for {change}",
+      "{someone} may beg {people} on {___} for {change}",
+      "{___} may beg {people} on {street} for {change}",
+      "{someone} may beg {people} on {street} for {___}"
     ],
     "alt2_text": "He begged people on the street for loose change.",
     "premise_stats": [
@@ -3418,26 +3407,26 @@
     ],
     "alt1_nouns": [
       "seat",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
       "change",
       "street",
-      "he",
+      "someone",
       "people"
     ],
     "alt1_text": "He searched under his car seats for loose change.",
     "type": "",
     "alt1_stats": [
       "{___} may search under {seat}",
-      "{he} may search under {___}"
+      "{someone} may search under {___}"
     ]
   },
   "322": {
     "premise_text": "The customer thought the souvenir was overpriced.",
     "premise_nouns": ["souvenir"],
     "alt2_stats": [
-      "{he} may bargain with {___}",
+      "{someone} may bargain with {___}",
       "{___} may bargain with {vendor}"
     ],
     "alt2_text": "He bargained with the vendor.",
@@ -3449,7 +3438,7 @@
     ],
     "alt2_nouns": [
       "vendor",
-      "he"
+      "someone"
     ],
     "alt1_text": "The vender sold it to him.",
     "type": "",
@@ -3484,7 +3473,7 @@
       "tire"
     ],
     "alt2_stats": [
-      "{he} may run over {___}",
+      "{someone} may run over {___}",
       "{___} may run over {nail}"
     ],
     "alt2_text": "He ran over a nail.",
@@ -3494,16 +3483,16 @@
     ],
     "alt1_nouns": [
       "limit",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
       "nail",
-      "he"
+      "someone"
     ],
     "alt1_text": "He went over the speed limit.",
     "type": "",
     "alt1_stats": [
-      "{he} may go over {___}",
+      "{someone} may go over {___}",
       "{___} may go over {limit}"
     ]
   },
@@ -3568,7 +3557,7 @@
       "entrance"
     ],
     "alt2_stats": [
-      "{she} may forget {___}",
+      "{someone} may forget {___}",
       "{___} may forget {something}"
     ],
     "alt2_text": "She forgot her ID.",
@@ -3581,7 +3570,7 @@
       "friend"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "something"
     ],
     "alt1_text": "Her friends stood her up.",
@@ -3605,13 +3594,13 @@
     ],
     "alt1_nouns": [
       "thunder",
-      "he"
+      "someone"
     ],
     "alt2_nouns": ["sun"],
     "alt1_text": "He heard thunder.",
     "type": "",
     "alt1_stats": [
-      "{he} may hear {___}",
+      "{someone} may hear {___}",
       "{___} may hear {thunder}"
     ]
   },
@@ -3643,25 +3632,25 @@
     "premise_text": "I planted the seeds in the soil.",
     "premise_nouns": [
       "seed",
-      "I",
+      "someone",
       "soil"
     ],
     "alt2_stats": ["{___} may be sprouted"],
     "alt2_text": "The seeds sprouted.",
     "premise_stats": [
-      "{I} may plant {seed} in {___}",
-      "{I} may plant {___} in {soil}",
+      "{someone} may plant {seed} in {___}",
+      "{someone} may plant {___} in {soil}",
       "{___} may plant {seed} in {soil}"
     ],
     "alt1_nouns": [
-      "I",
+      "someone",
       "soil"
     ],
     "alt2_nouns": ["seed"],
     "alt1_text": "I watered the soil.",
     "type": "",
     "alt1_stats": [
-      "{I} may water {___}",
+      "{someone} may water {___}",
       "{___} may water {soil}"
     ]
   },
@@ -3670,7 +3659,7 @@
     "premise_nouns": ["something"],
     "alt2_stats": [
       "{___} may support {cause}",
-      "{he} may support {___}"
+      "{someone} may support {___}"
     ],
     "alt2_text": "He supported the cause behind his donation.",
     "premise_stats": ["{___} may stay anonymous"],
@@ -3680,7 +3669,7 @@
     ],
     "alt2_nouns": [
       "cause",
-      "he"
+      "someone"
     ],
     "alt1_text": "He wanted to maintain his privacy.",
     "type": "",
@@ -3694,27 +3683,27 @@
     "premise_nouns": ["woman"],
     "alt2_stats": [
       "{___} may hide {scar} with {makeup}",
-      "{she} may hide {___} with {makeup}",
-      "{she} may hide {scar} with {___}"
+      "{someone} may hide {___} with {makeup}",
+      "{someone} may hide {scar} with {___}"
     ],
     "alt2_text": "She hid the scar with makeup.",
     "premise_stats": ["{___} may feel ashamed"],
     "alt1_nouns": [
+      "someone",
       "scar",
-      "she",
       "stranger"
     ],
     "alt2_nouns": [
       "makeup",
-      "scar",
-      "she"
+      "someone",
+      "scar"
     ],
     "alt1_text": "She explained the scar to strangers.",
     "type": "",
     "alt1_stats": [
-      "{she} may explain {scar} to {___}",
-      "{___} may explain {scar} to {stranger}",
-      "{she} may explain {___} to {stranger}"
+      "{someone} may explain {___} to {stranger}",
+      "{someone} may explain {scar} to {___}",
+      "{___} may explain {scar} to {stranger}"
     ]
   },
   "186": {
@@ -3724,8 +3713,8 @@
       "doctor"
     ],
     "alt2_stats": [
-      "{he} may put {___} in {cast}",
-      "{he} may put {arm} in {___}",
+      "{someone} may put {arm} in {___}",
+      "{someone} may put {___} in {cast}",
       "{___} may put {arm} in {cast}"
     ],
     "alt2_text": "He put the patient's arm in a cast.",
@@ -3736,8 +3725,8 @@
     "alt1_nouns": ["arm"],
     "alt2_nouns": [
       "cast",
-      "arm",
-      "he"
+      "someone",
+      "arm"
     ],
     "alt1_text": "He discovered that the patient's arm was broken.",
     "type": "",
@@ -3782,8 +3771,8 @@
     ],
     "alt2_stats": [
       "{___} may put {ring} on {finger}",
-      "{she} may put {___} on {finger}",
-      "{she} may put {ring} on {___}"
+      "{someone} may put {___} on {finger}",
+      "{someone} may put {ring} on {___}"
     ],
     "alt2_text": "She put a diamond ring on her finger.",
     "premise_stats": [
@@ -3792,20 +3781,20 @@
       "{___} may run {finger} under {water}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "finger",
       "toaster"
     ],
     "alt2_nouns": [
       "ring",
-      "she",
+      "someone",
       "finger"
     ],
     "alt1_text": "She burned her finger on the toaster.",
     "type": "",
     "alt1_stats": [
-      "{she} may burn {___} on {toaster}",
-      "{she} may burn {finger} on {___}",
+      "{someone} may burn {___} on {toaster}",
+      "{someone} may burn {finger} on {___}",
       "{___} may burn {finger} on {toaster}"
     ]
   },
@@ -3814,7 +3803,7 @@
     "premise_nouns": [
       "faucet",
       "hand",
-      "I"
+      "someone"
     ],
     "alt2_stats": [
       "{water} may splash in {___}",
@@ -3822,8 +3811,8 @@
     ],
     "alt2_text": "The water splashed in my face.",
     "premise_stats": [
-      "{I} may put {hand} under {___}",
-      "{I} may put {___} under {faucet}",
+      "{someone} may put {___} under {faucet}",
+      "{someone} may put {hand} under {___}",
       "{___} may put {hand} under {faucet}"
     ],
     "alt1_nouns": [
@@ -3846,21 +3835,21 @@
     "premise_nouns": [
       "fit",
       "composure",
-      "I"
+      "someone"
     ],
     "alt2_stats": [
-      "{I} may take {___}",
+      "{someone} may take {___}",
       "{___} may take {breath}"
     ],
     "alt2_text": "I took deep breaths.",
     "premise_stats": [
       "{___} may regain {composure} from {fit}",
-      "{I} may regain {___} from {fit}",
-      "{I} may regain {composure} from {___}"
+      "{someone} may regain {___} from {fit}",
+      "{someone} may regain {composure} from {___}"
     ],
     "alt1_nouns": ["heart"],
     "alt2_nouns": [
-      "I",
+      "someone",
       "breath"
     ],
     "alt1_text": "My heart pounded.",
@@ -3914,7 +3903,7 @@
     ],
     "alt1_nouns": [
       "meeting",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
       "tie",
@@ -3923,20 +3912,20 @@
     "alt1_text": "He scheduled a meeting with an important client.",
     "type": "",
     "alt1_stats": [
-      "{___} may schedule {meeting}",
-      "{he} may schedule {___}"
+      "{someone} may schedule {___}",
+      "{___} may schedule {meeting}"
     ]
   },
   "116": {
     "premise_text": "I moved to a new city.",
     "premise_nouns": [
-      "I",
+      "someone",
       "city"
     ],
     "alt2_stats": ["{___} may be born"],
     "alt2_text": "My son was born.",
     "premise_stats": [
-      "{I} may move to {___}",
+      "{someone} may move to {___}",
       "{___} may move to {city}"
     ],
     "alt1_nouns": ["something"],
@@ -3970,8 +3959,8 @@
       "wave"
     ],
     "alt2_stats": [
-      "{she} may paddle {___} into {ocean}",
-      "{she} may paddle {board} into {___}",
+      "{someone} may paddle {board} into {___}",
+      "{someone} may paddle {___} into {ocean}",
       "{___} may paddle {board} into {ocean}"
     ],
     "alt2_text": "She paddled her board into the ocean.",
@@ -3985,7 +3974,7 @@
       "wave"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "ocean",
       "board"
     ],
@@ -4063,19 +4052,19 @@
     "premise_text": "I received a package in the mail.",
     "premise_nouns": [
       "mail",
-      "package",
-      "I"
+      "someone",
+      "package"
     ],
     "alt2_stats": [
-      "{I} may take {package} to {___}",
       "{___} may take {package} to {office}",
-      "{I} may take {___} to {office}"
+      "{someone} may take {package} to {___}",
+      "{someone} may take {___} to {office}"
     ],
     "alt2_text": "I took the package to the post office.",
     "premise_stats": [
-      "{I} may receive {package} in {___}",
+      "{someone} may receive {package} in {___}",
       "{___} may receive {package} in {mail}",
-      "{I} may receive {___} in {mail}"
+      "{someone} may receive {___} in {mail}"
     ],
     "alt1_nouns": [
       "curiosity",
@@ -4083,8 +4072,8 @@
     ],
     "alt2_nouns": [
       "office",
-      "package",
-      "I"
+      "someone",
+      "package"
     ],
     "alt1_text": "The package triggered my curiosity.",
     "type": "",
@@ -4095,28 +4084,28 @@
   },
   "110": {
     "premise_text": "I was confused by the professor's lecture.",
-    "premise_nouns": ["I"],
+    "premise_nouns": ["someone"],
     "alt2_stats": [
-      "{I} may ask {___}",
+      "{someone} may ask {___}",
       "{___} may ask {question}"
     ],
     "alt2_text": "I asked the professor questions.",
     "premise_stats": ["{___} may be confused"],
     "alt1_nouns": [
+      "someone",
       "professor",
-      "attention",
-      "I"
+      "attention"
     ],
     "alt2_nouns": [
-      "question",
-      "I"
+      "someone",
+      "question"
     ],
     "alt1_text": "I paid attention to the professor.",
     "type": "",
     "alt1_stats": [
       "{___} may pay {attention} to {professor}",
-      "{I} may pay {attention} to {___}",
-      "{I} may pay {___} to {professor}"
+      "{someone} may pay {attention} to {___}",
+      "{someone} may pay {___} to {professor}"
     ]
   },
   "111": {
@@ -4157,7 +4146,7 @@
       "{___} may receive {detention}",
       "{student} may receive {___}"
     ],
-    "alt1_nouns": ["he"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "homework",
       "teacher"
@@ -4212,7 +4201,7 @@
     ],
     "alt2_stats": [
       "{___} may look for {drug}",
-      "{they} may look for {___}"
+      "{someone} may look for {___}"
     ],
     "alt2_text": "They were looking for illegal drugs.",
     "premise_stats": [
@@ -4224,7 +4213,7 @@
       "something"
     ],
     "alt2_nouns": [
-      "they",
+      "someone",
       "drug"
     ],
     "alt1_text": "They were trying to elicit a confession.",
@@ -4236,25 +4225,25 @@
   },
   "433": {
     "premise_text": "I coughed.",
-    "premise_nouns": ["I"],
+    "premise_nouns": ["someone"],
     "alt2_stats": [
-      "{I} may lower {___}",
+      "{someone} may lower {___}",
       "{___} may lower {voice}"
     ],
     "alt2_text": "I lowered my voice.",
     "premise_stats": ["{___} may cough"],
     "alt1_nouns": [
-      "I",
+      "someone",
       "smoke"
     ],
     "alt2_nouns": [
       "voice",
-      "I"
+      "someone"
     ],
     "alt1_text": "I inhaled smoke.",
     "type": "",
     "alt1_stats": [
-      "{I} may inhale {___}",
+      "{someone} may inhale {___}",
       "{___} may inhale {smoke}"
     ]
   },
@@ -4315,8 +4304,8 @@
       "woman"
     ],
     "alt2_stats": [
-      "{she} may break {___}",
-      "{___} may break {leg}"
+      "{___} may break {leg}",
+      "{someone} may break {___}"
     ],
     "alt2_text": "She broke her leg.",
     "premise_stats": [
@@ -4325,16 +4314,16 @@
     ],
     "alt1_nouns": [
       "leg",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
       "leg",
-      "she"
+      "someone"
     ],
     "alt1_text": "She shaved her legs.",
     "type": "",
     "alt1_stats": [
-      "{she} may shave {___}",
+      "{someone} may shave {___}",
       "{___} may shave {leg}"
     ]
   },
@@ -4352,8 +4341,8 @@
       "{woman} may cover {___} with {hand}",
       "{woman} may cover {mouth} with {___}"
     ],
-    "alt1_nouns": ["she"],
-    "alt2_nouns": ["she"],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "She exhaled.",
     "type": "",
     "alt1_stats": ["{___} may exhale"]
@@ -4366,7 +4355,7 @@
       "bride"
     ],
     "alt2_stats": [
-      "{she} may call off {___}",
+      "{someone} may call off {___}",
       "{___} may call off {wedding}"
     ],
     "alt2_text": "She called the wedding off.",
@@ -4381,7 +4370,7 @@
     ],
     "alt2_nouns": [
       "wedding",
-      "she"
+      "someone"
     ],
     "alt1_text": "The wedding guests brought gifts.",
     "type": "",
@@ -4404,8 +4393,8 @@
       "{couple} may travel {south} for {___}",
       "{couple} may travel {___} for {winter}"
     ],
-    "alt1_nouns": ["they"],
-    "alt2_nouns": ["they"],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "They were retired.",
     "type": "",
     "alt1_stats": ["{___} may be retired"]
@@ -4436,7 +4425,7 @@
     ],
     "alt2_stats": [
       "{___} may detect {predator}",
-      "{it} may detect {___}"
+      "{something} may detect {___}"
     ],
     "alt2_text": "It detected a predator.",
     "premise_stats": [
@@ -4444,18 +4433,18 @@
       "{turtle} may hide in {___}"
     ],
     "alt1_nouns": [
-      "it",
-      "fish"
+      "fish",
+      "something"
     ],
     "alt2_nouns": [
       "predator",
-      "it"
+      "something"
     ],
     "alt1_text": "It ate a fish.",
     "type": "",
     "alt1_stats": [
       "{___} may eat {fish}",
-      "{it} may eat {___}"
+      "{something} may eat {___}"
     ]
   },
   "126": {
@@ -4466,7 +4455,7 @@
       "clothes"
     ],
     "alt2_stats": [
-      "{she} may outgrow {___}",
+      "{someone} may outgrow {___}",
       "{___} may outgrow {clothes}"
     ],
     "alt2_text": "She outgrew the clothes.",
@@ -4478,7 +4467,7 @@
     "alt1_nouns": ["clothes"],
     "alt2_nouns": [
       "clothes",
-      "she"
+      "someone"
     ],
     "alt1_text": "The clothes were tattered.",
     "type": "",
@@ -4512,7 +4501,7 @@
     "alt2_text": "His wife was diagnosed with cancer.",
     "premise_stats": ["{___} may be alive"],
     "alt1_nouns": [
-      "he",
+      "someone",
       "cancer"
     ],
     "alt2_nouns": [
@@ -4522,7 +4511,7 @@
     "alt1_text": "He was cured of cancer.",
     "type": "",
     "alt1_stats": [
-      "{he} may be cured of {___}",
+      "{someone} may be cured of {___}",
       "{___} may be cured of {cancer}"
     ]
   },
@@ -4585,9 +4574,9 @@
       "something"
     ],
     "alt2_stats": [
-      "{she} may endure {___} in {occupation}",
       "{___} may endure {lot} in {occupation}",
-      "{she} may endure {lot} in {___}"
+      "{someone} may endure {___} in {occupation}",
+      "{someone} may endure {lot} in {___}"
     ],
     "alt2_text": "She endured a lot of stress in her current occupation.",
     "premise_stats": [
@@ -4596,20 +4585,20 @@
     ],
     "alt1_nouns": [
       "occupation",
-      "she",
+      "someone",
       "lot"
     ],
     "alt2_nouns": [
       "occupation",
-      "she",
+      "someone",
       "lot"
     ],
     "alt1_text": "She made a lot of money in her current occupation.",
     "type": "",
     "alt1_stats": [
-      "{she} may make {___} in {occupation}",
-      "{___} may make {lot} in {occupation}",
-      "{she} may make {lot} in {___}"
+      "{someone} may make {lot} in {___}",
+      "{someone} may make {___} in {occupation}",
+      "{___} may make {lot} in {occupation}"
     ]
   },
   "122": {
@@ -4621,7 +4610,7 @@
     ],
     "alt2_stats": [
       "{___} may smile at {someone}",
-      "{I} may smile at {___}"
+      "{someone} may smile at {___}"
     ],
     "alt2_text": "I smiled at him.",
     "premise_stats": [
@@ -4629,19 +4618,13 @@
       "{something} may be cut in {___} in {line}",
       "{___} may be cut in {front} in {line}"
     ],
-    "alt1_nouns": [
-      "someone",
-      "I"
-    ],
-    "alt2_nouns": [
-      "someone",
-      "I"
-    ],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "I confronted him.",
     "type": "",
     "alt1_stats": [
-      "{___} may confront {someone}",
-      "{I} may confront {___}"
+      "{someone} may confront {___}",
+      "{___} may confront {someone}"
     ]
   },
   "301": {
@@ -4651,8 +4634,8 @@
       "woman"
     ],
     "alt2_stats": [
-      "{___} may receive {bill}",
-      "{she} may receive {___}"
+      "{someone} may receive {___}",
+      "{___} may receive {bill}"
     ],
     "alt2_text": "She received her monthly bill.",
     "premise_stats": [
@@ -4665,7 +4648,7 @@
     ],
     "alt2_nouns": [
       "bill",
-      "she"
+      "someone"
     ],
     "alt1_text": "She preferred paying by cash.",
     "type": "",
@@ -4736,14 +4719,14 @@
     ],
     "alt1_nouns": [
       "awe",
-      "he"
+      "someone"
     ],
-    "alt2_nouns": ["he"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "He felt in awe.",
     "type": "",
     "alt1_stats": [
-      "{___} may feel in {awe}",
-      "{he} may feel in {___}"
+      "{someone} may feel in {___}",
+      "{___} may feel in {awe}"
     ]
   },
   "303": {
@@ -4773,31 +4756,31 @@
   "306": {
     "premise_text": "I ran out of breath.",
     "premise_nouns": [
-      "I",
+      "someone",
       "breath"
     ],
     "alt2_stats": [
-      "{I} may read {___}",
-      "{___} may read {chapter}"
+      "{___} may read {chapter}",
+      "{someone} may read {___}"
     ],
     "alt2_text": "I read several chapters of the book.",
     "premise_stats": [
-      "{I} may run out of {___}",
+      "{someone} may run out of {___}",
       "{___} may run out of {breath}"
     ],
     "alt1_nouns": [
       "flight",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
       "chapter",
-      "I"
+      "someone"
     ],
     "alt1_text": "I climbed several flights of stairs.",
     "type": "",
     "alt1_stats": [
-      "{___} may climb {flight}",
-      "{I} may climb {___}"
+      "{someone} may climb {___}",
+      "{___} may climb {flight}"
     ]
   },
   "305": {
@@ -4813,7 +4796,7 @@
       "{woman} may refuse {___}"
     ],
     "alt1_nouns": ["something"],
-    "alt2_nouns": ["she"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "She was the designated driver for the night.",
     "type": "",
     "alt1_stats": ["{___} may be designated"]
@@ -4853,23 +4836,23 @@
     "premise_nouns": ["woman"],
     "alt2_stats": [
       "{___} may seek {career}",
-      "{she} may seek {___}"
+      "{someone} may seek {___}"
     ],
     "alt2_text": "She sought a career as a psychiatrist.",
     "premise_stats": ["{___} may be deemed"],
     "alt1_nouns": [
-      "she",
+      "someone",
       "institution"
     ],
     "alt2_nouns": [
-      "career",
-      "she"
+      "someone",
+      "career"
     ],
     "alt1_text": "She was sent to a psychiatric institution.",
     "type": "",
     "alt1_stats": [
       "{___} may be sent to {institution}",
-      "{she} may be sent to {___}"
+      "{someone} may be sent to {___}"
     ]
   },
   "129": {
@@ -4936,9 +4919,9 @@
       "something"
     ],
     "alt2_stats": [
+      "{someone} may bring {___} to {school}",
       "{___} may bring {lunch} to {school}",
-      "{he} may bring {lunch} to {___}",
-      "{he} may bring {___} to {school}"
+      "{someone} may bring {lunch} to {___}"
     ],
     "alt2_text": "He brought his lunch to school.",
     "premise_stats": [
@@ -4949,19 +4932,19 @@
     "alt1_nouns": [
       "home",
       "assignment",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
       "school",
-      "lunch",
-      "he"
+      "someone",
+      "lunch"
     ],
     "alt1_text": "He left his assignment at home.",
     "type": "",
     "alt1_stats": [
-      "{he} may leave {___} at {home}",
-      "{he} may leave {assignment} at {___}",
-      "{___} may leave {assignment} at {home}"
+      "{someone} may leave {___} at {home}",
+      "{___} may leave {assignment} at {home}",
+      "{someone} may leave {assignment} at {___}"
     ]
   },
   "445": {
@@ -4990,7 +4973,7 @@
     ],
     "alt2_stats": [
       "{___} may be excommunicated from {church}",
-      "{he} may be excommunicated from {___}"
+      "{someone} may be excommunicated from {___}"
     ],
     "alt2_text": "He was excommunicated from the church.",
     "premise_stats": [
@@ -4999,19 +4982,19 @@
     ],
     "alt1_nouns": [
       "church",
-      "money",
-      "he"
+      "someone",
+      "money"
     ],
     "alt2_nouns": [
       "church",
-      "he"
+      "someone"
     ],
     "alt1_text": "He donated money to the church.",
     "type": "",
     "alt1_stats": [
       "{___} may donate {money} to {church}",
-      "{he} may donate {money} to {___}",
-      "{he} may donate {___} to {church}"
+      "{someone} may donate {money} to {___}",
+      "{someone} may donate {___} to {church}"
     ]
   },
   "447": {
@@ -5021,9 +5004,9 @@
       "hair"
     ],
     "alt2_stats": [
-      "{she} may lather {___} into {hair}",
+      "{someone} may lather {___} into {hair}",
       "{___} may lather {shampoo} into {hair}",
-      "{she} may lather {shampoo} into {___}"
+      "{someone} may lather {shampoo} into {___}"
     ],
     "alt2_text": "She lathered shampoo into her hair.",
     "premise_stats": [
@@ -5032,35 +5015,35 @@
     ],
     "alt1_nouns": [
       "clip",
-      "she",
+      "someone",
       "hair"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "hair",
       "shampoo"
     ],
     "alt1_text": "She pulled her hair back with a clip.",
     "type": "",
     "alt1_stats": [
-      "{she} may pull {___} with {clip}",
       "{___} may pull {hair} with {clip}",
-      "{she} may pull {hair} with {___}"
+      "{someone} may pull {hair} with {___}",
+      "{someone} may pull {___} with {clip}"
     ]
   },
   "440": {
     "premise_text": "The man grew old.",
     "premise_nouns": ["man"],
     "alt2_stats": [
-      "{___} may sell {belongings}",
-      "{he} may sell {___}"
+      "{someone} may sell {___}",
+      "{___} may sell {belongings}"
     ],
     "alt2_text": "He sold his belongings.",
     "premise_stats": ["{___} may grow old"],
     "alt1_nouns": ["hair"],
     "alt2_nouns": [
       "belongings",
-      "he"
+      "someone"
     ],
     "alt1_text": "His hair turned gray.",
     "type": "",
@@ -5074,7 +5057,7 @@
     ],
     "alt2_stats": [
       "{___} may order {fries}",
-      "{they} may order {___}"
+      "{someone} may order {___}"
     ],
     "alt2_text": "They ordered fries with the hamburger.",
     "premise_stats": [
@@ -5082,35 +5065,35 @@
       "{___} may share {hamburger}"
     ],
     "alt1_nouns": [
-      "they",
+      "someone",
       "half",
       "hamburger"
     ],
     "alt2_nouns": [
-      "they",
-      "fries"
+      "fries",
+      "someone"
     ],
     "alt1_text": "They cut the hamburger in half.",
     "type": "",
     "alt1_stats": [
-      "{they} may cut {___} in {half}",
-      "{___} may cut {hamburger} in {half}",
-      "{they} may cut {hamburger} in {___}"
+      "{someone} may cut {hamburger} in {___}",
+      "{someone} may cut {___} in {half}",
+      "{___} may cut {hamburger} in {half}"
     ]
   },
   "442": {
     "premise_text": "I twisted the cap off the soda bottle.",
     "premise_nouns": [
       "cap",
-      "bottle",
-      "I"
+      "someone",
+      "bottle"
     ],
     "alt2_stats": ["{___} may leak out"],
     "alt2_text": "The soda leaked out.",
     "premise_stats": [
       "{___} may twist {cap} off {bottle}",
-      "{I} may twist {cap} off {___}",
-      "{I} may twist {___} off {bottle}"
+      "{someone} may twist {___} off {bottle}",
+      "{someone} may twist {cap} off {___}"
     ],
     "alt1_nouns": ["soda"],
     "alt2_nouns": ["soda"],
@@ -5166,15 +5149,15 @@
     "premise_text": "The ring on my finger got stuck.",
     "premise_nouns": ["something"],
     "alt2_stats": [
-      "{I} may chip {___}",
+      "{someone} may chip {___}",
       "{___} may chip {fingernail}"
     ],
     "alt2_text": "I chipped my fingernail.",
     "premise_stats": ["{___} may be stuck"],
     "alt1_nouns": ["finger"],
     "alt2_nouns": [
-      "fingernail",
-      "I"
+      "someone",
+      "fingernail"
     ],
     "alt1_text": "My finger swelled.",
     "type": "",
@@ -5184,23 +5167,23 @@
     "premise_text": "I pulled the rubber band.",
     "premise_nouns": [
       "band",
-      "I"
+      "someone"
     ],
     "alt2_stats": ["{___} may stretch"],
     "alt2_text": "It stretched.",
     "premise_stats": [
-      "{I} may pull {___}",
+      "{someone} may pull {___}",
       "{___} may pull {band}"
     ],
     "alt1_nouns": [
-      "it",
+      "something",
       "room"
     ],
-    "alt2_nouns": ["it"],
+    "alt2_nouns": ["something"],
     "alt1_text": "It flung across the room.",
     "type": "",
     "alt1_stats": [
-      "{it} may fling across {___}",
+      "{something} may fling across {___}",
       "{___} may fling across {room}"
     ]
   },
@@ -5212,7 +5195,7 @@
       "word"
     ],
     "alt2_stats": [
-      "{she} may chuck {___}",
+      "{someone} may chuck {___}",
       "{___} may chuck {textbook}"
     ],
     "alt2_text": "She chucked the textbook across the room.",
@@ -5223,18 +5206,18 @@
     ],
     "alt1_nouns": [
       "term",
-      "she",
+      "someone",
       "dictionary"
     ],
     "alt2_nouns": [
       "textbook",
-      "she"
+      "someone"
     ],
     "alt1_text": "She looked the term up in the dictionary.",
     "type": "",
     "alt1_stats": [
-      "{she} may look up {___} in {dictionary}",
-      "{she} may look up {term} in {___}",
+      "{someone} may look up {___} in {dictionary}",
+      "{someone} may look up {term} in {___}",
       "{___} may look up {term} in {dictionary}"
     ]
   },
@@ -5315,13 +5298,13 @@
   "138": {
     "premise_text": "I scratched my skin.",
     "premise_nouns": [
-      "I",
+      "someone",
       "skin"
     ],
     "alt2_stats": ["{___} may fade"],
     "alt2_text": "My scar faded.",
     "premise_stats": [
-      "{I} may scratch {___}",
+      "{someone} may scratch {___}",
       "{___} may scratch {skin}"
     ],
     "alt1_nouns": ["itch"],
@@ -5337,7 +5320,7 @@
       "grandmother"
     ],
     "alt2_stats": [
-      "{she} may send {___}",
+      "{someone} may send {___}",
       "{___} may send {gift}"
     ],
     "alt2_text": "She sent me a gift.",
@@ -5345,10 +5328,10 @@
       "{___} may note to {grandmother}",
       "{someone} may note to {___}"
     ],
-    "alt1_nouns": ["she"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "gift",
-      "she"
+      "someone"
     ],
     "alt1_text": "She became forgetful.",
     "type": "",
@@ -5359,22 +5342,22 @@
     "premise_nouns": ["flashlight"],
     "alt2_stats": [
       "{___} may replace {battery}",
-      "{I} may replace {___}"
+      "{someone} may replace {___}"
     ],
     "alt2_text": "I replaced the batteries.",
     "premise_stats": ["{___} may be dead"],
     "alt1_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt2_nouns": [
       "battery",
-      "I"
+      "someone"
     ],
     "alt1_text": "I took it apart.",
     "type": "",
     "alt1_stats": [
-      "{I} may take {___}",
+      "{someone} may take {___}",
       "{___} may take {something}"
     ]
   },
@@ -5412,8 +5395,8 @@
     "premise_text": "I pressed my hand into the wet cement.",
     "premise_nouns": [
       "hand",
-      "cement",
-      "I"
+      "someone",
+      "cement"
     ],
     "alt2_stats": [
       "{crack} may emerge in {___}",
@@ -5421,9 +5404,9 @@
     ],
     "alt2_text": "Cracks emerged in the cement.",
     "premise_stats": [
-      "{I} may press {hand} into {___}",
       "{___} may press {hand} into {cement}",
-      "{I} may press {___} into {cement}"
+      "{someone} may press {___} into {cement}",
+      "{someone} may press {hand} into {___}"
     ],
     "alt1_nouns": [
       "handprint",
@@ -5448,7 +5431,7 @@
     ],
     "alt2_stats": [
       "{___} may scrap {theory}",
-      "{he} may scrap {___}"
+      "{someone} may scrap {___}"
     ],
     "alt2_text": "He scrapped his theory.",
     "premise_stats": [
@@ -5456,17 +5439,17 @@
       "{detective} may reveal {___}"
     ],
     "alt1_nouns": [
-      "theory",
-      "he"
+      "someone",
+      "theory"
     ],
     "alt2_nouns": [
-      "theory",
-      "he"
+      "someone",
+      "theory"
     ],
     "alt1_text": "He finalized his theory.",
     "type": "",
     "alt1_stats": [
-      "{he} may finalize {___}",
+      "{someone} may finalize {___}",
       "{___} may finalize {theory}"
     ]
   },
@@ -5477,9 +5460,9 @@
       "boy"
     ],
     "alt2_stats": [
+      "{someone} may share {___} with {brother}",
       "{___} may share {toy} with {brother}",
-      "{he} may share {toy} with {___}",
-      "{he} may share {___} with {brother}"
+      "{someone} may share {toy} with {___}"
     ],
     "alt2_text": "He shared his toys with his brother.",
     "premise_stats": [
@@ -5493,8 +5476,8 @@
     ],
     "alt2_nouns": [
       "toy",
-      "brother",
-      "he"
+      "someone",
+      "brother"
     ],
     "alt1_text": "His brother took his toys from him.",
     "type": "",
@@ -5512,8 +5495,8 @@
     ],
     "alt2_stats": [
       "{___} may eradicate {ivy} from {yard}",
-      "{I} may eradicate {___} from {yard}",
-      "{I} may eradicate {ivy} from {___}"
+      "{someone} may eradicate {ivy} from {___}",
+      "{someone} may eradicate {___} from {yard}"
     ],
     "alt2_text": "I eradicated the poison ivy from my yard.",
     "premise_stats": [
@@ -5522,20 +5505,20 @@
     ],
     "alt1_nouns": [
       "yard",
-      "ivy",
-      "I"
+      "someone",
+      "ivy"
     ],
     "alt2_nouns": [
       "yard",
-      "ivy",
-      "I"
+      "someone",
+      "ivy"
     ],
     "alt1_text": "I brushed against poison ivy in my yard.",
     "type": "",
     "alt1_stats": [
-      "{I} may brush against {___} in {yard}",
+      "{someone} may brush against {ivy} in {___}",
       "{___} may brush against {ivy} in {yard}",
-      "{I} may brush against {ivy} in {___}"
+      "{someone} may brush against {___} in {yard}"
     ]
   },
   "452": {
@@ -5549,7 +5532,7 @@
     "premise_stats": ["{___} may expire"],
     "alt1_nouns": [
       "issue",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
       "issue",
@@ -5558,8 +5541,8 @@
     "alt1_text": "I discarded the new issue.",
     "type": "",
     "alt1_stats": [
-      "{___} may discard {issue}",
-      "{I} may discard {___}"
+      "{someone} may discard {___}",
+      "{___} may discard {issue}"
     ]
   },
   "457": {
@@ -5581,7 +5564,7 @@
       "something",
       "friend"
     ],
-    "alt2_nouns": ["she"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "She wanted to ask her friend for a favor.",
     "type": "",
     "alt1_stats": [
@@ -5619,7 +5602,7 @@
     "premise_nouns": ["something"],
     "alt2_stats": [
       "{___} may skip {grade}",
-      "{he} may skip {___}"
+      "{someone} may skip {___}"
     ],
     "alt2_text": "He skipped a grade in school.",
     "premise_stats": ["{___} may read"],
@@ -5628,8 +5611,8 @@
       "something"
     ],
     "alt2_nouns": [
-      "grade",
-      "he"
+      "someone",
+      "grade"
     ],
     "alt1_text": "He began attending school.",
     "type": "",
@@ -5645,7 +5628,7 @@
       "boy"
     ],
     "alt2_stats": [
-      "{he} may eat {___}",
+      "{someone} may eat {___}",
       "{___} may eat {lunch}"
     ],
     "alt2_text": "He ate a big lunch.",
@@ -5658,8 +5641,8 @@
       "meal"
     ],
     "alt2_nouns": [
-      "lunch",
-      "he"
+      "someone",
+      "lunch"
     ],
     "alt1_text": "His mother cooked his favorite meal.",
     "type": "",
@@ -5672,39 +5655,39 @@
     "premise_text": "The man fainted.",
     "premise_nouns": ["man"],
     "alt2_stats": [
-      "{___} may run {marathon}",
-      "{he} may run {___}"
+      "{someone} may run {___}",
+      "{___} may run {marathon}"
     ],
     "alt2_text": "He ran a marathon.",
     "premise_stats": ["{___} may faint"],
     "alt1_nouns": [
       "nap",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
-      "he",
+      "someone",
       "marathon"
     ],
     "alt1_text": "He took a nap.",
     "type": "",
     "alt1_stats": [
       "{___} may take {nap}",
-      "{he} may take {___}"
+      "{someone} may take {___}"
     ]
   },
   "131": {
     "premise_text": "I rubbed the soap between my hands.",
     "premise_nouns": [
       "hand",
-      "soap",
-      "I"
+      "someone",
+      "soap"
     ],
     "alt2_stats": ["{___} may go numb"],
     "alt2_text": "My hands went numb.",
     "premise_stats": [
+      "{someone} may rub {___} between {hand}",
       "{___} may rub {soap} between {hand}",
-      "{I} may rub {___} between {hand}",
-      "{I} may rub {soap} between {___}"
+      "{someone} may rub {soap} between {___}"
     ],
     "alt1_nouns": ["soap"],
     "alt2_nouns": ["hand"],
@@ -5785,7 +5768,7 @@
       "battle"
     ],
     "alt2_stats": [
-      "{they} may storm {___}",
+      "{someone} may storm {___}",
       "{___} may storm {city}"
     ],
     "alt2_text": "They stormed the city.",
@@ -5793,9 +5776,9 @@
       "{___} may surrender {battle}",
       "{army} may surrender {___}"
     ],
-    "alt1_nouns": ["they"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
-      "they",
+      "someone",
       "city"
     ],
     "alt1_text": "They were outnumbered.",
@@ -5835,17 +5818,17 @@
   "147": {
     "premise_text": "I ironed my shirt.",
     "premise_nouns": [
-      "I",
+      "someone",
       "shirt"
     ],
     "alt2_stats": ["{___} may be wrinkled"],
     "alt2_text": "It was wrinkled.",
     "premise_stats": [
-      "{I} may iron {___}",
+      "{someone} may iron {___}",
       "{___} may iron {shirt}"
     ],
     "alt1_nouns": ["it"],
-    "alt2_nouns": ["it"],
+    "alt2_nouns": ["something"],
     "alt1_text": "It was clean.",
     "type": "",
     "alt1_stats": ["{___} may be clean"]
@@ -5858,14 +5841,14 @@
     "premise_stats": ["{___} may feel dizzy"],
     "alt1_nouns": [
       "balance",
-      "she"
+      "someone"
     ],
     "alt2_nouns": ["something"],
     "alt1_text": "She lost her balance.",
     "type": "",
     "alt1_stats": [
-      "{she} may lose {___}",
-      "{___} may lose {balance}"
+      "{___} may lose {balance}",
+      "{someone} may lose {___}"
     ]
   },
   "149": {
@@ -5876,7 +5859,7 @@
     ],
     "alt2_stats": [
       "{___} may notice {vehicle}",
-      "{he} may notice {___}"
+      "{someone} may notice {___}"
     ],
     "alt2_text": "He noticed a stranded vehicle.",
     "premise_stats": [
@@ -5885,17 +5868,17 @@
     ],
     "alt1_nouns": [
       "intersection",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
       "vehicle",
-      "he"
+      "someone"
     ],
     "alt1_text": "He went through an intersection.",
     "type": "",
     "alt1_stats": [
       "{___} may go through {intersection}",
-      "{he} may go through {___}"
+      "{someone} may go through {___}"
     ]
   },
   "461": {
@@ -5929,7 +5912,7 @@
       "competition"
     ],
     "alt2_stats": [
-      "{he} may intimidate {___}",
+      "{someone} may intimidate {___}",
       "{___} may intimidate {competitor}"
     ],
     "alt2_text": "He intimidated his competitors.",
@@ -5939,7 +5922,7 @@
     ],
     "alt1_nouns": ["competition"],
     "alt2_nouns": [
-      "he",
+      "someone",
       "competitor"
     ],
     "alt1_text": "The competition was sabotaged.",
@@ -5974,31 +5957,31 @@
     "premise_text": "The lock opened.",
     "premise_nouns": ["lock"],
     "alt2_stats": [
-      "{___} may make {duplicate}",
-      "{I} may make {___}"
+      "{someone} may make {___}",
+      "{___} may make {duplicate}"
     ],
     "alt2_text": "I made a duplicate of the key.",
     "premise_stats": ["{___} may open"],
     "alt1_nouns": [
-      "I",
+      "someone",
       "key"
     ],
     "alt2_nouns": [
       "duplicate",
-      "I"
+      "someone"
     ],
     "alt1_text": "I turned the key in the lock.",
     "type": "",
     "alt1_stats": [
-      "{I} may turn {___}",
-      "{___} may turn {key}"
+      "{___} may turn {key}",
+      "{someone} may turn {___}"
     ]
   },
   "464": {
     "premise_text": "I put rubber gloves on.",
     "premise_nouns": [
-      "glove",
-      "I"
+      "someone",
+      "glove"
     ],
     "alt2_stats": [
       "{something} may clean {___}",
@@ -6006,7 +5989,7 @@
     ],
     "alt2_text": "I was preparing to clean the bathroom.",
     "premise_stats": [
-      "{I} may put on {___}",
+      "{someone} may put on {___}",
       "{___} may put on {glove}"
     ],
     "alt1_nouns": [
@@ -6242,15 +6225,15 @@
     "premise_text": "The boy felt homesick.",
     "premise_nouns": ["boy"],
     "alt2_stats": [
-      "{he} may bicker with {___}",
-      "{___} may bicker with {sister}"
+      "{___} may bicker with {sister}",
+      "{someone} may bicker with {___}"
     ],
     "alt2_text": "He bickered with his sister.",
     "premise_stats": ["{___} may feel"],
-    "alt1_nouns": ["he"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "sister",
-      "he"
+      "someone"
     ],
     "alt1_text": "He went away to camp.",
     "type": "",
@@ -6261,14 +6244,14 @@
     "premise_nouns": ["flight"],
     "alt2_stats": [
       "{___} may be held up at {security}",
-      "{I} may be held up at {___}"
+      "{someone} may be held up at {___}"
     ],
     "alt2_text": "I was held up at airport security.",
     "premise_stats": ["{___} may be delayed"],
     "alt1_nouns": ["tornado"],
     "alt2_nouns": [
-      "security",
-      "I"
+      "someone",
+      "security"
     ],
     "alt1_text": "Tornadoes were sighted in the area.",
     "type": "",
@@ -6354,7 +6337,7 @@
       "classmate"
     ],
     "alt2_stats": [
-      "{he} may feign {___}",
+      "{someone} may feign {___}",
       "{___} may feign {interest}"
     ],
     "alt2_text": "He feigned interest in the class.",
@@ -6364,18 +6347,18 @@
       "{student} may flaunt {___} to {classmate}"
     ],
     "alt1_nouns": [
-      "score",
-      "he"
+      "someone",
+      "score"
     ],
     "alt2_nouns": [
       "interest",
-      "he"
+      "someone"
     ],
     "alt1_text": "He received a perfect score.",
     "type": "",
     "alt1_stats": [
       "{___} may receive {score}",
-      "{he} may receive {___}"
+      "{someone} may receive {___}"
     ]
   },
   "192": {
@@ -6386,13 +6369,13 @@
     "premise_stats": ["{___} may be cluttered"],
     "alt1_nouns": [
       "contents",
-      "I"
+      "someone"
     ],
     "alt2_nouns": ["drawer"],
     "alt1_text": "I threw away unnecessary contents.",
     "type": "",
     "alt1_stats": [
-      "{I} may throw {___}",
+      "{someone} may throw {___}",
       "{___} may throw {contents}"
     ]
   },
@@ -6400,47 +6383,47 @@
     "premise_text": "The smoke alarm went off.",
     "premise_nouns": ["alarm"],
     "alt2_stats": [
-      "{I} may burn {___}",
+      "{someone} may burn {___}",
       "{___} may burn {dinner}"
     ],
     "alt2_text": "I burnt my dinner.",
     "premise_stats": ["{___} may go off"],
     "alt1_nouns": [
       "candle",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
       "dinner",
-      "I"
+      "someone"
     ],
     "alt1_text": "I lit a candle.",
     "type": "",
     "alt1_stats": [
       "{___} may light {candle}",
-      "{I} may light {___}"
+      "{someone} may light {___}"
     ]
   },
   "199": {
     "premise_text": "The vase broke.",
     "premise_nouns": ["vase"],
     "alt2_stats": [
-      "{___} may glue {something}",
-      "{I} may glue {___}"
+      "{someone} may glue {___}",
+      "{___} may glue {something}"
     ],
     "alt2_text": "I glued it back together.",
     "premise_stats": ["{___} may break"],
     "alt1_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt2_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt1_text": "I stenciled it.",
     "type": "",
     "alt1_stats": [
-      "{I} may stencil {___}",
+      "{someone} may stencil {___}",
       "{___} may stencil {something}"
     ]
   },
@@ -6460,7 +6443,7 @@
       "{woman} may be in {___}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "talk"
     ],
     "alt2_nouns": [
@@ -6470,8 +6453,8 @@
     "alt1_text": "She engaged in small talk with her friend.",
     "type": "",
     "alt1_stats": [
-      "{she} may engage in {___}",
-      "{___} may engage in {talk}"
+      "{___} may engage in {talk}",
+      "{someone} may engage in {___}"
     ]
   },
   "35": {
@@ -6479,23 +6462,23 @@
     "premise_nouns": ["something"],
     "alt2_stats": [
       "{___} may take {puzzle}",
-      "{she} may take {___}"
+      "{someone} may take {___}"
     ],
     "alt2_text": "She took apart the puzzle.",
     "premise_stats": ["{___} may miss"],
     "alt1_nouns": [
       "puzzle",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
       "puzzle",
-      "she"
+      "someone"
     ],
     "alt1_text": "She completed the puzzle.",
     "type": "",
     "alt1_stats": [
       "{___} may complete {puzzle}",
-      "{she} may complete {___}"
+      "{someone} may complete {___}"
     ]
   },
   "36": {
@@ -6616,26 +6599,25 @@
     "premise_text": "The papers were disorganized.",
     "premise_nouns": ["papers"],
     "alt2_stats": [
-      "{I} may put {___} into {order}",
+      "{someone} may put {___} into {order}",
       "{___} may put {someone} into {order}",
-      "{I} may put {someone} into {___}"
+      "{someone} may put {someone} into {___}"
     ],
     "alt2_text": "I put them into alphabetical order.",
     "premise_stats": ["{___} may be disorganized"],
     "alt1_nouns": [
-      "photocopy",
-      "I"
+      "someone",
+      "photocopy"
     ],
     "alt2_nouns": [
       "order",
-      "someone",
-      "I"
+      "someone"
     ],
     "alt1_text": "I made photocopies of them.",
     "type": "",
     "alt1_stats": [
-      "{___} may make {photocopy}",
-      "{I} may make {___}"
+      "{someone} may make {___}",
+      "{___} may make {photocopy}"
     ]
   },
   "38": {
@@ -6645,8 +6627,8 @@
       "lottery"
     ],
     "alt2_stats": [
-      "{she} may join {___}",
-      "{___} may join {church}"
+      "{___} may join {church}",
+      "{someone} may join {___}"
     ],
     "alt2_text": "She joined a church.",
     "premise_stats": [
@@ -6654,18 +6636,18 @@
       "{___} may win {lottery}"
     ],
     "alt1_nouns": [
-      "yacht",
-      "she"
+      "someone",
+      "yacht"
     ],
     "alt2_nouns": [
       "church",
-      "she"
+      "someone"
     ],
     "alt1_text": "She bought a yacht.",
     "type": "",
     "alt1_stats": [
-      "{___} may buy {yacht}",
-      "{she} may buy {___}"
+      "{someone} may buy {___}",
+      "{___} may buy {yacht}"
     ]
   },
   "43": {
@@ -6706,7 +6688,7 @@
     ],
     "alt2_stats": [
       "{___} may sing to {something}",
-      "{I} may sing to {___}"
+      "{someone} may sing to {___}"
     ],
     "alt2_text": "I sang along to it.",
     "premise_stats": [
@@ -6715,17 +6697,17 @@
     ],
     "alt1_nouns": [
       "ear",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt1_text": "I covered my ears.",
     "type": "",
     "alt1_stats": [
       "{___} may cover {ear}",
-      "{I} may cover {___}"
+      "{someone} may cover {___}"
     ]
   },
   "41": {
@@ -6805,8 +6787,7 @@
     ],
     "alt1_nouns": [
       "someone",
-      "door",
-      "he"
+      "door"
     ],
     "alt2_nouns": [
       "sushi",
@@ -6815,8 +6796,8 @@
     "alt1_text": "He opened the door for her.",
     "type": "",
     "alt1_stats": [
-      "{he} may open {door} for {___}",
-      "{he} may open {___} for {someone}",
+      "{someone} may open {___} for {someone}",
+      "{someone} may open {door} for {___}",
       "{___} may open {door} for {someone}"
     ]
   },
@@ -6880,16 +6861,13 @@
       "{___} may give {number}",
       "{woman} may give {___}"
     ],
-    "alt1_nouns": [
-      "someone",
-      "she"
-    ],
-    "alt2_nouns": ["she"],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "She was attracted to him.",
     "type": "",
     "alt1_stats": [
-      "{___} may be attracted to {someone}",
-      "{she} may be attracted to {___}"
+      "{someone} may be attracted to {___}",
+      "{___} may be attracted to {someone}"
     ]
   },
   "26": {
@@ -6905,14 +6883,14 @@
       "{skydiver} may glide to {___}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "parachute"
     ],
-    "alt2_nouns": ["she"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "She opened her parachute.",
     "type": "",
     "alt1_stats": [
-      "{she} may open {___}",
+      "{someone} may open {___}",
       "{___} may open {parachute}"
     ]
   },
@@ -6948,23 +6926,23 @@
     "premise_text": "The child became immune to the disease.",
     "premise_nouns": ["child"],
     "alt2_stats": [
-      "{he} may receive {___}",
+      "{someone} may receive {___}",
       "{___} may receive {vaccine}"
     ],
     "alt2_text": "He received the vaccine for the disease.",
     "premise_stats": ["{___} may become immune"],
     "alt1_nouns": [
       "exposure",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
-      "he",
+      "someone",
       "vaccine"
     ],
     "alt1_text": "He avoided exposure to the disease.",
     "type": "",
     "alt1_stats": [
-      "{he} may avoid {___}",
+      "{someone} may avoid {___}",
       "{___} may avoid {exposure}"
     ]
   },
@@ -7017,8 +6995,8 @@
       "man"
     ],
     "alt2_stats": [
-      "{he} may grow {___}",
-      "{___} may grow {beard}"
+      "{___} may grow {beard}",
+      "{someone} may grow {___}"
     ],
     "alt2_text": "He grew a beard.",
     "premise_stats": [
@@ -7026,18 +7004,18 @@
       "{man} may hate {___}"
     ],
     "alt1_nouns": [
-      "he",
+      "someone",
       "hat"
     ],
     "alt2_nouns": [
-      "beard",
-      "he"
+      "someone",
+      "beard"
     ],
     "alt1_text": "He wore a hat.",
     "type": "",
     "alt1_stats": [
       "{___} may wear {hat}",
-      "{he} may wear {___}"
+      "{someone} may wear {___}"
     ]
   },
   "31": {
@@ -7048,17 +7026,17 @@
     ],
     "alt2_stats": [
       "{___} may be in {mood}",
-      "{she} may be in {___}"
+      "{someone} may be in {___}"
     ],
     "alt2_text": "She was in a good mood.",
     "premise_stats": [
       "{woman} may hum to {___}",
       "{___} may hum to {someone}"
     ],
-    "alt1_nouns": ["she"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
-      "mood",
-      "she"
+      "someone",
+      "mood"
     ],
     "alt1_text": "She was nervous.",
     "type": "",
@@ -7068,7 +7046,7 @@
     "premise_text": "I hung up the phone.",
     "premise_nouns": [
       "phone",
-      "I"
+      "someone"
     ],
     "alt2_stats": [
       "{caller} may identify {someone} to {___}",
@@ -7077,7 +7055,7 @@
     ],
     "alt2_text": "The caller identified himself to me.",
     "premise_stats": [
-      "{I} may hang up {___}",
+      "{someone} may hang up {___}",
       "{___} may hang up {phone}"
     ],
     "alt1_nouns": [
@@ -7102,32 +7080,32 @@
     "premise_nouns": ["shirt"],
     "alt2_stats": [
       "{___} may put {something} in {dryer}",
-      "{I} may put {___} in {dryer}",
-      "{I} may put {something} in {___}"
+      "{someone} may put {___} in {dryer}",
+      "{someone} may put {something} in {___}"
     ],
     "alt2_text": "I put it in the dryer.",
     "premise_stats": ["{___} may shrink"],
     "alt1_nouns": [
       "bleach",
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt2_nouns": [
       "dryer",
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt1_text": "I poured bleach on it.",
     "type": "",
     "alt1_stats": [
-      "{I} may pour {bleach} on {___}",
-      "{I} may pour {___} on {something}",
-      "{___} may pour {bleach} on {something}"
+      "{___} may pour {bleach} on {something}",
+      "{someone} may pour {___} on {something}",
+      "{someone} may pour {bleach} on {___}"
     ]
   },
   "18": {
     "premise_text": "It got dark outside.",
-    "premise_nouns": ["it"],
+    "premise_nouns": ["something"],
     "alt2_stats": [
       "{___} may become visible in {sky}",
       "{moon} may become visible in {___}"
@@ -7227,19 +7205,19 @@
     ],
     "alt2_stats": [
       "{___} may steal {money} from {church}",
-      "{she} may steal {___} from {church}",
-      "{she} may steal {money} from {___}"
+      "{someone} may steal {___} from {church}",
+      "{someone} may steal {money} from {___}"
     ],
     "alt2_text": "She stole money from a church.",
     "premise_stats": [
       "{offender} may violate {___}",
       "{___} may violate {parole}"
     ],
-    "alt1_nouns": ["she"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "church",
-      "money",
-      "she"
+      "someone",
+      "money"
     ],
     "alt1_text": "She was sent back to jail.",
     "type": "",
@@ -7302,7 +7280,7 @@
       "girl"
     ],
     "alt2_stats": [
-      "{she} may make {___}",
+      "{someone} may make {___}",
       "{___} may make {friend}"
     ],
     "alt2_text": "She made a new friend.",
@@ -7312,16 +7290,16 @@
     ],
     "alt1_nouns": [
       "bee",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "friend"
     ],
     "alt1_text": "She won a spelling bee.",
     "type": "",
     "alt1_stats": [
-      "{she} may win {___}",
+      "{someone} may win {___}",
       "{___} may win {bee}"
     ]
   },
@@ -7453,7 +7431,7 @@
     ],
     "alt2_stats": [
       "{___} may be addicted to {nicotine}",
-      "{he} may be addicted to {___}"
+      "{someone} may be addicted to {___}"
     ],
     "alt2_text": "He was addicted to nicotine.",
     "premise_stats": [
@@ -7466,7 +7444,7 @@
     ],
     "alt2_nouns": [
       "nicotine",
-      "he"
+      "someone"
     ],
     "alt1_text": "His family urged him to quit smoking.",
     "type": "",
@@ -7482,7 +7460,7 @@
       "accent"
     ],
     "alt2_stats": [
-      "{she} may migrate from {___}",
+      "{someone} may migrate from {___}",
       "{___} may migrate from {country}"
     ],
     "alt2_text": "She migrated from another country.",
@@ -7492,40 +7470,40 @@
     ],
     "alt1_nouns": [
       "family",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "country"
     ],
     "alt1_text": "She came from a wealthy family.",
     "type": "",
     "alt1_stats": [
       "{___} may come from {family}",
-      "{she} may come from {___}"
+      "{someone} may come from {___}"
     ]
   },
   "83": {
     "premise_text": "The boy's mouth stung.",
     "premise_nouns": ["mouth"],
     "alt2_stats": [
-      "{he} may blow out {___}",
+      "{someone} may blow out {___}",
       "{___} may blow out {candle}"
     ],
     "alt2_text": "He blew out the candle.",
     "premise_stats": ["{___} may be stung"],
     "alt1_nouns": [
-      "pepper",
-      "he"
+      "someone",
+      "pepper"
     ],
     "alt2_nouns": [
       "candle",
-      "he"
+      "someone"
     ],
     "alt1_text": "He ate a pepper.",
     "type": "",
     "alt1_stats": [
-      "{he} may eat {___}",
+      "{someone} may eat {___}",
       "{___} may eat {pepper}"
     ]
   },
@@ -7556,14 +7534,14 @@
   "81": {
     "premise_text": "I tipped the bottle.",
     "premise_nouns": [
-      "bottle",
-      "I"
+      "someone",
+      "bottle"
     ],
     "alt2_stats": ["{___} may pour out"],
     "alt2_text": "The liquid in the bottle poured out.",
     "premise_stats": [
       "{___} may tip {bottle}",
-      "{I} may tip {___}"
+      "{someone} may tip {___}"
     ],
     "alt1_nouns": ["liquid"],
     "alt2_nouns": ["liquid"],
@@ -7578,8 +7556,8 @@
       "street"
     ],
     "alt2_stats": [
-      "{I} may hail {___}",
-      "{___} may hail {cab}"
+      "{___} may hail {cab}",
+      "{someone} may hail {___}"
     ],
     "alt2_text": "I hailed a cab.",
     "premise_stats": [
@@ -7587,72 +7565,72 @@
       "{___} may be robbed on {street}"
     ],
     "alt1_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt2_nouns": [
       "cab",
-      "I"
+      "someone"
     ],
     "alt1_text": "I called 911.",
     "type": "",
     "alt1_stats": [
       "{___} may call {something}",
-      "{I} may call {___}"
+      "{someone} may call {___}"
     ]
   },
   "87": {
     "premise_text": "My stomach hurt.",
     "premise_nouns": ["stomach"],
     "alt2_stats": [
-      "{I} may eat {___}",
-      "{___} may eat {cake}"
+      "{___} may eat {cake}",
+      "{someone} may eat {___}"
     ],
     "alt2_text": "I ate birthday cake.",
     "premise_stats": ["{___} may hurt"],
     "alt1_nouns": [
-      "treadmill",
-      "I"
+      "someone",
+      "treadmill"
     ],
     "alt2_nouns": [
       "cake",
-      "I"
+      "someone"
     ],
     "alt1_text": "I jogged on the treadmill.",
     "type": "",
     "alt1_stats": [
       "{___} may jog on {treadmill}",
-      "{I} may jog on {___}"
+      "{someone} may jog on {___}"
     ]
   },
   "84": {
     "premise_text": "I finished a page of the book.",
     "premise_nouns": [
       "page",
-      "I"
+      "someone"
     ],
     "alt2_stats": [
-      "{I} may turn to {___}",
-      "{___} may turn to {page}"
+      "{___} may turn to {page}",
+      "{someone} may turn to {___}"
     ],
     "alt2_text": "I turned to the next page.",
     "premise_stats": [
-      "{I} may finish {___}",
+      "{someone} may finish {___}",
       "{___} may finish {page}"
     ],
     "alt1_nouns": [
       "page",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
       "page",
-      "I"
+      "someone"
     ],
     "alt1_text": "I ripped out the next page.",
     "type": "",
     "alt1_stats": [
-      "{___} may rip out {page}",
-      "{I} may rip out {___}"
+      "{someone} may rip out {___}",
+      "{___} may rip out {page}"
     ]
   },
   "85": {
@@ -7756,8 +7734,8 @@
       "man"
     ],
     "alt2_stats": [
-      "{___} may feel {content}",
-      "{he} may feel {___}"
+      "{someone} may feel {___}",
+      "{___} may feel {content}"
     ],
     "alt2_text": "He felt content.",
     "premise_stats": [
@@ -7767,7 +7745,7 @@
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "content",
-      "he"
+      "someone"
     ],
     "alt1_text": "He wanted to relax.",
     "type": "",
@@ -7858,9 +7836,9 @@
       "something"
     ],
     "alt2_stats": [
-      "{they} may withhold {___} from {public}",
+      "{someone} may withhold {___} from {public}",
       "{___} may withhold {name} from {public}",
-      "{they} may withhold {name} from {___}"
+      "{someone} may withhold {name} from {___}"
     ],
     "alt2_text": "They withheld the victim's name from the public.",
     "premise_stats": [
@@ -7872,8 +7850,8 @@
       "something"
     ],
     "alt2_nouns": [
-      "they",
       "name",
+      "someone",
       "public"
     ],
     "alt1_text": "The victim struggled to recall details about the crime.",
@@ -7888,25 +7866,24 @@
     "premise_nouns": ["clothes"],
     "alt2_stats": [
       "{___} may lose {weight}",
-      "{he} may lose {___}"
+      "{someone} may lose {___}"
     ],
     "alt2_text": "He lost weight.",
     "premise_stats": ["{___} may fit"],
     "alt1_nouns": [
       "someone",
-      "he",
       "sale"
     ],
     "alt2_nouns": [
       "weight",
-      "he"
+      "someone"
     ],
     "alt1_text": "He bought them on sale.",
     "type": "",
     "alt1_stats": [
+      "{someone} may buy {someone} on {___}",
       "{___} may buy {someone} on {sale}",
-      "{he} may buy {someone} on {___}",
-      "{he} may buy {___} on {sale}"
+      "{someone} may buy {___} on {sale}"
     ]
   },
   "75": {
@@ -7934,7 +7911,7 @@
       "man"
     ],
     "alt2_stats": [
-      "{he} may approach {___}",
+      "{someone} may approach {___}",
       "{___} may approach {building}"
     ],
     "alt2_text": "He approached the building.",
@@ -7945,7 +7922,7 @@
     "alt1_nouns": [],
     "alt2_nouns": [
       "building",
-      "he"
+      "someone"
     ],
     "alt1_text": "He got out of the car.",
     "type": "",
@@ -7956,14 +7933,14 @@
     "premise_nouns": [
       "sandpaper",
       "wood",
-      "I"
+      "someone"
     ],
     "alt2_stats": ["{___} may become sticky"],
     "alt2_text": "The wood became sticky.",
     "premise_stats": [
-      "{I} may rub {___} on {wood}",
+      "{someone} may rub {sandpaper} on {___}",
       "{___} may rub {sandpaper} on {wood}",
-      "{I} may rub {sandpaper} on {___}"
+      "{someone} may rub {___} on {wood}"
     ],
     "alt1_nouns": ["wood"],
     "alt2_nouns": ["wood"],
@@ -7975,23 +7952,23 @@
     "premise_text": "The woman felt lonely.",
     "premise_nouns": ["woman"],
     "alt2_stats": [
-      "{she} may adopt {___}",
+      "{someone} may adopt {___}",
       "{___} may adopt {cat}"
     ],
     "alt2_text": "She adopted a cat.",
     "premise_stats": ["{___} may feel lonely"],
     "alt1_nouns": [
-      "she",
+      "someone",
       "kitchen"
     ],
     "alt2_nouns": [
       "cat",
-      "she"
+      "someone"
     ],
     "alt1_text": "She renovated her kitchen.",
     "type": "",
     "alt1_stats": [
-      "{she} may renovate {___}",
+      "{someone} may renovate {___}",
       "{___} may renovate {kitchen}"
     ]
   },
@@ -8003,7 +7980,7 @@
     ],
     "alt2_stats": [
       "{___} may write {poem}",
-      "{she} may write {___}"
+      "{someone} may write {___}"
     ],
     "alt2_text": "She wrote a poem.",
     "premise_stats": [
@@ -8011,18 +7988,18 @@
       "{___} may help {someone}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "blood"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "poem"
     ],
     "alt1_text": "She donated blood.",
     "type": "",
     "alt1_stats": [
-      "{she} may donate {___}",
-      "{___} may donate {blood}"
+      "{___} may donate {blood}",
+      "{someone} may donate {___}"
     ]
   },
   "56": {
@@ -8068,7 +8045,7 @@
       "man"
     ],
     "alt2_stats": [
-      "{he} may loosen {___}",
+      "{someone} may loosen {___}",
       "{___} may loosen {tie}"
     ],
     "alt2_text": "He loosened his tie.",
@@ -8077,18 +8054,18 @@
       "{___} may remove {coat}"
     ],
     "alt1_nouns": [
-      "house",
-      "he"
+      "someone",
+      "house"
     ],
     "alt2_nouns": [
       "tie",
-      "he"
+      "someone"
     ],
     "alt1_text": "He entered the house.",
     "type": "",
     "alt1_stats": [
       "{___} may enter {house}",
-      "{he} may enter {___}"
+      "{someone} may enter {___}"
     ]
   },
   "65": {
@@ -8133,7 +8110,7 @@
       "breakfast",
       "something"
     ],
-    "alt2_nouns": ["I"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "I forgot to eat breakfast.",
     "type": "",
     "alt1_stats": [
@@ -8203,8 +8180,8 @@
       "man"
     ],
     "alt2_stats": [
-      "{___} may be fined for {littering}",
-      "{he} may be fined for {___}"
+      "{someone} may be fined for {___}",
+      "{___} may be fined for {littering}"
     ],
     "alt2_text": "He was fined for littering.",
     "premise_stats": [
@@ -8212,10 +8189,10 @@
       "{___} may throw {can} onto {street}",
       "{man} may throw {___} onto {street}"
     ],
-    "alt1_nouns": ["he"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "littering",
-      "he"
+      "someone"
     ],
     "alt1_text": "He was jumped from behind.",
     "type": "",
@@ -8261,39 +8238,39 @@
     "premise_text": "The bird couldn't fly.",
     "premise_nouns": ["bird"],
     "alt2_stats": [
-      "{it} may injure {___}",
-      "{___} may injure {wing}"
+      "{___} may injure {wing}",
+      "{something} may injure {___}"
     ],
     "alt2_text": "It injured its wing.",
     "premise_stats": ["{___} may not fly"],
     "alt1_nouns": [
       "winter",
-      "it"
+      "something"
     ],
     "alt2_nouns": [
       "wing",
-      "it"
+      "something"
     ],
     "alt1_text": "It migrated for the winter.",
     "type": "",
     "alt1_stats": [
-      "{it} may migrate for {___}",
-      "{___} may migrate for {winter}"
+      "{___} may migrate for {winter}",
+      "{something} may migrate for {___}"
     ]
   },
   "44": {
     "premise_text": "The man's eye became infected.",
     "premise_nouns": ["something"],
     "alt2_stats": [
-      "{___} may put on {glass}",
-      "{he} may put on {___}"
+      "{someone} may put on {___}",
+      "{___} may put on {glass}"
     ],
     "alt2_text": "He put on glasses.",
     "premise_stats": ["{___} may be infected"],
-    "alt1_nouns": ["he"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
-      "glass",
-      "he"
+      "someone",
+      "glass"
     ],
     "alt1_text": "He went blind.",
     "type": "",
@@ -8306,7 +8283,7 @@
       "someone"
     ],
     "alt2_stats": [
-      "{she} may pour {___}",
+      "{someone} may pour {___}",
       "{___} may pour {lemonade}"
     ],
     "alt2_text": "She poured herself some lemonade.",
@@ -8316,19 +8293,18 @@
     ],
     "alt1_nouns": [
       "someone",
-      "towel",
-      "she"
+      "towel"
     ],
     "alt2_nouns": [
       "lemonade",
-      "she"
+      "someone"
     ],
     "alt1_text": "She wrapped herself in a towel.",
     "type": "",
     "alt1_stats": [
-      "{she} may wrap {someone} in {___}",
-      "{___} may wrap {someone} in {towel}",
-      "{she} may wrap {___} in {towel}"
+      "{someone} may wrap {___} in {towel}",
+      "{someone} may wrap {someone} in {___}",
+      "{___} may wrap {someone} in {towel}"
     ]
   },
   "46": {
@@ -8345,30 +8321,30 @@
     ],
     "alt1_nouns": [
       "cat",
-      "she"
+      "someone"
     ],
     "alt2_nouns": ["something"],
     "alt1_text": "She saw a black cat.",
     "type": "",
     "alt1_stats": [
-      "{___} may see {cat}",
-      "{she} may see {___}"
+      "{someone} may see {___}",
+      "{___} may see {cat}"
     ]
   },
   "51": {
     "premise_text": "I drank from the water fountain.",
     "premise_nouns": [
       "fountain",
-      "I"
+      "someone"
     ],
     "alt2_stats": ["{___} may feel nauseous"],
     "alt2_text": "I felt nauseous.",
     "premise_stats": [
-      "{___} may drink from {fountain}",
-      "{I} may drink from {___}"
+      "{someone} may drink from {___}",
+      "{___} may drink from {fountain}"
     ],
-    "alt1_nouns": ["I"],
-    "alt2_nouns": ["I"],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "I was thirsty.",
     "type": "",
     "alt1_stats": ["{___} may be thirsty"]
@@ -8380,8 +8356,8 @@
       "neighbor"
     ],
     "alt2_stats": [
-      "{they} may host {barbeque} in {___}",
-      "{they} may host {___} in {backyard}",
+      "{someone} may host {barbeque} in {___}",
+      "{someone} may host {___} in {backyard}",
       "{___} may host {barbeque} in {backyard}"
     ],
     "alt2_text": "They hosted a barbeque in their backyard.",
@@ -8391,17 +8367,17 @@
     ],
     "alt1_nouns": [
       "fence",
-      "they"
+      "someone"
     ],
     "alt2_nouns": [
-      "they",
+      "someone",
       "barbeque",
       "backyard"
     ],
     "alt1_text": "They built a fence around their property.",
     "type": "",
     "alt1_stats": [
-      "{they} may build {___}",
+      "{someone} may build {___}",
       "{___} may build {fence}"
     ]
   },
@@ -8450,7 +8426,7 @@
       "lamp"
     ],
     "alt2_stats": [
-      "{they} may jump on {___}",
+      "{someone} may jump on {___}",
       "{___} may jump on {bed}"
     ],
     "alt2_text": "They jumped on the bed.",
@@ -8459,18 +8435,18 @@
       "{___} may knock over {lamp}"
     ],
     "alt1_nouns": [
-      "they",
-      "fight"
+      "fight",
+      "someone"
     ],
     "alt2_nouns": [
-      "they",
-      "bed"
+      "bed",
+      "someone"
     ],
     "alt1_text": "They had a pillow fight.",
     "type": "",
     "alt1_stats": [
       "{___} may have {fight}",
-      "{they} may have {___}"
+      "{someone} may have {___}"
     ]
   },
   "487": {
@@ -8508,14 +8484,14 @@
     ],
     "alt1_nouns": [
       "tag",
-      "he"
+      "someone"
     ],
     "alt2_nouns": ["something"],
     "alt1_text": "He checked its price tag.",
     "type": "",
     "alt1_stats": [
       "{___} may check {tag}",
-      "{he} may check {___}"
+      "{someone} may check {___}"
     ]
   },
   "486": {
@@ -8525,9 +8501,9 @@
       "newspaper"
     ],
     "alt2_stats": [
-      "{she} may cast {___} in {election}",
-      "{___} may cast {vote} in {election}",
-      "{she} may cast {vote} in {___}"
+      "{someone} may cast {___} in {election}",
+      "{someone} may cast {vote} in {___}",
+      "{___} may cast {vote} in {election}"
     ],
     "alt2_text": "She casted a vote in the election.",
     "premise_stats": [
@@ -8535,42 +8511,42 @@
       "{woman} may read {___}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "outcome"
     ],
     "alt2_nouns": [
       "election",
       "vote",
-      "she"
+      "someone"
     ],
     "alt1_text": "She discovered the outcome of the election.",
     "type": "",
     "alt1_stats": [
-      "{___} may discover {outcome}",
-      "{she} may discover {___}"
+      "{someone} may discover {___}",
+      "{___} may discover {outcome}"
     ]
   },
   "280": {
     "premise_text": "The woman's eyeglasses fogged up.",
     "premise_nouns": ["eyeglass"],
     "alt2_stats": [
-      "{she} may enter {___}",
-      "{___} may enter {sauna}"
+      "{___} may enter {sauna}",
+      "{someone} may enter {___}"
     ],
     "alt2_text": "She entered the sauna.",
     "premise_stats": ["{___} may fog up"],
     "alt1_nouns": [
       "pool",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "sauna"
     ],
     "alt1_text": "She reclined by the pool.",
     "type": "",
     "alt1_stats": [
-      "{she} may recline by {___}",
+      "{someone} may recline by {___}",
       "{___} may recline by {pool}"
     ]
   },
@@ -8578,24 +8554,24 @@
     "premise_text": "The woman was arrested.",
     "premise_nouns": ["woman"],
     "alt2_stats": [
-      "{she} may commit {___}",
+      "{someone} may commit {___}",
       "{___} may commit {assault}"
     ],
     "alt2_text": "She committed assault.",
     "premise_stats": ["{___} may be arrested"],
     "alt1_nouns": [
       "rehab",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "assault"
     ],
     "alt1_text": "She checked into rehab.",
     "type": "",
     "alt1_stats": [
-      "{she} may check into {___}",
-      "{___} may check into {rehab}"
+      "{___} may check into {rehab}",
+      "{someone} may check into {___}"
     ]
   },
   "484": {
@@ -8634,23 +8610,23 @@
     "premise_text": "The boy found the television show boring.",
     "premise_nouns": ["boy"],
     "alt2_stats": [
-      "{he} may shut off {___}",
+      "{someone} may shut off {___}",
       "{___} may shut off {something}"
     ],
     "alt2_text": "He shut it off.",
     "premise_stats": ["{___} may find"],
     "alt1_nouns": [
-      "something",
-      "he"
+      "someone",
+      "something"
     ],
     "alt2_nouns": [
-      "something",
-      "he"
+      "someone",
+      "something"
     ],
     "alt1_text": "He recorded it.",
     "type": "",
     "alt1_stats": [
-      "{he} may record {___}",
+      "{someone} may record {___}",
       "{___} may record {something}"
     ]
   },
@@ -8661,8 +8637,8 @@
       "doctor"
     ],
     "alt2_stats": [
-      "{___} may go to {school}",
-      "{she} may go to {___}"
+      "{someone} may go to {___}",
+      "{___} may go to {school}"
     ],
     "alt2_text": "She went to medical school.",
     "premise_stats": [
@@ -8670,18 +8646,18 @@
       "{something} may be {___}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "hospital"
     ],
     "alt2_nouns": [
       "school",
-      "she"
+      "someone"
     ],
     "alt1_text": "She visited the hospital.",
     "type": "",
     "alt1_stats": [
       "{___} may visit {hospital}",
-      "{she} may visit {___}"
+      "{someone} may visit {___}"
     ]
   },
   "489": {
@@ -8721,8 +8697,8 @@
       "something"
     ],
     "alt2_stats": [
-      "{___} may watch {movie}",
-      "{he} may watch {___}"
+      "{someone} may watch {___}",
+      "{___} may watch {movie}"
     ],
     "alt2_text": "He watched a horror movie.",
     "premise_stats": [
@@ -8731,16 +8707,16 @@
     ],
     "alt1_nouns": [
       "nightlight",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
-      "movie",
-      "he"
+      "someone",
+      "movie"
     ],
     "alt1_text": "He turned on his nightlight.",
     "type": "",
     "alt1_stats": [
-      "{he} may turn on {___}",
+      "{someone} may turn on {___}",
       "{___} may turn on {nightlight}"
     ]
   },
@@ -8749,23 +8725,23 @@
     "premise_nouns": ["something"],
     "alt2_stats": [
       "{___} may take {time}",
-      "{they} may take {___}"
+      "{someone} may take {___}"
     ],
     "alt2_text": "They took some time apart.",
     "premise_stats": ["{___} may be engaged"],
     "alt1_nouns": [
-      "they",
-      "wedding"
+      "wedding",
+      "someone"
     ],
     "alt2_nouns": [
-      "they",
-      "time"
+      "time",
+      "someone"
     ],
     "alt1_text": "They planned a wedding.",
     "type": "",
     "alt1_stats": [
-      "{___} may plan {wedding}",
-      "{they} may plan {___}"
+      "{someone} may plan {___}",
+      "{___} may plan {wedding}"
     ]
   },
   "282": {
@@ -8811,7 +8787,7 @@
     "premise_stats": ["{___} may chew"],
     "alt1_nouns": [
       "bubble",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
       "gum",
@@ -8820,8 +8796,8 @@
     "alt1_text": "I blew a bubble with the gum.",
     "type": "",
     "alt1_stats": [
-      "{___} may blow {bubble}",
-      "{I} may blow {___}"
+      "{someone} may blow {___}",
+      "{___} may blow {bubble}"
     ]
   },
   "289": {
@@ -8867,9 +8843,9 @@
       "attack"
     ],
     "alt2_stats": [
-      "{I} may take {someone} to {___}",
       "{___} may take {someone} to {room}",
-      "{I} may take {___} to {room}"
+      "{someone} may take {___} to {room}",
+      "{someone} may take {someone} to {___}"
     ],
     "alt2_text": "I took her to the emergency room.",
     "premise_stats": [
@@ -8882,7 +8858,6 @@
     ],
     "alt2_nouns": [
       "someone",
-      "I",
       "room"
     ],
     "alt1_text": "I encouraged her to take deep breaths.",
@@ -8899,8 +8874,8 @@
       "shirt"
     ],
     "alt2_stats": [
-      "{he} may ask {___} for {help}",
-      "{he} may ask {mother} for {___}",
+      "{someone} may ask {___} for {help}",
+      "{someone} may ask {mother} for {___}",
       "{___} may ask {mother} for {help}"
     ],
     "alt2_text": "He asked his mother for help.",
@@ -8915,7 +8890,7 @@
     "alt2_nouns": [
       "help",
       "mother",
-      "he"
+      "someone"
     ],
     "alt1_text": "He refused to wear the shirt.",
     "type": "",
@@ -8970,9 +8945,9 @@
     "premise_text": "The man's pocket jingled as he walked.",
     "premise_nouns": ["someone"],
     "alt2_stats": [
-      "{he} may sew {hole} in {___}",
-      "{he} may sew {___} in {pocket}",
-      "{___} may sew {hole} in {pocket}"
+      "{someone} may sew {hole} in {___}",
+      "{___} may sew {hole} in {pocket}",
+      "{someone} may sew {___} in {pocket}"
     ],
     "alt2_text": "He sewed the hole in his pocket.",
     "premise_stats": ["{___} may walk"],
@@ -8982,7 +8957,7 @@
     ],
     "alt2_nouns": [
       "pocket",
-      "he",
+      "someone",
       "hole"
     ],
     "alt1_text": "His pocket was filled with coins.",
@@ -9075,14 +9050,14 @@
   "476": {
     "premise_text": "I pushed the wagon.",
     "premise_nouns": [
-      "wagon",
-      "I"
+      "someone",
+      "wagon"
     ],
     "alt2_stats": ["{___} may spin"],
     "alt2_text": "The wagon wheels spun forward.",
     "premise_stats": [
-      "{___} may push {wagon}",
-      "{I} may push {___}"
+      "{someone} may push {___}",
+      "{___} may push {wagon}"
     ],
     "alt1_nouns": ["object"],
     "alt2_nouns": ["wheel"],
@@ -9125,8 +9100,8 @@
       "fraud"
     ],
     "alt2_stats": [
-      "{___} may be removed from {office}",
-      "{he} may be removed from {___}"
+      "{someone} may be removed from {___}",
+      "{___} may be removed from {office}"
     ],
     "alt2_text": "He was removed from office.",
     "premise_stats": [
@@ -9134,42 +9109,42 @@
       "{___} may be convicted of {fraud}"
     ],
     "alt1_nouns": [
-      "re-election",
-      "he"
+      "someone",
+      "re-election"
     ],
     "alt2_nouns": [
       "office",
-      "he"
+      "someone"
     ],
     "alt1_text": "He campaigned for re-election.",
     "type": "",
     "alt1_stats": [
       "{___} may campaign for {re-election}",
-      "{he} may campaign for {___}"
+      "{someone} may campaign for {___}"
     ]
   },
   "478": {
     "premise_text": "My closet was messy.",
     "premise_nouns": ["closet"],
     "alt2_stats": [
-      "{I} may decorate {___}",
+      "{someone} may decorate {___}",
       "{___} may decorate {something}"
     ],
     "alt2_text": "I decorated it.",
     "premise_stats": ["{___} may be messy"],
     "alt1_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt2_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt1_text": "I organized it.",
     "type": "",
     "alt1_stats": [
-      "{___} may organize {something}",
-      "{I} may organize {___}"
+      "{someone} may organize {___}",
+      "{___} may organize {something}"
     ]
   },
   "272": {
@@ -9237,23 +9212,23 @@
     "premise_nouns": ["foot"],
     "alt2_stats": [
       "{___} may go {swimming}",
-      "{I} may go {___}"
+      "{someone} may go {___}"
     ],
     "alt2_text": "I went swimming.",
     "premise_stats": ["{___} may be blistered"],
     "alt1_nouns": [
-      "I",
+      "someone",
       "hiking"
     ],
     "alt2_nouns": [
-      "I",
+      "someone",
       "swimming"
     ],
     "alt1_text": "I went hiking.",
     "type": "",
     "alt1_stats": [
       "{___} may go {hiking}",
-      "{I} may go {___}"
+      "{someone} may go {___}"
     ]
   },
   "274": {
@@ -9263,8 +9238,8 @@
       "woman"
     ],
     "alt2_stats": [
-      "{___} may plan {vacation}",
-      "{they} may plan {___}"
+      "{someone} may plan {___}",
+      "{___} may plan {vacation}"
     ],
     "alt2_text": "They planned a vacation together.",
     "premise_stats": [
@@ -9273,8 +9248,8 @@
     ],
     "alt1_nouns": ["something"],
     "alt2_nouns": [
-      "they",
-      "vacation"
+      "vacation",
+      "someone"
     ],
     "alt1_text": "They stopped seeing each other.",
     "type": "",
@@ -9285,20 +9260,20 @@
   },
   "479": {
     "premise_text": "I stayed up late.",
-    "premise_nouns": ["I"],
+    "premise_nouns": ["someone"],
     "alt2_stats": ["{___} may be tired"],
     "alt2_text": "I was tired in the morning.",
     "premise_stats": ["{___} may stay up"],
     "alt1_nouns": [
       "dream",
-      "I"
+      "someone"
     ],
-    "alt2_nouns": ["I"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "I had vivid dreams that night.",
     "type": "",
     "alt1_stats": [
       "{___} may have {dream}",
-      "{I} may have {___}"
+      "{someone} may have {___}"
     ]
   },
   "273": {
@@ -9318,7 +9293,7 @@
     ],
     "alt1_nouns": [
       "whiff",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
       "someone",
@@ -9327,7 +9302,7 @@
     "alt1_text": "He caught a whiff of her perfume.",
     "type": "",
     "alt1_stats": [
-      "{he} may catch {___}",
+      "{someone} may catch {___}",
       "{___} may catch {whiff}"
     ]
   },
@@ -9395,13 +9370,13 @@
     "premise_text": "I drank a cup of coffee.",
     "premise_nouns": [
       "cup",
-      "I"
+      "someone"
     ],
     "alt2_stats": ["{___} may sleep"],
     "alt2_text": "I nodded off to sleep.",
     "premise_stats": [
       "{___} may drink {cup}",
-      "{I} may drink {___}"
+      "{someone} may drink {___}"
     ],
     "alt1_nouns": ["yawning"],
     "alt2_nouns": ["something"],
@@ -9449,14 +9424,14 @@
     ],
     "alt1_nouns": [
       "work",
-      "he"
+      "someone"
     ],
     "alt2_nouns": ["work"],
     "alt1_text": "He checked his work.",
     "type": "",
     "alt1_stats": [
       "{___} may check {work}",
-      "{he} may check {___}"
+      "{someone} may check {___}"
     ]
   },
   "470": {
@@ -9468,8 +9443,8 @@
       "{something} may see {___}",
       "{___} may see {something}"
     ],
-    "alt1_nouns": ["they"],
-    "alt2_nouns": ["they"],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "They kissed.",
     "type": "",
     "alt1_stats": ["{___} may kiss"]
@@ -9478,23 +9453,17 @@
     "premise_text": "The woman asked the man to leave.",
     "premise_nouns": ["something"],
     "alt2_stats": [
-      "{he} may thank {___}",
+      "{someone} may thank {___}",
       "{___} may thank {someone}"
     ],
     "alt2_text": "He thanked her.",
     "premise_stats": ["{___} may leave"],
-    "alt1_nouns": [
-      "someone",
-      "he"
-    ],
-    "alt2_nouns": [
-      "someone",
-      "he"
-    ],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "He insulted her.",
     "type": "",
     "alt1_stats": [
-      "{he} may insult {___}",
+      "{someone} may insult {___}",
       "{___} may insult {someone}"
     ]
   },
@@ -9538,28 +9507,28 @@
     "premise_text": "I dabbed the floor with a paper towel.",
     "premise_nouns": [
       "floor",
-      "towel",
-      "I"
+      "someone",
+      "towel"
     ],
     "alt2_stats": ["{___} may be stained"],
     "alt2_text": "The floor was permanently stained.",
     "premise_stats": [
-      "{I} may dab {floor} with {___}",
-      "{I} may dab {___} with {towel}",
+      "{someone} may dab {___} with {towel}",
+      "{someone} may dab {floor} with {___}",
       "{___} may dab {floor} with {towel}"
     ],
     "alt1_nouns": [
       "floor",
       "juice",
-      "I"
+      "someone"
     ],
     "alt2_nouns": ["floor"],
     "alt1_text": "I spilled juice on the floor.",
     "type": "",
     "alt1_stats": [
-      "{I} may spill {___} on {floor}",
-      "{I} may spill {juice} on {___}",
-      "{___} may spill {juice} on {floor}"
+      "{someone} may spill {___} on {floor}",
+      "{___} may spill {juice} on {floor}",
+      "{someone} may spill {juice} on {___}"
     ]
   },
   "107": {
@@ -9622,24 +9591,24 @@
     "premise_text": "I botched the job interview.",
     "premise_nouns": [
       "interview",
-      "I"
+      "someone"
     ],
     "alt2_stats": [
-      "{I} may anticipate {___}",
-      "{___} may anticipate {question}"
+      "{___} may anticipate {question}",
+      "{someone} may anticipate {___}"
     ],
     "alt2_text": "I anticipated the interviewer's questions.",
     "premise_stats": [
       "{___} may botch {interview}",
-      "{I} may botch {___}"
+      "{someone} may botch {___}"
     ],
     "alt1_nouns": [
       "interviewer",
       "question"
     ],
     "alt2_nouns": [
-      "question",
-      "I"
+      "someone",
+      "question"
     ],
     "alt1_text": "The interviewer asked difficult questions.",
     "type": "",
@@ -9658,8 +9627,8 @@
     "alt2_text": "His parents abused him.",
     "premise_stats": ["{___} may run"],
     "alt1_nouns": [
-      "parent",
-      "he"
+      "someone",
+      "parent"
     ],
     "alt2_nouns": [
       "someone",
@@ -9668,8 +9637,8 @@
     "alt1_text": "He relied on his parents.",
     "type": "",
     "alt1_stats": [
-      "{he} may rely on {___}",
-      "{___} may rely on {parent}"
+      "{___} may rely on {parent}",
+      "{someone} may rely on {___}"
     ]
   },
   "103": {
@@ -9705,24 +9674,24 @@
   "102": {
     "premise_text": "I pushed the pendulum.",
     "premise_nouns": [
-      "pendulum",
-      "I"
+      "someone",
+      "pendulum"
     ],
     "alt2_stats": ["{___} may swing"],
     "alt2_text": "It swung back and forth.",
     "premise_stats": [
-      "{I} may push {___}",
+      "{someone} may push {___}",
       "{___} may push {pendulum}"
     ],
     "alt1_nouns": [
       "stop",
-      "it"
+      "something"
     ],
-    "alt2_nouns": ["it"],
+    "alt2_nouns": ["something"],
     "alt1_text": "It slowed to a stop.",
     "type": "",
     "alt1_stats": [
-      "{it} may slow to {___}",
+      "{something} may slow to {___}",
       "{___} may slow to {stop}"
     ]
   },
@@ -9751,7 +9720,7 @@
       "teacher"
     ],
     "alt2_stats": [
-      "{she} may give {___}",
+      "{someone} may give {___}",
       "{___} may give {quiz}"
     ],
     "alt2_text": "She gave her students a pop quiz.",
@@ -9762,7 +9731,7 @@
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "quiz",
-      "she"
+      "someone"
     ],
     "alt1_text": "She identified the students that were absent.",
     "type": "",
@@ -9776,14 +9745,14 @@
     "premise_stats": ["{___} may be pulled over"],
     "alt1_nouns": [
       "parking",
-      "he"
+      "someone"
     ],
-    "alt2_nouns": ["he"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "He was parking.",
     "type": "",
     "alt1_stats": [
-      "{___} may be {parking}",
-      "{he} may be {___}"
+      "{someone} may be {___}",
+      "{___} may be {parking}"
     ]
   },
   "98": {
@@ -9793,7 +9762,7 @@
       "woman"
     ],
     "alt2_stats": [
-      "{she} may be reminded of {___}",
+      "{someone} may be reminded of {___}",
       "{___} may be reminded of {childhood}"
     ],
     "alt2_text": "She was reminded of her childhood.",
@@ -9806,7 +9775,7 @@
       "something"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "childhood"
     ],
     "alt1_text": "She remembered to take her medication.",
@@ -9832,15 +9801,15 @@
     "premise_text": "The retail shop shut down.",
     "premise_nouns": ["shop"],
     "alt2_stats": [
-      "{it} may renew {___}",
-      "{___} may renew {lease}"
+      "{___} may renew {lease}",
+      "{something} may renew {___}"
     ],
     "alt2_text": "It renewed its lease.",
     "premise_stats": ["{___} may shut down"],
     "alt1_nouns": ["sale"],
     "alt2_nouns": [
-      "it",
-      "lease"
+      "lease",
+      "something"
     ],
     "alt1_text": "Its sales were lagging.",
     "type": "",
@@ -9854,7 +9823,7 @@
       "woman"
     ],
     "alt2_stats": [
-      "{she} may receive {___}",
+      "{someone} may receive {___}",
       "{___} may receive {bonus}"
     ],
     "alt2_text": "She received a salary bonus.",
@@ -9865,7 +9834,7 @@
     ],
     "alt1_nouns": ["husband"],
     "alt2_nouns": [
-      "she",
+      "someone",
       "bonus"
     ],
     "alt1_text": "Her husband got laid off.",
@@ -9932,13 +9901,13 @@
     "premise_text": "I slipped on the floor.",
     "premise_nouns": [
       "floor",
-      "I"
+      "someone"
     ],
     "alt2_stats": ["{___} may be cracked"],
     "alt2_text": "The tile was cracked.",
     "premise_stats": [
       "{___} may slip on {floor}",
-      "{I} may slip on {___}"
+      "{someone} may slip on {___}"
     ],
     "alt1_nouns": ["tile"],
     "alt2_nouns": ["tile"],
@@ -9962,7 +9931,7 @@
       "{swimmer} may win {___}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "medal"
     ],
     "alt2_nouns": [
@@ -9973,7 +9942,7 @@
     "type": "",
     "alt1_stats": [
       "{___} may receive {medal}",
-      "{she} may receive {___}"
+      "{someone} may receive {___}"
     ]
   },
   "93": {
@@ -9992,26 +9961,25 @@
     "premise_text": "I excused myself from the group.",
     "premise_nouns": [
       "someone",
-      "group",
-      "I"
+      "group"
     ],
     "alt2_stats": ["{___} may ring"],
     "alt2_text": "My phone rang.",
     "premise_stats": [
       "{___} may excuse {someone} from {group}",
-      "{I} may excuse {___} from {group}",
-      "{I} may excuse {someone} from {___}"
+      "{someone} may excuse {___} from {group}",
+      "{someone} may excuse {someone} from {___}"
     ],
     "alt1_nouns": [
       "phone",
-      "I"
+      "someone"
     ],
     "alt2_nouns": ["phone"],
     "alt1_text": "I turned off my phone.",
     "type": "",
     "alt1_stats": [
       "{___} may turn off {phone}",
-      "{I} may turn off {___}"
+      "{someone} may turn off {___}"
     ]
   },
   "92": {
@@ -10072,23 +10040,23 @@
     "premise_text": "My foot went numb.",
     "premise_nouns": ["foot"],
     "alt2_stats": [
-      "{I} may shake {___}",
+      "{someone} may shake {___}",
       "{___} may shake {foot}"
     ],
     "alt2_text": "I shook my foot.",
     "premise_stats": ["{___} may go numb"],
     "alt1_nouns": [
-      "shoe",
-      "I"
+      "someone",
+      "shoe"
     ],
     "alt2_nouns": [
       "foot",
-      "I"
+      "someone"
     ],
     "alt1_text": "I put my shoes on.",
     "type": "",
     "alt1_stats": [
-      "{I} may put on {___}",
+      "{someone} may put on {___}",
       "{___} may put on {shoe}"
     ]
   },
@@ -10116,23 +10084,23 @@
     "premise_text": "The egg splattered.",
     "premise_nouns": ["egg"],
     "alt2_stats": [
-      "{I} may boil {___}",
+      "{someone} may boil {___}",
       "{___} may boil {something}"
     ],
     "alt2_text": "I boiled it.",
     "premise_stats": ["{___} may splatter"],
     "alt1_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt2_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt1_text": "I dropped it.",
     "type": "",
     "alt1_stats": [
-      "{I} may drop {___}",
+      "{someone} may drop {___}",
       "{___} may drop {something}"
     ]
   },
@@ -10140,16 +10108,13 @@
     "premise_text": "The computer was expensive to fix.",
     "premise_nouns": ["something"],
     "alt2_stats": [
-      "{I} may buy {___}",
+      "{someone} may buy {___}",
       "{___} may buy {someone}"
     ],
     "alt2_text": "I bought a new one.",
     "premise_stats": ["{___} may fix"],
     "alt1_nouns": ["something"],
-    "alt2_nouns": [
-      "someone",
-      "I"
-    ],
+    "alt2_nouns": ["someone"],
     "alt1_text": "I got it repaired.",
     "type": "",
     "alt1_stats": ["{___} may be repaired"]
@@ -10162,8 +10127,8 @@
     ],
     "alt2_stats": [
       "{___} may keep {someone} in {place}",
-      "{I} may keep {___} in {place}",
-      "{I} may keep {someone} in {___}"
+      "{someone} may keep {___} in {place}",
+      "{someone} may keep {someone} in {___}"
     ],
     "alt2_text": "I kept them in a secure place.",
     "premise_stats": [
@@ -10176,8 +10141,7 @@
     ],
     "alt2_nouns": [
       "someone",
-      "place",
-      "I"
+      "place"
     ],
     "alt1_text": "I paper clipped them together.",
     "type": "",
@@ -10238,24 +10202,24 @@
     "premise_text": "My ears were ringing.",
     "premise_nouns": ["ear"],
     "alt2_stats": [
-      "{I} may go to {___}",
+      "{someone} may go to {___}",
       "{___} may go to {concert}"
     ],
     "alt2_text": "I went to a concert.",
     "premise_stats": ["{___} may ring"],
     "alt1_nouns": [
-      "museum",
-      "I"
+      "someone",
+      "museum"
     ],
     "alt2_nouns": [
       "concert",
-      "I"
+      "someone"
     ],
     "alt1_text": "I went to a museum.",
     "type": "",
     "alt1_stats": [
-      "{I} may go to {___}",
-      "{___} may go to {museum}"
+      "{___} may go to {museum}",
+      "{someone} may go to {___}"
     ]
   },
   "290": {
@@ -10283,7 +10247,7 @@
       "earring"
     ],
     "alt2_stats": [
-      "{she} may get {___}",
+      "{someone} may get {___}",
       "{___} may get {tattoo}"
     ],
     "alt2_text": "She got a tattoo.",
@@ -10293,7 +10257,7 @@
     ],
     "alt1_nouns": ["ear"],
     "alt2_nouns": [
-      "she",
+      "someone",
       "tattoo"
     ],
     "alt1_text": "She got her ears pierced.",
@@ -10308,7 +10272,7 @@
     ],
     "alt2_stats": [
       "{___} may cancel {flight}",
-      "{they} may cancel {___}"
+      "{someone} may cancel {___}"
     ],
     "alt2_text": "They cancelled my flight.",
     "premise_stats": [
@@ -10317,16 +10281,16 @@
     ],
     "alt1_nouns": [
       "compensation",
-      "they"
+      "someone"
     ],
     "alt2_nouns": [
       "flight",
-      "they"
+      "someone"
     ],
     "alt1_text": "They offered me compensation.",
     "type": "",
     "alt1_stats": [
-      "{they} may offer {___}",
+      "{someone} may offer {___}",
       "{___} may offer {compensation}"
     ]
   },
@@ -10334,19 +10298,19 @@
     "premise_text": "I scrubbed the stain on the floor.",
     "premise_nouns": [
       "floor",
-      "I",
+      "someone",
       "stain"
     ],
     "alt2_stats": [
-      "{I} may get {___} on {floor}",
+      "{someone} may get {dirt} on {___}",
       "{___} may get {dirt} on {floor}",
-      "{I} may get {dirt} on {___}"
+      "{someone} may get {___} on {floor}"
     ],
     "alt2_text": "I got dirt on the floor.",
     "premise_stats": [
-      "{I} may scrub {stain} on {___}",
       "{___} may scrub {stain} on {floor}",
-      "{I} may scrub {___} on {floor}"
+      "{someone} may scrub {stain} on {___}",
+      "{someone} may scrub {___} on {floor}"
     ],
     "alt1_nouns": [
       "something",
@@ -10354,8 +10318,8 @@
     ],
     "alt2_nouns": [
       "floor",
-      "dirt",
-      "I"
+      "someone",
+      "dirt"
     ],
     "alt1_text": "I got rid of the stain.",
     "type": "",
@@ -10367,30 +10331,30 @@
   "497": {
     "premise_text": "I tidied up my house.",
     "premise_nouns": [
-      "house",
-      "I"
+      "someone",
+      "house"
     ],
     "alt2_stats": [
-      "{___} may expect {company}",
-      "{I} may expect {___}"
+      "{someone} may expect {___}",
+      "{___} may expect {company}"
     ],
     "alt2_text": "I was expecting company.",
     "premise_stats": [
-      "{___} may tidy up {house}",
-      "{I} may tidy up {___}"
+      "{someone} may tidy up {___}",
+      "{___} may tidy up {house}"
     ],
     "alt1_nouns": [
       "work",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
       "company",
-      "I"
+      "someone"
     ],
     "alt1_text": "I was swamped with work.",
     "type": "",
     "alt1_stats": [
-      "{I} may be swamped with {___}",
+      "{someone} may be swamped with {___}",
       "{___} may be swamped with {work}"
     ]
   },
@@ -10401,7 +10365,7 @@
       "hamburger"
     ],
     "alt2_stats": [
-      "{she} may like {___}",
+      "{someone} may like {___}",
       "{___} may like {food}"
     ],
     "alt2_text": "She liked fast food.",
@@ -10410,17 +10374,17 @@
       "{girl} may decline {___}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "vegetarian"
     ],
     "alt2_nouns": [
       "food",
-      "she"
+      "someone"
     ],
     "alt1_text": "She was a vegetarian.",
     "type": "",
     "alt1_stats": [
-      "{she} may be {___}",
+      "{someone} may be {___}",
       "{___} may be {vegetarian}"
     ]
   },
@@ -10428,13 +10392,13 @@
     "premise_text": "I lit the candle.",
     "premise_nouns": [
       "candle",
-      "I"
+      "someone"
     ],
     "alt2_stats": ["{___} may be hardened"],
     "alt2_text": "The wax on the candle hardened.",
     "premise_stats": [
       "{___} may light {candle}",
-      "{I} may light {___}"
+      "{someone} may light {___}"
     ],
     "alt1_nouns": [
       "candle",
@@ -10452,25 +10416,25 @@
     "premise_text": "I spent the day at the pool.",
     "premise_nouns": [
       "pool",
-      "day",
-      "I"
+      "someone",
+      "day"
     ],
     "alt2_stats": ["{___} may be sunburned"],
     "alt2_text": "My face got sunburned.",
     "premise_stats": [
-      "{I} may spend {day} at {___}",
-      "{I} may spend {___} at {pool}",
-      "{___} may spend {day} at {pool}"
+      "{someone} may spend {day} at {___}",
+      "{___} may spend {day} at {pool}",
+      "{someone} may spend {___} at {pool}"
     ],
     "alt1_nouns": [
-      "ankle",
-      "I"
+      "someone",
+      "ankle"
     ],
     "alt2_nouns": ["something"],
     "alt1_text": "I sprained my ankle.",
     "type": "",
     "alt1_stats": [
-      "{I} may sprain {___}",
+      "{someone} may sprain {___}",
       "{___} may sprain {ankle}"
     ]
   },
@@ -10488,14 +10452,14 @@
     ],
     "alt1_nouns": [
       "street",
-      "he"
+      "someone"
     ],
     "alt2_nouns": ["meter"],
     "alt1_text": "He parallel parked on the street.",
     "type": "",
     "alt1_stats": [
-      "{he} may park on {___}",
-      "{___} may park on {street}"
+      "{___} may park on {street}",
+      "{someone} may park on {___}"
     ]
   },
   "494": {
@@ -10529,8 +10493,8 @@
       "man"
     ],
     "alt2_stats": [
-      "{___} may open {bar}",
-      "{he} may open {___}"
+      "{someone} may open {___}",
+      "{___} may open {bar}"
     ],
     "alt2_text": "He opened a new bar of soap.",
     "premise_stats": [
@@ -10539,7 +10503,7 @@
     ],
     "alt1_nouns": ["something"],
     "alt2_nouns": [
-      "he",
+      "someone",
       "bar"
     ],
     "alt1_text": "He was sweaty from working out.",
@@ -10574,8 +10538,8 @@
       "{book} may become {___}"
     ],
     "alt1_nouns": [
-      "it",
-      "movie"
+      "movie",
+      "something"
     ],
     "alt2_nouns": [
       "obscurity",
@@ -10584,7 +10548,7 @@
     "alt1_text": "It was adapted into a movie.",
     "type": "",
     "alt1_stats": [
-      "{it} may be adapted into {___}",
+      "{something} may be adapted into {___}",
       "{___} may be adapted into {movie}"
     ]
   },
@@ -10595,18 +10559,18 @@
       "man"
     ],
     "alt2_stats": [
-      "{___} may owe {money}",
-      "{he} may owe {___}"
+      "{someone} may owe {___}",
+      "{___} may owe {money}"
     ],
     "alt2_text": "He owed money.",
     "premise_stats": [
       "{man} may win {___}",
       "{___} may win {lottery}"
     ],
-    "alt1_nouns": ["he"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
-      "money",
-      "he"
+      "someone",
+      "money"
     ],
     "alt1_text": "He became rich.",
     "type": "",
@@ -10619,8 +10583,8 @@
       "skier"
     ],
     "alt2_stats": [
-      "{she} may hit {___}",
-      "{___} may hit {patch}"
+      "{___} may hit {patch}",
+      "{someone} may hit {___}"
     ],
     "alt2_text": "She hit a patch of ice.",
     "premise_stats": [
@@ -10629,16 +10593,16 @@
     ],
     "alt1_nouns": [
       "pole",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
-      "she",
+      "someone",
       "patch"
     ],
     "alt1_text": "She dropped her ski poles.",
     "type": "",
     "alt1_stats": [
-      "{she} may drop {___}",
+      "{someone} may drop {___}",
       "{___} may drop {pole}"
     ]
   },
@@ -10682,49 +10646,49 @@
     "premise_text": "The man's watch was broken.",
     "premise_nouns": ["watch"],
     "alt2_stats": [
-      "{he} may ask {___} for {time}",
-      "{he} may ask {stranger} for {___}",
+      "{someone} may ask {___} for {time}",
+      "{someone} may ask {stranger} for {___}",
       "{___} may ask {stranger} for {time}"
     ],
     "alt2_text": "He asked a stranger for the time.",
     "premise_stats": ["{___} may be broken"],
     "alt1_nouns": [
       "stop",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
       "time",
-      "he",
+      "someone",
       "stranger"
     ],
     "alt1_text": "He waited at the bus stop.",
     "type": "",
     "alt1_stats": [
-      "{he} may wait at {___}",
+      "{someone} may wait at {___}",
       "{___} may wait at {stop}"
     ]
   },
   "88": {
     "premise_text": "I put my plate in the sink.",
     "premise_nouns": [
+      "someone",
       "plate",
-      "sink",
-      "I"
+      "sink"
     ],
     "alt2_stats": [
-      "{I} may skip {___}",
-      "{___} may skip {dinner}"
+      "{___} may skip {dinner}",
+      "{someone} may skip {___}"
     ],
     "alt2_text": "I skipped dinner.",
     "premise_stats": [
       "{___} may put {plate} in {sink}",
-      "{I} may put {plate} in {___}",
-      "{I} may put {___} in {sink}"
+      "{someone} may put {plate} in {___}",
+      "{someone} may put {___} in {sink}"
     ],
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "dinner",
-      "I"
+      "someone"
     ],
     "alt1_text": "I finished eating.",
     "type": "",
@@ -10769,7 +10733,7 @@
       "{album} may collect {___} in {attic}"
     ],
     "alt1_nouns": [
-      "they",
+      "someone",
       "year"
     ],
     "alt2_nouns": [
@@ -10779,15 +10743,15 @@
     "alt1_text": "They remained untouched for years.",
     "type": "",
     "alt1_stats": [
-      "{they} may remain untouched for {___}",
-      "{___} may remain untouched for {year}"
+      "{___} may remain untouched for {year}",
+      "{someone} may remain untouched for {___}"
     ]
   },
   "241": {
     "premise_text": "I got distracted from my conversation with the woman.",
     "premise_nouns": [
-      "conversation",
-      "I"
+      "someone",
+      "conversation"
     ],
     "alt2_stats": [
       "{woman} may tell {___}",
@@ -10795,10 +10759,10 @@
     ],
     "alt2_text": "The woman was telling a funny story.",
     "premise_stats": [
-      "{I} may be distracted from {___}",
+      "{someone} may be distracted from {___}",
       "{___} may be distracted from {conversation}"
     ],
-    "alt1_nouns": ["everyone"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "story",
       "woman"
@@ -10823,9 +10787,9 @@
       "{something} may save {___}"
     ],
     "alt1_nouns": [
+      "someone",
       "money",
-      "account",
-      "he"
+      "account"
     ],
     "alt2_nouns": [
       "purchase",
@@ -10834,21 +10798,21 @@
     "alt1_text": "He withdrew money from his savings account.",
     "type": "",
     "alt1_stats": [
-      "{he} may withdraw {money} from {___}",
       "{___} may withdraw {money} from {account}",
-      "{he} may withdraw {___} from {account}"
+      "{someone} may withdraw {___} from {account}",
+      "{someone} may withdraw {money} from {___}"
     ]
   },
   "384": {
     "premise_text": "I put shoes on.",
     "premise_nouns": [
-      "shoe",
-      "I"
+      "someone",
+      "shoe"
     ],
     "alt2_stats": ["{___} may be wet"],
     "alt2_text": "The paint on the walls was wet.",
     "premise_stats": [
-      "{I} may put on {___}",
+      "{someone} may put on {___}",
       "{___} may put on {shoe}"
     ],
     "alt1_nouns": ["something"],
@@ -10864,8 +10828,8 @@
       "something"
     ],
     "alt2_stats": [
-      "{she} may give up {___}",
-      "{___} may give up {custody}"
+      "{___} may give up {custody}",
+      "{someone} may give up {___}"
     ],
     "alt2_text": "She gave up custody of the children.",
     "premise_stats": [
@@ -10874,7 +10838,7 @@
     ],
     "alt1_nouns": ["something"],
     "alt2_nouns": [
-      "she",
+      "someone",
       "custody"
     ],
     "alt1_text": "She sent the children to daycare.",
@@ -10888,7 +10852,7 @@
       "driver"
     ],
     "alt2_stats": [
-      "{she} may make {___}",
+      "{someone} may make {___}",
       "{___} may make {turn}"
     ],
     "alt2_text": "She made a right turn at the light.",
@@ -10902,7 +10866,7 @@
     ],
     "alt2_nouns": [
       "turn",
-      "she"
+      "someone"
     ],
     "alt1_text": "Another car swerved into her lane.",
     "type": "",
@@ -10936,7 +10900,7 @@
       "approval"
     ],
     "alt2_stats": [
-      "{she} may obey {___}",
+      "{someone} may obey {___}",
       "{___} may obey {rule}"
     ],
     "alt2_text": "She obeyed her parent's rules.",
@@ -10944,10 +10908,10 @@
       "{girl} may desire {___}",
       "{___} may desire {approval}"
     ],
-    "alt1_nouns": ["she"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "rule",
-      "she"
+      "someone"
     ],
     "alt1_text": "She ran away from home.",
     "type": "",
@@ -10987,24 +10951,24 @@
     "premise_text": "I packed up my belongings.",
     "premise_nouns": [
       "belongings",
-      "I"
+      "someone"
     ],
     "alt2_stats": ["{___} may move"],
     "alt2_text": "I was moving out of my apartment.",
     "premise_stats": [
       "{___} may pack up {belongings}",
-      "{I} may pack up {___}"
+      "{someone} may pack up {___}"
     ],
     "alt1_nouns": [
-      "apartment",
-      "I"
+      "someone",
+      "apartment"
     ],
-    "alt2_nouns": ["I"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "I was hunting for a new apartment.",
     "type": "",
     "alt1_stats": [
       "{___} may hunt for {apartment}",
-      "{I} may hunt for {___}"
+      "{someone} may hunt for {___}"
     ]
   },
   "386": {
@@ -11014,18 +10978,18 @@
       "mother"
     ],
     "alt2_stats": [
-      "{she} may hold {___}",
-      "{___} may hold {hand}"
+      "{___} may hold {hand}",
+      "{someone} may hold {___}"
     ],
     "alt2_text": "She held his hand.",
     "premise_stats": [
       "{mother} may become {___}",
       "{___} may become {level}"
     ],
-    "alt1_nouns": ["she"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "hand",
-      "she"
+      "someone"
     ],
     "alt1_text": "She squatted down.",
     "type": "",
@@ -11047,14 +11011,14 @@
     ],
     "alt1_nouns": [
       "help",
-      "I"
+      "someone"
     ],
     "alt2_nouns": ["book"],
     "alt1_text": "I requested the librarian's help.",
     "type": "",
     "alt1_stats": [
-      "{I} may request {___}",
-      "{___} may request {help}"
+      "{___} may request {help}",
+      "{someone} may request {___}"
     ]
   },
   "245": {
@@ -11069,7 +11033,7 @@
       "{conversation} may be lulled to {___}",
       "{___} may be lulled to {silence}"
     ],
-    "alt1_nouns": ["I"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": ["something"],
     "alt1_text": "I felt awkward.",
     "type": "",
@@ -11127,25 +11091,25 @@
     "premise_text": "I put coins in the washing machine at the laundromat.",
     "premise_nouns": [
       "coin",
+      "someone",
       "laundromat",
-      "machine",
-      "I"
+      "machine"
     ],
     "alt2_stats": [
-      "{I} may run out of {___}",
+      "{someone} may run out of {___}",
       "{___} may run out of {detergent}"
     ],
     "alt2_text": "I ran out of laundry detergent.",
     "premise_stats": [
-      "{I} may put {coin} in {machine} at {___}",
-      "{I} may put {___} in {machine} at {laundromat}",
-      "{I} may put {coin} in {___} at {laundromat}",
-      "{___} may put {coin} in {machine} at {laundromat}"
+      "{someone} may put {coin} in {___} at {laundromat}",
+      "{someone} may put {___} in {machine} at {laundromat}",
+      "{___} may put {coin} in {machine} at {laundromat}",
+      "{someone} may put {coin} in {machine} at {___}"
     ],
     "alt1_nouns": ["machine"],
     "alt2_nouns": [
-      "detergent",
-      "I"
+      "someone",
+      "detergent"
     ],
     "alt1_text": "The machine powered on.",
     "type": "",
@@ -11170,9 +11134,9 @@
       "actor"
     ],
     "alt2_stats": [
-      "{she} may ask {someone} for {___}",
-      "{___} may ask {someone} for {autograph}",
-      "{she} may ask {___} for {autograph}"
+      "{someone} may ask {someone} for {___}",
+      "{someone} may ask {___} for {autograph}",
+      "{___} may ask {someone} for {autograph}"
     ],
     "alt2_text": "She asked him for his autograph.",
     "premise_stats": [
@@ -11185,8 +11149,7 @@
     ],
     "alt2_nouns": [
       "autograph",
-      "someone",
-      "she"
+      "someone"
     ],
     "alt1_text": "She went to see his new film.",
     "type": "",
@@ -11217,15 +11180,15 @@
     "premise_text": "I clenched the candy wrapper in my fist.",
     "premise_nouns": [
       "wrapper",
-      "fist",
-      "I"
+      "someone",
+      "fist"
     ],
     "alt2_stats": ["{___} may rip"],
     "alt2_text": "The wrapper ripped.",
     "premise_stats": [
-      "{I} may clench {wrapper} in {___}",
-      "{___} may clench {wrapper} in {fist}",
-      "{I} may clench {___} in {fist}"
+      "{someone} may clench {wrapper} in {___}",
+      "{someone} may clench {___} in {fist}",
+      "{___} may clench {wrapper} in {fist}"
     ],
     "alt1_nouns": ["wrapper"],
     "alt2_nouns": ["wrapper"],
@@ -11246,7 +11209,7 @@
       "{___} may be convicted for {crime}"
     ],
     "alt1_nouns": ["jury"],
-    "alt2_nouns": ["she"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "The jury was fair.",
     "type": "",
     "alt1_stats": ["{___} may be fair"]
@@ -11306,14 +11269,14 @@
       "{___} may exaggerate {detail}"
     ],
     "alt1_nouns": [
-      "she",
+      "someone",
       "attention"
     ],
-    "alt2_nouns": ["she"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "She wanted attention.",
     "type": "",
     "alt1_stats": [
-      "{she} may want {___}",
+      "{someone} may want {___}",
       "{___} may want {attention}"
     ]
   },
@@ -11325,16 +11288,16 @@
     ],
     "alt2_stats": [
       "{___} may go {diving}",
-      "{she} may go {___}"
+      "{someone} may go {___}"
     ],
     "alt2_text": "She went sky diving.",
     "premise_stats": [
       "{___} may hit {crisis}",
       "{woman} may hit {___}"
     ],
-    "alt1_nouns": ["she"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
-      "she",
+      "someone",
       "diving"
     ],
     "alt1_text": "She retired.",
@@ -11392,8 +11355,8 @@
       "coma"
     ],
     "alt2_stats": [
-      "{___} may suffer {damage}",
-      "{he} may suffer {___}"
+      "{someone} may suffer {___}",
+      "{___} may suffer {damage}"
     ],
     "alt2_text": "He suffered brain damage.",
     "premise_stats": [
@@ -11402,16 +11365,16 @@
     ],
     "alt1_nouns": [
       "trauma",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
-      "damage",
-      "he"
+      "someone",
+      "damage"
     ],
     "alt1_text": "He suffered emotional trauma.",
     "type": "",
     "alt1_stats": [
-      "{he} may suffer {___}",
+      "{someone} may suffer {___}",
       "{___} may suffer {trauma}"
     ]
   },
@@ -11451,15 +11414,15 @@
       "{man} may go into {denial} about {___}"
     ],
     "alt1_nouns": [
-      "something",
-      "he"
+      "someone",
+      "something"
     ],
     "alt2_nouns": ["something"],
     "alt1_text": "He got over it easily.",
     "type": "",
     "alt1_stats": [
-      "{___} may get over {something}",
-      "{he} may get over {___}"
+      "{someone} may get over {___}",
+      "{___} may get over {something}"
     ]
   },
   "377": {
@@ -11469,7 +11432,7 @@
       "something"
     ],
     "alt2_stats": [
-      "{I} may buy {___}",
+      "{someone} may buy {___}",
       "{___} may buy {fruit}"
     ],
     "alt2_text": "I bought fruits and vegetables.",
@@ -11478,17 +11441,17 @@
       "{___} may eat {diet}"
     ],
     "alt1_nouns": [
-      "class",
-      "I"
+      "someone",
+      "class"
     ],
     "alt2_nouns": [
       "fruit",
-      "I"
+      "someone"
     ],
     "alt1_text": "I attended a yoga class.",
     "type": "",
     "alt1_stats": [
-      "{I} may attend {___}",
+      "{someone} may attend {___}",
       "{___} may attend {class}"
     ]
   },
@@ -11505,7 +11468,7 @@
       "{___} may have {phobia}"
     ],
     "alt1_nouns": ["something"],
-    "alt2_nouns": ["she"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "She rescued an abandoned dog.",
     "type": "",
     "alt1_stats": ["{___} may be abandoned"]
@@ -11517,7 +11480,7 @@
       "woman"
     ],
     "alt2_stats": [
-      "{she} may miss {___}",
+      "{someone} may miss {___}",
       "{___} may miss {someone}"
     ],
     "alt2_text": "She missed them.",
@@ -11525,18 +11488,12 @@
       "{woman} may visit {___}",
       "{___} may visit {family}"
     ],
-    "alt1_nouns": [
-      "someone",
-      "she"
-    ],
-    "alt2_nouns": [
-      "someone",
-      "she"
-    ],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "She distrusted them.",
     "type": "",
     "alt1_stats": [
-      "{she} may distrust {___}",
+      "{someone} may distrust {___}",
       "{___} may distrust {someone}"
     ]
   },
@@ -11594,7 +11551,7 @@
     "premise_text": "I burst into a fit of laughter.",
     "premise_nouns": [
       "fit",
-      "I"
+      "someone"
     ],
     "alt2_stats": [
       "{___} may well up with {tear}",
@@ -11602,7 +11559,7 @@
     ],
     "alt2_text": "My eyes welled up with tears.",
     "premise_stats": [
-      "{I} may burst into {___}",
+      "{someone} may burst into {___}",
       "{___} may burst into {fit}"
     ],
     "alt1_nouns": ["something"],
@@ -11621,7 +11578,7 @@
       "something"
     ],
     "alt2_stats": [
-      "{I} may tell {___}",
+      "{someone} may tell {___}",
       "{___} may tell {joke}"
     ],
     "alt2_text": "I told a joke.",
@@ -11629,10 +11586,10 @@
       "{something} may lighten {___}",
       "{___} may lighten {mood}"
     ],
-    "alt1_nouns": ["I"],
+    "alt1_nouns": ["someone"],
     "alt2_nouns": [
-      "joke",
-      "I"
+      "someone",
+      "joke"
     ],
     "alt1_text": "I remained quiet.",
     "type": "",
@@ -11642,24 +11599,24 @@
     "premise_text": "The balloon expanded.",
     "premise_nouns": ["balloon"],
     "alt2_stats": [
-      "{I} may prick {___}",
+      "{someone} may prick {___}",
       "{___} may prick {something}"
     ],
     "alt2_text": "I pricked it.",
     "premise_stats": ["{___} may expand"],
     "alt1_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt2_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt1_text": "I blew into it.",
     "type": "",
     "alt1_stats": [
-      "{___} may blow into {something}",
-      "{I} may blow into {___}"
+      "{someone} may blow into {___}",
+      "{___} may blow into {something}"
     ]
   },
   "238": {
@@ -11669,7 +11626,7 @@
       "man"
     ],
     "alt2_stats": [
-      "{he} may admit {___}",
+      "{someone} may admit {___}",
       "{___} may admit {indiscretion}"
     ],
     "alt2_text": "He admitted his indiscretion.",
@@ -11678,18 +11635,18 @@
       "{man} may have {___}"
     ],
     "alt1_nouns": [
-      "he",
+      "someone",
       "friend"
     ],
     "alt2_nouns": [
       "indiscretion",
-      "he"
+      "someone"
     ],
     "alt1_text": "He manipulated his friend.",
     "type": "",
     "alt1_stats": [
-      "{he} may manipulate {___}",
-      "{___} may manipulate {friend}"
+      "{___} may manipulate {friend}",
+      "{someone} may manipulate {___}"
     ]
   },
   "237": {
@@ -11699,7 +11656,7 @@
       "man"
     ],
     "alt2_stats": [
-      "{he} may drop {___}",
+      "{someone} may drop {___}",
       "{___} may drop {hammer}"
     ],
     "alt2_text": "He dropped a hammer on his foot.",
@@ -11709,19 +11666,19 @@
     ],
     "alt1_nouns": [
       "sock",
-      "he",
+      "someone",
       "hole"
     ],
     "alt2_nouns": [
-      "he",
+      "someone",
       "hammer"
     ],
     "alt1_text": "He got a hole in his sock.",
     "type": "",
     "alt1_stats": [
-      "{he} may get {hole} in {___}",
-      "{he} may get {___} in {sock}",
-      "{___} may get {hole} in {sock}"
+      "{___} may get {hole} in {sock}",
+      "{someone} may get {hole} in {___}",
+      "{someone} may get {___} in {sock}"
     ]
   },
   "262": {
@@ -11732,8 +11689,8 @@
       "man"
     ],
     "alt2_stats": [
-      "{___} may disagree with {therapist}",
-      "{he} may disagree with {___}"
+      "{someone} may disagree with {___}",
+      "{___} may disagree with {therapist}"
     ],
     "alt2_text": "He disagreed with the therapist.",
     "premise_stats": [
@@ -11743,16 +11700,16 @@
     ],
     "alt1_nouns": [
       "therapist",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
       "therapist",
-      "he"
+      "someone"
     ],
     "alt1_text": "He trusted the therapist.",
     "type": "",
     "alt1_stats": [
-      "{he} may trust {___}",
+      "{someone} may trust {___}",
       "{___} may trust {therapist}"
     ]
   },
@@ -11876,14 +11833,14 @@
     ],
     "alt1_nouns": [
       "fence",
-      "he"
+      "someone"
     ],
     "alt2_nouns": ["sleeve"],
     "alt1_text": "He hopped the fence.",
     "type": "",
     "alt1_stats": [
       "{___} may hop {fence}",
-      "{he} may hop {___}"
+      "{someone} may hop {___}"
     ]
   },
   "360": {
@@ -11891,46 +11848,46 @@
     "premise_nouns": ["teenager"],
     "alt2_stats": [
       "{___} may join {team}",
-      "{he} may join {___}"
+      "{someone} may join {___}"
     ],
     "alt2_text": "He joined the basketball team.",
     "premise_stats": ["{___} may grow taller"],
     "alt1_nouns": [
-      "spurt",
-      "he"
+      "someone",
+      "spurt"
     ],
     "alt2_nouns": [
-      "team",
-      "he"
+      "someone",
+      "team"
     ],
     "alt1_text": "He went through a growth spurt.",
     "type": "",
     "alt1_stats": [
       "{___} may go through {spurt}",
-      "{he} may go through {___}"
+      "{someone} may go through {___}"
     ]
   },
   "366": {
     "premise_text": "The room was dim.",
     "premise_nouns": ["room"],
     "alt2_stats": [
-      "{I} may wash {___}",
+      "{someone} may wash {___}",
       "{___} may wash {window}"
     ],
     "alt2_text": "I washed the windows.",
     "premise_stats": ["{___} may be dim"],
     "alt1_nouns": [
-      "blind",
-      "I"
+      "someone",
+      "blind"
     ],
     "alt2_nouns": [
       "window",
-      "I"
+      "someone"
     ],
     "alt1_text": "I opened the blinds.",
     "type": "",
     "alt1_stats": [
-      "{I} may open {___}",
+      "{someone} may open {___}",
       "{___} may open {blind}"
     ]
   },
@@ -11938,23 +11895,23 @@
     "premise_text": "The girl's mouth ached.",
     "premise_nouns": ["mouth"],
     "alt2_stats": [
-      "{___} may swallow {gum}",
-      "{she} may swallow {___}"
+      "{someone} may swallow {___}",
+      "{___} may swallow {gum}"
     ],
     "alt2_text": "She swallowed her gum.",
     "premise_stats": ["{___} may ache"],
     "alt1_nouns": [
       "tooth",
-      "she"
+      "someone"
     ],
     "alt2_nouns": [
       "gum",
-      "she"
+      "someone"
     ],
     "alt1_text": "She lost a tooth.",
     "type": "",
     "alt1_stats": [
-      "{she} may lose {___}",
+      "{someone} may lose {___}",
       "{___} may lose {tooth}"
     ]
   },
@@ -11962,24 +11919,24 @@
     "premise_text": "The computer crashed.",
     "premise_nouns": ["computer"],
     "alt2_stats": [
-      "{I} may download {___}",
-      "{___} may download {virus}"
+      "{___} may download {virus}",
+      "{someone} may download {___}"
     ],
     "alt2_text": "I downloaded a virus.",
     "premise_stats": ["{___} may crash"],
     "alt1_nouns": [
       "file",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
-      "virus",
-      "I"
+      "someone",
+      "virus"
     ],
     "alt1_text": "I backed up my files.",
     "type": "",
     "alt1_stats": [
-      "{___} may back up {file}",
-      "{I} may back up {___}"
+      "{someone} may back up {___}",
+      "{___} may back up {file}"
     ]
   },
   "363": {
@@ -11990,7 +11947,7 @@
     ],
     "alt2_stats": [
       "{___} may have {child}",
-      "{he} may have {___}"
+      "{someone} may have {___}"
     ],
     "alt2_text": "He had children.",
     "premise_stats": [
@@ -11998,17 +11955,17 @@
       "{___} may deem {death}"
     ],
     "alt1_nouns": [
-      "he",
+      "someone",
       "note"
     ],
     "alt2_nouns": [
       "child",
-      "he"
+      "someone"
     ],
     "alt1_text": "He left a note.",
     "type": "",
     "alt1_stats": [
-      "{he} may leave {___}",
+      "{someone} may leave {___}",
       "{___} may leave {note}"
     ]
   },
@@ -12109,23 +12066,17 @@
     "premise_nouns": ["banana"],
     "alt2_stats": [
       "{___} may eat {someone}",
-      "{we} may eat {___}"
+      "{someone} may eat {___}"
     ],
     "alt2_text": "We ate them.",
     "premise_stats": ["{___} may ripen"],
-    "alt1_nouns": [
-      "someone",
-      "we"
-    ],
-    "alt2_nouns": [
-      "someone",
-      "we"
-    ],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "We squeezed them.",
     "type": "",
     "alt1_stats": [
-      "{___} may squeeze {someone}",
-      "{we} may squeeze {___}"
+      "{someone} may squeeze {___}",
+      "{___} may squeeze {someone}"
     ]
   },
   "267": {
@@ -12136,8 +12087,8 @@
     ],
     "alt2_stats": [
       "{___} may go on {vacation} for {week}",
-      "{I} may go on {vacation} for {___}",
-      "{I} may go on {___} for {week}"
+      "{someone} may go on {vacation} for {___}",
+      "{someone} may go on {___} for {week}"
     ],
     "alt2_text": "I went on vacation for two weeks.",
     "premise_stats": [
@@ -12147,7 +12098,7 @@
     "alt1_nouns": ["lid"],
     "alt2_nouns": [
       "vacation",
-      "I",
+      "someone",
       "week"
     ],
     "alt1_text": "The lid on the mailbox broke.",
@@ -12170,13 +12121,13 @@
     ],
     "alt1_nouns": [
       "coffee",
-      "he"
+      "someone"
     ],
-    "alt2_nouns": ["he"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "He sipped coffee.",
     "type": "",
     "alt1_stats": [
-      "{he} may sip {___}",
+      "{someone} may sip {___}",
       "{___} may sip {coffee}"
     ]
   },
@@ -12187,7 +12138,7 @@
       "praise"
     ],
     "alt2_stats": [
-      "{he} may raise {___}",
+      "{someone} may raise {___}",
       "{___} may raise {tax}"
     ],
     "alt2_text": "He raised taxes.",
@@ -12197,33 +12148,33 @@
     ],
     "alt1_nouns": [
       "poverty",
-      "he"
+      "someone"
     ],
     "alt2_nouns": [
       "tax",
-      "he"
+      "someone"
     ],
     "alt1_text": "He fought poverty.",
     "type": "",
     "alt1_stats": [
-      "{he} may fight {___}",
+      "{someone} may fight {___}",
       "{___} may fight {poverty}"
     ]
   },
   "264": {
     "premise_text": "I approached the man.",
     "premise_nouns": [
-      "I",
+      "someone",
       "man"
     ],
     "alt2_stats": ["{___} may look familiar"],
     "alt2_text": "He looked familiar.",
     "premise_stats": [
       "{___} may approach {man}",
-      "{I} may approach {___}"
+      "{someone} may approach {___}"
     ],
-    "alt1_nouns": ["he"],
-    "alt2_nouns": ["he"],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "He looked busy.",
     "type": "",
     "alt1_stats": ["{___} may look busy"]
@@ -12256,24 +12207,24 @@
     "premise_text": "The cat purred.",
     "premise_nouns": ["cat"],
     "alt2_stats": [
-      "{___} may pet {something}",
-      "{I} may pet {___}"
+      "{someone} may pet {___}",
+      "{___} may pet {something}"
     ],
     "alt2_text": "I petted it.",
     "premise_stats": ["{___} may purr"],
     "alt1_nouns": [
-      "it",
-      "someone"
+      "someone",
+      "something"
     ],
     "alt2_nouns": [
-      "something",
-      "I"
+      "someone",
+      "something"
     ],
     "alt1_text": "It scratched me.",
     "type": "",
     "alt1_stats": [
       "{___} may scratch {someone}",
-      "{it} may scratch {___}"
+      "{something} may scratch {___}"
     ]
   },
   "252": {
@@ -12328,14 +12279,14 @@
     "premise_text": "I ran the ice cube under warm water.",
     "premise_nouns": [
       "water",
-      "cube",
-      "I"
+      "someone",
+      "cube"
     ],
     "alt2_stats": ["{___} may vanish"],
     "alt2_text": "The ice cube vanished.",
     "premise_stats": [
-      "{I} may run {___} under {water}",
-      "{I} may run {cube} under {___}",
+      "{someone} may run {cube} under {___}",
+      "{someone} may run {___} under {water}",
       "{___} may run {cube} under {water}"
     ],
     "alt1_nouns": [
@@ -12387,7 +12338,7 @@
     ],
     "alt1_nouns": [
       "home",
-      "she",
+      "someone",
       "wallet"
     ],
     "alt2_nouns": [
@@ -12397,8 +12348,8 @@
     "alt1_text": "She left her wallet at home.",
     "type": "",
     "alt1_stats": [
-      "{she} may leave {wallet} at {___}",
-      "{she} may leave {___} at {home}",
+      "{someone} may leave {___} at {home}",
+      "{someone} may leave {wallet} at {___}",
       "{___} may leave {wallet} at {home}"
     ]
   },
@@ -12409,7 +12360,7 @@
       "room"
     ],
     "alt2_stats": [
-      "{I} may put on {___}",
+      "{someone} may put on {___}",
       "{___} may put on {glove}"
     ],
     "alt2_text": "I put the rubber gloves on.",
@@ -12419,19 +12370,19 @@
     ],
     "alt1_nouns": [
       "hand",
-      "nose",
-      "I"
+      "someone",
+      "nose"
     ],
     "alt2_nouns": [
-      "glove",
-      "I"
+      "someone",
+      "glove"
     ],
     "alt1_text": "I clamped my hand over my nose.",
     "type": "",
     "alt1_stats": [
+      "{someone} may clamp {___} over {nose}",
       "{___} may clamp {hand} over {nose}",
-      "{I} may clamp {hand} over {___}",
-      "{I} may clamp {___} over {nose}"
+      "{someone} may clamp {hand} over {___}"
     ]
   },
   "354": {
@@ -12440,8 +12391,8 @@
     "alt2_stats": ["{___} may be intoxicated"],
     "alt2_text": "She was intoxicated.",
     "premise_stats": ["{___} may stay"],
-    "alt1_nouns": ["she"],
-    "alt2_nouns": ["she"],
+    "alt1_nouns": ["someone"],
+    "alt2_nouns": ["someone"],
     "alt1_text": "She was contagious.",
     "type": "",
     "alt1_stats": ["{___} may be contagious"]
@@ -12512,13 +12463,13 @@
     "premise_text": "We ordered a pizza.",
     "premise_nouns": [
       "pizza",
-      "we"
+      "someone"
     ],
     "alt2_stats": ["{___} may get cold"],
     "alt2_text": "The pizza got cold.",
     "premise_stats": [
-      "{___} may order {pizza}",
-      "{we} may order {___}"
+      "{someone} may order {___}",
+      "{___} may order {pizza}"
     ],
     "alt1_nouns": ["pizza"],
     "alt2_nouns": ["pizza"],
@@ -12554,24 +12505,24 @@
     "premise_text": "The button on my shirt fell off.",
     "premise_nouns": ["button"],
     "alt2_stats": [
-      "{I} may glue {___}",
+      "{someone} may glue {___}",
       "{___} may glue {button}"
     ],
     "alt2_text": "I glued the button back on.",
     "premise_stats": ["{___} may fall off"],
     "alt1_nouns": [
       "button",
-      "I"
+      "someone"
     ],
     "alt2_nouns": [
       "button",
-      "I"
+      "someone"
     ],
     "alt1_text": "I sewed the button back on.",
     "type": "",
     "alt1_stats": [
-      "{___} may sew {button}",
-      "{I} may sew {___}"
+      "{someone} may sew {___}",
+      "{___} may sew {button}"
     ]
   },
   "257": {
@@ -12632,28 +12583,28 @@
     "premise_text": "The clouds looked dark.",
     "premise_nouns": ["cloud"],
     "alt2_stats": [
-      "{I} may bring {___} to {work}",
-      "{I} may bring {umbrella} to {___}",
+      "{someone} may bring {umbrella} to {___}",
+      "{someone} may bring {___} to {work}",
       "{___} may bring {umbrella} to {work}"
     ],
     "alt2_text": "I brought my umbrella to work.",
     "premise_stats": ["{___} may look dark"],
     "alt1_nouns": [
       "work",
-      "laptop",
-      "I"
+      "someone",
+      "laptop"
     ],
     "alt2_nouns": [
       "work",
       "umbrella",
-      "I"
+      "someone"
     ],
     "alt1_text": "I brought my laptop to work.",
     "type": "",
     "alt1_stats": [
+      "{someone} may bring {laptop} to {___}",
       "{___} may bring {laptop} to {work}",
-      "{I} may bring {___} to {work}",
-      "{I} may bring {laptop} to {___}"
+      "{someone} may bring {___} to {work}"
     ]
   },
   "253": {
