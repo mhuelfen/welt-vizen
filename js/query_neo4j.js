@@ -71,15 +71,12 @@ function parse_results(data) {
 
             // check if relation is already there to prevent double links in vizualisation
             var rel_type_key = "" + start_id + ":" + type + ":" + end_id;
-			console.log('key',rel_type_key)
 			// only rels with different nodes or types
 			if (!unique_links.hasOwnProperty(rel_type_key)){
                 unique_links[rel_type_key] = true;
-				console.log('add',rel_type_key)
                 
 				// count number of links
                 var rel_key = "" + start_id + ":" + end_id;
-                console.log('s:', start_id, 'e:', end_id, 'key:', rel_key, link_counts)
                 if (link_counts.hasOwnProperty(rel_key)) {
                     link_counts[rel_key] = link_counts[rel_key] + 1
                 } else {
@@ -98,7 +95,6 @@ function parse_results(data) {
                 for (attr in rel_properties) {
                     relation[attr] = rel_properties[attr];
                 }
-				console.log("Rel",relation)
                 relations_for_viz.push(relation);
             }
         }
