@@ -23,17 +23,19 @@ function id_from_url(url) {
     return url.split('/').slice(-1)[0];
 }
 
+/*
+* Parse results from neo4J api for visualisation.
+*/
 function parse_results(data) {
 
     var nodes_from_query = [];
     var relations_for_viz = [];
     var paths_for_viz = [];
     var results = data.data;
+	var link_counts = {};
 
 	// display found results info
 	update_results('Results found: '+results.length);
-
-
 
     console.log("Data", data);
     console.log("Results",results.length,results,results.length);
@@ -62,11 +64,26 @@ function parse_results(data) {
         // add relation data
         for (var rel = 0; rel < results[i][2].length; rel++) {
             var rel_data = results[i][2][rel];
+
+			var start_id = id_from_url(rel_data[2].start);
+			var end_id = id_from_url(rel_data[2].end);
+
+			// count number of links
+			var rel_key = ""+ start_id +":"+ end_id;
+			console.log('s:',start_id, 'e:',end_id,'key:',rel_key, link_counts )
+			if(rel_key in link_counts){
+				link_counts[rel_key] = link_counts[rel_key] + 1
+			} else {
+				link_counts[rel_key] = 1				
+			}
+			
             var relation = {
-                'source': id_from_url(rel_data[2].start),
-                'target': id_from_url(rel_data[2].end),
-                'type': rel_data[1]
-            };
+                'source': start_id,
+                'target': end_id,
+                'type': rel_data[1],
+				'link_num' : link_counts[rel_key] 				
+            };			
+			
             // get properties of relation
             var rel_properties = results[i][2][rel][2].data;
             for (attr in rel_properties) {
@@ -151,7 +168,7 @@ function parse_results(data) {
 	        paths[p_index][n_index] = node_ids[node];
 	    });
 	});
-	
+	console.log('LINKS ',relations_for_viz);
     draw_graph(nodes_for_viz, relations_for_viz,paths);
 }
 
