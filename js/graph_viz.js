@@ -91,40 +91,18 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
         .attr("markerWidth", 4)
         .attr("markerHeight", 3)
         .attr("orient", "auto")
+
         .append("path")
     //        .style("stroke-opacity", 0.5)
-    .attr("d", "M 0 0 L 10 5 L 0 10 z");
+    .attr("d", "M 0 0 L 10 5 L 0 10 z")
+	.style("fill","#545454"); //"");
 
     // graph legend
     draw_legend(svg);
 	//    draw_legend(svg, rel_colors, rel_types);
 
 
-    var node = svg.selectAll(".node")
-        .data(force.nodes())
-        .enter().append("g")
-        .attr("class", "node")
-        .style("fill", function (d) {
-            if (d.type == "stat") {
-                return "blue";
-            } else {
-                return "red";
-            }
-        })
-        .on("mouseover", node_mouseover)
-        .on("mouseout", node_mouseout)
-        .call(force.drag);
-    // draw node 
-    node.append("circle")
-        .attr("r", node_diameter);
-    // add text
-    node.append("text")
-        .attr("x", 12)
-        .attr("dy", ".35em")
-        .style("fill", "#000")
-        .text(function (d) {
-            return d.text;
-        });
+
 
 	// add links as lines and style depending on properties
     var link = svg.selectAll(".link")
@@ -158,50 +136,54 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
                 return "url(#arrowhead)";
         })
         .style("stroke-opacity", 0.5);
-
-        function tick() {
-            link.attr("d", function (d) {
-                var x1 = d.source.x,
-                    y1 = d.source.y,
-                    x2 = d.target.x,
-                    y2 = d.target.y,
-                    dx = x2 - x1,
-                    dy = y2 - y1,
-                    // Set dr to 0 for straight edges.
-                    // Set dr to Math.sqrt(dx * dx + dy * dy) for a simple curve.
-                    // Assuming a simple curve, decrease dr to space curves.
-                    // There's probably a better decay function that spaces things nice and evenly. 
-                    dr = Math.sqrt(dx * dx + dy * dy) - Math.sqrt(300 * (d.link_num * 3 - 1));
-
-                return "M" + x1 + "," + y1 + "A" + dr + "," + dr + " 0 0,1 " + x2 + "," + y2;
-            });
-
-            node.attr("transform", function (d) {
-                return "translate(" + d.x + "," + d.y + ")";
-            });
-        }
 	
-	// // place nodes and links on canvas
-	//     function tick() {
-	//         link
-	//             .attr("x1", function (d) {
-	//                 return d.source.x;
-	//             })
-	//             .attr("y1", function (d) {
-	//                 return d.source.y;
-	//             })
-	//             .attr("x2", function (d) {
-	//                 return d.target.x;
-	//             })
-	//             .attr("y2", function (d) {
-	//                 return d.target.y;
-	//             });
-	//     
-	//         node
-	//             .attr("transform", function (d) {
-	//                 return "translate(" + d.x + "," + d.y + ")";
-	//             });
-	//     }	
+	    var node = svg.selectAll(".node")
+	        .data(force.nodes())
+	        .enter().append("g")
+	        .attr("class", "node")
+	        .style("fill", function (d) {
+	            if (d.type == "stat") {
+	                return "blue";
+	            } else {
+	                return "red";
+	            }
+	        })
+	        .on("mouseover", node_mouseover)
+	        .on("mouseout", node_mouseout)
+	        .call(force.drag);
+	    // draw node 
+	    node.append("circle")
+	        .attr("r", node_diameter);
+	    // add text
+	    node.append("text")
+	        .attr("x", 12)
+	        .attr("dy", ".35em")
+	        .style("fill", "#000")
+	        .text(function (d) {
+	            return d.text;
+	        });
+			
+	        function tick() {
+	            link.attr("d", function (d) {
+	                var x1 = d.source.x,
+	                    y1 = d.source.y,
+	                    x2 = d.target.x,
+	                    y2 = d.target.y,
+	                    dx = x2 - x1,
+	                    dy = y2 - y1,
+	                    // Set dr to 0 for straight edges.
+	                    // Set dr to Math.sqrt(dx * dx + dy * dy) for a simple curve.
+	                    // Assuming a simple curve, decrease dr to space curves.
+	                    // There's probably a better decay function that spaces things nice and evenly. 
+	                    dr = Math.sqrt(dx * dx + dy * dy) - Math.sqrt(300 * (d.link_num * 3 - 1));
+
+	                return "M" + x1 + "," + y1 + "A" + dr + "," + dr + " 1 0,1 " + x2 + "," + y2;
+	            });
+
+	            node.attr("transform", function (d) {
+	                return "translate(" + d.x + "," + d.y + ")";
+	            });
+	        }	
 }
 
 /*
