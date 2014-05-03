@@ -2,7 +2,7 @@ var url = 'http://localhost:7474/db/data/cypher';
 
 var json;
 var copa_questions;
-
+var results;
 /*
 * Load copa questions and extracted entities in GUI.
 */
@@ -158,7 +158,28 @@ function update_cbs(){
 }
 
 function update_results(text){
-	    $("#text_results").val(text);
+	    $('#results').val(text);   
 }
 
+function copa_eval(){
+	results = {};
+	copa_query_options = get_all_query_options();	
+	console.log('options generated')
+    for (quest_num in copa_query_options) {
+		results[quest_num] = {}
+        if (copa_query_options.hasOwnProperty(quest_num)) {
+			console.log('started quest eval copq quest number: ', quest_num);
+			// count paths for alternative 1
+			count_paths_for_alternative(quest_num,1,copa_query_options[quest_num]['alt1'],function (path_num) {
+				results[quest_num]['alt1'] = path_num;
+			});
+			// count paths for alternative 2
+			count_paths_for_alternative(quest_num,2,copa_query_options[quest_num]['alt2'],function (path_num) {
+				results[quest_num]['alt2'] = path_num;			
+			});
+			// TODO remove
+			break;
+		}
+	}
+}
 

@@ -11,12 +11,14 @@
 // premise_stats: Array[2]
 // premise_text: "Political violence broke out in the nation."
 
+var paths_lens = {} 
+
 /*
 * Get list of all possible query options.
 */
 function get_all_query_options() {
 	// get two list for options: premise - alternative1, premise - alternative2
-	var query_options = {}
+	var copa_query_options = {}
     for (quest_num in copa_questions) {
         if (copa_questions.hasOwnProperty(quest_num)) {
 			// all query options for this copa question
@@ -25,10 +27,12 @@ function get_all_query_options() {
 			quest_options['alt1'] = all_premise_alt_options(copa_questions[quest_num],1);
 			// for alternative 2
 			quest_options['alt2'] = all_premise_alt_options(copa_questions[quest_num],2);
-			query_options[quest_num] = quest_options;
+			copa_query_options[quest_num] = quest_options;
         }
+		// TODO remove
+		break;		
     }
-	return query_options;	
+	return copa_query_options;	
 }
 
 /*
@@ -62,9 +66,38 @@ function make_option_bundle(options,contents1,contents2,type1,type2){
 	for(item1 in contents1){		
 		for(item2 in contents2){
 			options.push([contents1[item1],type1,contents2[item2],type2])
-			// console.log(options);
+			// TODO remove
+			break;
 		}
+		// TODO remove
+		break;
 	}    	
 	return options;
 }
- 
+
+/*
+* To decide copa questions by max found path heuristic.
+*/
+function count_paths_for_alternative(quest_num,alt_num,quest_options,callback){
+	path_len_sum = 0;
+	questions_processed = 0;
+	// console.log("quest_options",quest_options)
+    for (query_opt in quest_options) {
+		// console.log("query_opt",query_opt);
+        // generate query
+		query = build_copa_query(quest_options[query_opt][0],quest_options[query_opt][1],quest_options[query_opt][2],quest_options[query_opt][3]);		
+		// query graph db
+		query_db_with_action(url,query,function (data){
+			path_len_sum += data.data.length;
+			questions_processed += 1;
+			console.log('PATH LEN',
+			// TODO change call in a way that right query opts are outputed aka chain the appropiate one to the callback
+			quest_num,alt_num,data.data.length,quest_options[query_opt][0],quest_options[query_opt][1],quest_options[query_opt][2],quest_options[query_opt][3]);
+			// if (questions_processed == 1){
+			// 	// 
+			// 	callback(paths);
+			// }
+		});		
+	}
+ 	
+}

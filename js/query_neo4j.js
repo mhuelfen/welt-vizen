@@ -1,4 +1,12 @@
+
 function query_db(url, query) {
+	query_db_with_action(url, query, parse_results);
+}
+
+/*
+* Query Neo4J Graph Db.
+*/
+function query_db_with_action(url, query, action) {
     var data = {
         "query": query,
         // "params" : params.
@@ -9,17 +17,29 @@ function query_db(url, query) {
         url: url,
         data: data,
         dataType: "json",
-        success: function (data) {
-            parse_results(data)
-        }, //,
+//        success: parse_results, //,
+        success: action,
         error: function (data) {
             console.log('error');
         }
     });
 }
-// get id from a neo4j url  
+
+
+/*
+* Get id from a neo4j url.
+*/
 function id_from_url(url) {
     return url.split('/').slice(-1)[0];
+}
+
+/*
+* Get number of found results (paths)
+*/
+function get_paths_found(data){
+    var results = data.data;    
+	return results.length;
+	
 }
 
 /*
@@ -35,12 +55,11 @@ function parse_results(data) {
     var unique_links = {};
 
     // display found results info
-    update_results('Results found: ' + results.length);
+    update_results('Results found: ' + get_paths_found(data));
 
     // console.log("Data", data);
     // console.log("Results", results.length, results, results.length);
 
-    $('#results').val(results.length + " paths found");
     for (var i = 0; i < results.length; i++) {
 
         // add noun nodes 
@@ -98,25 +117,7 @@ function parse_results(data) {
                 relations_for_viz.push(relation);
             }
         }
-
-
     }
-    //     var paths = []
-    //     // add path data	
-    //     var path_nodes_urls;
-    //     for (var i = 0; i < results.length; i++) {
-    // //        console.log("PATH", results[i][3].nodes);
-    //         path_nodes = results[i][3].nodes;
-    //         path_node_ids = []
-    //         // nodes are str        
-    //         for (var n = 0; n < path_nodes.length; n++) {
-    //             path_node_ids.push(id_from_url(path_nodes[n]));
-    //         }
-    //         console.log(path_node_ids);
-    //         paths.push(path_node_ids);
-    //     }
-    //     console.log(paths);
-    // 
 
     var paths = []
         // add path data	
@@ -135,12 +136,10 @@ function parse_results(data) {
     }
     console.log("paths", paths);
 
-
     // console.log('nodes:', nodes_from_query);
     // console.log('rels', relations_for_viz);
     // console.log('nodes:', nodes_from_query[0]);
     // console.log('rels', relations_for_viz[0]);
-
 
     var nodes_for_viz = []
 
@@ -175,7 +174,7 @@ function parse_results(data) {
             paths[p_index][n_index] = node_ids[node];
         });
     });
-    console.log('LINKS ', relations_for_viz);
+
     draw_graph(nodes_for_viz, relations_for_viz, paths);
 }
 
