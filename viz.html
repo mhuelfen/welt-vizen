@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <head>
     
-	<title>Weltvissualisation</title>
-	
+  <title>Weltvissualisation</title>
+  
     <link rel="stylesheet" type="text/css" href="vizen.css" />
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -16,12 +16,12 @@
     <script  src="js/copa_eval.js"></script>
    
     <script>
-	var url = 'http://localhost:7474/db/data/cypher';
-	
-	$( document ).ready(function() {
+  var url = 'http://localhost:7474/db/data/cypher';
+  
+  $( document ).ready(function() {
       // load_json_to_ui("data/test_quest.json");
-	  load_json_to_ui("data/copa_quest.json");
-	});
+    load_json_to_ui("data/copa_quest.json");
+  });
     </script>
 </head>
 <body>
@@ -38,24 +38,24 @@
                 <li id="li_1" >
 
     <label >COPA Question</label>
-	
+  
     <select id ="cb_questions" onchange="update_cbs()" ></select>
     <hr>
     <label class="description">Premise:</label>
     <label id='l_premise'>Premise text</label>
-	
+  
     <select id ="premise_nouns" class='query_cb' ></select>
     <select id ="premise_stats" class='query_cb' ></select>
     <hr>
     <label class="description">Alternative1:</label>
     <label id='l_alternative1'>Alternative1 text</label>
-	
+  
     <select id ="alternative1_nouns" class='query_cb' ></select>
     <select id ="alternative1_stats" class='query_cb' ></select>
     <hr>
     <label class="description">Alternative2:</label>
     <label id='l_alternative2'>Alternative2 text</label>
-	
+  
     <select id ="alternative2_nouns" class='query_cb' ></select>
     <select id ="alternative2_stats" class='query_cb' ></select>
 
@@ -79,35 +79,35 @@
         <input id="statement2" name= "statement2" class="element text" maxlength="255" size="20" value="{ball} may hit {___}"/>
         <label class="sub_label">Statement2</label>
     </span>  -->
-		
+    
 <!-- controls -->
     <label class="description">Premise - Alt. 1:</label>
-		<input type="button" id='b_premise_nouns__alternative1_stats' class='query_control' value="P noun -> A1 state"
-		onclick="query_db(url,build_copa_query_from_cbs('premise_nouns','alternative1_stats'));" />
+    <input type="button" id='b_premise_nouns__alternative1_stats' class='query_control' value="P noun -> A1 state"
+    onclick="query_db(url,build_copa_query_from_cbs('premise_nouns','alternative1_stats'));" />
 
-		<input type="button" id='b_alternative1_nouns__premise_stats' class='query_control' value="A1 noun -> P state"
-		onclick="query_db(url,build_copa_query_from_cbs('alternative1_nouns','premise_stats'));" />
+    <input type="button" id='b_alternative1_nouns__premise_stats' class='query_control' value="A1 noun -> P state"
+    onclick="query_db(url,build_copa_query_from_cbs('alternative1_nouns','premise_stats'));" />
 
-		<input type="button" id='b_premise_nouns__alternative1_nouns' class='query_control' value="P noun -> A1 noun"
-		onclick="query_db(url,build_copa_query_from_cbs('premise_nouns','alternative1_nouns'));" />
+    <input type="button" id='b_premise_nouns__alternative1_nouns' class='query_control' value="P noun -> A1 noun"
+    onclick="query_db(url,build_copa_query_from_cbs('premise_nouns','alternative1_nouns'));" />
 
-		<input type="button" id='b_premise_stats__alternative1_stats' class='query_control' value="P state -> A1 state"
-		onclick="query_db(url,build_copa_query_from_cbs('premise_stats','alternative1_stats'));" />
-    <hr>		
-	 <label class="description">Premise - Alt. 2:</label>
-		<input type="button" id='b_premise_nouns__alternative2_stats' class='query_control' value="P noun -> A2 state"
-		onclick="query_db(url,build_copa_query_from_cbs('premise_nouns','alternative2_stats'));" />
+    <input type="button" id='b_premise_stats__alternative1_stats' class='query_control' value="P state -> A1 state"
+    onclick="query_db(url,build_copa_query_from_cbs('premise_stats','alternative1_stats'));" />
+    <hr>    
+   <label class="description">Premise - Alt. 2:</label>
+    <input type="button" id='b_premise_nouns__alternative2_stats' class='query_control' value="P noun -> A2 state"
+    onclick="query_db(url,build_copa_query_from_cbs('premise_nouns','alternative2_stats'));" />
 
-		<input type="button" id='b_alternative2_nouns__premise_stats' class='query_control' value="A2 noun -> P state"
-		onclick="query_db(url,build_copa_query_from_cbs('alternative2_nouns','premise_stats'));" />
-		
-		<input type="button" id='b_premise_nouns__alternative2_nouns' class='query_control' value="P noun -> A2 noun"
-		onclick="query_db(url,build_copa_query_from_cbs('premise_nouns','alternative2_nouns'));" />
+    <input type="button" id='b_alternative2_nouns__premise_stats' class='query_control' value="A2 noun -> P state"
+    onclick="query_db(url,build_copa_query_from_cbs('alternative2_nouns','premise_stats'));" />
+    
+    <input type="button" id='b_premise_nouns__alternative2_nouns' class='query_control' value="P noun -> A2 noun"
+    onclick="query_db(url,build_copa_query_from_cbs('premise_nouns','alternative2_nouns'));" />
 
-		<input type="button" id='b_premise_stats__alternative2_stats' class='query_control' value="P state -> A2 state"
-		onclick="query_db(url,build_copa_query_from_cbs('premise_stats','alternative2_stats'));" />		
-		
-		
+    <input type="button" id='b_premise_stats__alternative2_stats' class='query_control' value="P state -> A2 state"
+    onclick="query_db(url,build_copa_query_from_cbs('premise_stats','alternative2_stats'));" />   
+    
+    
     </li>       <li id="li_7" >
     <label class="description" for="element_7">Algorithm</label>
     <span>
@@ -132,14 +132,14 @@
     <div>
         <textarea id="query_input" name="query_input" class="element textarea medium">Type Cypher Query</textarea> 
     </div>
-	
-	<input type="button" class='query_control' name="send_stat" value="Send custom query"
-		onclick='query_db(url,$("#query_input").val());' /> 
+  
+  <input type="button" class='query_control' name="send_stat" value="Send custom query"
+    onclick='query_db(url,$("#query_input").val());' /> 
 
 
-	<input type="button" class='query_control' name="send_stat" value="EVAL!"
-		onclick='copa_eval();' /> 
-		
+  <input type="button" class='query_control' name="send_stat" value="EVAL!"
+    onclick='copa_eval();' /> 
+    
     </li>       <li id="li_4" >
     <label class="description" for="element_4">Results </label>
     <div>
