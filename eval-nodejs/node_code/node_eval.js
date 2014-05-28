@@ -18,7 +18,7 @@ function eval_with_copa_questions(json_path){
   fs.readFile(json_path, 'utf8', function (err, data) {
     if (err) {
       console.log('Error: ' + err);
-      return;
+      // return;
     }
 
     var copa_data = JSON.parse(data);
@@ -41,7 +41,6 @@ function eval_query_options(copa_questions) {
       quest_options['alt1'] = all_premise_alt_options(copa_questions[quest_num], 1);
 
       // query with all options for this question
-      //console.log(quest_options);
       // alt1
       count_paths_for_alternative(quest_num, 1, quest_options['alt1']);
 
@@ -60,18 +59,14 @@ function eval_query_options(copa_questions) {
 * Get the length of the path from one result.
 */
 function get_path_length(result,path_count){
-  console.log('result in get_path_length');
-//  console.log(result);
-  // TODO get length
+  // get paths count if there are results
   if (result[0] != undefined){
-    console.log('len: ' + result[0]['p'].length);
     var found_paths = result[0]['p'].length;
     path_count += found_paths;
   }
   console.log('path_count new ' + path_count);
-  // 
   // path_count += found_paths;
-  return;
+  return path_count;
 }
 
 /*
@@ -85,17 +80,15 @@ function count_paths(quest_options, callback) {
       //console.log('query_opt: ' + quest_option);
       query = build_copa_query(quest_option[0], quest_option[1], quest_option[2], quest_option[3],'allshorttest',5,15);
       // query neo4j
-      console.log(get_path_length);
-      db.query(query, {}, function (err, result) {
-        get_path_length(result,path_count)
-      });
 
+      db.query(query, {}, function (err, result) {
+        return get_path_length(result,path_count);
+      });
       //parseAndProcessFeed(item, callback);
     }, 
     function(err) {
       // runs after all items calls have finished
       console.log('complete: ' + path_count);
-      console.log(items);
       
       // sort items by date
       // items.sort(function(a, b) {
@@ -129,7 +122,7 @@ function count_paths_for_alternative(quest_num, alt_num, quest_options, callback
  * Build cypher query with given data. Algorithm parameters are from the GUI.
  */
 function build_copa_query(start_content, start_type, end_content, end_type,algo, max_length,max_paths) {
-  console.log(start_content, start_type, end_content, end_type, algo, max_length, max_paths);
+  // console.log(start_content, start_type, end_content, end_type, algo, max_length, max_paths);
   var query = 'START ';
 
   // start node
