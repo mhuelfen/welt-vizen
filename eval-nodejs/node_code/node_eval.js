@@ -82,11 +82,26 @@ function count_paths(quest_options, callback) {
       // query neo4j
 
       db.query(query, {}, function (err, result) {
-        return get_path_length(result,path_count);
+        if (result[0] != undefined){
+          var found_paths = result[0]['p'].length;
+          path_count += found_paths;
+        }
+        console.log(path_count);
+
+        // signal that call back finished
+        callback();
       });
+
+
+      // db.query(query, {}, function (err, result) {
+      //   return get_path_length(result,path_count);
+      // });
       //parseAndProcessFeed(item, callback);
     }, 
     function(err) {
+      if (err){
+        console.log('A call failed to process');
+      }
       // runs after all items calls have finished
       console.log('complete: ' + path_count);
       
