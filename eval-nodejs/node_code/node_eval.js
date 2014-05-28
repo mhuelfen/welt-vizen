@@ -1,27 +1,19 @@
 //var express = require('express');
 var request = require('request');
+var async = require('async');
 
 var neo4j = require('neo4j');
 var db = new neo4j.GraphDatabase('http://localhost:7474');
 
 var url = 'http://localhost:7474/db/data/cypher';
 
-function query_db(query) {
-  db.query(query, function(err, result){
-      if(err) throw err;
-      console.log(result);
-      // console.log(result.data); // delivers an array of query results
-      // console.log(result.columns); // delivers an array of names of objects getting returned
-  });
-
-}
 /*
 * Load copa questions from file
 */
 function eval_with_copa_questions(json_path){
   
   var fs = require('fs');
-  console.log(json_path);
+  console.log('loading questions from: ' + json_path);
  
   fs.readFile(json_path, 'utf8', function (err, data) {
     if (err) {
@@ -41,24 +33,21 @@ function eval_query_options(copa_questions) {
   // get two list for options: premise - alternative1, premise - alternative2
   var copa_query_options = {}
   for (quest_num in copa_questions) {
-    console.log(quest_num);
+    console.log('Questionnr: ' + quest_num);
     if (copa_questions.hasOwnProperty(quest_num)) {
       // all query options for this copa question
       quest_options = {}
       // for alternative 1
       quest_options['alt1'] = all_premise_alt_options(copa_questions[quest_num], 1);
-      // for alternative 2
-      quest_options['alt2'] = all_premise_alt_options(copa_questions[quest_num], 2);
-      copa_query_options[quest_num] = quest_options;
 
-      // eval this question
-      console.log(quest_options);
-      //eval_question(quest_options);
       // query with all options for this question
-
+      //console.log(quest_options);
       // alt1
       count_paths_for_alternative(quest_num, 1, quest_options['alt1']);
-      // alt2
+
+      // for alternative 2
+      // quest_options['alt2'] = all_premise_alt_options(copa_questions[quest_num], 2);
+      // copa_query_options[quest_num] = quest_options;
 
     }
     // TODO remove this only uses the first question
@@ -67,8 +56,58 @@ function eval_query_options(copa_questions) {
   return copa_query_options;
 }
 
+/*
+* Get the length of the path from one result.
+*/
+function get_path_length(result,path_count){
+  console.log('result in get_path_length');
+//  console.log(result);
+  // TODO get length
+  if (result[0] != undefined){
+    console.log('len: ' + result[0]['p'].length);
+    var found_paths = result[0]['p'].length;
+    path_count += found_paths;
+  }
+  console.log('path_count new ' + path_count);
+  // 
+  // path_count += found_paths;
+  return;
+}
 
+/*
+* Query DB for one alterantive and count found paths.
+*/
+function count_paths(quest_options, callback) { 
+  var path_count = 0;
+  async.forEach(quest_options, 
+    function(quest_option, callback) {
+      // generate query
+      //console.log('query_opt: ' + quest_option);
+      query = build_copa_query(quest_option[0], quest_option[1], quest_option[2], quest_option[3],'allshorttest',5,15);
+      // query neo4j
+      console.log(get_path_length);
+      db.query(query, {}, function (err, result) {
+        get_path_length(result,path_count)
+      });
 
+      //parseAndProcessFeed(item, callback);
+    }, 
+    function(err) {
+      // runs after all items calls have finished
+      console.log('complete: ' + path_count);
+      console.log(items);
+      
+      // sort items by date
+      // items.sort(function(a, b) {
+      //  return (Date.parse(b.date) - Date.parse(a.name));
+      // });
+      // 
+      // var rssFeed = createAggregatedFeed();
+      // 
+      callback(err, path_count);
+    }
+  );
+}
 
 /*
  * To decide copa questions by max found path heuristic.
@@ -77,34 +116,13 @@ function count_paths_for_alternative(quest_num, alt_num, quest_options, callback
   path_len_sum = 0;
   questions_processed = 0;
   // console.log("quest_options",quest_options)
-  for (query_opt in quest_options) {
+  var path_lens = 0;
 
-
-
-    // console.log("query_opt",query_opt);
-    // generate query
-    query = build_copa_query(quest_options[query_opt][0], quest_options[query_opt][1], quest_options[
-      query_opt][2], quest_options[query_opt][3],'allshorttest',5,15);
-    // query graph db
-    console.log(query);
-    query_db(query);
-
-    // query_db_with_action(url, query, function (data) {
-    //   path_len_sum += data.data.length;
-    //   questions_processed += 1;
-    //   console.log('PATH LEN',
-    //     // TODO change call in a way that right query opts are outputed aka chain the appropiate one to the callback
-    //     quest_num, alt_num, data.data.length, quest_options[query_opt][0], quest_options[query_opt][1],
-    //     quest_options[query_opt][2], quest_options[query_opt][3]);
-    // 
-    // 
-    //   // if (questions_processed == 1){
-    //   //  // 
-    //   //  callback(paths);
-    //   // }
-    // });
-  }
-
+  count_paths(quest_options, function(err, result) {
+    console.log('In AGG');
+    console.log('AGG RESULT ' + result);
+    //return result;// here is result of aggregate
+  });
 }
 
 /*
@@ -156,7 +174,8 @@ function build_copa_query(start_content, start_type, end_content, end_type,algo,
  */
 function all_premise_alt_options(copa_quest, alt_num) {
   options = []
-  console.log(copa_quest);
+  //console.log(copa_quest);
+
   // get data for given alternative
   alt_name = "alt" + alt_num;
   alt_nouns = copa_quest[alt_name + "_nouns"]
