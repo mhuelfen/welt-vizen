@@ -39,14 +39,13 @@ function eval_query_options(copa_questions) {
       quest_options = {}
       // for alternative 1
       quest_options['alt1'] = all_premise_alt_options(copa_questions[quest_num], 1);
-
       // query with all options for this question
-      // alt1
-      count_paths_for_alternative(quest_num, 1, quest_options['alt1']);
+      var alt1_path_count = count_paths_for_alternative(quest_num, 1, quest_options['alt1']);
 
-      // for alternative 2
-      // quest_options['alt2'] = all_premise_alt_options(copa_questions[quest_num], 2);
-      // copa_query_options[quest_num] = quest_options;
+      //for alternative 2
+      quest_options['alt2'] = all_premise_alt_options(copa_questions[quest_num], 2);
+      // query with all options for this question
+      var alt2_path_count = count_paths_for_alternative(quest_num, 2, quest_options['alt2']);
 
     }
     // TODO remove this only uses the first question
@@ -86,7 +85,7 @@ function count_paths(quest_options, callback) {
           var found_paths = result[0]['p'].length;
           path_count += found_paths;
         }
-        console.log(path_count);
+        //onsole.log(path_count);
 
         // signal that call back finished
         callback();
@@ -103,15 +102,6 @@ function count_paths(quest_options, callback) {
         console.log('A call failed to process');
       }
       // runs after all items calls have finished
-      console.log('complete: ' + path_count);
-      
-      // sort items by date
-      // items.sort(function(a, b) {
-      //  return (Date.parse(b.date) - Date.parse(a.name));
-      // });
-      // 
-      // var rssFeed = createAggregatedFeed();
-      // 
       callback(err, path_count);
     }
   );
@@ -123,13 +113,12 @@ function count_paths(quest_options, callback) {
 function count_paths_for_alternative(quest_num, alt_num, quest_options, callback) {
   path_len_sum = 0;
   questions_processed = 0;
-  // console.log("quest_options",quest_options)
+  console.log("quest_options",quest_options)
   var path_lens = 0;
 
   count_paths(quest_options, function(err, result) {
-    console.log('In AGG');
-    console.log('AGG RESULT ' + result);
-    //return result;// here is result of aggregate
+    console.log('Result: ' + quest_num +'\t' + alt_num + '\t'+ result);
+    return result;// here is result of aggregate
   });
 }
 
@@ -210,12 +199,9 @@ function make_option_bundle(options, contents1, contents2, type1, type2) {
   for (item1 in contents1) {
     for (item2 in contents2) {
       options.push([contents1[item1], type1, contents2[item2], type2])
-      // TODO remove
-      break;
     }
-    // TODO remove
-    break;
   }
+  console.log(options.length + ' options');
   return options;
 }
  
