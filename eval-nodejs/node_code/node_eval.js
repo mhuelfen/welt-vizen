@@ -48,26 +48,11 @@ function eval_query_options(copa_questions) {
       var alt2_path_count = count_paths_for_alternative(quest_num, 2, quest_options['alt2']);
 
     }
-    // TODO remove this only uses the first question
-    break;
+    // // TODO remove this only uses the first question
+    // break;
   }
   return copa_query_options;
 }
-
-/*
-* Get the length of the path from one result.
-*/
-function get_path_length(result,path_count){
-  // get paths count if there are results
-  if (result[0] != undefined){
-    var found_paths = result[0]['p'].length;
-    path_count += found_paths;
-  }
-  console.log('path_count new ' + path_count);
-  // path_count += found_paths;
-  return path_count;
-}
-
 /*
 * Query DB for one alterantive and count found paths.
 */
@@ -78,15 +63,20 @@ function count_paths(quest_options, callback) {
       // generate query
       //console.log('query_opt: ' + quest_option);
       query = build_copa_query(quest_option[0], quest_option[1], quest_option[2], quest_option[3],'allshorttest',5,15);
-      // query neo4j
 
+      // query neo4j and count found paths
       db.query(query, {}, function (err, result) {
-        if (result[0] != undefined){
-          var found_paths = result[0]['p'].length;
-          path_count += found_paths;
-        }
-        //onsole.log(path_count);
 
+        // // for path length heuristic loop over results and add path length
+        // if (result[0] != undefined){
+        //   // this is the length of one path 
+        //   var found_paths = result[0]['p'].length;
+        //   // console.log(query + " ### " + found_paths + JSON.stringify(result));
+        // }
+        
+        // add the found path to the count for this alternative
+        path_count += result.length;
+        
         // signal that call back finished
         callback();
       });
@@ -113,7 +103,7 @@ function count_paths(quest_options, callback) {
 function count_paths_for_alternative(quest_num, alt_num, quest_options, callback) {
   path_len_sum = 0;
   questions_processed = 0;
-  console.log("quest_options",quest_options)
+  //console.log("quest_options",quest_options)
   var path_lens = 0;
 
   count_paths(quest_options, function(err, result) {
@@ -201,7 +191,7 @@ function make_option_bundle(options, contents1, contents2, type1, type2) {
       options.push([contents1[item1], type1, contents2[item2], type2])
     }
   }
-  console.log(options.length + ' options');
+  // console.log(options.length + ' options');
   return options;
 }
  
