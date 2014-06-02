@@ -90,22 +90,6 @@ function eval_copa_question(copa_question,quest_num) {
     count_paths_for_alternative(quest_num, 1, quest_options['alt1']),
     count_paths_for_alternative(quest_num, 2, quest_options['alt2'])
     ]);
-  // 
-  // 
-  //   .then(function (result1) {
-  // 
-  //         .then(function (result2) {
-  //             // console.log("quest_num\t" + result1.quest_num + "\tpath1\t" + result1.data + "\tpath2\t" +
-  //             //   result2.data);
-  //             console.log(result1.quest_num + "\t" + result1.data + "\t" +
-  //               result2.data + "\t" + result2.quest_num);
-  // 
-  //           } // TODO add error function);
-  //       );
-  //     } // TODO add error function);
-  // );
-
-
 }
 
 /*
