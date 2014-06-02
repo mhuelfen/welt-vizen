@@ -34,7 +34,6 @@ function eval_copa_question(copa_questions) {
   // get two list for options: premise - alternative1, premise - alternative2
   var copa_query_options = {}
   for (quest_num in copa_questions) {
-    console.log(quest_num + '\t'+ copa_questions[quest_num]);
     if (copa_questions.hasOwnProperty(quest_num)) {
       // all query options for this copa question
       quest_options = {}
@@ -43,27 +42,24 @@ function eval_copa_question(copa_questions) {
       //for alternative 2
       quest_options['alt2'] = all_premise_alt_options(copa_questions[quest_num], 2);
 
-      // // query with all options for this question
-      // var alt1_path_count = count_paths_for_alternative(quest_num, 1, quest_options['alt1']);
-
       // query with all options for this question
       count_paths_for_alternative(quest_num, 1, quest_options['alt1'])
-      .then(function (path_sum_alt1){
-        count_paths_for_alternative(quest_num, 2, quest_options['alt2'])
-        .then ( function (path_sum_alt2){          
-                  console.log("path1\t" + path_sum_alt1 + "\tpath2\t" + path_sum_alt2);
-        });
-      });
+        .then(function (result1) {
+            count_paths_for_alternative(quest_num, 2, quest_options['alt2'])
+              .then(function (result2) {
+                  console.log("quest_num\t" + result1.quest_num + "\tpath1\t" + result1.data + "\tpath2\t" +
+                    result2.data);
+                } // TODO add error function);
+            );
+          } // TODO add error function);
+      );
 
-      // // query with all options for this question
-      // var alt2_path_count = count_paths_for_alternative(quest_num, 2, quest_options['alt2']);
     }
-    // TODO collect results in for now in global var
-    
-    // TODO remove this only uses the first question
-    break;
+    // // TODO remove this only uses the first question
+    // console.log("DEV MODE ONLY FIRST QUESTION PROCESSED");
+    // break;
   }
-  
+
   // promise
   // return Q.all([
   //     eventualAdd(2, 2),
@@ -84,7 +80,7 @@ function count_paths_for_alternative(quest_num, alt_num, quest_options, callback
     count_paths(quest_options, function(err, result) {
       // console.log('Result: ' + quest_num +'\t' + alt_num + '\t'+ result);
       // Return  path count sum.
-      resolve(result);
+      resolve({"quest_num" :quest_num, "alt_num" : alt_num, "data" : result });
     });
   });
 }
