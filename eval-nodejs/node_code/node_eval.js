@@ -23,48 +23,60 @@ function eval_with_copa_questions(json_path){
     }
 
     var copa_data = JSON.parse(data);
-    eval_copa_question(copa_data['questions']);
+    eval_all_copa_questions(copa_data['questions']);
   });
 }
 
 /*
- * Get list of all possible query options.
+ * Eval if the copa questions.
  */
-function eval_copa_question(copa_questions) {
-  // get two list for options: premise - alternative1, premise - alternative2
-  var copa_query_options = {}
+function eval_all_copa_questions(copa_questions) {
   for (quest_num in copa_questions) {
+    console.log(quest_num);
     if (copa_questions.hasOwnProperty(quest_num)) {
-      // all query options for this copa question
-      quest_options = {}
-      // for alternative 1
-      quest_options['alt1'] = all_premise_alt_options(copa_questions[quest_num], 1);
-      //for alternative 2
-      quest_options['alt2'] = all_premise_alt_options(copa_questions[quest_num], 2);
-
-      // query with all options for this question
-      count_paths_for_alternative(quest_num, 1, quest_options['alt1'])
-        .then(function (result1) {
-            count_paths_for_alternative(quest_num, 2, quest_options['alt2'])
-              .then(function (result2) {
-                  console.log("quest_num\t" + result1.quest_num + "\tpath1\t" + result1.data + "\tpath2\t" +
-                    result2.data);
-                } // TODO add error function);
-            );
-          } // TODO add error function);
-      );
-
+      // Eval this copa question.
+      eval_copa_question(copa_questions[quest_num], quest_num);
     }
-    // // TODO remove this only uses the first question
-    // console.log("DEV MODE ONLY FIRST QUESTION PROCESSED");
-    // break;
+    // TODO remove this only uses the first question
+    console.log("DEV MODE ONLY FIRST QUESTION PROCESSED");
+    break;
   }
 
-  // promise
+  // TODO collect promises
   // return Q.all([
   //     eventualAdd(2, 2),
   //     eventualAdd(10, 20)
   // ]);
+}
+
+
+/*
+ * Eval if a single copa question was answered correct.
+ */
+function eval_copa_question(copa_question,quest_num) {
+  // all query options for this copa question
+  quest_options = {}
+  // for alternative 1
+  quest_options['alt1'] = all_premise_alt_options(copa_question, 1);
+  //for alternative 2
+  quest_options['alt2'] = all_premise_alt_options(copa_question, 2);
+
+  // query with all options for this question
+  count_paths_for_alternative(quest_num, 1, quest_options['alt1'])
+    .then(function (result1) {
+        count_paths_for_alternative(quest_num, 2, quest_options['alt2'])
+          .then(function (result2) {
+              // console.log("quest_num\t" + result1.quest_num + "\tpath1\t" + result1.data + "\tpath2\t" +
+              //   result2.data);
+              console.log(result1.quest_num + "\t" + result1.data + "\t" +
+                result2.data);
+
+            } // TODO add error function);
+        );
+      } // TODO add error function);
+  );
+
+
 }
 
 /*
