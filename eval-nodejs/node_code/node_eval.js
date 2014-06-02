@@ -48,14 +48,20 @@ function eval_with_copa_questions(json_path){
  */
 function eval_all_copa_questions(copa_questions) {
   for (quest_num in copa_questions) {
-    console.log(quest_num);
     if (copa_questions.hasOwnProperty(quest_num)) {
       // Eval this copa question.
-      eval_copa_question(copa_questions[quest_num], quest_num);
+      eval_copa_question(copa_questions[quest_num], quest_num)
+      .then( function (results) {
+        console.log("quest_num\t" + results[0].quest_num +"\t" + results[0].data + "\t" + results[1].data);
+      } // TODO add error function);
+    );
+
     }
-    // // TODO remove this only uses the first question
-    // console.log("DEV MODE ONLY FIRST QUESTION PROCESSED");
-    // break;
+    if (quest_num == 2){
+      // TODO remove this only uses the first question
+      console.log("DEV MODE ONLY FIRST QUESTION PROCESSED");
+      break;
+    }
   }
 
   // TODO collect promises
@@ -77,20 +83,27 @@ function eval_copa_question(copa_question,quest_num) {
   //for alternative 2
   quest_options['alt2'] = all_premise_alt_options(copa_question, 2);
 
-  // query with all options for this question
-  count_paths_for_alternative(quest_num, 1, quest_options['alt1'])
-    .then(function (result1) {
-        count_paths_for_alternative(quest_num, 2, quest_options['alt2'])
-          .then(function (result2) {
-              // console.log("quest_num\t" + result1.quest_num + "\tpath1\t" + result1.data + "\tpath2\t" +
-              //   result2.data);
-              console.log(result1.quest_num + "\t" + result1.data + "\t" +
-                result2.data);
 
-            } // TODO add error function);
-        );
-      } // TODO add error function);
-  );
+  // TODO result 2 is always the same
+  // query with all options for this question
+  return Q.all([
+    count_paths_for_alternative(quest_num, 1, quest_options['alt1']),
+    count_paths_for_alternative(quest_num, 2, quest_options['alt2'])
+    ]);
+  // 
+  // 
+  //   .then(function (result1) {
+  // 
+  //         .then(function (result2) {
+  //             // console.log("quest_num\t" + result1.quest_num + "\tpath1\t" + result1.data + "\tpath2\t" +
+  //             //   result2.data);
+  //             console.log(result1.quest_num + "\t" + result1.data + "\t" +
+  //               result2.data + "\t" + result2.quest_num);
+  // 
+  //           } // TODO add error function);
+  //       );
+  //     } // TODO add error function);
+  // );
 
 
 }
@@ -106,7 +119,7 @@ function count_paths_for_alternative(quest_num, alt_num, quest_options) {
   return Q.Promise(function(resolve, reject, notify) {
   
     count_paths(quest_options, function(err, result) {
-      // console.log('Result: ' + quest_num +'\t' + alt_num + '\t'+ result);
+      // console.log('Result: ' + quest_num  + '\t' + alt_num + '\t'+ result);
       // Return  path count sum.
       resolve({"quest_num" :quest_num, "alt_num" : alt_num, "data" : result });
     });
