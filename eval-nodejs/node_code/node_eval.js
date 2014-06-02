@@ -1,6 +1,7 @@
 //var express = require('express');
 var request = require('request');
 var async = require('async');
+var Q = require('q');
 
 var neo4j = require('neo4j');
 var db = new neo4j.GraphDatabase('http://localhost:7474');
@@ -22,39 +23,102 @@ function eval_with_copa_questions(json_path){
     }
 
     var copa_data = JSON.parse(data);
-    eval_query_options(copa_data['questions']);
+    eval_copa_question(copa_data['questions']);
   });
 }
 
 /*
  * Get list of all possible query options.
  */
-function eval_query_options(copa_questions) {
+function eval_copa_question(copa_questions) {
   // get two list for options: premise - alternative1, premise - alternative2
   var copa_query_options = {}
   for (quest_num in copa_questions) {
-    console.log('Questionnr: ' + quest_num);
+    console.log(quest_num + '\t'+ copa_questions[quest_num]);
     if (copa_questions.hasOwnProperty(quest_num)) {
       // all query options for this copa question
       quest_options = {}
       // for alternative 1
       quest_options['alt1'] = all_premise_alt_options(copa_questions[quest_num], 1);
-      // query with all options for this question
-      var alt1_path_count = count_paths_for_alternative(quest_num, 1, quest_options['alt1']);
-
       //for alternative 2
       quest_options['alt2'] = all_premise_alt_options(copa_questions[quest_num], 2);
-      // query with all options for this question
-      var alt2_path_count = count_paths_for_alternative(quest_num, 2, quest_options['alt2']);
 
+      // // query with all options for this question
+      // var alt1_path_count = count_paths_for_alternative(quest_num, 1, quest_options['alt1']);
+
+      // query with all options for this question
+      count_paths_for_alternative(quest_num, 1, quest_options['alt1'])
+      .then(function (path_sum_alt1){
+        count_paths_for_alternative(quest_num, 2, quest_options['alt2'])
+        .then ( function (path_sum_alt2){          
+                  console.log("path1\t" + path_sum_alt1 + "\tpath2\t" + path_sum_alt2);
+        });
+      });
+
+      // // query with all options for this question
+      // var alt2_path_count = count_paths_for_alternative(quest_num, 2, quest_options['alt2']);
     }
-    // // TODO remove this only uses the first question
-    // break;
+    // TODO collect results in for now in global var
+    
+    // TODO remove this only uses the first question
+    break;
   }
-  return copa_query_options;
+  
+  // promise
+  // return Q.all([
+  //     eventualAdd(2, 2),
+  //     eventualAdd(10, 20)
+  // ]);
 }
+
 /*
-* Query DB for one alterantive and count found paths.
+ * To decide copa questions by max found path heuristic.
+ */
+function count_paths_for_alternative(quest_num, alt_num, quest_options, callback) {
+  path_len_sum = 0;
+  questions_processed = 0;
+  //console.log("quest_options",quest_options)
+  var path_lens = 0;
+  return Q.Promise(function(resolve, reject, notify) {
+  
+    count_paths(quest_options, function(err, result) {
+      // console.log('Result: ' + quest_num +'\t' + alt_num + '\t'+ result);
+      // Return  path count sum.
+      resolve(result);
+    });
+  });
+}
+
+/*
+ * Build cypher query with given data. Algorithm parameters are from the GUI.
+ */
+function build_copa_query(start_content, start_type, end_content, end_type,algo, max_length,max_paths) {
+  // console.log(start_content, start_type, end_content, end_type, algo, max_length, max_paths);
+  var query = 'START ';
+
+  // start node
+  query += 'n=node:' + start_type + '(' + (start_type == 'nouns' ? 'word' : 'term') + '="' + start_content +
+    '" ),'
+  // end node
+  query += 'm=node:' + end_type + '(' + (end_type == 'nouns' ? 'word' : 'term') + '="' + end_content + '")\n'
+
+  // set algorithm and path length
+  if ( algo == 'allshorttest') {
+    query += 'MATCH p=allShortestPaths((n)-[*..' + max_length + ']->(m))\n';
+  } else if (algo == 'allshorttest'){
+    query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']->(m))\n';      
+  }
+
+  query += 'RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,\n';
+  query += 'EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,\n';
+  query += 'EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels, ';
+  query += 'p LIMIT ' + max_paths + ';'
+
+  return query;
+}
+
+/*
+* Query DB for one alternative and counting found paths.
 */
 function count_paths(quest_options, callback) { 
   var path_count = 0;
@@ -95,49 +159,6 @@ function count_paths(quest_options, callback) {
       callback(err, path_count);
     }
   );
-}
-
-/*
- * To decide copa questions by max found path heuristic.
- */
-function count_paths_for_alternative(quest_num, alt_num, quest_options, callback) {
-  path_len_sum = 0;
-  questions_processed = 0;
-  //console.log("quest_options",quest_options)
-  var path_lens = 0;
-
-  count_paths(quest_options, function(err, result) {
-    console.log('Result: ' + quest_num +'\t' + alt_num + '\t'+ result);
-    return result;// here is result of aggregate
-  });
-}
-
-/*
- * Build cypher query with given data. Algorithm parameters are from the GUI.
- */
-function build_copa_query(start_content, start_type, end_content, end_type,algo, max_length,max_paths) {
-  // console.log(start_content, start_type, end_content, end_type, algo, max_length, max_paths);
-  var query = 'START ';
-
-  // start node
-  query += 'n=node:' + start_type + '(' + (start_type == 'nouns' ? 'word' : 'term') + '="' + start_content +
-    '" ),'
-  // end node
-  query += 'm=node:' + end_type + '(' + (end_type == 'nouns' ? 'word' : 'term') + '="' + end_content + '")\n'
-
-  // set algorithm and path length
-  if ( algo == 'allshorttest') {
-    query += 'MATCH p=allShortestPaths((n)-[*..' + max_length + ']->(m))\n';
-  } else if (algo == 'allshorttest'){
-    query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']->(m))\n';      
-  }
-
-  query += 'RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,\n';
-  query += 'EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,\n';
-  query += 'EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels, ';
-  query += 'p LIMIT ' + max_paths + ';'
-
-  return query;
 }
 
 // evaluation code 
@@ -197,8 +218,7 @@ function make_option_bundle(options, contents1, contents2, type1, type2) {
  
 
 
-//console.log(db);
-var query = 'START n=node:nouns(word="body" ),m=node:nouns(word="grass") MATCH p=allShortestPaths((n)-[*..5]->(m)) \ RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns, EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats, EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels, p LIMIT 15';
+var testQuery = 'START n=node:nouns(word="body" ),m=node:nouns(word="grass") MATCH p=allShortestPaths((n)-[*..5]->(m)) \ RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns, EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats, EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels, p LIMIT 15';
 
 
 
