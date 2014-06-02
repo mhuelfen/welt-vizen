@@ -1,3 +1,19 @@
+/*
+* evaluation code 
+*
+* Copa Quest structure.
+*
+* alt1_nouns: Array[2]
+* alt1_stats: Array[2]
+* alt1_text: "Many citizens relocated to the capitol."
+* alt2_nouns: Array[3]
+* alt2_stats: Array[3]
+* alt2_text: "Many citizens took refuge in other territories."
+* premise_nouns: Array[2]
+* premise_stats: Array[2]
+* premise_text: "Political violence broke out in the nation."
+*/
+
 //var express = require('express');
 var request = require('request');
 var async = require('async');
@@ -28,7 +44,7 @@ function eval_with_copa_questions(json_path){
 }
 
 /*
- * Eval if the copa questions.
+ * Eval all copa questions.
  */
 function eval_all_copa_questions(copa_questions) {
   for (quest_num in copa_questions) {
@@ -51,7 +67,7 @@ function eval_all_copa_questions(copa_questions) {
 
 
 /*
- * Eval if a single copa question was answered correct.
+ * Check if a single copa question was answered correct.
  */
 function eval_copa_question(copa_question,quest_num) {
   // all query options for this copa question
@@ -80,9 +96,9 @@ function eval_copa_question(copa_question,quest_num) {
 }
 
 /*
- * To decide copa questions by max found path heuristic.
+ * Count found paths for one alternative.
  */
-function count_paths_for_alternative(quest_num, alt_num, quest_options, callback) {
+function count_paths_for_alternative(quest_num, alt_num, quest_options) {
   path_len_sum = 0;
   questions_processed = 0;
   //console.log("quest_options",quest_options)
@@ -95,34 +111,6 @@ function count_paths_for_alternative(quest_num, alt_num, quest_options, callback
       resolve({"quest_num" :quest_num, "alt_num" : alt_num, "data" : result });
     });
   });
-}
-
-/*
- * Build cypher query with given data. Algorithm parameters are from the GUI.
- */
-function build_copa_query(start_content, start_type, end_content, end_type,algo, max_length,max_paths) {
-  // console.log(start_content, start_type, end_content, end_type, algo, max_length, max_paths);
-  var query = 'START ';
-
-  // start node
-  query += 'n=node:' + start_type + '(' + (start_type == 'nouns' ? 'word' : 'term') + '="' + start_content +
-    '" ),'
-  // end node
-  query += 'm=node:' + end_type + '(' + (end_type == 'nouns' ? 'word' : 'term') + '="' + end_content + '")\n'
-
-  // set algorithm and path length
-  if ( algo == 'allshorttest') {
-    query += 'MATCH p=allShortestPaths((n)-[*..' + max_length + ']->(m))\n';
-  } else if (algo == 'allshorttest'){
-    query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']->(m))\n';      
-  }
-
-  query += 'RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,\n';
-  query += 'EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,\n';
-  query += 'EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels, ';
-  query += 'p LIMIT ' + max_paths + ';'
-
-  return query;
 }
 
 /*
@@ -169,21 +157,33 @@ function count_paths(quest_options, callback) {
   );
 }
 
-// evaluation code 
-// Copa Quesst structure
-// alt1_nouns: Array[2]
-// alt1_stats: Array[2]
-// alt1_text: "Many citizens relocated to the capitol."
-// alt2_nouns: Array[3]
-// alt2_stats: Array[3]
-// alt2_text: "Many citizens took refuge in other territories."
-// premise_nouns: Array[2]
-// premise_stats: Array[2]
-// premise_text: "Political violence broke out in the nation."
+/*
+ * Build cypher query with given data. Algorithm parameters are from the GUI.
+ */
+function build_copa_query(start_content, start_type, end_content, end_type,algo, max_length,max_paths) {
+  // console.log(start_content, start_type, end_content, end_type, algo, max_length, max_paths);
+  var query = 'START ';
 
+  // start node
+  query += 'n=node:' + start_type + '(' + (start_type == 'nouns' ? 'word' : 'term') + '="' + start_content +
+    '" ),'
+  // end node
+  query += 'm=node:' + end_type + '(' + (end_type == 'nouns' ? 'word' : 'term') + '="' + end_content + '")\n'
 
-// var paths_lens = {};
-// 
+  // set algorithm and path length
+  if ( algo == 'allshorttest') {
+    query += 'MATCH p=allShortestPaths((n)-[*..' + max_length + ']->(m))\n';
+  } else if (algo == 'allshorttest'){
+    query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']->(m))\n';      
+  }
+
+  query += 'RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,\n';
+  query += 'EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,\n';
+  query += 'EXTRACT( r IN relationships(p) |[id(r),type(r),r]) as rels, ';
+  query += 'p LIMIT ' + max_paths + ';'
+
+  return query;
+}
 
 /*
  * Gets all option for the combination of the premise and one alternative.
