@@ -53,9 +53,9 @@ function eval_all_copa_questions(copa_questions) {
       // Eval this copa question.
       eval_copa_question(copa_questions[quest_num], quest_num);
     }
-    // TODO remove this only uses the first question
-    console.log("DEV MODE ONLY FIRST QUESTION PROCESSED");
-    break;
+    // // TODO remove this only uses the first question
+    // console.log("DEV MODE ONLY FIRST QUESTION PROCESSED");
+    // break;
   }
 
   // TODO collect promises
@@ -118,6 +118,7 @@ function count_paths_for_alternative(quest_num, alt_num, quest_options) {
 */
 function count_paths(quest_options, callback) { 
   var path_count = 0;
+  var path_len_sum = 0;
   async.forEach(quest_options, 
     function(quest_option, callback) {
       // generate query
@@ -126,16 +127,22 @@ function count_paths(quest_options, callback) {
 
       // query neo4j and count found paths
       db.query(query, {}, function (err, result) {
-
-        // // for path length heuristic loop over results and add path length
-        // if (result[0] != undefined){
-        //   // this is the length of one path 
-        //   var found_paths = result[0]['p'].length;
-        //   // console.log(query + " ### " + found_paths + JSON.stringify(result));
-        // }
         
-        // add the found path to the count for this alternative
-        path_count += result.length;
+        /*
+        * Path length heuristic.
+        */
+        // for path length heuristic loop over results and add path length
+        for (resultNr in result){
+          // this is the length of one path 
+          path_len_sum += result[resultNr]['p'].length;
+          // console.log(query + " ### " + found_paths + JSON.stringify(result));
+        }
+        
+        // /*
+        // * Path count heuristic.
+        // */
+        // // add the found path to the count for this alternative
+        // path_count += result.length;
         
         // signal that call back finished
         callback();
@@ -152,7 +159,9 @@ function count_paths(quest_options, callback) {
         console.log('A call failed to process');
       }
       // runs after all items calls have finished
-      callback(err, path_count);
+//      callback(err, path_count);
+        callback(err, path_len_sum);
+
     }
   );
 }
