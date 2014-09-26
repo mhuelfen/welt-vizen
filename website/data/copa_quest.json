@@ -1,5 +1,5 @@
 {
-    "questions": {
+  "questions": {
   "338": {
     "premise_text": "The scientist conducted an experiment.",
     "premise_nouns": [
@@ -15,6 +15,7 @@
       "{___} may conduct {experiment}",
       "{scientist} may conduct {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "theory"
@@ -40,6 +41,7 @@
     ],
     "alt2_text": "I stored it in the refrigerator.",
     "premise_stats": ["{___} may stay cold"],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "someone",
@@ -65,6 +67,7 @@
       "{man} may lift {___}",
       "{___} may lift {box}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "back"
@@ -89,6 +92,7 @@
     ],
     "alt2_text": "She left it unsupervised.",
     "premise_stats": ["{___} may miss"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "lot",
       "something"
@@ -119,6 +123,7 @@
       "{___} may dig up {site}",
       "{archeologist} may dig up {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "artifact",
       "someone"
@@ -149,6 +154,7 @@
       "{guard} may replay {___}",
       "{___} may replay {footage}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [],
     "alt2_nouns": [
       "someone",
@@ -173,6 +179,7 @@
       "{___} may cover {ear}",
       "{woman} may cover {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["alarm"],
     "alt2_nouns": [
       "woman",
@@ -199,6 +206,7 @@
       "{someone} may linger in {bed} upon {___}",
       "{___} may linger in {bed} upon {awakening}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "it",
@@ -223,6 +231,7 @@
       "{___} may come upon {puddle}",
       "{someone} may come upon {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "puddle"
@@ -253,6 +262,7 @@
       "{___} may fall to {ground}",
       "{rider} may fall to {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "rider",
       "bull"
@@ -283,6 +293,7 @@
       "{___} may chug {pitcher}",
       "{someone} may chug {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "someone",
@@ -301,6 +312,7 @@
     ],
     "alt2_text": "He played computer games.",
     "premise_stats": ["{___} may be muscular"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "weight",
       "someone"
@@ -331,6 +343,7 @@
       "{woman} may receive {___}",
       "{___} may receive {diploma}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "college"
@@ -361,6 +374,7 @@
       "{___} may suffer {amnesia}",
       "{woman} may suffer {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "reaction",
       "someone"
@@ -390,6 +404,7 @@
       "{boy} may turn {___} on {jar}",
       "{boy} may turn {lid} on {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["jar"],
     "alt2_nouns": ["lid"],
     "alt1_text": "The jar became warm.",
@@ -411,6 +426,7 @@
       "{something} may get {___}",
       "{___} may get {cash}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "bank"
@@ -438,6 +454,7 @@
       "{___} may find {seat}",
       "{someone} may find {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["film"],
     "alt2_nouns": ["someone"],
     "alt1_text": "The film began.",
@@ -459,6 +476,7 @@
       "{___} may recognize {creativity}",
       "{parent} may recognize {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "bike",
       "something"
@@ -489,6 +507,7 @@
       "{hospital} may send {___}",
       "{___} may send {home}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["symptom"],
     "alt2_nouns": [
       "family",
@@ -504,6 +523,7 @@
     "alt2_stats": ["{___} may be adopted"],
     "alt2_text": "She was adopted.",
     "premise_stats": ["{___} may threaten"],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["someone"],
     "alt1_text": "She didn't get vaccinated.",
@@ -525,6 +545,7 @@
       "{___} may jump in {fright}",
       "{someone} may jump in {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "something"
@@ -555,6 +576,7 @@
       "{hunter} may run out of {___}",
       "{___} may run out of {ammunition}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "gun"
@@ -580,6 +602,7 @@
     ],
     "alt2_text": "He put fertilizer in the soil.",
     "premise_stats": ["{___} may flourish"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "variety"
@@ -602,6 +625,7 @@
     "alt2_stats": ["{___} may freeze"],
     "alt2_text": "The pipe froze.",
     "premise_stats": ["{___} may a"],
+    "correctAlternative": 2,
     "alt1_nouns": ["water"],
     "alt2_nouns": ["pipe"],
     "alt1_text": "The water was unsanitary.",
@@ -617,6 +641,7 @@
     ],
     "alt2_text": "I put on a hat.",
     "premise_stats": ["{___} may be loose"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "belt"
@@ -647,6 +672,7 @@
       "{___} may feel {shock}",
       "{woman} may feel {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "doorknob",
       "someone"
@@ -674,6 +700,7 @@
       "{___} may lipstick on {cheek}",
       "{man} may lipstick on {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "woman",
       "someone"
@@ -700,6 +727,7 @@
       "{someone} may put {___} in {soup}",
       "{___} may put {cube} in {soup}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["soup"],
     "alt2_nouns": ["soup"],
     "alt1_text": "The soup cooled down.",
@@ -721,6 +749,7 @@
       "{woman} may get with {___}",
       "{___} may get with {crime}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["accomplice"],
     "alt2_nouns": [
       "evidence",
@@ -747,6 +776,7 @@
       "{girl} may share {___} with {friend}",
       "{girl} may share {lunch} with {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "lunch",
       "something"
@@ -774,6 +804,7 @@
       "{police} may close {___}",
       "{___} may close {investigation}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "suspect"
@@ -795,6 +826,7 @@
     ],
     "alt2_text": "I browsed the internet.",
     "premise_stats": ["{___} may subside"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "walk"
@@ -822,6 +854,7 @@
       "{someone} may stand on {___}",
       "{___} may stand on {foot}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["balance"],
     "alt2_nouns": ["someone"],
     "alt1_text": "My balance wavered.",
@@ -840,6 +873,7 @@
       "{___} may lose {money}",
       "{company} may lose {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "product",
       "review"
@@ -861,6 +895,7 @@
     ],
     "alt2_text": "I poured it out.",
     "premise_stats": ["{___} may scald hot"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "something"
@@ -888,6 +923,7 @@
       "{baby} may pull {___}",
       "{___} may pull {hair}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["baby"],
     "alt2_nouns": ["mother"],
     "alt1_text": "The baby burped.",
@@ -909,6 +945,7 @@
       "{___} may be evicted from {apartment}",
       "{tenant} may be evicted from {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "rent",
       "something"
@@ -930,6 +967,7 @@
     "alt2_stats": ["{___} may be old"],
     "alt2_text": "It was old.",
     "premise_stats": ["{___} may fade"],
+    "correctAlternative": 2,
     "alt1_nouns": ["it"],
     "alt2_nouns": ["it"],
     "alt1_text": "It was fake.",
@@ -945,6 +983,7 @@
     ],
     "alt2_text": "I jumped the battery.",
     "premise_stats": ["{___} may be towed"],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "battery",
@@ -969,6 +1008,7 @@
       "{___} may wake up with {toothache}",
       "{man} may wake up with {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "appointment"
@@ -999,6 +1039,7 @@
       "{boy} may get {___}",
       "{___} may get {eye}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "bully",
       "boy"
@@ -1026,6 +1067,7 @@
       "{someone} may push {___}",
       "{___} may push {pedal}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["car"],
     "alt2_nouns": ["door"],
     "alt1_text": "The car accelerated.",
@@ -1047,6 +1089,7 @@
       "{team} may lose {___}",
       "{___} may lose {game}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["player"],
     "alt2_nouns": [
       "coach",
@@ -1071,6 +1114,7 @@
       "{___} may misplace {wallet}",
       "{someone} may misplace {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "phone",
       "someone"
@@ -1096,6 +1140,7 @@
     ],
     "alt2_text": "I put a match to the wick.",
     "premise_stats": ["{___} may go out"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "wick",
       "someone"
@@ -1127,6 +1172,7 @@
       "{___} may give {something}",
       "{coach} may give {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "player",
       "penalty"
@@ -1157,6 +1203,7 @@
       "{___} may meet for {coffee}",
       "{woman} may meet for {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "location",
       "cafe"
@@ -1175,6 +1222,7 @@
     "alt2_stats": ["{___} may laugh"],
     "alt2_text": "I was laughing.",
     "premise_stats": ["{___} may become red"],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "I was sobbing.",
@@ -1196,6 +1244,7 @@
       "{someone} may toss {___}",
       "{___} may toss {ball}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "ball",
       "ground"
@@ -1227,6 +1276,7 @@
       "{___} may tolerate {behavior}",
       "{woman} may tolerate {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "time",
       "friend"
@@ -1258,6 +1308,7 @@
       "{___} may smell of {garlic}",
       "{breath} may smell of {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "mouth",
       "someone"
@@ -1287,6 +1338,7 @@
       "{body} may cast {___} over {grass}",
       "{___} may cast {shadow} over {grass}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["sun"],
     "alt2_nouns": ["grass"],
     "alt1_text": "The sun was rising.",
@@ -1302,6 +1354,7 @@
     ],
     "alt2_text": "He drew a map.",
     "premise_stats": ["{___} may be lost"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "direction",
       "someone"
@@ -1326,6 +1379,7 @@
     ],
     "alt2_text": "The cook grilled it.",
     "premise_stats": ["{___} may brown"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "cook",
       "something"
@@ -1350,6 +1404,7 @@
     ],
     "alt2_text": "I bleached the shirt.",
     "premise_stats": ["{___} may come"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "shirt"
@@ -1381,6 +1436,7 @@
       "{something} may conserve {___}",
       "{___} may conserve {energy}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "floor",
       "someone",
@@ -1414,6 +1470,7 @@
       "{___} may lose {election}",
       "{politician} may lose {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "ad"
@@ -1438,6 +1495,7 @@
       "{something} may stay for {___}",
       "{___} may stay for {night}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "forecast",
       "storm"
@@ -1465,6 +1523,7 @@
       "{guest} may hide behind {___}",
       "{___} may hide behind {couch}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "it",
       "party"
@@ -1489,6 +1548,7 @@
     ],
     "alt2_text": "The parents picked out a name for the baby.",
     "premise_stats": ["{___} may calm down"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "parent",
       "front",
@@ -1521,6 +1581,7 @@
       "{___} may doubt {pitch}",
       "{someone} may doubt {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "offer"
@@ -1553,6 +1614,7 @@
       "{audience} may boo {comedian} off {___}",
       "{___} may boo {comedian} off {stage}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "joke"
@@ -1583,6 +1645,7 @@
       "{runner} may wear {___}",
       "{___} may wear {shorts}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "forecast",
       "temperature"
@@ -1613,6 +1676,7 @@
       "{man} may turn on {___}",
       "{___} may turn on {faucet}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "water",
       "something"
@@ -1643,6 +1707,7 @@
       "{soldier} may be concealed in {___}",
       "{___} may be concealed in {brush}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "rifle"
@@ -1667,6 +1732,7 @@
     ],
     "alt2_text": "She paid off her mortgage.",
     "premise_stats": ["{___} may retire"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "pension"
@@ -1698,6 +1764,7 @@
       "{___} may misdiagnose {patient}",
       "{physician} may misdiagnose {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "lawsuit",
       "patient",
@@ -1731,6 +1798,7 @@
       "{___} may find {bug}",
       "{girl} may find {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "bowl",
       "milk",
@@ -1763,6 +1831,7 @@
       "{man} may get {___}",
       "{___} may get {discount}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "cashier"
@@ -1793,6 +1862,7 @@
       "{woman} may delete {___}",
       "{___} may delete {email}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "money",
@@ -1824,6 +1894,7 @@
       "{police} may eliminate {___} from {list}",
       "{police} may eliminate {woman} from {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "police",
       "someone"
@@ -1848,6 +1919,7 @@
       "{___} may watch {movie}",
       "{something} may watch {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["movie"],
     "alt2_nouns": ["movie"],
     "alt1_text": "The movie was rated R.",
@@ -1863,6 +1935,7 @@
     ],
     "alt2_text": "Many customers asked for refunds.",
     "premise_stats": ["{___} may be convincing"],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "refund",
@@ -1889,6 +1962,7 @@
       "{woman} may present {___} with {gift}",
       "{___} may present {brother} with {gift}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "gift",
       "something"
@@ -1913,6 +1987,7 @@
     ],
     "alt2_text": "She wiped her eyes.",
     "premise_stats": ["{___} may smear"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "hair"
@@ -1940,6 +2015,7 @@
       "{administrator} may clear {___}",
       "{___} may clear {throat}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["meeting"],
     "alt2_nouns": ["meeting"],
     "alt1_text": "The meeting was postponed.",
@@ -1961,6 +2037,7 @@
       "{___} may reach {peak}",
       "{climber} may reach {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "avalanche"
@@ -1990,6 +2067,7 @@
       "{girl} may stare at {someone} in {___}",
       "{girl} may stare at {___} in {mirror}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["mirror"],
     "alt1_text": "She felt self-conscious.",
@@ -2010,6 +2088,7 @@
       "{vandal} may throw {rock} at {___}",
       "{___} may throw {rock} at {window}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["window"],
     "alt2_nouns": ["window"],
     "alt1_text": "The window cracked.",
@@ -2025,6 +2104,7 @@
     ],
     "alt2_text": "He fell asleep on his couch.",
     "premise_stats": ["{___} may be bitten"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "wood",
       "camping",
@@ -2051,6 +2131,7 @@
     ],
     "alt2_text": "It was caught in a hurricane.",
     "premise_stats": ["{___} may capsize"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "sail",
       "captain"
@@ -2078,6 +2159,7 @@
       "{something} may demonstrate {___}",
       "{___} may demonstrate {etiquette}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["something"],
     "alt1_text": "She threw away her napkin after eating.",
@@ -2098,6 +2180,7 @@
       "{___} may fan {someone} with {hand}",
       "{woman} may fan {someone} with {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "conditioner",
@@ -2127,6 +2210,7 @@
       "{someone} may bump into {___}",
       "{___} may bump into {stranger}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "I ran away.",
@@ -2145,6 +2229,7 @@
       "{doctor} may amputate {___}",
       "{___} may amputate {leg}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["something"],
     "alt1_text": "It was badly bruised.",
@@ -2166,6 +2251,7 @@
       "{man} may hold {___}",
       "{___} may hold {breath}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "water",
@@ -2185,6 +2271,7 @@
     ],
     "alt2_text": "It moved its headquarters to a suburban location.",
     "premise_stats": ["{___} may level off"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "effort",
       "something"
@@ -2216,6 +2303,7 @@
       "{___} may have {infection}",
       "{woman} may have {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "antibiotic"
@@ -2246,6 +2334,7 @@
       "{father} may shut off {___}",
       "{___} may shut off {television}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "child",
       "something"
@@ -2271,6 +2360,7 @@
     ],
     "alt2_text": "The teacher subtracted points off the student's grade.",
     "premise_stats": ["{___} may be incorrect"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "point",
       "grade",
@@ -2304,6 +2394,7 @@
       "{___} may be summoned for {duty}",
       "{woman} may be summoned for {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "lawyer"
@@ -2331,6 +2422,7 @@
       "{woman} may compliment {___}",
       "{___} may compliment {man}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "He sneezed.",
@@ -2351,6 +2443,7 @@
       "{someone} may apply {___} to {cut}",
       "{someone} may apply {pressure} to {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["something"],
     "alt1_text": "It healed.",
@@ -2372,6 +2465,7 @@
       "{___} may release {hostage}",
       "{kidnapper} may release {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "money"
@@ -2403,6 +2497,7 @@
       "{___} may come off {desk}",
       "{dust} may come off {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "cloth",
       "someone",
@@ -2438,6 +2533,7 @@
       "{woman} may banish {child} from {___}",
       "{___} may banish {child} from {property}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "child",
       "ball",
@@ -2467,6 +2563,7 @@
       "{motorcyclist} may twist {___}",
       "{___} may twist {throttle}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "motorcycle",
       "halt"
@@ -2494,6 +2591,7 @@
       "{judge} may pound {___}",
       "{___} may pound {gavel}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "uproar",
       "courtroom"
@@ -2524,6 +2622,7 @@
       "{___} may catch {ball}",
       "{player} may catch {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "teammate",
       "someone",
@@ -2554,6 +2653,7 @@
       "{boy} may climb {___}",
       "{___} may climb {tree}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "cat",
       "tree"
@@ -2579,6 +2679,7 @@
     ],
     "alt2_text": "The man scooted the chair closer to his desk.",
     "premise_stats": ["{___} may squeak"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "office",
       "chair",
@@ -2605,6 +2706,7 @@
     ],
     "alt2_text": "The student spit out the gum.",
     "premise_stats": ["{___} may chew"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "gum",
       "shoe"
@@ -2629,6 +2731,7 @@
     ],
     "alt2_text": "He cut an onion.",
     "premise_stats": ["{___} may be watered"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "onion"
@@ -2658,6 +2761,7 @@
       "{host} may serve {dinner} to {___}",
       "{host} may serve {___} to {guest}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["guest"],
     "alt2_nouns": ["guest"],
     "alt1_text": "His guests were gracious.",
@@ -2679,6 +2783,7 @@
       "{man} may drink at {___}",
       "{___} may drink at {party}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "headache",
       "someone"
@@ -2706,6 +2811,7 @@
       "{___} may resign from {job}",
       "{woman} may resign from {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "position",
       "firm",
@@ -2729,6 +2835,7 @@
     ],
     "alt2_text": "I lost all my data.",
     "premise_stats": ["{___} may crash"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "speaker",
       "someone"
@@ -2759,6 +2866,7 @@
       "{community} may learn of {___}",
       "{___} may learn of {death}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "family",
       "cemetery",
@@ -2792,6 +2900,7 @@
       "{___} may knock over {pin}",
       "{ball} may knock over {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "ball",
       "man",
@@ -2827,6 +2936,7 @@
       "{___} may flash {badge} to {officer}",
       "{detective} may flash {___} to {officer}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "officer",
       "badge"
@@ -2852,6 +2962,7 @@
     ],
     "alt2_text": "The girl picked a flower for her mother.",
     "premise_stats": ["{___} may make"],
+    "correctAlternative": 2,
     "alt1_nouns": ["mother"],
     "alt2_nouns": [
       "girl",
@@ -2871,6 +2982,7 @@
     ],
     "alt2_text": "Her parents gave her a toy.",
     "premise_stats": ["{___} may cry"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "toy",
       "parent"
@@ -2903,6 +3015,7 @@
       "{stranger} may cry out to {___} in {language}",
       "{stranger} may cry out to {someone} in {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "someone",
@@ -2932,6 +3045,7 @@
       "{something} may incriminate {___} against {enemy}",
       "{___} may incriminate {evidence} against {enemy}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "enemy",
       "man"
@@ -2959,6 +3073,7 @@
       "{___} may go to {bed}",
       "{someone} may go to {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "it",
       "night"
@@ -2988,6 +3103,7 @@
       "{___} may push {someone} off {top}",
       "{girl} may push {___} off {top}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "slide"
@@ -3018,6 +3134,7 @@
       "{___} may recover from {surgery}",
       "{friend} may recover from {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "hospital"
@@ -3040,6 +3157,7 @@
     "alt2_stats": ["{___} may be shocked"],
     "alt2_text": "I was shocked.",
     "premise_stats": ["{___} may drop open"],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["something"],
     "alt1_text": "I was unhappy.",
@@ -3058,6 +3176,7 @@
       "{dj} may turn on {___}",
       "{___} may turn on {music}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "party",
       "people"
@@ -3085,6 +3204,7 @@
       "{___} may disobey {parent}",
       "{child} may disobey {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "parent"
@@ -3116,6 +3236,7 @@
       "{___} may upgrade {hardware}",
       "{woman} may upgrade {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "computer",
       "file",
@@ -3144,6 +3265,7 @@
     ],
     "alt2_text": "He owner took it in for a paint job.",
     "premise_stats": ["{___} may look filthy"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "wash",
       "owner",
@@ -3178,6 +3300,7 @@
       "{___} may gain {recognition}",
       "{scientist} may gain {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "species",
       "someone"
@@ -3211,6 +3334,7 @@
       "{boy} may fill {bucket} with {___}",
       "{boy} may fill {___} with {sand}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "sand",
       "someone",
@@ -3243,6 +3367,7 @@
       "{___} may pay for {ticket}",
       "{friend} may pay for {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "refund",
       "someone"
@@ -3270,6 +3395,7 @@
       "{car} may stop at {___}",
       "{___} may stop at {crosswalk}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "pedestrian",
       "road"
@@ -3294,6 +3420,7 @@
     ],
     "alt2_text": "His brother kicked him.",
     "premise_stats": ["{___} may giggle"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "brother"
@@ -3324,6 +3451,7 @@
       "{girl} may be performed in {___}",
       "{___} may be performed in {recital}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "recital",
@@ -3348,6 +3476,7 @@
       "{knee} may be buckled on {___}",
       "{___} may be buckled on {stair}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "railing",
       "someone"
@@ -3376,6 +3505,7 @@
       "{___} may run through {sprinkler}",
       "{child} may run through {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "popsicle",
       "someone"
@@ -3405,6 +3535,7 @@
       "{___} may fill {meter}",
       "{something} may fill {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "seat",
       "someone"
@@ -3431,6 +3562,7 @@
     ],
     "alt2_text": "He bargained with the vendor.",
     "premise_stats": ["{___} may be overpriced"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "something",
@@ -3457,6 +3589,7 @@
     ],
     "alt2_text": "A tall person was sitting in front of me.",
     "premise_stats": ["{___} may be blocked"],
+    "correctAlternative": 2,
     "alt1_nouns": ["couple"],
     "alt2_nouns": [
       "person",
@@ -3481,6 +3614,7 @@
       "{driver} may get {___}",
       "{___} may get {tire}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "limit",
       "someone"
@@ -3505,6 +3639,7 @@
     ],
     "alt2_text": "He avoided making eye contact with her.",
     "premise_stats": ["{___} may lie"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "something"
@@ -3535,6 +3670,7 @@
       "{something} may eat {___}",
       "{___} may eat {vegetable}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "milk",
       "something"
@@ -3565,6 +3701,7 @@
       "{woman} may be denied {___}",
       "{___} may be denied {entrance}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "friend"
@@ -3592,6 +3729,7 @@
       "{___} may turn on {headlight}",
       "{driver} may turn on {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "thunder",
       "someone"
@@ -3619,6 +3757,7 @@
       "{something} may be formed on {___}",
       "{___} may be formed on {moon}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "moon",
@@ -3642,6 +3781,7 @@
       "{someone} may plant {___} in {soil}",
       "{___} may plant {seed} in {soil}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "soil"
@@ -3663,6 +3803,7 @@
     ],
     "alt2_text": "He supported the cause behind his donation.",
     "premise_stats": ["{___} may stay anonymous"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "privacy",
       "something"
@@ -3688,6 +3829,7 @@
     ],
     "alt2_text": "She hid the scar with makeup.",
     "premise_stats": ["{___} may feel ashamed"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "scar",
@@ -3722,6 +3864,7 @@
       "{doctor} may x-ray {___}",
       "{___} may x-ray {arm}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["arm"],
     "alt2_nouns": [
       "cast",
@@ -3747,6 +3890,7 @@
       "{student} may misspell {___}",
       "{___} may misspell {word}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "teacher"
@@ -3780,6 +3924,7 @@
       "{woman} may run {finger} under {___}",
       "{___} may run {finger} under {water}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "finger",
@@ -3815,6 +3960,7 @@
       "{someone} may put {hand} under {___}",
       "{___} may put {hand} under {faucet}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "hand",
       "soap"
@@ -3847,6 +3993,7 @@
       "{someone} may regain {___} from {fit}",
       "{someone} may regain {composure} from {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["heart"],
     "alt2_nouns": [
       "someone",
@@ -3871,6 +4018,7 @@
       "{man} may confess {___}",
       "{___} may confess {love}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "woman",
       "someone"
@@ -3901,6 +4049,7 @@
       "{___} may dress in {suit}",
       "{man} may dress in {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "meeting",
       "someone"
@@ -3928,6 +4077,7 @@
       "{someone} may move to {___}",
       "{___} may move to {city}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["son"],
     "alt1_text": "I found a better-paying job.",
@@ -3946,6 +4096,7 @@
       "{something} may give {___}",
       "{___} may give {answer}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["question"],
     "alt2_nouns": ["something"],
     "alt1_text": "The question made me uncomfortable.",
@@ -3968,6 +4119,7 @@
       "{___} may catch {wave}",
       "{surfer} may catch {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "shore",
       "someone",
@@ -4001,6 +4153,7 @@
       "{___} may disarm {opponent}",
       "{speaker} may disarm {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "opponent",
       "speaker"
@@ -4031,6 +4184,7 @@
       "{man} may beg for {___}",
       "{___} may beg for {forgiveness}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "pity",
       "woman",
@@ -4066,6 +4220,7 @@
       "{___} may receive {package} in {mail}",
       "{someone} may receive {___} in {mail}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "curiosity",
       "package"
@@ -4091,6 +4246,7 @@
     ],
     "alt2_text": "I asked the professor questions.",
     "premise_stats": ["{___} may be confused"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "professor",
@@ -4117,6 +4273,7 @@
     ],
     "alt2_text": "Teachers required students to read it.",
     "premise_stats": ["{___} may be deemed"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "school",
       "library",
@@ -4146,6 +4303,7 @@
       "{___} may receive {detention}",
       "{student} may receive {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "homework",
@@ -4161,6 +4319,7 @@
     "alt2_stats": ["{___} may be cold"],
     "alt2_text": "His palms were cold and sweaty.",
     "premise_stats": ["{___} may shake"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "girl",
       "something"
@@ -4187,6 +4346,7 @@
       "{___} may hit {egg} on {side}",
       "{chef} may hit {egg} on {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["egg"],
     "alt2_nouns": ["egg"],
     "alt1_text": "The egg cracked.",
@@ -4208,6 +4368,7 @@
       "{___} may search {car}",
       "{police} may search {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "confession",
       "something"
@@ -4232,6 +4393,7 @@
     ],
     "alt2_text": "I lowered my voice.",
     "premise_stats": ["{___} may cough"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "smoke"
@@ -4253,6 +4415,7 @@
     "alt2_stats": ["{___} may drag on"],
     "alt2_text": "The hour seemed to drag on.",
     "premise_stats": ["{___} may chime"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "it",
       "top"
@@ -4282,6 +4445,7 @@
       "{secretary} may put {caller} on {___}",
       "{secretary} may put {___} on {hold}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "reception",
       "phone"
@@ -4312,6 +4476,7 @@
       "{___} may walk with {crutch}",
       "{woman} may walk with {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "leg",
       "someone"
@@ -4341,6 +4506,7 @@
       "{woman} may cover {___} with {hand}",
       "{woman} may cover {mouth} with {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "She exhaled.",
@@ -4364,6 +4530,7 @@
       "{bride} may get {foot} before {___}",
       "{bride} may get {___} before {wedding}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "gift",
       "guest"
@@ -4393,6 +4560,7 @@
       "{couple} may travel {south} for {___}",
       "{couple} may travel {___} for {winter}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "They were retired.",
@@ -4411,6 +4579,7 @@
       "{___} may attend {event}",
       "{something} may attend {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["someone"],
     "alt1_text": "He turned down his friend's invitation to go.",
@@ -4432,6 +4601,7 @@
       "{___} may hide in {shell}",
       "{turtle} may hide in {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "fish",
       "something"
@@ -4464,6 +4634,7 @@
       "{___} may hand down {clothes} to {sister}",
       "{girl} may hand down {___} to {sister}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["clothes"],
     "alt2_nouns": [
       "clothes",
@@ -4485,6 +4656,7 @@
       "{___} may testify against {suspect}",
       "{witness} may testify against {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["suspect"],
     "alt2_nouns": ["suspect"],
     "alt1_text": "The suspect was acquitted.",
@@ -4500,6 +4672,7 @@
     ],
     "alt2_text": "His wife was diagnosed with cancer.",
     "premise_stats": ["{___} may be alive"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "cancer"
@@ -4532,6 +4705,7 @@
       "{parent} may leave {___} with {babysitter}",
       "{___} may leave {child} with {babysitter}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "something",
       "preschool"
@@ -4561,6 +4735,7 @@
       "{girl} may go down {___} on {bike}",
       "{girl} may go down {hill} on {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["bike"],
     "alt2_nouns": ["bike"],
     "alt1_text": "Her bike swerved.",
@@ -4583,6 +4758,7 @@
       "{___} may switch {career}",
       "{something} may switch {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "occupation",
       "someone",
@@ -4618,6 +4794,7 @@
       "{something} may be cut in {___} in {line}",
       "{___} may be cut in {front} in {line}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "I confronted him.",
@@ -4642,6 +4819,7 @@
       "{___} may write {check}",
       "{woman} may write {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "cash",
       "something"
@@ -4666,6 +4844,7 @@
     ],
     "alt2_text": "The train ran off the tracks.",
     "premise_stats": ["{___} may go dark"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "train",
       "tunnel"
@@ -4690,6 +4869,7 @@
     ],
     "alt2_text": "The swimmers returned towards the shore.",
     "premise_stats": ["{___} may be dangerous"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "sunscreen",
       "swimmer"
@@ -4717,6 +4897,7 @@
       "{___} may contemplate {painting}",
       "{man} may contemplate {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "awe",
       "someone"
@@ -4738,6 +4919,7 @@
     ],
     "alt2_text": "The man stalked her.",
     "premise_stats": ["{___} may restrain"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "man"
@@ -4768,6 +4950,7 @@
       "{someone} may run out of {___}",
       "{___} may run out of {breath}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "flight",
       "someone"
@@ -4795,6 +4978,7 @@
       "{___} may refuse {beer}",
       "{woman} may refuse {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["someone"],
     "alt1_text": "She was the designated driver for the night.",
@@ -4816,6 +5000,7 @@
       "{___} may emerge from {cloud}",
       "{sun} may emerge from {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "watch",
       "woman"
@@ -4840,6 +5025,7 @@
     ],
     "alt2_text": "She sought a career as a psychiatrist.",
     "premise_stats": ["{___} may be deemed"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "institution"
@@ -4870,6 +5056,7 @@
       "{trip} may take {___}",
       "{___} may take {time}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["driver"],
     "alt2_nouns": [
       "turn",
@@ -4896,6 +5083,7 @@
       "{coach} may lose {___} after {game}",
       "{coach} may lose {voice} after {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "ball",
       "player"
@@ -4929,6 +5117,7 @@
       "{something} may get to {school} on {___}",
       "{something} may get to {___} on {time}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "home",
       "assignment",
@@ -4959,6 +5148,7 @@
       "{journalist} may write {___}",
       "{___} may write {biography}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["journalist"],
     "alt2_nouns": ["journalist"],
     "alt1_text": "The humanitarian was difficult for the journalist to interview.",
@@ -4980,6 +5170,7 @@
       "{man} may defy {___}",
       "{___} may defy {authority}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "church",
       "someone",
@@ -5013,6 +5204,7 @@
       "{___} may fall in {face}",
       "{hair} may fall in {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "clip",
       "someone",
@@ -5040,6 +5232,7 @@
     ],
     "alt2_text": "He sold his belongings.",
     "premise_stats": ["{___} may grow old"],
+    "correctAlternative": 1,
     "alt1_nouns": ["hair"],
     "alt2_nouns": [
       "belongings",
@@ -5064,6 +5257,7 @@
       "{something} may share {___}",
       "{___} may share {hamburger}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "half",
@@ -5095,6 +5289,7 @@
       "{someone} may twist {___} off {bottle}",
       "{someone} may twist {cap} off {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["soda"],
     "alt2_nouns": ["soda"],
     "alt1_text": "The soda fizzed.",
@@ -5115,6 +5310,7 @@
       "{pair} may come under {___} by {teacher}",
       "{___} may come under {scrutiny} by {teacher}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "student",
       "grade"
@@ -5133,6 +5329,7 @@
     "alt2_stats": ["{___} may score"],
     "alt2_text": "The player scored.",
     "premise_stats": ["{___} may cheer"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "tie",
       "game"
@@ -5154,6 +5351,7 @@
     ],
     "alt2_text": "I chipped my fingernail.",
     "premise_stats": ["{___} may be stuck"],
+    "correctAlternative": 1,
     "alt1_nouns": ["finger"],
     "alt2_nouns": [
       "someone",
@@ -5175,6 +5373,7 @@
       "{someone} may pull {___}",
       "{___} may pull {band}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "something",
       "room"
@@ -5204,6 +5403,7 @@
       "{girl} may come across {___} in {textbook}",
       "{___} may come across {word} in {textbook}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "term",
       "someone",
@@ -5230,6 +5430,7 @@
     ],
     "alt2_text": "His family cut off contact with him.",
     "premise_stats": ["{___} may become disabled"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "support",
       "family"
@@ -5262,6 +5463,7 @@
       "{cowgirl} may throw {lasso} towards {___}",
       "{___} may throw {lasso} towards {horse}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "horse",
       "lasso"
@@ -5289,6 +5491,7 @@
       "{___} may overlook {pa}",
       "{group} may overlook {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["woman"],
     "alt2_nouns": ["woman"],
     "alt1_text": "The woman was relieved.",
@@ -5307,6 +5510,7 @@
       "{someone} may scratch {___}",
       "{___} may scratch {skin}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["itch"],
     "alt2_nouns": ["scar"],
     "alt1_text": "My itch went away.",
@@ -5328,6 +5532,7 @@
       "{___} may note to {grandmother}",
       "{someone} may note to {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "gift",
@@ -5346,6 +5551,7 @@
     ],
     "alt2_text": "I replaced the batteries.",
     "premise_stats": ["{___} may be dead"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "something"
@@ -5376,6 +5582,7 @@
       "{___} may spray {dog}",
       "{skunk} may spray {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "smell",
       "dog"
@@ -5408,6 +5615,7 @@
       "{someone} may press {___} into {cement}",
       "{someone} may press {hand} into {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "handprint",
       "cement"
@@ -5438,6 +5646,7 @@
       "{___} may reveal {anomaly}",
       "{detective} may reveal {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "theory"
@@ -5469,6 +5678,7 @@
       "{boy} may throw {___}",
       "{___} may throw {tantrum}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "toy",
       "someone",
@@ -5503,6 +5713,7 @@
       "{___} may break out into {rash}",
       "{skin} may break out into {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "yard",
       "someone",
@@ -5530,6 +5741,7 @@
     ],
     "alt2_text": "I stopped receiving new issues.",
     "premise_stats": ["{___} may expire"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "issue",
       "someone"
@@ -5559,6 +5771,7 @@
       "{woman} may lavish {friend} with {___}",
       "{___} may lavish {friend} with {flattery}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "favor",
       "something",
@@ -5585,6 +5798,7 @@
       "{___} may miss from {pocket}",
       "{key} may miss from {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "pocket",
       "hole"
@@ -5606,6 +5820,7 @@
     ],
     "alt2_text": "He skipped a grade in school.",
     "premise_stats": ["{___} may read"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "school",
       "something"
@@ -5636,6 +5851,7 @@
       "{___} may skip {dinner}",
       "{boy} may skip {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "mother",
       "meal"
@@ -5660,6 +5876,7 @@
     ],
     "alt2_text": "He ran a marathon.",
     "premise_stats": ["{___} may faint"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "nap",
       "someone"
@@ -5689,6 +5906,7 @@
       "{___} may rub {soap} between {hand}",
       "{someone} may rub {soap} between {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["soap"],
     "alt2_nouns": ["hand"],
     "alt1_text": "The soap foamed.",
@@ -5701,6 +5919,7 @@
     "alt2_stats": ["{___} may become outdated"],
     "alt2_text": "The product became outdated.",
     "premise_stats": ["{___} may be advertised"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "product",
       "consumer"
@@ -5728,6 +5947,7 @@
       "{___} may tackle {man}",
       "{guard} may tackle {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "pocket",
       "man"
@@ -5755,6 +5975,7 @@
       "{driver} may rotate {___}",
       "{___} may rotate {wheel}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["car"],
     "alt2_nouns": ["car"],
     "alt1_text": "The car halted.",
@@ -5776,6 +5997,7 @@
       "{___} may surrender {battle}",
       "{army} may surrender {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "someone",
@@ -5800,6 +6022,7 @@
       "{___} may bomb {ship}",
       "{navy} may bomb {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "ship",
       "pier"
@@ -5827,6 +6050,7 @@
       "{someone} may iron {___}",
       "{___} may iron {shirt}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["it"],
     "alt2_nouns": ["something"],
     "alt1_text": "It was clean.",
@@ -5839,6 +6063,7 @@
     "alt2_stats": ["{___} may stretch"],
     "alt2_text": "She did stretches.",
     "premise_stats": ["{___} may feel dizzy"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "balance",
       "someone"
@@ -5866,6 +6091,7 @@
       "{___} may pull over to {side}",
       "{driver} may pull over to {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "intersection",
       "someone"
@@ -5893,6 +6119,7 @@
       "{___} may call {ambulance}",
       "{mother} may call {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "cat",
       "son"
@@ -5920,6 +6147,7 @@
       "{man} may lose {___}",
       "{___} may lose {competition}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["competition"],
     "alt2_nouns": [
       "someone",
@@ -5941,6 +6169,7 @@
       "{driver} may slam on {___}",
       "{___} may slam on {brake}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "road",
       "deer"
@@ -5962,6 +6191,7 @@
     ],
     "alt2_text": "I made a duplicate of the key.",
     "premise_stats": ["{___} may open"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "key"
@@ -5992,6 +6222,7 @@
       "{someone} may put on {___}",
       "{___} may put on {glove}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "hand",
       "something"
@@ -6013,6 +6244,7 @@
     "alt2_stats": ["{___} may go extinct"],
     "alt2_text": "Their predators went extinct.",
     "premise_stats": ["{___} may be endangered"],
+    "correctAlternative": 1,
     "alt1_nouns": ["habitat"],
     "alt2_nouns": ["predator"],
     "alt1_text": "Their habitat was destroyed.",
@@ -6028,6 +6260,7 @@
     ],
     "alt2_text": "The woman wore a bracelet.",
     "premise_stats": ["{___} may look different"],
+    "correctAlternative": 1,
     "alt1_nouns": ["hair"],
     "alt2_nouns": [
       "bracelet",
@@ -6053,6 +6286,7 @@
       "{___} may do {assignment}",
       "{something} may do {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "something",
       "teacher"
@@ -6078,6 +6312,7 @@
     ],
     "alt2_text": "A knock sounded at the door.",
     "premise_stats": ["{___} may bark"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "cat",
       "couch"
@@ -6110,6 +6345,7 @@
       "{something} may replace {park} with {___}",
       "{___} may replace {park} with {mall}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "environmentalist",
       "petition"
@@ -6137,6 +6373,7 @@
       "{burglar} may break into {___}",
       "{___} may break into {house}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["homeowner"],
     "alt2_nouns": ["alarm"],
     "alt1_text": "The homeowners were asleep.",
@@ -6152,6 +6389,7 @@
     ],
     "alt2_text": "The girl applied her makeup.",
     "premise_stats": ["{___} may fog up"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "girl",
       "fan"
@@ -6182,6 +6420,7 @@
       "{___} may enter behind {someone}",
       "{woman} may enter behind {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["door"],
     "alt2_nouns": [
       "woman",
@@ -6206,6 +6445,7 @@
       "{___} may fly up into {sky}",
       "{rocket} may fly up into {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "girl",
       "something"
@@ -6230,6 +6470,7 @@
     ],
     "alt2_text": "He bickered with his sister.",
     "premise_stats": ["{___} may feel"],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "sister",
@@ -6248,6 +6489,7 @@
     ],
     "alt2_text": "I was held up at airport security.",
     "premise_stats": ["{___} may be delayed"],
+    "correctAlternative": 1,
     "alt1_nouns": ["tornado"],
     "alt2_nouns": [
       "someone",
@@ -6269,6 +6511,7 @@
       "{boy} may murmur {___}",
       "{___} may murmur {reply}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["something"],
     "alt1_text": "His mother told him to whisper.",
@@ -6287,6 +6530,7 @@
       "{___} may have {awakening}",
       "{woman} may have {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "church",
       "something"
@@ -6314,6 +6558,7 @@
       "{baby} may wail in {___}",
       "{___} may wail in {crib}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "mother",
       "baby"
@@ -6346,6 +6591,7 @@
       "{student} may flaunt {grade} to {___}",
       "{student} may flaunt {___} to {classmate}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "score"
@@ -6367,6 +6613,7 @@
     "alt2_stats": ["{___} may shut"],
     "alt2_text": "I locked the drawers shut.",
     "premise_stats": ["{___} may be cluttered"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "contents",
       "someone"
@@ -6388,6 +6635,7 @@
     ],
     "alt2_text": "I burnt my dinner.",
     "premise_stats": ["{___} may go off"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "candle",
       "someone"
@@ -6412,6 +6660,7 @@
     ],
     "alt2_text": "I glued it back together.",
     "premise_stats": ["{___} may break"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "something"
@@ -6442,6 +6691,7 @@
       "{___} may be in {mood}",
       "{woman} may be in {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "talk"
@@ -6466,6 +6716,7 @@
     ],
     "alt2_text": "She took apart the puzzle.",
     "premise_stats": ["{___} may miss"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "puzzle",
       "someone"
@@ -6491,6 +6742,7 @@
     ],
     "alt2_text": "He wanted to iron his pants before work.",
     "premise_stats": ["{___} may leap"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "clock",
       "something"
@@ -6524,6 +6776,7 @@
       "{police} may aim {weapon} at {___}",
       "{___} may aim {weapon} at {fugitive}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "ground",
       "fugitive"
@@ -6548,6 +6801,7 @@
     ],
     "alt2_text": "The nurse gave him an IV.",
     "premise_stats": ["{___} may be dehydrated"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "nurse",
       "reflex"
@@ -6580,6 +6834,7 @@
       "{seamstress} may push {___} into {fabric}",
       "{seamstress} may push {needle} into {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "thread",
       "needle"
@@ -6605,6 +6860,7 @@
     ],
     "alt2_text": "I put them into alphabetical order.",
     "premise_stats": ["{___} may be disorganized"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "photocopy"
@@ -6635,6 +6891,7 @@
       "{woman} may win {___}",
       "{___} may win {lottery}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "yacht"
@@ -6665,6 +6922,7 @@
       "{___} may not hire {applicant}",
       "{something} may not hire {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "check",
       "applicant"
@@ -6695,6 +6953,7 @@
       "{___} may come on {radio}",
       "{song} may come on {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "ear",
       "someone"
@@ -6725,6 +6984,7 @@
       "{___} may misplace {key}",
       "{tenant} may misplace {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "landlord",
       "door"
@@ -6755,6 +7015,7 @@
       "{woman} may hire {___}",
       "{___} may hire {lawyer}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "employer",
       "something"
@@ -6785,6 +7046,7 @@
       "{something} may look like {___}",
       "{___} may look like {gentleman}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "door"
@@ -6813,6 +7075,7 @@
       "{farmland} may need {___}",
       "{___} may need {irrigation}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["canal"],
     "alt2_nouns": ["flood"],
     "alt1_text": "A canal was constructed.",
@@ -6834,6 +7097,7 @@
       "{host} may cancel {___}",
       "{___} may cancel {party}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "flu"
@@ -6861,6 +7125,7 @@
       "{___} may give {number}",
       "{woman} may give {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "She was attracted to him.",
@@ -6882,6 +7147,7 @@
       "{___} may glide to {ground}",
       "{skydiver} may glide to {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "parachute"
@@ -6904,6 +7170,7 @@
     ],
     "alt2_text": "Her mother fixed her hair into pigtails.",
     "premise_stats": ["{___} may become cranky"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "mother",
       "nap",
@@ -6931,6 +7198,7 @@
     ],
     "alt2_text": "He received the vaccine for the disease.",
     "premise_stats": ["{___} may become immune"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "exposure",
       "someone"
@@ -6952,6 +7220,7 @@
     "alt2_stats": ["{___} may evaporate"],
     "alt2_text": "The juice evaporated.",
     "premise_stats": ["{___} may ferment"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "wine",
       "juice"
@@ -6973,6 +7242,7 @@
     ],
     "alt2_text": "The friends were splitting hairs.",
     "premise_stats": ["{___} may drag on"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "friend",
       "eye"
@@ -7003,6 +7273,7 @@
       "{___} may hate {haircut}",
       "{man} may hate {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "hat"
@@ -7033,6 +7304,7 @@
       "{woman} may hum to {___}",
       "{___} may hum to {someone}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "someone",
@@ -7058,6 +7330,7 @@
       "{someone} may hang up {___}",
       "{___} may hang up {phone}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "caller",
       "someone",
@@ -7085,6 +7358,7 @@
     ],
     "alt2_text": "I put it in the dryer.",
     "premise_stats": ["{___} may shrink"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "bleach",
       "someone",
@@ -7112,6 +7386,7 @@
     ],
     "alt2_text": "The moon became visible in the sky.",
     "premise_stats": ["{___} may get dark"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "sky",
       "something"
@@ -7133,6 +7408,7 @@
     "alt2_stats": ["{___} may snore"],
     "alt2_text": "My friend snored.",
     "premise_stats": ["{___} may sleep"],
+    "correctAlternative": 1,
     "alt1_nouns": ["friend"],
     "alt2_nouns": ["friend"],
     "alt1_text": "My friend awoke.",
@@ -7148,6 +7424,7 @@
     ],
     "alt2_text": "Her friend gave her a pat on the back.",
     "premise_stats": ["{___} may gasp"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "cube",
@@ -7181,6 +7458,7 @@
       "{___} may freeze over for {winter}",
       "{pond} may freeze over for {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "pond",
       "people"
@@ -7213,6 +7491,7 @@
       "{offender} may violate {___}",
       "{___} may violate {parole}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "church",
@@ -7235,6 +7514,7 @@
       "{___} may repair {faucet}",
       "{woman} may repair {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["faucet"],
     "alt2_nouns": ["faucet"],
     "alt1_text": "The faucet was leaky.",
@@ -7257,6 +7537,7 @@
       "{___} may suffer {stroke}",
       "{woman} may suffer {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "house",
       "something"
@@ -7288,6 +7569,7 @@
       "{___} may receive {trophy}",
       "{girl} may receive {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "bee",
       "someone"
@@ -7318,6 +7600,7 @@
       "{___} may slip off in {shower}",
       "{ring} may slip off in {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "ring",
       "woman"
@@ -7350,6 +7633,7 @@
       "{___} may file {complaint} with {manager}",
       "{customer} may file {complaint} with {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "customer",
       "associate"
@@ -7375,6 +7659,7 @@
     ],
     "alt2_text": "The girl told a secret to her friend.",
     "premise_stats": ["{___} may be angry"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "girl",
       "rumor"
@@ -7408,6 +7693,7 @@
       "{___} may drop {food} on {floor}",
       "{man} may drop {food} on {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "dog"
@@ -7438,6 +7724,7 @@
       "{man} may crave {___}",
       "{___} may crave {cigarette}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "smoking",
       "something"
@@ -7468,6 +7755,7 @@
       "{___} may speak with {accent}",
       "{woman} may speak with {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "family",
       "someone"
@@ -7492,6 +7780,7 @@
     ],
     "alt2_text": "He blew out the candle.",
     "premise_stats": ["{___} may be stung"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "pepper"
@@ -7519,6 +7808,7 @@
       "{___} may hide from {police}",
       "{fugitive} may hide from {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "police",
       "case"
@@ -7543,6 +7833,7 @@
       "{___} may tip {bottle}",
       "{someone} may tip {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["liquid"],
     "alt2_nouns": ["liquid"],
     "alt1_text": "The liquid in the bottle froze.",
@@ -7564,6 +7855,7 @@
       "{woman} may be robbed on {___}",
       "{___} may be robbed on {street}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "something"
@@ -7588,6 +7880,7 @@
     ],
     "alt2_text": "I ate birthday cake.",
     "premise_stats": ["{___} may hurt"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "treadmill"
@@ -7618,6 +7911,7 @@
       "{someone} may finish {___}",
       "{___} may finish {page}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "page",
       "someone"
@@ -7639,6 +7933,7 @@
     "alt2_stats": ["{___} may be crowded"],
     "alt2_text": "The restaurant was crowded.",
     "premise_stats": ["{___} may be slow"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "table",
       "something"
@@ -7663,6 +7958,7 @@
       "{___} may play {game}",
       "{something} may play {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "rule",
@@ -7694,6 +7990,7 @@
       "{woman} may dangle {biscuit} above {___}",
       "{woman} may dangle {___} above {dog}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["dog"],
     "alt2_nouns": [
       "fur",
@@ -7712,6 +8009,7 @@
     ],
     "alt2_text": "The shop was undergoing renovation.",
     "premise_stats": ["{___} may be closed"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "owner",
       "customer"
@@ -7742,6 +8040,7 @@
       "{___} may go for {weekend}",
       "{man} may go for {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "content",
@@ -7766,6 +8065,7 @@
       "{___} may tune {radio}",
       "{boy} may tune {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "music",
       "station"
@@ -7793,6 +8093,7 @@
       "{terrorist} may set off {___}",
       "{___} may set off {bomb}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["bomb"],
     "alt2_nouns": ["bomb"],
     "alt1_text": "The bomb exploded.",
@@ -7814,6 +8115,7 @@
       "{police} may handcuff {___}",
       "{___} may handcuff {suspect}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "police",
       "backup"
@@ -7845,6 +8147,7 @@
       "{___} may protect {identity}",
       "{something} may protect {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "detail",
       "something"
@@ -7870,6 +8173,7 @@
     ],
     "alt2_text": "He lost weight.",
     "premise_stats": ["{___} may fit"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "sale"
@@ -7895,6 +8199,7 @@
     ],
     "alt2_text": "The clock showed the wrong time.",
     "premise_stats": ["{___} may tick"],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "time",
@@ -7919,6 +8224,7 @@
       "{___} may close {umbrella}",
       "{man} may close {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [],
     "alt2_nouns": [
       "building",
@@ -7942,6 +8248,7 @@
       "{___} may rub {sandpaper} on {wood}",
       "{someone} may rub {___} on {wood}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["wood"],
     "alt2_nouns": ["wood"],
     "alt1_text": "The wood became smooth.",
@@ -7957,6 +8264,7 @@
     ],
     "alt2_text": "She adopted a cat.",
     "premise_stats": ["{___} may feel lonely"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "kitchen"
@@ -7987,6 +8295,7 @@
       "{something} may help {___}",
       "{___} may help {someone}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "blood"
@@ -8014,6 +8323,7 @@
       "{___} may drop {gun}",
       "{officer} may drop {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["gun"],
     "alt2_nouns": ["gun"],
     "alt1_text": "The gun recoiled.",
@@ -8032,6 +8342,7 @@
       "{___} may sign {document}",
       "{man} may sign {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["transaction"],
     "alt2_nouns": ["transaction"],
     "alt1_text": "The transaction was voided.",
@@ -8053,6 +8364,7 @@
       "{man} may remove {___}",
       "{___} may remove {coat}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "house"
@@ -8085,6 +8397,7 @@
       "{family} may take {___} to {veterinarian}",
       "{___} may take {dog} to {veterinarian}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "bone",
       "dog"
@@ -8106,6 +8419,7 @@
     "alt2_stats": ["{___} may be full"],
     "alt2_text": "I was full from breakfast.",
     "premise_stats": ["{___} may growl"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "breakfast",
       "something"
@@ -8130,6 +8444,7 @@
       "{___} may set off {flare}",
       "{boater} may set off {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "shore",
       "boat"
@@ -8157,6 +8472,7 @@
       "{crowd} may give {___}",
       "{___} may give {ovation}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "autograph",
       "band"
@@ -8189,6 +8505,7 @@
       "{___} may throw {can} onto {street}",
       "{man} may throw {___} onto {street}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "littering",
@@ -8210,6 +8527,7 @@
       "{___} may throw out {bread}",
       "{man} may throw out {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["it"],
     "alt2_nouns": ["it"],
     "alt1_text": "It was fresh.",
@@ -8228,6 +8546,7 @@
       "{___} may prepare {needle}",
       "{nurse} may prepare {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["patient"],
     "alt2_nouns": ["patient"],
     "alt1_text": "The patient bled.",
@@ -8243,6 +8562,7 @@
     ],
     "alt2_text": "It injured its wing.",
     "premise_stats": ["{___} may not fly"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "winter",
       "something"
@@ -8267,6 +8587,7 @@
     ],
     "alt2_text": "He put on glasses.",
     "premise_stats": ["{___} may be infected"],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "someone",
@@ -8291,6 +8612,7 @@
       "{___} may get out {pool}",
       "{someone} may get out {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "towel"
@@ -8319,6 +8641,7 @@
       "{___} may make {wish}",
       "{girl} may make {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "cat",
       "someone"
@@ -8343,6 +8666,7 @@
       "{someone} may drink from {___}",
       "{___} may drink from {fountain}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "I was thirsty.",
@@ -8365,6 +8689,7 @@
       "{homeowner} may dislike {___}",
       "{___} may dislike {neighbor}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "fence",
       "someone"
@@ -8393,6 +8718,7 @@
       "{bodybuilder} may lift {___}",
       "{___} may lift {weight}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["gym"],
     "alt2_nouns": ["muscle"],
     "alt1_text": "The gym closed.",
@@ -8413,6 +8739,7 @@
       "{cook} may stir {___} in {bowl}",
       "{___} may stir {ingredient} in {bowl}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["ingredient"],
     "alt2_nouns": ["ingredient"],
     "alt1_text": "The ingredients melted.",
@@ -8434,6 +8761,7 @@
       "{child} may knock over {___}",
       "{___} may knock over {lamp}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "fight",
       "someone"
@@ -8461,6 +8789,7 @@
       "{___} may be coughed on {friend}",
       "{child} may be coughed on {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["friend"],
     "alt2_nouns": ["friend"],
     "alt1_text": "His friend got sick.",
@@ -8482,6 +8811,7 @@
       "{___} may wonder about {cost}",
       "{shopper} may wonder about {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "tag",
       "someone"
@@ -8510,6 +8840,7 @@
       "{___} may read {newspaper}",
       "{woman} may read {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "outcome"
@@ -8535,6 +8866,7 @@
     ],
     "alt2_text": "She entered the sauna.",
     "premise_stats": ["{___} may fog up"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "pool",
       "someone"
@@ -8559,6 +8891,7 @@
     ],
     "alt2_text": "She committed assault.",
     "premise_stats": ["{___} may be arrested"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "rehab",
       "someone"
@@ -8590,6 +8923,7 @@
       "{___} may break out in {nation}",
       "{violence} may break out in {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "something",
       "capitol"
@@ -8615,6 +8949,7 @@
     ],
     "alt2_text": "He shut it off.",
     "premise_stats": ["{___} may find"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "something"
@@ -8645,6 +8980,7 @@
       "{___} may be {doctor}",
       "{something} may be {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "hospital"
@@ -8675,6 +9011,7 @@
       "{woman} may contact {___}",
       "{___} may contact {agent}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "condo",
       "something"
@@ -8705,6 +9042,7 @@
       "{___} may go to {bed}",
       "{something} may go to {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "nightlight",
       "someone"
@@ -8729,6 +9067,7 @@
     ],
     "alt2_text": "They took some time apart.",
     "premise_stats": ["{___} may be engaged"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "wedding",
       "someone"
@@ -8761,6 +9100,7 @@
       "{something} may be called on {___} for {answer}",
       "{something} may be called on {contestant} for {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "contestant",
       "lead"
@@ -8785,6 +9125,7 @@
     ],
     "alt2_text": "The gum lost its flavor.",
     "premise_stats": ["{___} may chew"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "bubble",
       "someone"
@@ -8818,6 +9159,7 @@
       "{___} may paint {picture} for {mother}",
       "{boy} may paint {picture} for {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "picture",
       "mother",
@@ -8852,6 +9194,7 @@
       "{daughter} may suffer {___}",
       "{___} may suffer {attack}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "something",
       "breath"
@@ -8883,6 +9226,7 @@
       "{___} may button {shirt}",
       "{something} may button {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "something",
       "shirt"
@@ -8908,6 +9252,7 @@
     ],
     "alt2_text": "The rider stroked the horse.",
     "premise_stats": ["{___} may buck"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "fly",
       "horse"
@@ -8929,6 +9274,7 @@
     "alt2_stats": ["{___} may be calculated"],
     "alt2_text": "The cost of the stolen jewelry was calculated.",
     "premise_stats": ["{___} may be caught"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "owner",
       "jewelry"
@@ -8951,6 +9297,7 @@
     ],
     "alt2_text": "He sewed the hole in his pocket.",
     "premise_stats": ["{___} may walk"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "pocket",
       "coin"
@@ -8982,6 +9329,7 @@
       "{___} may stare at {student}",
       "{something} may stare at {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["phone"],
     "alt2_nouns": [
       "student",
@@ -9006,6 +9354,7 @@
       "{___} may change from {summer}",
       "{season} may change from {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "home",
       "people"
@@ -9035,6 +9384,7 @@
       "{___} may assign {homework} to {student}",
       "{teacher} may assign {___} to {student}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "student",
       "note"
@@ -9059,6 +9409,7 @@
       "{someone} may push {___}",
       "{___} may push {wagon}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["object"],
     "alt2_nouns": ["wheel"],
     "alt1_text": "The objects in the wagon fell out.",
@@ -9075,6 +9426,7 @@
     ],
     "alt2_text": "The potter put the clay in the oven.",
     "premise_stats": ["{___} may harden"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "clay",
       "ball",
@@ -9108,6 +9460,7 @@
       "{politician} may be convicted of {___}",
       "{___} may be convicted of {fraud}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "re-election"
@@ -9132,6 +9485,7 @@
     ],
     "alt2_text": "I decorated it.",
     "premise_stats": ["{___} may be messy"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "something"
@@ -9162,6 +9516,7 @@
       "{woman} may betray {___}",
       "{___} may betray {friend}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "card",
       "friend"
@@ -9192,6 +9547,7 @@
       "{___} may support {bill}",
       "{something} may support {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "president",
       "bill"
@@ -9216,6 +9572,7 @@
     ],
     "alt2_text": "I went swimming.",
     "premise_stats": ["{___} may be blistered"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "hiking"
@@ -9246,6 +9603,7 @@
       "{___} may get into {fight}",
       "{woman} may get into {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "vacation",
@@ -9264,6 +9622,7 @@
     "alt2_stats": ["{___} may be tired"],
     "alt2_text": "I was tired in the morning.",
     "premise_stats": ["{___} may stay up"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "dream",
       "someone"
@@ -9291,6 +9650,7 @@
       "{___} may take {notice}",
       "{man} may take {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "whiff",
       "someone"
@@ -9320,6 +9680,7 @@
       "{bully} may stick out {foot} in {___}",
       "{bully} may stick out {___} in {front}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "bully",
       "classmate"
@@ -9348,6 +9709,7 @@
       "{something} may get {___}",
       "{___} may get {revenge}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "enemy",
       "crime",
@@ -9378,6 +9740,7 @@
       "{___} may drink {cup}",
       "{someone} may drink {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["yawning"],
     "alt2_nouns": ["something"],
     "alt1_text": "My yawning ceased.",
@@ -9399,6 +9762,7 @@
       "{___} may be mistaken for {sister}",
       "{woman} may be mistaken for {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["woman"],
     "alt2_nouns": [
       "sister",
@@ -9422,6 +9786,7 @@
       "{man} may make {___} in {calculation}",
       "{___} may make {error} in {calculation}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "work",
       "someone"
@@ -9443,6 +9808,7 @@
       "{something} may see {___}",
       "{___} may see {something}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "They kissed.",
@@ -9458,6 +9824,7 @@
     ],
     "alt2_text": "He thanked her.",
     "premise_stats": ["{___} may leave"],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "He insulted her.",
@@ -9479,6 +9846,7 @@
       "{branch} may land in {___}",
       "{___} may land in {river}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["branch"],
     "alt2_nouns": ["current"],
     "alt1_text": "The branch moved downstream.",
@@ -9497,6 +9865,7 @@
       "{something} may serve {___}",
       "{___} may serve {patron}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["patron"],
     "alt2_nouns": ["patron"],
     "alt1_text": "The patron was alone.",
@@ -9517,6 +9886,7 @@
       "{someone} may dab {floor} with {___}",
       "{___} may dab {floor} with {towel}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "floor",
       "juice",
@@ -9543,6 +9913,7 @@
       "{man} may look at {___}",
       "{___} may look at {watch}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "something"
@@ -9571,6 +9942,7 @@
       "{company} may recall {___}",
       "{___} may recall {drug}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "effect",
       "user"
@@ -9602,6 +9974,7 @@
       "{___} may botch {interview}",
       "{someone} may botch {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "interviewer",
       "question"
@@ -9626,6 +9999,7 @@
     ],
     "alt2_text": "His parents abused him.",
     "premise_stats": ["{___} may run"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "parent"
@@ -9656,6 +10030,7 @@
       "{___} may kick {stack}",
       "{child} may kick {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "head",
       "stack"
@@ -9683,6 +10058,7 @@
       "{someone} may push {___}",
       "{___} may push {pendulum}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "stop",
       "something"
@@ -9704,6 +10080,7 @@
     ],
     "alt2_text": "It was 3 AM.",
     "premise_stats": ["{___} may close"],
+    "correctAlternative": 2,
     "alt1_nouns": ["it"],
     "alt2_nouns": [
       "it",
@@ -9728,6 +10105,7 @@
       "{___} may take {roll}",
       "{teacher} may take {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "quiz",
@@ -9743,6 +10121,7 @@
     "alt2_stats": ["{___} may speed"],
     "alt2_text": "He was speeding.",
     "premise_stats": ["{___} may be pulled over"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "parking",
       "someone"
@@ -9770,6 +10149,7 @@
       "{woman} may sense {___}",
       "{___} may sense {smell}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "medication",
       "something"
@@ -9791,6 +10171,7 @@
     "alt2_stats": ["{___} may snore"],
     "alt2_text": "Her husband was snoring.",
     "premise_stats": ["{___} may awaken"],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["husband"],
     "alt1_text": "She took sleeping pills.",
@@ -9806,6 +10187,7 @@
     ],
     "alt2_text": "It renewed its lease.",
     "premise_stats": ["{___} may shut down"],
+    "correctAlternative": 1,
     "alt1_nouns": ["sale"],
     "alt2_nouns": [
       "lease",
@@ -9832,6 +10214,7 @@
       "{___} may take {family} on {vacation}",
       "{woman} may take {___} on {vacation}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["husband"],
     "alt2_nouns": [
       "someone",
@@ -9853,6 +10236,7 @@
       "{truck} may crash into {___}",
       "{___} may crash into {motorcycle}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["motorcyclist"],
     "alt2_nouns": ["bridge"],
     "alt1_text": "The motorcyclist died.",
@@ -9873,6 +10257,7 @@
       "{___} may slide {razor} across {chin}",
       "{man} may slide {___} across {chin}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["stubble"],
     "alt2_nouns": ["stubble"],
     "alt1_text": "His stubble grew.",
@@ -9885,6 +10270,7 @@
     "alt2_stats": ["{___} may shut down"],
     "alt2_text": "Factories shut down.",
     "premise_stats": ["{___} may worsen"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "factory",
       "production"
@@ -9909,6 +10295,7 @@
       "{___} may slip on {floor}",
       "{someone} may slip on {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["tile"],
     "alt2_nouns": ["tile"],
     "alt1_text": "The tile was wet.",
@@ -9930,6 +10317,7 @@
       "{___} may win {race}",
       "{swimmer} may win {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "medal"
@@ -9951,6 +10339,7 @@
     "alt2_stats": ["{___} may be open"],
     "alt2_text": "The blinds were open.",
     "premise_stats": ["{___} may be opaque"],
+    "correctAlternative": 1,
     "alt1_nouns": ["glass"],
     "alt2_nouns": ["blind"],
     "alt1_text": "The glass was stained.",
@@ -9970,6 +10359,7 @@
       "{someone} may excuse {___} from {group}",
       "{someone} may excuse {someone} from {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "phone",
       "someone"
@@ -9991,6 +10381,7 @@
     ],
     "alt2_text": "The photographer quickly changed the child's pose.",
     "premise_stats": ["{___} may smile"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "photographer",
       "photo"
@@ -10021,6 +10412,7 @@
       "{mother} may scold {___}",
       "{___} may scold {daughter}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "daughter",
       "table"
@@ -10045,6 +10437,7 @@
     ],
     "alt2_text": "I shook my foot.",
     "premise_stats": ["{___} may go numb"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "shoe"
@@ -10074,6 +10467,7 @@
       "{boy} may read {___} to {grandfather}",
       "{___} may read {novel} to {grandfather}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["grandfather"],
     "alt2_nouns": ["grandfather"],
     "alt1_text": "His grandfather was deaf.",
@@ -10089,6 +10483,7 @@
     ],
     "alt2_text": "I boiled it.",
     "premise_stats": ["{___} may splatter"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "something"
@@ -10113,6 +10508,7 @@
     ],
     "alt2_text": "I bought a new one.",
     "premise_stats": ["{___} may fix"],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["someone"],
     "alt1_text": "I got it repaired.",
@@ -10135,6 +10531,7 @@
       "{document} may contain {___}",
       "{___} may contain {information}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "something"
@@ -10165,6 +10562,7 @@
       "{___} may crash {party}",
       "{group} may crash {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "host",
       "someone"
@@ -10192,6 +10590,7 @@
       "{girl} may push {___}",
       "{___} may push {friend}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["friend"],
     "alt2_nouns": ["friend"],
     "alt1_text": "Her friend choked.",
@@ -10207,6 +10606,7 @@
     ],
     "alt2_text": "I went to a concert.",
     "premise_stats": ["{___} may ring"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "museum"
@@ -10231,6 +10631,7 @@
     ],
     "alt2_text": "The teams shook hands.",
     "premise_stats": ["{___} may end"],
+    "correctAlternative": 2,
     "alt1_nouns": ["team"],
     "alt2_nouns": [
       "hand",
@@ -10255,6 +10656,7 @@
       "{something} may wear {___}",
       "{___} may wear {earring}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["ear"],
     "alt2_nouns": [
       "someone",
@@ -10279,6 +10681,7 @@
       "{airline} may mishandle {___}",
       "{___} may mishandle {luggage}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "compensation",
       "someone"
@@ -10312,6 +10715,7 @@
       "{someone} may scrub {stain} on {___}",
       "{someone} may scrub {___} on {floor}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "something",
       "stain"
@@ -10343,6 +10747,7 @@
       "{someone} may tidy up {___}",
       "{___} may tidy up {house}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "work",
       "someone"
@@ -10373,6 +10778,7 @@
       "{___} may decline {hamburger}",
       "{girl} may decline {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "vegetarian"
@@ -10400,6 +10806,7 @@
       "{___} may light {candle}",
       "{someone} may light {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "candle",
       "something"
@@ -10426,6 +10833,7 @@
       "{___} may spend {day} at {pool}",
       "{someone} may spend {___} at {pool}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "ankle"
@@ -10450,6 +10858,7 @@
       "{man} may receive {___}",
       "{___} may receive {ticket}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "street",
       "someone"
@@ -10471,6 +10880,7 @@
     ],
     "alt2_text": "Her family avoided her.",
     "premise_stats": ["{___} may become famous"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "photographer"
@@ -10501,6 +10911,7 @@
       "{___} may take {shower}",
       "{man} may take {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "someone",
@@ -10516,6 +10927,7 @@
     "alt2_stats": ["{___} may die"],
     "alt2_text": "The laptop's battery died.",
     "premise_stats": ["{___} may go black"],
+    "correctAlternative": 2,
     "alt1_nouns": ["warranty"],
     "alt2_nouns": ["battery"],
     "alt1_text": "The laptop's warranty expired.",
@@ -10537,6 +10949,7 @@
       "{___} may become {bestseller}",
       "{book} may become {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "movie",
       "something"
@@ -10567,6 +10980,7 @@
       "{man} may win {___}",
       "{___} may win {lottery}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "someone",
@@ -10591,6 +11005,7 @@
       "{skier} may slip on {___}",
       "{___} may slip on {slope}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "pole",
       "someone"
@@ -10615,6 +11030,7 @@
     ],
     "alt2_text": "The man retrieved a pen from his pocket.",
     "premise_stats": ["{___} may be tiny"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "glass",
       "man"
@@ -10636,6 +11052,7 @@
     "alt2_stats": ["{___} may flicker"],
     "alt2_text": "The light flickered.",
     "premise_stats": ["{___} may switch up"],
+    "correctAlternative": 2,
     "alt1_nouns": ["light"],
     "alt2_nouns": ["light"],
     "alt1_text": "The light faded.",
@@ -10652,6 +11069,7 @@
     ],
     "alt2_text": "He asked a stranger for the time.",
     "premise_stats": ["{___} may be broken"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "stop",
       "someone"
@@ -10685,6 +11103,7 @@
       "{someone} may put {plate} in {___}",
       "{someone} may put {___} in {sink}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "dinner",
@@ -10706,6 +11125,7 @@
       "{man} may close {___}",
       "{___} may close {book}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["something"],
     "alt1_text": "He finished reading it.",
@@ -10732,6 +11152,7 @@
       "{___} may collect {dust} in {attic}",
       "{album} may collect {___} in {attic}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "year"
@@ -10762,6 +11183,7 @@
       "{someone} may be distracted from {___}",
       "{___} may be distracted from {conversation}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "story",
@@ -10786,6 +11208,7 @@
       "{___} may save {money}",
       "{something} may save {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "money",
@@ -10815,6 +11238,7 @@
       "{someone} may put on {___}",
       "{___} may put on {shoe}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["paint"],
     "alt1_text": "The floor contained broken glass.",
@@ -10836,6 +11260,7 @@
       "{___} may look after {child}",
       "{something} may look after {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "someone",
@@ -10860,6 +11285,7 @@
       "{driver} may honk {___}",
       "{___} may honk {horn}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "car",
       "lane"
@@ -10887,6 +11313,7 @@
       "{woman} may spot {___}",
       "{___} may spot {friend}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["woman"],
     "alt2_nouns": ["woman"],
     "alt1_text": "The woman waved.",
@@ -10908,6 +11335,7 @@
       "{girl} may desire {___}",
       "{___} may desire {approval}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "rule",
@@ -10932,6 +11360,7 @@
       "{boy} may mimic {___}",
       "{___} may mimic {brother}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "brother",
       "boy"
@@ -10959,6 +11388,7 @@
       "{___} may pack up {belongings}",
       "{someone} may pack up {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "apartment"
@@ -10986,6 +11416,7 @@
       "{mother} may become {___}",
       "{___} may become {level}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "hand",
@@ -11009,6 +11440,7 @@
       "{___} may locate {book} in {stack}",
       "{librarian} may locate {___} in {stack}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "help",
       "someone"
@@ -11033,6 +11465,7 @@
       "{conversation} may be lulled to {___}",
       "{___} may be lulled to {silence}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["something"],
     "alt1_text": "I felt awkward.",
@@ -11048,6 +11481,7 @@
     ],
     "alt2_text": "There was a hole in it.",
     "premise_stats": ["{___} may leak"],
+    "correctAlternative": 2,
     "alt1_nouns": ["it"],
     "alt2_nouns": [
       "something",
@@ -11072,6 +11506,7 @@
       "{family} may postpone {___}",
       "{___} may postpone {barbeque}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "forecast",
       "storm"
@@ -11106,6 +11541,7 @@
       "{___} may put {coin} in {machine} at {laundromat}",
       "{someone} may put {coin} in {machine} at {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["machine"],
     "alt2_nouns": [
       "someone",
@@ -11121,6 +11557,7 @@
     "alt2_stats": ["{___} may be foggy"],
     "alt2_text": "It was foggy.",
     "premise_stats": ["{___} may travel"],
+    "correctAlternative": 2,
     "alt1_nouns": ["it"],
     "alt2_nouns": ["it"],
     "alt1_text": "It was cloudy.",
@@ -11143,6 +11580,7 @@
       "{girl} may meet {___}",
       "{___} may meet {actor}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "film",
       "something"
@@ -11170,6 +11608,7 @@
       "{woman} may press down on {___}",
       "{___} may press down on {key}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["sound"],
     "alt2_nouns": ["key"],
     "alt1_text": "A sound played.",
@@ -11190,6 +11629,7 @@
       "{someone} may clench {___} in {fist}",
       "{___} may clench {wrapper} in {fist}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["wrapper"],
     "alt2_nouns": ["wrapper"],
     "alt1_text": "The wrapper crinkled.",
@@ -11208,6 +11648,7 @@
       "{woman} may be convicted for {___}",
       "{___} may be convicted for {crime}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["jury"],
     "alt2_nouns": ["someone"],
     "alt1_text": "The jury was fair.",
@@ -11220,6 +11661,7 @@
     "alt2_stats": ["{___} may whistle"],
     "alt2_text": "The teapot whistled.",
     "premise_stats": ["{___} may boil"],
+    "correctAlternative": 2,
     "alt1_nouns": ["teapot"],
     "alt2_nouns": ["teapot"],
     "alt1_text": "The teapot cooled.",
@@ -11241,6 +11683,7 @@
       "{city} may re-elect {___}",
       "{___} may re-elect {mayor}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "budget",
       "city"
@@ -11268,6 +11711,7 @@
       "{woman} may exaggerate {___}",
       "{___} may exaggerate {detail}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "attention"
@@ -11295,6 +11739,7 @@
       "{___} may hit {crisis}",
       "{woman} may hit {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "someone",
@@ -11316,6 +11761,7 @@
       "{conversation} may turn to {___}",
       "{___} may turn to {politics}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["conversation"],
     "alt2_nouns": ["debate"],
     "alt1_text": "The conversation quieted down.",
@@ -11338,6 +11784,7 @@
       "{___} may break out in {hall}",
       "{fistfight} may break out in {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "principal",
@@ -11363,6 +11810,7 @@
       "{___} may go into {coma}",
       "{patient} may go into {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "trauma",
       "someone"
@@ -11384,6 +11832,7 @@
     "alt2_stats": ["{___} may pass"],
     "alt2_text": "His mother passed away.",
     "premise_stats": ["{___} may grieve"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "wife",
       "someone"
@@ -11413,6 +11862,7 @@
       "{___} may go into {denial} about {tragedy}",
       "{man} may go into {denial} about {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "something"
@@ -11440,6 +11890,7 @@
       "{something} may eat {___}",
       "{___} may eat {diet}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "class"
@@ -11467,6 +11918,7 @@
       "{girl} may have {___}",
       "{___} may have {phobia}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["someone"],
     "alt1_text": "She rescued an abandoned dog.",
@@ -11488,6 +11940,7 @@
       "{woman} may visit {___}",
       "{___} may visit {family}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "She distrusted them.",
@@ -11511,6 +11964,7 @@
       "{girl} may apply {___} to {paper}",
       "{___} may apply {scissors} to {paper}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["something"],
     "alt2_nouns": ["paper"],
     "alt1_text": "The paper sliced apart.",
@@ -11532,6 +11986,7 @@
       "{___} may implement {code}",
       "{principal} may implement {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "student",
       "decision"
@@ -11562,6 +12017,7 @@
       "{someone} may burst into {___}",
       "{___} may burst into {fit}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "tear",
@@ -11586,6 +12042,7 @@
       "{something} may lighten {___}",
       "{___} may lighten {mood}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": [
       "someone",
@@ -11604,6 +12061,7 @@
     ],
     "alt2_text": "I pricked it.",
     "premise_stats": ["{___} may expand"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "something"
@@ -11634,6 +12092,7 @@
       "{___} may have {attack}",
       "{man} may have {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "friend"
@@ -11664,6 +12123,7 @@
       "{man} may break {___}",
       "{___} may break {toe}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "sock",
       "someone",
@@ -11698,6 +12158,7 @@
       "{___} may reveal {information} to {therapist}",
       "{man} may reveal {information} to {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "therapist",
       "someone"
@@ -11722,6 +12183,7 @@
     ],
     "alt2_text": "The assailant took the man's wallet.",
     "premise_stats": ["{___} may fall unconscious"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "assailant",
       "head",
@@ -11748,6 +12210,7 @@
     ],
     "alt2_text": "My family held a reunion.",
     "premise_stats": ["{___} may pass"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "family",
       "funeral"
@@ -11778,6 +12241,7 @@
       "{___} may pull over {celebrity}",
       "{officer} may pull over {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "celebrity",
       "bribe"
@@ -11808,6 +12272,7 @@
       "{patient} may undergo {___}",
       "{___} may undergo {procedure}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["procedure"],
     "alt2_nouns": [
       "specialist",
@@ -11831,6 +12296,7 @@
       "{___} may catch {shirtsleeve} on {rung}",
       "{man} may catch {___} on {rung}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "fence",
       "someone"
@@ -11852,6 +12318,7 @@
     ],
     "alt2_text": "He joined the basketball team.",
     "premise_stats": ["{___} may grow taller"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "spurt"
@@ -11876,6 +12343,7 @@
     ],
     "alt2_text": "I washed the windows.",
     "premise_stats": ["{___} may be dim"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "blind"
@@ -11900,6 +12368,7 @@
     ],
     "alt2_text": "She swallowed her gum.",
     "premise_stats": ["{___} may ache"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "tooth",
       "someone"
@@ -11924,6 +12393,7 @@
     ],
     "alt2_text": "I downloaded a virus.",
     "premise_stats": ["{___} may crash"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "file",
       "someone"
@@ -11954,6 +12424,7 @@
       "{investigator} may deem {___}",
       "{___} may deem {death}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "someone",
       "note"
@@ -11978,6 +12449,7 @@
     ],
     "alt2_text": "The child yanked the tablecloth.",
     "premise_stats": ["{___} may spill"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "child",
       "table"
@@ -12005,6 +12477,7 @@
       "{spy} may discover {___}",
       "{___} may discover {location}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "phone",
       "spy"
@@ -12034,6 +12507,7 @@
       "{father} may put {daughter} in {___}",
       "{___} may put {daughter} in {stroller}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["something"],
     "alt2_nouns": [
       "someone",
@@ -12055,6 +12529,7 @@
       "{chef} may press down on {___}",
       "{___} may press down on {dough}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["dough"],
     "alt2_nouns": ["dough"],
     "alt1_text": "The dough crumbled.",
@@ -12070,6 +12545,7 @@
     ],
     "alt2_text": "We ate them.",
     "premise_stats": ["{___} may ripen"],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "We squeezed them.",
@@ -12095,6 +12571,7 @@
       "{___} may overflow with {letter}",
       "{mailbox} may overflow with {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["lid"],
     "alt2_nouns": [
       "vacation",
@@ -12119,6 +12596,7 @@
       "{___} may read {cartoon} in {newspaper}",
       "{man} may read {cartoon} in {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "coffee",
       "someone"
@@ -12146,6 +12624,7 @@
       "{___} may receive {praise}",
       "{leader} may receive {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "poverty",
       "someone"
@@ -12173,6 +12652,7 @@
       "{___} may approach {man}",
       "{someone} may approach {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "He looked busy.",
@@ -12191,6 +12671,7 @@
       "{chandelier} may be shattered on {___}",
       "{___} may be shattered on {floor}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "chandelier",
       "ceiling"
@@ -12212,6 +12693,7 @@
     ],
     "alt2_text": "I petted it.",
     "premise_stats": ["{___} may purr"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "someone",
       "something"
@@ -12239,6 +12721,7 @@
       "{boy} may push {___}",
       "{___} may push {sister}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "sister",
       "someone"
@@ -12260,6 +12743,7 @@
     ],
     "alt2_text": "Oil spilled into the ocean.",
     "premise_stats": ["{___} may diminish"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "ocean",
       "boat"
@@ -12289,6 +12773,7 @@
       "{someone} may run {___} under {water}",
       "{___} may run {cube} under {water}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "finger",
       "cube"
@@ -12315,6 +12800,7 @@
       "{man} may drink {water} with {___}",
       "{man} may drink {___} with {meal}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["meal"],
     "alt2_nouns": ["meal"],
     "alt1_text": "His meal was cold.",
@@ -12336,6 +12822,7 @@
       "{___} may come into {boutique}",
       "{customer} may come into {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "home",
       "someone",
@@ -12368,6 +12855,7 @@
       "{odor} may fill {___}",
       "{___} may fill {room}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "hand",
       "someone",
@@ -12391,6 +12879,7 @@
     "alt2_stats": ["{___} may be intoxicated"],
     "alt2_text": "She was intoxicated.",
     "premise_stats": ["{___} may stay"],
+    "correctAlternative": 1,
     "alt1_nouns": ["someone"],
     "alt2_nouns": ["someone"],
     "alt1_text": "She was contagious.",
@@ -12412,6 +12901,7 @@
       "{___} may attract {paperclip}",
       "{magnet} may attract {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "paperclip",
       "magnet"
@@ -12442,6 +12932,7 @@
       "{___} may miss {work}",
       "{employee} may miss {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "touch",
       "family",
@@ -12471,6 +12962,7 @@
       "{someone} may order {___}",
       "{___} may order {pizza}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["pizza"],
     "alt2_nouns": ["pizza"],
     "alt1_text": "The pizza was delivered.",
@@ -12492,6 +12984,7 @@
       "{gardener} may pull {___}",
       "{___} may pull {weed}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["weed"],
     "alt2_nouns": [
       "seed",
@@ -12510,6 +13003,7 @@
     ],
     "alt2_text": "I glued the button back on.",
     "premise_stats": ["{___} may fall off"],
+    "correctAlternative": 1,
     "alt1_nouns": [
       "button",
       "someone"
@@ -12540,6 +13034,7 @@
       "{___} may lose {hold}",
       "{boy} may lose {___}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["bar"],
     "alt2_nouns": [
       "fragrance",
@@ -12564,6 +13059,7 @@
       "{___} may wear {sunglass}",
       "{celebrity} may wear {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "something",
       "fan"
@@ -12589,6 +13085,7 @@
     ],
     "alt2_text": "I brought my umbrella to work.",
     "premise_stats": ["{___} may look dark"],
+    "correctAlternative": 2,
     "alt1_nouns": [
       "work",
       "someone",
@@ -12619,6 +13116,7 @@
       "{man} may gain {___}",
       "{___} may gain {weight}"
     ],
+    "correctAlternative": 1,
     "alt1_nouns": ["suit"],
     "alt2_nouns": ["shoe"],
     "alt1_text": "He got his suit altered.",
@@ -12637,6 +13135,7 @@
       "{___} may move to {shoulder}",
       "{car} may move to {___}"
     ],
+    "correctAlternative": 2,
     "alt1_nouns": ["light"],
     "alt2_nouns": ["ambulance"],
     "alt1_text": "The traffic light turned green.",
@@ -12652,6 +13151,7 @@
     ],
     "alt2_text": "The pilot made an error.",
     "premise_stats": ["{___} may be faulty"],
+    "correctAlternative": 1,
     "alt1_nouns": ["airplane"],
     "alt2_nouns": [
       "error",
