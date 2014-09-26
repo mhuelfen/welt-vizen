@@ -42,7 +42,6 @@ function eval_with_copa_questions(json_path){
   });
 }
 
-
 /*
  * Eval all copa questions.
  */
@@ -57,11 +56,11 @@ function eval_all_copa_questions(copa_questions) {
     );
 
     }
-    if (quest_num === '2'){
-      // TODO remove this only uses the first question
-      console.log('DEV MODE ONLY FIRST QUESTION PROCESSED');
-      break;
-    }
+    // if (quest_num === '2'){
+    //   // TODO remove this only uses the first question
+    //   console.log('DEV MODE ONLY FIRST QUESTION PROCESSED');
+    //   break;
+    // }
   }
 
   // TODO collect promises
@@ -98,6 +97,7 @@ function eval_copa_question(copa_question,quest_num) {
 function count_paths_for_alternative(quest_num, alt_num, quest_options) {
   var path_len_sum = 0,
     path_lens = 0;
+
   //console.log('quest_options',quest_options)
 
   return Q.Promise(function(resolve, reject, notify) {
@@ -116,12 +116,14 @@ function count_paths_for_alternative(quest_num, alt_num, quest_options) {
 function count_paths(quest_options, callback) { 
   var path_count = 0;
   var path_len_sum = 0;
+
   // console.log('Fired queries\t' + quest_options.length);
   async.forEach(quest_options, 
     function(quest_option, callback) {
       // generate query
-      //console.log('query_opt: ' + quest_option);
-      query = build_copa_query(quest_option[0], quest_option[1], quest_option[2], quest_option[3],'allshorttest',5,15);
+      // console.log('query_opt: ' + quest_option);
+      
+      var query = build_copa_query(quest_option[0], quest_option[1], quest_option[2], quest_option[3],'allshorttest',5,15);
 
       // query neo4j and count found paths
       db.query(query, {}, function (err, result) {
@@ -131,16 +133,16 @@ function count_paths(quest_options, callback) {
         */
         // add the found path to the count for this alternative
         path_count += result.length;
-        
+
         /*
         * Path length heuristic.
         */
         // for path length heuristic loop over results and add path length
-        for (resultNr in result){
+        result.forEach(function(result_item) {
           // this is the length of one path 
-          path_len_sum += result[resultNr]['p'].length;
+          path_len_sum += result_item['p'].length;
           // console.log(query + ' ### ' + found_paths + JSON.stringify(result));
-        }
+        });
 
         // signal that call back finished
         callback();
@@ -166,7 +168,7 @@ function count_paths(quest_options, callback) {
  * Build cypher query with given data. Algorithm parameters are from the GUI.
  */
 function build_copa_query(start_content, start_type, end_content, end_type,algo, max_length,max_paths) {
-  // console.log(start_content, start_type, end_content, end_type, algo, max_length, max_paths);
+  
   var query = 'START ';
 
   // start node
