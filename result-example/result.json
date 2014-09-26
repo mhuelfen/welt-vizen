@@ -1,0 +1,4580 @@
+{
+    "table": {
+        "_response": {
+            "columns": [
+                "nouns",
+                "stats",
+                "rels",
+                "p"
+            ],
+            "data": [
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                12472,
+                                "waistcoat"
+                            ],
+                            [
+                                6237,
+                                "it"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                58401,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.86578625
+                                }
+                            ],
+                            [
+                                6043632,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6275145,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.86578625
+                            },
+                            {
+                                "word": "waistcoat"
+                            },
+                            {},
+                            {
+                                "word": "it"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "12472",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "waistcoat"
+                                }
+                            },
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            },
+                            {
+                                "id": "6237",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "it"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6275145",
+                                "type": "MAY_BE",
+                                "startNode": "6237",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6043632",
+                                "type": "MAY_BE",
+                                "startNode": "12472",
+                                "endNode": "6237",
+                                "properties": {}
+                            },
+                            {
+                                "id": "58401",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "12472",
+                                "properties": {
+                                    "cos_dist": 0.86578625
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                4869,
+                                "garment"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                66780,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.85125446
+                                }
+                            ],
+                            [
+                                6283089,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.85125446
+                            },
+                            {
+                                "word": "garment"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4869",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "garment"
+                                }
+                            },
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6283089",
+                                "type": "MAY_BE",
+                                "startNode": "4869",
+                                "endNode": "10744",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "66780",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "4869",
+                                "properties": {
+                                    "cos_dist": 0.85125446
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                1687,
+                                "cap"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                125274,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.81183904
+                                }
+                            ],
+                            [
+                                6312384,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.81183904
+                            },
+                            {
+                                "word": "cap"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "1687",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "cap"
+                                }
+                            },
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6312384",
+                                "type": "MAY_BE",
+                                "startNode": "1687",
+                                "endNode": "10744",
+                                "properties": {}
+                            },
+                            {
+                                "id": "125274",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "1687",
+                                "properties": {
+                                    "cos_dist": 0.81183904
+                                }
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                11609,
+                                "thing"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                5964223,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                108844,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8518889
+                                }
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {},
+                            {
+                                "word": "thing"
+                            },
+                            {
+                                "cos_dist": 0.8518889
+                            },
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "11609",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "thing"
+                                }
+                            },
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "5964223",
+                                "type": "MAY_BE",
+                                "startNode": "10457",
+                                "endNode": "11609",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "108844",
+                                "type": "SIM_NOUN",
+                                "startNode": "11609",
+                                "endNode": "10744",
+                                "properties": {
+                                    "cos_dist": 0.8518889
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                11609,
+                                "thing"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                5964223,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6227462,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {},
+                            {
+                                "word": "thing"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "11609",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "thing"
+                                }
+                            },
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "5964223",
+                                "type": "MAY_BE",
+                                "startNode": "10457",
+                                "endNode": "11609",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6227462",
+                                "type": "MAY_BE",
+                                "startNode": "11609",
+                                "endNode": "10744",
+                                "properties": {}
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                7066,
+                                "mask"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                71366,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8433941
+                                }
+                            ],
+                            [
+                                6213526,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8433941
+                            },
+                            {
+                                "word": "mask"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "7066",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "mask"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "71366",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "7066",
+                                "properties": {
+                                    "cos_dist": 0.8433941
+                                }
+                            },
+                            {
+                                "id": "6213526",
+                                "type": "MAY_BE",
+                                "startNode": "7066",
+                                "endNode": "10744",
+                                "properties": {}
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                7066,
+                                "mask"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                71366,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8433941
+                                }
+                            ],
+                            [
+                                5954714,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8433941
+                            },
+                            {
+                                "word": "mask"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "7066",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "mask"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "5954714",
+                                "type": "MAY_BE",
+                                "startNode": "7066",
+                                "endNode": "10744",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "71366",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "7066",
+                                "properties": {
+                                    "cos_dist": 0.8433941
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                7066,
+                                "mask"
+                            ],
+                            [
+                                7711,
+                                "night"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                71366,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8433941
+                                }
+                            ],
+                            [
+                                6219075,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                5869330,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8433941
+                            },
+                            {
+                                "word": "mask"
+                            },
+                            {},
+                            {
+                                "word": "night"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "7711",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "night"
+                                }
+                            },
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "7066",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "mask"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "5869330",
+                                "type": "MAY_BE",
+                                "startNode": "7711",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6219075",
+                                "type": "MAY_BE",
+                                "startNode": "7066",
+                                "endNode": "7711",
+                                "properties": {}
+                            },
+                            {
+                                "id": "71366",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "7066",
+                                "properties": {
+                                    "cos_dist": 0.8433941
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                7066,
+                                "mask"
+                            ],
+                            [
+                                7711,
+                                "night"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                71366,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8433941
+                                }
+                            ],
+                            [
+                                6032269,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                5869330,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8433941
+                            },
+                            {
+                                "word": "mask"
+                            },
+                            {},
+                            {
+                                "word": "night"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "7711",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "night"
+                                }
+                            },
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "7066",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "mask"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6032269",
+                                "type": "MAY_BE",
+                                "startNode": "7066",
+                                "endNode": "7711",
+                                "properties": {}
+                            },
+                            {
+                                "id": "5869330",
+                                "type": "MAY_BE",
+                                "startNode": "7711",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "71366",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "7066",
+                                "properties": {
+                                    "cos_dist": 0.8433941
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                2130,
+                                "clothes"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                82326,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8224282
+                                }
+                            ],
+                            [
+                                6263185,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8224282
+                            },
+                            {
+                                "word": "clothes"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "2130",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "clothes"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6263185",
+                                "type": "MAY_BE",
+                                "startNode": "2130",
+                                "endNode": "10744",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "82326",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "2130",
+                                "properties": {
+                                    "cos_dist": 0.8224282
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                10431,
+                                "shirt"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                116932,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8073767
+                                }
+                            ],
+                            [
+                                6312652,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8073767
+                            },
+                            {
+                                "word": "shirt"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10431",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shirt"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "116932",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "10431",
+                                "properties": {
+                                    "cos_dist": 0.8073767
+                                }
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6312652",
+                                "type": "MAY_BE",
+                                "startNode": "10431",
+                                "endNode": "10744",
+                                "properties": {}
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                11731,
+                                "toga"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                58409,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.834506
+                                }
+                            ],
+                            [
+                                6315843,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.834506
+                            },
+                            {
+                                "word": "toga"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "11731",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "toga"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6315843",
+                                "type": "MAY_BE",
+                                "startNode": "11731",
+                                "endNode": "10744",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "58409",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "11731",
+                                "properties": {
+                                    "cos_dist": 0.834506
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                12113,
+                                "uniform"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                58381,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.77423096
+                                }
+                            ],
+                            [
+                                6263054,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.77423096
+                            },
+                            {
+                                "word": "uniform"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            },
+                            {
+                                "id": "12113",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "uniform"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6263054",
+                                "type": "MAY_BE",
+                                "startNode": "12113",
+                                "endNode": "10744",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "58381",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "12113",
+                                "properties": {
+                                    "cos_dist": 0.77423096
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                5325,
+                                "hat"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                110996,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.84681386
+                                }
+                            ],
+                            [
+                                6277890,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.84681386
+                            },
+                            {
+                                "word": "hat"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            },
+                            {
+                                "id": "5325",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "hat"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "110996",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "5325",
+                                "properties": {
+                                    "cos_dist": 0.84681386
+                                }
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6277890",
+                                "type": "MAY_BE",
+                                "startNode": "5325",
+                                "endNode": "10744",
+                                "properties": {}
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                2648,
+                                "costume"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                24614,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8325663
+                                }
+                            ],
+                            [
+                                6284335,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8325663
+                            },
+                            {
+                                "word": "costume"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            },
+                            {
+                                "id": "2648",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "costume"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "24614",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "2648",
+                                "properties": {
+                                    "cos_dist": 0.8325663
+                                }
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6284335",
+                                "type": "MAY_BE",
+                                "startNode": "2648",
+                                "endNode": "10744",
+                                "properties": {}
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                2648,
+                                "costume"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                24614,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8325663
+                                }
+                            ],
+                            [
+                                6218283,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8325663
+                            },
+                            {
+                                "word": "costume"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            },
+                            {
+                                "id": "2648",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "costume"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "24614",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "2648",
+                                "properties": {
+                                    "cos_dist": 0.8325663
+                                }
+                            },
+                            {
+                                "id": "6218283",
+                                "type": "MAY_BE",
+                                "startNode": "2648",
+                                "endNode": "10744",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                10436,
+                                "shoe"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                49430,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8219283
+                                }
+                            ],
+                            [
+                                6306301,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8219283
+                            },
+                            {
+                                "word": "shoe"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            },
+                            {
+                                "id": "10436",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shoe"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6306301",
+                                "type": "MAY_BE",
+                                "startNode": "10436",
+                                "endNode": "10744",
+                                "properties": {}
+                            },
+                            {
+                                "id": "49430",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "10436",
+                                "properties": {
+                                    "cos_dist": 0.8219283
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                11221,
+                                "suit"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                58393,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8435081
+                                }
+                            ],
+                            [
+                                6184878,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8435081
+                            },
+                            {
+                                "word": "suit"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            },
+                            {
+                                "id": "11221",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "suit"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6184878",
+                                "type": "MAY_BE",
+                                "startNode": "11221",
+                                "endNode": "10744",
+                                "properties": {}
+                            },
+                            {
+                                "id": "58393",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "11221",
+                                "properties": {
+                                    "cos_dist": 0.8435081
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                11221,
+                                "suit"
+                            ],
+                            [
+                                860,
+                                "average"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                58393,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8435081
+                                }
+                            ],
+                            [
+                                6058719,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                5862453,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8435081
+                            },
+                            {
+                                "word": "suit"
+                            },
+                            {},
+                            {
+                                "word": "average"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            },
+                            {
+                                "id": "11221",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "suit"
+                                }
+                            },
+                            {
+                                "id": "860",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "average"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6058719",
+                                "type": "MAY_BE",
+                                "startNode": "11221",
+                                "endNode": "860",
+                                "properties": {}
+                            },
+                            {
+                                "id": "5862453",
+                                "type": "MAY_BE",
+                                "startNode": "860",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "58393",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "11221",
+                                "properties": {
+                                    "cos_dist": 0.8435081
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                11221,
+                                "suit"
+                            ],
+                            [
+                                860,
+                                "average"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                58393,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.8435081
+                                }
+                            ],
+                            [
+                                5871017,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                5862453,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.8435081
+                            },
+                            {
+                                "word": "suit"
+                            },
+                            {},
+                            {
+                                "word": "average"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            },
+                            {
+                                "id": "11221",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "suit"
+                                }
+                            },
+                            {
+                                "id": "860",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "average"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "5871017",
+                                "type": "MAY_BE",
+                                "startNode": "11221",
+                                "endNode": "860",
+                                "properties": {}
+                            },
+                            {
+                                "id": "5862453",
+                                "type": "MAY_BE",
+                                "startNode": "860",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "58393",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "11221",
+                                "properties": {
+                                    "cos_dist": 0.8435081
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "row": [
+                        [
+                            [
+                                10457,
+                                "shorts"
+                            ],
+                            [
+                                3578,
+                                "dress"
+                            ],
+                            [
+                                10744,
+                                "something"
+                            ],
+                            [
+                                4625,
+                                "forecast"
+                            ]
+                        ],
+                        [],
+                        [
+                            [
+                                30798,
+                                "SIM_NOUN",
+                                {
+                                    "cos_dist": 0.83764863
+                                }
+                            ],
+                            [
+                                6249235,
+                                "MAY_BE",
+                                {}
+                            ],
+                            [
+                                6296496,
+                                "MAY_BE",
+                                {}
+                            ]
+                        ],
+                        [
+                            {
+                                "word": "shorts"
+                            },
+                            {
+                                "cos_dist": 0.83764863
+                            },
+                            {
+                                "word": "dress"
+                            },
+                            {},
+                            {
+                                "word": "something"
+                            },
+                            {},
+                            {
+                                "word": "forecast"
+                            }
+                        ]
+                    ],
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "4625",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "forecast"
+                                }
+                            },
+                            {
+                                "id": "10744",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "something"
+                                }
+                            },
+                            {
+                                "id": "10457",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "shorts"
+                                }
+                            },
+                            {
+                                "id": "3578",
+                                "labels": [
+                                    "Noun"
+                                ],
+                                "properties": {
+                                    "word": "dress"
+                                }
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "6249235",
+                                "type": "MAY_BE",
+                                "startNode": "3578",
+                                "endNode": "10744",
+                                "properties": {}
+                            },
+                            {
+                                "id": "6296496",
+                                "type": "MAY_BE",
+                                "startNode": "10744",
+                                "endNode": "4625",
+                                "properties": {}
+                            },
+                            {
+                                "id": "30798",
+                                "type": "SIM_NOUN",
+                                "startNode": "10457",
+                                "endNode": "3578",
+                                "properties": {
+                                    "cos_dist": 0.83764863
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "stats": {
+                "contains_updates": false,
+                "nodes_created": 0,
+                "nodes_deleted": 0,
+                "properties_set": 0,
+                "relationships_created": 0,
+                "relationship_deleted": 0,
+                "labels_added": 0,
+                "labels_removed": 0,
+                "indexes_added": 0,
+                "indexes_removed": 0,
+                "constraints_added": 0,
+                "constraints_removed": 0
+            }
+        },
+        "nodes": [
+            {
+                "id": "12472",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "waistcoat"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "6237",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "it"
+                }
+            },
+            {
+                "id": "4869",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "garment"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "1687",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "cap"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "11609",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "thing"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "11609",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "thing"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "7066",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "mask"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "7066",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "mask"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "7711",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "night"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "7066",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "mask"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "7711",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "night"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "7066",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "mask"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "2130",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "clothes"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10431",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shirt"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "11731",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "toga"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "12113",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "uniform"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "5325",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "hat"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "2648",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "costume"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "2648",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "costume"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "10436",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shoe"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "11221",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "suit"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "11221",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "suit"
+                }
+            },
+            {
+                "id": "860",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "average"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "11221",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "suit"
+                }
+            },
+            {
+                "id": "860",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "average"
+                }
+            },
+            {
+                "id": "4625",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "forecast"
+                }
+            },
+            {
+                "id": "10744",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "something"
+                }
+            },
+            {
+                "id": "10457",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "shorts"
+                }
+            },
+            {
+                "id": "3578",
+                "labels": [
+                    "Noun"
+                ],
+                "properties": {
+                    "word": "dress"
+                }
+            }
+        ],
+        "other": [],
+        "relationships": [
+            {
+                "id": "6275145",
+                "type": "MAY_BE",
+                "startNode": "6237",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "6043632",
+                "type": "MAY_BE",
+                "startNode": "12472",
+                "endNode": "6237",
+                "properties": {}
+            },
+            {
+                "id": "58401",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "12472",
+                "properties": {
+                    "cos_dist": 0.86578625
+                }
+            },
+            {
+                "id": "6283089",
+                "type": "MAY_BE",
+                "startNode": "4869",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "66780",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "4869",
+                "properties": {
+                    "cos_dist": 0.85125446
+                }
+            },
+            {
+                "id": "6312384",
+                "type": "MAY_BE",
+                "startNode": "1687",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "125274",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "1687",
+                "properties": {
+                    "cos_dist": 0.81183904
+                }
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "5964223",
+                "type": "MAY_BE",
+                "startNode": "10457",
+                "endNode": "11609",
+                "properties": {}
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "108844",
+                "type": "SIM_NOUN",
+                "startNode": "11609",
+                "endNode": "10744",
+                "properties": {
+                    "cos_dist": 0.8518889
+                }
+            },
+            {
+                "id": "5964223",
+                "type": "MAY_BE",
+                "startNode": "10457",
+                "endNode": "11609",
+                "properties": {}
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "6227462",
+                "type": "MAY_BE",
+                "startNode": "11609",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "71366",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "7066",
+                "properties": {
+                    "cos_dist": 0.8433941
+                }
+            },
+            {
+                "id": "6213526",
+                "type": "MAY_BE",
+                "startNode": "7066",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "5954714",
+                "type": "MAY_BE",
+                "startNode": "7066",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "71366",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "7066",
+                "properties": {
+                    "cos_dist": 0.8433941
+                }
+            },
+            {
+                "id": "5869330",
+                "type": "MAY_BE",
+                "startNode": "7711",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "6219075",
+                "type": "MAY_BE",
+                "startNode": "7066",
+                "endNode": "7711",
+                "properties": {}
+            },
+            {
+                "id": "71366",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "7066",
+                "properties": {
+                    "cos_dist": 0.8433941
+                }
+            },
+            {
+                "id": "6032269",
+                "type": "MAY_BE",
+                "startNode": "7066",
+                "endNode": "7711",
+                "properties": {}
+            },
+            {
+                "id": "5869330",
+                "type": "MAY_BE",
+                "startNode": "7711",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "71366",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "7066",
+                "properties": {
+                    "cos_dist": 0.8433941
+                }
+            },
+            {
+                "id": "6263185",
+                "type": "MAY_BE",
+                "startNode": "2130",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "82326",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "2130",
+                "properties": {
+                    "cos_dist": 0.8224282
+                }
+            },
+            {
+                "id": "116932",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "10431",
+                "properties": {
+                    "cos_dist": 0.8073767
+                }
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "6312652",
+                "type": "MAY_BE",
+                "startNode": "10431",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "6315843",
+                "type": "MAY_BE",
+                "startNode": "11731",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "58409",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "11731",
+                "properties": {
+                    "cos_dist": 0.834506
+                }
+            },
+            {
+                "id": "6263054",
+                "type": "MAY_BE",
+                "startNode": "12113",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "58381",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "12113",
+                "properties": {
+                    "cos_dist": 0.77423096
+                }
+            },
+            {
+                "id": "110996",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "5325",
+                "properties": {
+                    "cos_dist": 0.84681386
+                }
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "6277890",
+                "type": "MAY_BE",
+                "startNode": "5325",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "24614",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "2648",
+                "properties": {
+                    "cos_dist": 0.8325663
+                }
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "6284335",
+                "type": "MAY_BE",
+                "startNode": "2648",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "24614",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "2648",
+                "properties": {
+                    "cos_dist": 0.8325663
+                }
+            },
+            {
+                "id": "6218283",
+                "type": "MAY_BE",
+                "startNode": "2648",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "6306301",
+                "type": "MAY_BE",
+                "startNode": "10436",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "49430",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "10436",
+                "properties": {
+                    "cos_dist": 0.8219283
+                }
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "6184878",
+                "type": "MAY_BE",
+                "startNode": "11221",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "58393",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "11221",
+                "properties": {
+                    "cos_dist": 0.8435081
+                }
+            },
+            {
+                "id": "6058719",
+                "type": "MAY_BE",
+                "startNode": "11221",
+                "endNode": "860",
+                "properties": {}
+            },
+            {
+                "id": "5862453",
+                "type": "MAY_BE",
+                "startNode": "860",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "58393",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "11221",
+                "properties": {
+                    "cos_dist": 0.8435081
+                }
+            },
+            {
+                "id": "5871017",
+                "type": "MAY_BE",
+                "startNode": "11221",
+                "endNode": "860",
+                "properties": {}
+            },
+            {
+                "id": "5862453",
+                "type": "MAY_BE",
+                "startNode": "860",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "58393",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "11221",
+                "properties": {
+                    "cos_dist": 0.8435081
+                }
+            },
+            {
+                "id": "6249235",
+                "type": "MAY_BE",
+                "startNode": "3578",
+                "endNode": "10744",
+                "properties": {}
+            },
+            {
+                "id": "6296496",
+                "type": "MAY_BE",
+                "startNode": "10744",
+                "endNode": "4625",
+                "properties": {}
+            },
+            {
+                "id": "30798",
+                "type": "SIM_NOUN",
+                "startNode": "10457",
+                "endNode": "3578",
+                "properties": {
+                    "cos_dist": 0.83764863
+                }
+            }
+        ],
+        "size": 21,
+        "stats": {
+            "contains_updates": false,
+            "nodes_created": 0,
+            "nodes_deleted": 0,
+            "properties_set": 0,
+            "relationships_created": 0,
+            "relationship_deleted": 0,
+            "labels_added": 0,
+            "labels_removed": 0,
+            "indexes_added": 0,
+            "indexes_removed": 0,
+            "constraints_added": 0,
+            "constraints_removed": 0
+        }
+    },
+    "graph": {
+        "nodeMap": {
+            "860": {
+                "word": "average"
+            },
+            "1687": {
+                "word": "cap"
+            },
+            "2130": {
+                "word": "clothes"
+            },
+            "2648": {
+                "word": "costume"
+            },
+            "3578": {
+                "word": "dress"
+            },
+            "4625": {
+                "word": "forecast"
+            },
+            "4869": {
+                "word": "garment"
+            },
+            "5325": {
+                "word": "hat"
+            },
+            "6237": {
+                "word": "it"
+            },
+            "7066": {
+                "word": "mask"
+            },
+            "7711": {
+                "word": "night"
+            },
+            "10431": {
+                "word": "shirt"
+            },
+            "10436": {
+                "word": "shoe"
+            },
+            "10457": {
+                "word": "shorts"
+            },
+            "10744": {
+                "word": "something"
+            },
+            "11221": {
+                "word": "suit"
+            },
+            "11609": {
+                "word": "thing"
+            },
+            "11731": {
+                "word": "toga"
+            },
+            "12113": {
+                "word": "uniform"
+            },
+            "12472": {
+                "word": "waistcoat"
+            }
+        },
+        "relationshipMap": {
+            "10676": {
+                "cos_dist": 0
+            },
+            "10677": {
+                "cos_dist": 0
+            },
+            "24602": {
+                "cos_dist": 0
+            },
+            "24603": {
+                "cos_dist": 0
+            },
+            "24606": {
+                "cos_dist": 0.79756296
+            },
+            "24607": {
+                "cos_dist": 0.79756296
+            },
+            "24612": {
+                "cos_dist": 0.87249947
+            },
+            "24613": {
+                "cos_dist": 0.87249947
+            },
+            "24614": {
+                "cos_dist": 0.8325663
+            },
+            "24615": {
+                "cos_dist": 0.8325663
+            },
+            "24616": {
+                "cos_dist": 0.8687517
+            },
+            "24617": {
+                "cos_dist": 0.8687517
+            },
+            "24618": {
+                "cos_dist": 0.78258896
+            },
+            "24619": {
+                "cos_dist": 0.78258896
+            },
+            "24626": {
+                "cos_dist": 0.8701668
+            },
+            "24627": {
+                "cos_dist": 0.8701668
+            },
+            "30788": {
+                "cos_dist": 0.7716968
+            },
+            "30789": {
+                "cos_dist": 0.7716968
+            },
+            "30798": {
+                "cos_dist": 0.83764863
+            },
+            "30799": {
+                "cos_dist": 0.83764863
+            },
+            "30800": {
+                "cos_dist": 0.75195616
+            },
+            "30801": {
+                "cos_dist": 0.75195616
+            },
+            "30804": {
+                "cos_dist": 0.8573669
+            },
+            "30805": {
+                "cos_dist": 0.8573669
+            },
+            "30806": {
+                "cos_dist": 0
+            },
+            "30807": {
+                "cos_dist": 0
+            },
+            "30812": {
+                "cos_dist": 0.7659094
+            },
+            "30813": {
+                "cos_dist": 0.7659094
+            },
+            "30818": {
+                "cos_dist": 0.84519726
+            },
+            "30819": {
+                "cos_dist": 0.84519726
+            },
+            "30822": {
+                "cos_dist": 0.84034395
+            },
+            "30823": {
+                "cos_dist": 0.84034395
+            },
+            "49234": {
+                "cos_dist": 0
+            },
+            "49235": {
+                "cos_dist": 0
+            },
+            "49420": {
+                "cos_dist": 0.8370444
+            },
+            "49421": {
+                "cos_dist": 0.8370444
+            },
+            "49430": {
+                "cos_dist": 0.8219283
+            },
+            "49431": {
+                "cos_dist": 0.8219283
+            },
+            "49438": {
+                "cos_dist": 0
+            },
+            "49439": {
+                "cos_dist": 0
+            },
+            "54168": {
+                "cos_dist": 0
+            },
+            "54169": {
+                "cos_dist": 0
+            },
+            "58380": {
+                "cos_dist": 0.77423096
+            },
+            "58381": {
+                "cos_dist": 0.77423096
+            },
+            "58392": {
+                "cos_dist": 0.8435081
+            },
+            "58393": {
+                "cos_dist": 0.8435081
+            },
+            "58396": {
+                "cos_dist": 0
+            },
+            "58397": {
+                "cos_dist": 0
+            },
+            "58400": {
+                "cos_dist": 0.86578625
+            },
+            "58401": {
+                "cos_dist": 0.86578625
+            },
+            "58408": {
+                "cos_dist": 0.834506
+            },
+            "58409": {
+                "cos_dist": 0.834506
+            },
+            "66738": {
+                "cos_dist": 0.81973416
+            },
+            "66739": {
+                "cos_dist": 0.81973416
+            },
+            "66742": {
+                "cos_dist": 0.8659473
+            },
+            "66743": {
+                "cos_dist": 0.8659473
+            },
+            "66748": {
+                "cos_dist": 0.858317
+            },
+            "66749": {
+                "cos_dist": 0.858317
+            },
+            "66764": {
+                "cos_dist": 0.8522648
+            },
+            "66765": {
+                "cos_dist": 0.8522648
+            },
+            "66780": {
+                "cos_dist": 0.85125446
+            },
+            "66781": {
+                "cos_dist": 0.85125446
+            },
+            "66782": {
+                "cos_dist": 0.79746884
+            },
+            "66783": {
+                "cos_dist": 0.79746884
+            },
+            "71362": {
+                "cos_dist": 0.8581649
+            },
+            "71363": {
+                "cos_dist": 0.8581649
+            },
+            "71366": {
+                "cos_dist": 0.8433941
+            },
+            "71367": {
+                "cos_dist": 0.8433941
+            },
+            "71372": {
+                "cos_dist": 0
+            },
+            "71373": {
+                "cos_dist": 0
+            },
+            "71374": {
+                "cos_dist": 0.8583564
+            },
+            "71375": {
+                "cos_dist": 0.8583564
+            },
+            "71512": {
+                "cos_dist": 0
+            },
+            "71513": {
+                "cos_dist": 0
+            },
+            "82306": {
+                "cos_dist": 0.7759537
+            },
+            "82307": {
+                "cos_dist": 0.7759537
+            },
+            "82310": {
+                "cos_dist": 0
+            },
+            "82311": {
+                "cos_dist": 0
+            },
+            "82316": {
+                "cos_dist": 0.83331937
+            },
+            "82317": {
+                "cos_dist": 0.83331937
+            },
+            "82318": {
+                "cos_dist": 0.693809
+            },
+            "82319": {
+                "cos_dist": 0.693809
+            },
+            "82324": {
+                "cos_dist": 0.8733306
+            },
+            "82325": {
+                "cos_dist": 0.8733306
+            },
+            "82326": {
+                "cos_dist": 0.8224282
+            },
+            "82327": {
+                "cos_dist": 0.8224282
+            },
+            "82330": {
+                "cos_dist": 0.71972215
+            },
+            "82331": {
+                "cos_dist": 0.71972215
+            },
+            "82334": {
+                "cos_dist": 0.7715581
+            },
+            "82335": {
+                "cos_dist": 0.7715581
+            },
+            "82348": {
+                "cos_dist": 0.8579425
+            },
+            "82349": {
+                "cos_dist": 0.8579425
+            },
+            "82352": {
+                "cos_dist": 0.79757357
+            },
+            "82353": {
+                "cos_dist": 0.79757357
+            },
+            "82356": {
+                "cos_dist": 0.71750563
+            },
+            "82357": {
+                "cos_dist": 0.71750563
+            },
+            "97988": {
+                "cos_dist": 0
+            },
+            "97989": {
+                "cos_dist": 0
+            },
+            "102532": {
+                "cos_dist": 0
+            },
+            "102533": {
+                "cos_dist": 0
+            },
+            "106474": {
+                "cos_dist": 0.82868487
+            },
+            "106475": {
+                "cos_dist": 0.82868487
+            },
+            "106482": {
+                "cos_dist": 0
+            },
+            "106483": {
+                "cos_dist": 0
+            },
+            "108842": {
+                "cos_dist": 0
+            },
+            "108843": {
+                "cos_dist": 0
+            },
+            "108844": {
+                "cos_dist": 0.8518889
+            },
+            "108845": {
+                "cos_dist": 0.8518889
+            },
+            "110984": {
+                "cos_dist": 0.8648598
+            },
+            "110985": {
+                "cos_dist": 0.8648598
+            },
+            "110994": {
+                "cos_dist": 0.8320382
+            },
+            "110995": {
+                "cos_dist": 0.8320382
+            },
+            "110996": {
+                "cos_dist": 0.84681386
+            },
+            "110997": {
+                "cos_dist": 0.84681386
+            },
+            "110998": {
+                "cos_dist": 0.8304549
+            },
+            "110999": {
+                "cos_dist": 0.8304549
+            },
+            "111010": {
+                "cos_dist": 0.8041941
+            },
+            "111011": {
+                "cos_dist": 0.8041941
+            },
+            "111030": {
+                "cos_dist": 0
+            },
+            "111031": {
+                "cos_dist": 0
+            },
+            "116914": {
+                "cos_dist": 0.7909811
+            },
+            "116915": {
+                "cos_dist": 0.7909811
+            },
+            "116922": {
+                "cos_dist": 0.7910361
+            },
+            "116923": {
+                "cos_dist": 0.7910361
+            },
+            "116924": {
+                "cos_dist": 0.8308368
+            },
+            "116925": {
+                "cos_dist": 0.8308368
+            },
+            "116926": {
+                "cos_dist": 0.86822385
+            },
+            "116927": {
+                "cos_dist": 0.86822385
+            },
+            "116932": {
+                "cos_dist": 0.8073767
+            },
+            "116933": {
+                "cos_dist": 0.8073767
+            },
+            "125232": {
+                "cos_dist": 0.8615088
+            },
+            "125233": {
+                "cos_dist": 0.8615088
+            },
+            "125236": {
+                "cos_dist": 0.8287132
+            },
+            "125237": {
+                "cos_dist": 0.8287132
+            },
+            "125268": {
+                "cos_dist": 0
+            },
+            "125269": {
+                "cos_dist": 0
+            },
+            "125270": {
+                "cos_dist": 0.82487243
+            },
+            "125271": {
+                "cos_dist": 0.82487243
+            },
+            "125272": {
+                "cos_dist": 0.8282566
+            },
+            "125273": {
+                "cos_dist": 0.8282566
+            },
+            "125274": {
+                "cos_dist": 0.81183904
+            },
+            "125275": {
+                "cos_dist": 0.81183904
+            },
+            "125280": {
+                "cos_dist": 0.8533015
+            },
+            "125281": {
+                "cos_dist": 0.8533015
+            },
+            "125286": {
+                "cos_dist": 0.8278227
+            },
+            "125287": {
+                "cos_dist": 0.8278227
+            },
+            "125296": {
+                "cos_dist": 0.87971437
+            },
+            "125297": {
+                "cos_dist": 0.87971437
+            },
+            "125306": {
+                "cos_dist": 0.68517405
+            },
+            "125307": {
+                "cos_dist": 0.68517405
+            },
+            "5760986": {},
+            "5761682": {},
+            "5763574": {},
+            "5766077": {},
+            "5767272": {},
+            "5773503": {},
+            "5777791": {},
+            "5780555": {},
+            "5782488": {},
+            "5786763": {},
+            "5788590": {},
+            "5790327": {},
+            "5792490": {},
+            "5795866": {},
+            "5799117": {},
+            "5803135": {},
+            "5805971": {},
+            "5807250": {},
+            "5808628": {},
+            "5811877": {},
+            "5813229": {},
+            "5816398": {},
+            "5821570": {},
+            "5822118": {},
+            "5824192": {},
+            "5824982": {},
+            "5826330": {},
+            "5826597": {},
+            "5827438": {},
+            "5828651": {},
+            "5829886": {},
+            "5832033": {},
+            "5832478": {},
+            "5834240": {},
+            "5843517": {},
+            "5848666": {},
+            "5851913": {},
+            "5853065": {},
+            "5854937": {},
+            "5855196": {},
+            "5857378": {},
+            "5862453": {},
+            "5869330": {},
+            "5871017": {},
+            "5871713": {},
+            "5882238": {},
+            "5883181": {},
+            "5884980": {},
+            "5891575": {},
+            "5893468": {},
+            "5893491": {},
+            "5899906": {},
+            "5904541": {},
+            "5915380": {},
+            "5919898": {},
+            "5920399": {},
+            "5951473": {},
+            "5954714": {},
+            "5959647": {},
+            "5962797": {},
+            "5964223": {},
+            "5969832": {},
+            "5970542": {},
+            "5973645": {},
+            "5973925": {},
+            "5976104": {},
+            "5976480": {},
+            "5989161": {},
+            "5989832": {},
+            "5993780": {},
+            "6010957": {},
+            "6026531": {},
+            "6030047": {},
+            "6032269": {},
+            "6034602": {},
+            "6037959": {},
+            "6040878": {},
+            "6043632": {},
+            "6058719": {},
+            "6088805": {},
+            "6131647": {},
+            "6134557": {},
+            "6168836": {},
+            "6178702": {},
+            "6181656": {},
+            "6184878": {},
+            "6185550": {},
+            "6197659": {},
+            "6199779": {},
+            "6205901": {},
+            "6207324": {},
+            "6213526": {},
+            "6216147": {},
+            "6218283": {},
+            "6219075": {},
+            "6221702": {},
+            "6223468": {},
+            "6225013": {},
+            "6227462": {},
+            "6232418": {},
+            "6236696": {},
+            "6245052": {},
+            "6245055": {},
+            "6245377": {},
+            "6249235": {},
+            "6250744": {},
+            "6262273": {},
+            "6263054": {},
+            "6263185": {},
+            "6266556": {},
+            "6273850": {},
+            "6275145": {},
+            "6275455": {},
+            "6277890": {},
+            "6278364": {},
+            "6281088": {},
+            "6282488": {},
+            "6283089": {},
+            "6284335": {},
+            "6286730": {},
+            "6287618": {},
+            "6287847": {},
+            "6289207": {},
+            "6289594": {},
+            "6290048": {},
+            "6296205": {},
+            "6296496": {},
+            "6296863": {},
+            "6298877": {},
+            "6302304": {},
+            "6303098": {},
+            "6306301": {},
+            "6306304": {},
+            "6308170": {},
+            "6312384": {},
+            "6312652": {},
+            "6315843": {},
+            "6317760": {},
+            "6318051": {}
+        }
+    }
+}

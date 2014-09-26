@@ -43,24 +43,144 @@ function eval_with_copa_questions(json_path){
 }
 
 /*
+* Calculate accuracy values for eval results.
+*/
+function calc_accuracy(eval_results){
+
+  var decisions = {
+                  'path_count' : {
+                    'right' : 0,
+                    'wrong' : 0,
+                    'same' : 0
+                  }, 
+                  'path_len' : {
+                    'right' : 0,
+                    'wrong' : 0,
+                    'same' : 0
+                  }, 
+                  'path_count_len' : {
+                    'right' : 0,
+                    'wrong' : 0,
+                    'same' : 0
+                  }
+  }
+  // console.log(Object.keys(eval_results));
+
+  eval_results.forEach(function(eval_result) {
+    // console.log('result:' + eval_result);
+    /*
+    * Count results for different eval types.
+    */
+    // Path count.
+    var choosenAlternativePathCount = decide_by_greater_number(eval_result.path_count1, eval_result.path_count2);
+    decisions.path_count = add_decision(decisions.path_count, eval_result.correctAlternative, choosenAlternativePathCount);
+
+    // Path length.
+    var choosenAlternativePathLen = decide_by_smaller_number(eval_result.path_len_sum1, eval_result.path_len_sum2);
+    decisions.path_len = add_decision(decisions.path_len, eval_result.correctAlternative, choosenAlternativePathLen);
+
+    // Path count/ length
+    var choosenAlternativePathCountLen = decide_by_greater_number( eval_result.path_count1 * 1.0 / eval_result.path_len_sum1 , eval_result.path_count2 * 1.0 / eval_result.path_len_sum2);
+    decisions.path_count_len = add_decision(decisions.path_count_len, eval_result.correctAlternative, choosenAlternativePathCountLen);
+
+    // console.log(decisions);
+  });
+
+  /*
+  * Calc accuracies
+  */
+  ['path_count', 'path_len', 'path_count_len'].forEach( function (heuristic) {
+    var decision = decisions[heuristic];
+    var accuracy = decision.right / (decision.right + decision.wrong)
+
+    // split same equally between both to emulate random choice in case where no alternative was choosen.
+    var accuracy_complete = (decision.right + (decision.same / 2.0))/ (decision.right + decision.wrong + decision.same);
+
+    console.log(heuristic + '\tacc: ' + accuracy + '\tacc_same: ' + accuracy_complete);
+  });
+  console.log(decisions);
+}
+
+function add_decision(decision, correctAlternative, choosenAlternative){
+  if (choosenAlternative == 0){
+    decision.same += 1;
+  } else if (correctAlternative == choosenAlternative){
+    decision.right += 1;
+  } else {
+    decision.wrong += 1;
+  }
+  return decision;
+}
+
+/*
+* Decide towards higher number.
+*/
+function decide_by_greater_number(count1, count2){
+
+  if (count1 > count2){
+    return 1;
+  } else if (count2 > count1){
+    return 2;
+  } else {
+    return 0;
+  }
+}
+
+/*
+* Decide towards smaller number.
+*/
+function decide_by_smaller_number(count1, count2){
+  if (count1 < count2){
+    return 1;
+  } else if (count2 < count1){
+    return 2;
+  } else {
+    return 0;
+  }
+}
+
+/*
  * Eval all copa questions.
  */
 function eval_all_copa_questions(copa_questions) {
+  var questCount = copa_questions.length;
+
+  var all_results = []
+
   for (var quest_num in copa_questions) {
     if (copa_questions.hasOwnProperty(quest_num)) {
       // Eval this copa question.
       eval_copa_question(copa_questions[quest_num], quest_num)
       .then( function (results) {
-        console.log('quest_num\t' + results[0].quest_num + '\t' + results[0].data.path_count + '\t' + results[1].data.path_count + '\t' + results[0].data.path_len_sum + '\t' + results[1].data.path_len_sum);
+        console.log('quest_num\t' + results[0].quest_num + '\t' +
+          results[0].correctAlternative + '\t' + results[0].data.path_count +'\t' +
+          results[1].data.path_count + '\t' + results[0].data.path_len_sum + '\t' +
+          results[1].data.path_len_sum);
+
+        all_results.push({
+          'quest_num' : results[0].quest_num,
+          'correctAlternative' : results[0].correctAlternative,
+          'path_count1' : results[0].data.path_count,
+          'path_count2' : results[1].data.path_count,
+          'path_len_sum1' : results[0].data.path_len_sum,
+          'path_len_sum2' : results[1].data.path_len_sum
+        });
+
+        // Calculate accuracies after all results are in .
+        if (Object.keys(all_results).length == 10){
+          // console.log(all_results);
+          calc_accuracy(all_results);
+        }
       } // TODO add error function);
     );
 
     }
-    // if (quest_num === '2'){
+    // if (quest_num === '10'){
     //   // TODO remove this only uses the first question
     //   console.log('DEV MODE ONLY FIRST QUESTION PROCESSED');
     //   break;
     // }
+
   }
 
   // TODO collect promises
@@ -86,15 +206,15 @@ function eval_copa_question(copa_question,quest_num) {
   // TODO result 2 is always the same
   // query with all options for this question
   return Q.all([
-    count_paths_for_alternative(quest_num, 1, quest_options['alt1']),
-    count_paths_for_alternative(quest_num, 2, quest_options['alt2'])
+    count_paths_for_alternative(quest_num, 1, quest_options['alt1'], copa_question['correctAlternative']),
+    count_paths_for_alternative(quest_num, 2, quest_options['alt2'], copa_question['correctAlternative'])
     ]);
 }
 
 /*
  * Count found paths for one alternative.
  */
-function count_paths_for_alternative(quest_num, alt_num, quest_options) {
+function count_paths_for_alternative(quest_num, alt_num, quest_options, correctAlternative) {
   var path_len_sum = 0,
     path_lens = 0;
 
@@ -105,7 +225,7 @@ function count_paths_for_alternative(quest_num, alt_num, quest_options) {
     count_paths(quest_options, function(err, result) {
       // console.log('Result: ' + quest_num  + '\t' + alt_num + '\t'+ result);
       // Return  path count sum.
-      resolve({'quest_num' :quest_num, 'alt_num' : alt_num, 'data' : result });
+      resolve({'quest_num' :quest_num, 'alt_num' : alt_num, 'data' : result , 'correctAlternative' : correctAlternative});
     });
   });
 }
@@ -123,7 +243,7 @@ function count_paths(quest_options, callback) {
       // generate query
       // console.log('query_opt: ' + quest_option);
       
-      var query = build_copa_query(quest_option[0], quest_option[1], quest_option[2], quest_option[3],'allshorttest',5,15);
+      var query = build_copa_query(quest_option[0], quest_option[1], quest_option[2], quest_option[3], 'allshorttest', 5, 15);
 
       // query neo4j and count found paths
       db.query(query, {}, function (err, result) {
