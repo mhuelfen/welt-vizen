@@ -62,6 +62,16 @@ function calc_accuracy(eval_results){
                     'right' : 0,
                     'wrong' : 0,
                     'same' : 0
+                  }, 
+                  'pmi_sum' : {
+                    'right' : 0,
+                    'wrong' : 0,
+                    'same' : 0
+                  }, 
+                  'cos_sum' : {
+                    'right' : 0,
+                    'wrong' : 0,
+                    'same' : 0
                   }
   }
   // console.log(Object.keys(eval_results));
@@ -80,8 +90,31 @@ function calc_accuracy(eval_results){
     decisions.path_len = add_decision(decisions.path_len, eval_result.correctAlternative, choosenAlternativePathLen);
 
     // Path count/ length
-    var choosenAlternativePathCountLen = decide_by_greater_number( eval_result.path_count1 * 1.0 / eval_result.path_len_sum1 , eval_result.path_count2 * 1.0 / eval_result.path_len_sum2);
+    var path_by_len1;
+    if (eval_result.path_len_sum1 != 0){
+      path_by_len1 = eval_result.path_count1 * 1.0 / eval_result.path_len_sum1;
+    } else {
+      path_by_len1 = 0;
+    }
+
+    var path_by_len2;
+    if (eval_result.path_len_sum2 != 0){
+      path_by_len2 = eval_result.path_count2 * 1.0 / eval_result.path_len_sum2;
+    } else {
+      path_by_len2 = 0;
+    }
+
+    var choosenAlternativePathCountLen = decide_by_greater_number(path_by_len1 , path_by_len2);
     decisions.path_count_len = add_decision(decisions.path_count_len, eval_result.correctAlternative, choosenAlternativePathCountLen);
+
+    // PMI
+    var choosenAlternativePmiSum = decide_by_greater_number(eval_result.pmi_sum1, eval_result.pmi_sum2);
+    decisions.pmi_sum = add_decision(decisions.pmi_sum, eval_result.correctAlternative, choosenAlternativePmiSum);
+
+    // COS min
+    var choosenAlternativeCosSum = decide_by_smaller_number(eval_result.cos_sum1, eval_result.cos_sum2);
+    decisions.cos_sum = add_decision(decisions.cos_sum, eval_result.correctAlternative, choosenAlternativeCosSum);
+
 
     // console.log(decisions);
   });
@@ -89,7 +122,7 @@ function calc_accuracy(eval_results){
   /*
   * Calc accuracies
   */
-  ['path_count', 'path_len', 'path_count_len'].forEach( function (heuristic) {
+  ['path_count', 'path_len', 'path_count_len', 'pmi_sum', 'cos_sum'].forEach( function (heuristic) {
     var decision = decisions[heuristic];
     var accuracy = decision.right / (decision.right + decision.wrong)
 
@@ -163,11 +196,16 @@ function eval_all_copa_questions(copa_questions) {
           'path_count1' : results[0].data.path_count,
           'path_count2' : results[1].data.path_count,
           'path_len_sum1' : results[0].data.path_len_sum,
-          'path_len_sum2' : results[1].data.path_len_sum
+          'path_len_sum2' : results[1].data.path_len_sum,
+          'pmi_sum1' : results[0].data.pmi_sum,
+          'pmi_sum2' : results[1].data.pmi_sum,
+          'cos_sum1' : results[0].data.cos_sum,
+          'cos_sum2' : results[1].data.cos_sum
+
         });
 
         // Calculate accuracies after all results are in .
-        if (Object.keys(all_results).length == 10){
+        if (Object.keys(all_results).length == 500){
           // console.log(all_results);
           calc_accuracy(all_results);
         }
@@ -175,11 +213,11 @@ function eval_all_copa_questions(copa_questions) {
     );
 
     }
-    // if (quest_num === '10'){
-    //   // TODO remove this only uses the first question
-    //   console.log('DEV MODE ONLY FIRST QUESTION PROCESSED');
-    //   break;
-    // }
+    if (quest_num === '500'){
+      // TODO remove this only uses the first question
+      console.log('DEV MODE ONLY FIRST QUESTION PROCESSED');
+      break;
+    }
 
   }
 
@@ -237,6 +275,8 @@ function count_paths(quest_options, callback) {
   var path_count = 0;
   var path_len_sum = 0;
 
+  // To collect als rel. that have pmi or cos sim value.
+  var rels_with_data = [];
   // console.log('Fired queries\t' + quest_options.length);
   async.forEach(quest_options, 
     function(quest_option, callback) {
@@ -261,7 +301,14 @@ function count_paths(quest_options, callback) {
         result.forEach(function(result_item) {
           // this is the length of one path 
           path_len_sum += result_item['p'].length;
+
           // console.log(query + ' ### ' + found_paths + JSON.stringify(result));
+          result_item['rels'].forEach( function(rel) {
+            if (rel[2].type != 'MAY_BE'){
+              rels_with_data.push(rel[2]._data);
+              // console.log(rel[2]._data);
+            }
+          });
         });
 
         // signal that call back finished
@@ -277,11 +324,61 @@ function count_paths(quest_options, callback) {
       if (err){
         console.log('A call failed to process');
       }
+
+      // console.log(rels_with_data);
+      // Remove double entries of rels.
+      var unique_rels = make_rels_unique(rels_with_data);
+
+      // Count and sum similarity measures.
+      var pmi_count = 0;
+      var pmi_sum = 0;
+      var cos_count = 0;
+      var cos_sum = 0;
+
+      unique_rels.forEach( function (rel) {
+
+        // console.log(rel);
+        if (rel.data.hasOwnProperty('pmi')){
+          pmi_count += 1;
+          pmi_sum += rel.data.pmi;
+        } else if (rel.data.hasOwnProperty('cos_dist')){
+          cos_count += 1;
+          cos_sum += rel.data.cos_dist;
+        }
+      });
+
+      // console.log(pmi_sum + ' ' + pmi_count);
+
       // runs after all items calls have finished
       //callback(err, path_count);
-      callback(err, {'path_count' : path_count,'path_len_sum' : path_len_sum});
+      callback(err, {'path_count' : path_count,'path_len_sum' : path_len_sum,
+                     'pmi_sum' : pmi_sum, 'pmi_count': pmi_count,
+                     'cos_sum' : cos_sum, 'cos_count': cos_count });
     }
   );
+}
+
+/*
+* Remove duplicate form array of relations.
+*
+* uses: start, end and type
+*/
+function make_rels_unique(rels){
+  var uniq_rels = {};
+  rels.forEach(function (rel) {
+    var startNode = rel.start.split('/')[rel.start.split('/').length - 1];
+    var endNode = rel.end.split('/')[rel.end.split('/').length - 1];
+    // Make unique string with start, end and type, double entries just overwrite each other.
+    uniq_rels[startNode + '_' + endNode + '_' + rel.type] = rel;
+  });
+
+  var uniq_rels_array = [];
+  for(var o in uniq_rels) {
+      uniq_rels_array.push(uniq_rels[o]);
+  }
+  // console.log(rels.length + ' ' +  uniq_rels_array.length);
+
+  return uniq_rels_array;
 }
 
 /*
@@ -301,7 +398,7 @@ function build_copa_query(start_content, start_type, end_content, end_type,algo,
   if ( algo === 'allshorttest') {
     query += 'MATCH p=allShortestPaths((n)-[*..' + max_length + ']->(m))\n';
   } else if (algo === 'allshorttest'){
-    query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']->(m))\n';      
+    query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']->(m))\n';
   }
 
   query += 'RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,\n';
