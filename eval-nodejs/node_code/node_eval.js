@@ -25,6 +25,11 @@ var request = require('request'),
 var db = new neo4j.GraphDatabase('http://localhost:7474'),
   url = 'http://localhost:7474/db/data/cypher';
 
+var max_path_length = 5,
+  max_path_count = 15;
+
+var quests_to_test = 500;
+
 /*
 * Load copa questions from file
 */
@@ -72,6 +77,26 @@ function calc_accuracy(eval_results){
                     'right' : 0,
                     'wrong' : 0,
                     'same' : 0
+                  },
+                  'pmi_mean' : {
+                    'right' : 0,
+                    'wrong' : 0,
+                    'same' : 0
+                  }, 
+                  'cos_mean' : {
+                    'right' : 0,
+                    'wrong' : 0,
+                    'same' : 0
+                  },
+                  'pmi_count' : {
+                    'right' : 0,
+                    'wrong' : 0,
+                    'same' : 0
+                  }, 
+                  'cos_count' : {
+                    'right' : 0,
+                    'wrong' : 0,
+                    'same' : 0
                   }
   }
   // console.log(Object.keys(eval_results));
@@ -115,6 +140,21 @@ function calc_accuracy(eval_results){
     var choosenAlternativeCosSum = decide_by_smaller_number(eval_result.cos_sum1, eval_result.cos_sum2);
     decisions.cos_sum = add_decision(decisions.cos_sum, eval_result.correctAlternative, choosenAlternativeCosSum);
 
+    // PMI mean
+    var choosenAlternativePmiMean = decide_by_greater_number(eval_result.pmi_sum1 / eval_result.pmi_count1, eval_result.pmi_sum2 / eval_result.pmi_count2);
+    decisions.pmi_mean = add_decision(decisions.pmi_mean, eval_result.correctAlternative, choosenAlternativePmiMean);
+
+    // COS min mean
+    var choosenAlternativeCosMean = decide_by_smaller_number(eval_result.cos_sum1 / eval_result.cos_count1, eval_result.cos_sum2 / eval_result.cos_count2);
+    decisions.cos_mean = add_decision(decisions.cos_mean, eval_result.correctAlternative, choosenAlternativeCosMean);
+
+    // PMI mean
+    var choosenAlternativePmiCount = decide_by_greater_number(eval_result.pmi_count1, eval_result.pmi_count2);
+    decisions.pmi_count = add_decision(decisions.pmi_count, eval_result.correctAlternative, choosenAlternativePmiCount);
+
+    // COS min mean
+    var choosenAlternativeCosCount = decide_by_greater_number(eval_result.cos_count1, eval_result.cos_count2);
+    decisions.cos_count = add_decision(decisions.cos_count, eval_result.correctAlternative, choosenAlternativeCosCount);
 
     // console.log(decisions);
   });
@@ -122,7 +162,7 @@ function calc_accuracy(eval_results){
   /*
   * Calc accuracies
   */
-  ['path_count', 'path_len', 'path_count_len', 'pmi_sum', 'cos_sum'].forEach( function (heuristic) {
+  ['path_count', 'path_len', 'path_count_len', 'pmi_sum', 'cos_sum', 'pmi_mean', 'cos_mean','pmi_count', 'cos_count'].forEach( function (heuristic) {
     var decision = decisions[heuristic];
     var accuracy = decision.right / (decision.right + decision.wrong)
 
@@ -188,7 +228,9 @@ function eval_all_copa_questions(copa_questions) {
         console.log('quest_num\t' + results[0].quest_num + '\t' +
           results[0].correctAlternative + '\t' + results[0].data.path_count +'\t' +
           results[1].data.path_count + '\t' + results[0].data.path_len_sum + '\t' +
-          results[1].data.path_len_sum);
+          results[1].data.path_len_sum + '\t' + results[0].data.pmi_sum + '\t' +
+          results[1].data.pmi_sum + '\t' + results[0].data.cos_sum + '\t' +
+          results[1].data.cos_sum);
 
         all_results.push({
           'quest_num' : results[0].quest_num,
@@ -200,12 +242,15 @@ function eval_all_copa_questions(copa_questions) {
           'pmi_sum1' : results[0].data.pmi_sum,
           'pmi_sum2' : results[1].data.pmi_sum,
           'cos_sum1' : results[0].data.cos_sum,
-          'cos_sum2' : results[1].data.cos_sum
-
+          'cos_sum2' : results[1].data.cos_sum,
+          'pmi_count1' : results[0].data.pmi_count,
+          'pmi_count2' : results[1].data.pmi_count,
+          'cos_count1' : results[0].data.cos_count,
+          'cos_count2' : results[1].data.cos_count
         });
 
         // Calculate accuracies after all results are in .
-        if (Object.keys(all_results).length == 500){
+        if (Object.keys(all_results).length == quests_to_test){
           // console.log(all_results);
           calc_accuracy(all_results);
         }
@@ -213,7 +258,7 @@ function eval_all_copa_questions(copa_questions) {
     );
 
     }
-    if (quest_num === '500'){
+    if (quest_num == quests_to_test){
       // TODO remove this only uses the first question
       console.log('DEV MODE ONLY FIRST QUESTION PROCESSED');
       break;
@@ -283,7 +328,8 @@ function count_paths(quest_options, callback) {
       // generate query
       // console.log('query_opt: ' + quest_option);
       
-      var query = build_copa_query(quest_option[0], quest_option[1], quest_option[2], quest_option[3], 'allshorttest', 5, 15);
+      var query = build_copa_query(quest_option[0], quest_option[1], quest_option[2],
+        quest_option[3], 'allshorttest', max_path_length, max_path_count);
 
       // query neo4j and count found paths
       db.query(query, {}, function (err, result) {
@@ -304,10 +350,12 @@ function count_paths(quest_options, callback) {
 
           // console.log(query + ' ### ' + found_paths + JSON.stringify(result));
           result_item['rels'].forEach( function(rel) {
-            if (rel[2].type != 'MAY_BE'){
-              rels_with_data.push(rel[2]._data);
-              // console.log(rel[2]._data);
-            }
+            // // exclude may be relations
+            // if (rel[2].type != 'MAY_BE'){
+            //   rels_with_data.push(rel[2]._data);
+            //   // console.log(rel[2]._data);
+            // }
+          rels_with_data.push(rel[2]._data);
           });
         });
 
