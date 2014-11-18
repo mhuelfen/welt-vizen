@@ -141,9 +141,6 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
   draw_legend(svg);
   //    draw_legend(svg, rel_colors, rel_types);
 
-
-
-
   // add links as lines and style depending on properties
   var link = svg.selectAll(".link")
     .data(force.links())
@@ -151,7 +148,12 @@ function draw_graph(nodes_for_viz, relations_for_viz, paths_for_viz) {
     .attr("class", "link")
     .style("stroke", function (d) {
       // console.log("line", d.type)
-      return rel_colors[d.type].color;
+      if(d.type in rel_colors){
+        return rel_colors[d.type].color;
+      } else {
+        return "black";
+      }
+
     })
     // thickness of line shows connection strength aka distributional semantics value
     .style("stroke-width", function (d) {
