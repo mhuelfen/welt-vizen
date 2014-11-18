@@ -25,10 +25,12 @@ var request = require('request'),
 var db = new neo4j.GraphDatabase('http://localhost:7474'),
   url = 'http://localhost:7474/db/data/cypher';
 
-var max_path_length = 5,
+var max_path_length = 4,
   max_path_count = 15;
 
 var quests_to_test = 500;
+
+var debug_output = false;
 
 /*
 * Load copa questions from file
@@ -225,8 +227,8 @@ function eval_all_copa_questions(copa_questions) {
       // Eval this copa question.
       eval_copa_question(copa_questions[quest_num], quest_num)
       .then( function (results) {
-        console.log('quest_num\t' + results[0].quest_num + '\t' +
-          results[0].correctAlternative + '\t' + results[0].data.path_count +'\t' +
+        console.log('qnr\t' + results[0].quest_num + '\t' +
+          'c ' + results[0].correctAlternative + '\t' + results[0].data.path_count +'\t' +
           results[1].data.path_count + '\t' + results[0].data.path_len_sum + '\t' +
           results[1].data.path_len_sum + '\t' + results[0].data.pmi_sum + '\t' +
           results[1].data.pmi_sum + '\t' + results[0].data.cos_sum + '\t' +
@@ -260,17 +262,11 @@ function eval_all_copa_questions(copa_questions) {
     }
     if (quest_num == quests_to_test){
       // TODO remove this only uses the first question
-      console.log('DEV MODE ONLY FIRST QUESTION PROCESSED');
+      console.log('DEV MODE ONLY FIRST ' + quests_to_test + ' QUESTIONS PROCESSED');
       break;
     }
 
   }
-
-  // TODO collect promises
-  // return Q.all([
-  //     eventualAdd(2, 2),
-  //     eventualAdd(10, 20)
-  // ]);
 }
 
 /*
@@ -313,6 +309,29 @@ function count_paths_for_alternative(quest_num, alt_num, quest_options, correctA
   });
 }
 
+function print_paths (result_item) {
+  var result_parts = result_item.nouns.concat(result_item.stats).concat(result_item.rels);
+
+  // Make mapping of neo4j Ids to strings
+  var strings_to_ids = {}
+  for (var part_index  in result_parts){
+    // console.log(result_parts[part_index]);
+    strings_to_ids[result_parts[part_index][0]] = result_parts[part_index][1]
+  }
+  // console.log(strings_to_ids);
+
+  for (var rel_index in result_item.rels){
+    var rel = result_item.rels[rel_index];
+    var splitted_start_url = rel[2]._data['start'].split('/');
+    var splitted_end_url = rel[2]._data['end'].split('/');
+    var start_id = splitted_start_url[splitted_start_url.length - 1];
+    var end_id = splitted_end_url[splitted_end_url.length - 1];
+
+    console.log(strings_to_ids[start_id] + ' - ' + rel[1] + ' - ' + strings_to_ids[end_id]);
+  }
+  console.log();
+}
+
 /*
 * Query DB for one alternative and counting found paths.
 */
@@ -329,6 +348,7 @@ function count_paths(quest_options, callback) {
       // console.log('query_opt: ' + quest_option);
       
       var query = build_copa_query(quest_option[0], quest_option[1], quest_option[2],
+        // quest_option[3], 'shorttest', max_path_length, max_path_count);
         quest_option[3], 'allshorttest', max_path_length, max_path_count);
 
       // query neo4j and count found paths
@@ -340,6 +360,8 @@ function count_paths(quest_options, callback) {
         // add the found path to the count for this alternative
         path_count += result.length;
 
+        // console.log(JSON.stringify(result) + '\n');
+
         /*
         * Path length heuristic.
         */
@@ -347,6 +369,11 @@ function count_paths(quest_options, callback) {
         result.forEach(function(result_item) {
           // this is the length of one path 
           path_len_sum += result_item['p'].length;
+
+          // Print found paths
+          if (debug_output){
+            print_paths(result_item);
+          }
 
           // console.log(query + ' ### ' + found_paths + JSON.stringify(result));
           result_item['rels'].forEach( function(rel) {
@@ -442,12 +469,21 @@ function build_copa_query(start_content, start_type, end_content, end_type,algo,
   // end node
   query += 'm=node:' + end_type + '(' + (end_type === 'nouns' ? 'word' : 'term') + '="' + end_content + '")\n';
 
-  // set algorithm and path length
+
+  //set algorithm and path length
+  // directed
   if ( algo === 'allshorttest') {
     query += 'MATCH p=allShortestPaths((n)-[*..' + max_length + ']->(m))\n';
-  } else if (algo === 'allshorttest'){
+  } else if (algo === 'shorttest'){
     query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']->(m))\n';
   }
+
+  // // undirected
+  // if ( algo === 'allshorttest') {
+  //   query += 'MATCH p=allShortestPaths((n)-[*..' + max_length + ']-(m))\n';
+  // } else if (algo === 'allshorttest'){
+  //   query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']-(m))\n';
+  // }
 
   query += 'RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,\n';
   query += 'EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,\n';
