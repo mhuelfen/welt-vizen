@@ -30,6 +30,8 @@ var max_path_length = 4,
 
 var quests_to_test = 500;
 
+var directed = true;
+
 var debug_output = false;
 
 /*
@@ -174,6 +176,9 @@ function calc_accuracy(eval_results){
     console.log(heuristic + '\tacc: ' + accuracy + '\tacc_same: ' + accuracy_complete);
   });
   console.log(decisions);
+  console.log('max_path_count: ' + max_path_count);
+  console.log('max_path_length: ' + max_path_length);
+  console.log('directed: ' + directed);
 }
 
 function add_decision(decision, correctAlternative, choosenAlternative){
@@ -471,19 +476,23 @@ function build_copa_query(start_content, start_type, end_content, end_type,algo,
 
 
   //set algorithm and path length
-  // directed
-  if ( algo === 'allshorttest') {
-    query += 'MATCH p=allShortestPaths((n)-[*..' + max_length + ']->(m))\n';
-  } else if (algo === 'shorttest'){
-    query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']->(m))\n';
+
+  if (directed) {
+    // directed
+    if ( algo === 'allshorttest') {
+      query += 'MATCH p=allShortestPaths((n)-[*..' + max_length + ']->(m))\n';
+    } else if (algo === 'shorttest'){
+      query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']->(m))\n';
+    }
+  } else {
+    // undirected
+    if ( algo === 'allshorttest') {
+      query += 'MATCH p=allShortestPaths((n)-[*..' + max_length + ']-(m))\n';
+    } else if (algo === 'allshorttest'){
+      query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']-(m))\n';
+    }
   }
 
-  // // undirected
-  // if ( algo === 'allshorttest') {
-  //   query += 'MATCH p=allShortestPaths((n)-[*..' + max_length + ']-(m))\n';
-  // } else if (algo === 'allshorttest'){
-  //   query += 'MATCH p=shortestPath((n)-[*..' + max_length + ']-(m))\n';
-  // }
 
   query += 'RETURN EXTRACT( n in FILTER( x IN nodes(p) WHERE HAS(x.word)) | [id(n),n.word] ) as nouns,\n';
   query += 'EXTRACT( s in FILTER( v IN nodes(p) WHERE HAS(v.term)) | [id(s),s.term] ) as stats,\n';
